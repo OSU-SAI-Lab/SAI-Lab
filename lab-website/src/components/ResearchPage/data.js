@@ -1,181 +1,178 @@
 export const projects = [
   {
-    id: "geospatial-rag",
-    title: "Geospatial RAG and Policy Regime Geodatabase Harmonization",
-    shortDescription: "Building retrieval-augmented generation systems for geospatial policy data to enable intelligent querying and analysis of agricultural policies.",
-    longDescription: `This project develops advanced retrieval-augmented generation (RAG) systems specifically designed for geospatial policy databases. We're creating intelligent systems that can understand, query, and harmonize complex policy regime data across different geographic regions and time periods.
+    id: "ai-powered-weld-defect-detection",
+    title: "AI-Powered Weld Defect Detection and Quality Monitoring",
+    shortDescription: "Real-time computer vision and deep learning system for automated weld defect detection in industrial manufacturing environments.",
+    longDescription: `This project, funded by American Engineering and Manufacturing (AEM), focuses on developing an intelligent computer vision system for automated weld quality monitoring in industrial settings.
 
-The system combines natural language processing with geospatial analytics to make policy data more accessible to researchers and policymakers. Our approach enables semantic search across heterogeneous policy databases and automatic harmonization of different classification schemes.`,
+We design and deploy deep learning pipelines to analyze welding videos in real time and detect structural defects such as porosity, irregular bead formation, and discontinuities. The system combines advanced segmentation and tracking methods (SAM-based pipelines), vision transformers, and custom preprocessing techniques to isolate weld regions and improve classification robustness under challenging lighting and noise conditions.`,
     thumbnail: null,
     status: "active",
-    researchAreas: ["Geospatial AI", "NLP"],
-    domains: ["Digital Agriculture", "Policy"],
-    memberIds: [2, 10],
+    researchAreas: ["Computer Vision", "Deep Learning", "Applied Machine Learning", "Industrial AI"],
+    domains: ["Smart Manufacturing", "Welding and Materials Engineering", "Industrial Automation"],
+    memberIds: [5],
     publicationIds: [],
-    fundingSource: "USDA",
-    startDate: "2024-01",
+    fundingSource: "American Engineering and Manufacturing (AEM)",
+    startDate: null,
     endDate: null,
     externalLinks: []
   },
   {
-    id: "monocular-depth-estimation",
-    title: "Monocular Depth Estimation for Agricultural Applications",
-    shortDescription: "Developing depth estimation techniques from satellite and drone imagery for shallow water bathymetry mapping and crop growth stage phenotyping.",
-    longDescription: `This research focuses on extracting 3D information from single-view imagery in agricultural contexts. We're developing novel computer vision techniques that can estimate depth from monocular satellite imagery for shallow water bathymetry mapping and from drone imagery for precise crop growth stage phenotyping.
+    id: "multi-tenant-rag-chatbot",
+    title: "Multi-Tenant Retrieval-Augmented Generation (RAG) Chatbot System",
+    shortDescription: "Scalable RAG-based chatbot for domain-specific knowledge ingestion and intelligent question answering.",
+    longDescription: `This project focuses on designing and deploying a scalable, multi-user Retrieval-Augmented Generation (RAG) system for domain-specific question answering.
 
-Our methods combine traditional photogrammetry with modern deep learning approaches, enabling accurate depth estimation without requiring expensive stereo camera setups or LiDAR sensors. This makes precision agriculture more accessible to farmers and researchers.`,
+The system enables users to upload and query their own documents, leveraging LLaMA-based large language models, vector databases, and PostgreSQL for structured metadata management. It supports per-user document isolation, semantic search, and real-time grounded responses.`,
     thumbnail: null,
     status: "active",
-    researchAreas: ["Computer Vision", "Geospatial AI"],
-    domains: ["Digital Agriculture"],
-    memberIds: [2, 11],
-    publicationIds: [],
-    fundingSource: null,
-    startDate: "2023-09",
-    endDate: null,
-    externalLinks: []
-  },
-  {
-    id: "diffusion-models-satellite",
-    title: "Domain-Adapted Diffusion Models for Satellite Imagery",
-    shortDescription: "Creating generative models for multispectral satellite imagery generation to address data scarcity in remote sensing applications.",
-    longDescription: `We're developing domain-adapted diffusion models specifically designed for multispectral satellite imagery. Traditional generative models struggle with the unique characteristics of satellite data, including multiple spectral bands, varying resolutions, and domain-specific artifacts.
-
-Our approach adapts state-of-the-art diffusion models to handle these challenges, enabling synthetic data generation that can augment limited training datasets and support data-scarce remote sensing applications. This work has implications for crop monitoring, land use classification, and environmental change detection.`,
-    thumbnail: null,
-    status: "active",
-    researchAreas: ["Computer Vision", "Deep Learning", "Geospatial AI"],
-    domains: ["Digital Agriculture"],
-    memberIds: [2],
-    publicationIds: [],
-    fundingSource: null,
-    startDate: "2024-03",
-    endDate: null,
-    externalLinks: []
-  },
-  {
-    id: "geospatial-data-pipeline",
-    title: "Scalable Geospatial Data Pipeline for ML",
-    shortDescription: "Building a production-grade data pipeline that processes Sentinel-1/2 and IO-LULC products into standardized ML-ready data cubes.",
-    longDescription: `This infrastructure project develops a scalable geospatial data pipeline that pulls Sentinel-1/2 satellite imagery and IO-LULC (land use/land cover) products from AWS S3 and converts them into standardized, ML-ready data cubes.
-
-The pipeline handles petabyte-scale data processing, automatic quality control, cloud masking, and standardization across different satellite sensors and time periods. It provides a foundation for downstream geospatial machine learning tasks and enables researchers to focus on model development rather than data wrangling.`,
-    thumbnail: null,
-    status: "active",
-    researchAreas: ["Distributed Systems", "Geospatial AI"],
-    domains: ["Digital Agriculture", "Cloud Infrastructure"],
-    memberIds: [4, 10],
-    publicationIds: [],
-    fundingSource: null,
-    startDate: "2023-08",
-    endDate: null,
-    externalLinks: []
-  },
-  {
-    id: "frequency-aware-architectures",
-    title: "Frequency-Aware CNN-Transformer Architectures",
-    shortDescription: "Exploring how state-of-the-art architectures capture spatial-frequency information for image classification and segmentation.",
-    longDescription: `This research investigates how modern CNN-Transformer hybrid architectures learn and represent spatial-frequency information in images. We're developing frequency-aware modules that explicitly model both spatial and frequency domain features.
-
-Our work provides insights into what these models learn and how they can be improved through frequency-aware design. Applications include medical imaging, remote sensing, and any domain where frequency characteristics are important for classification or segmentation tasks.`,
-    thumbnail: null,
-    status: "active",
-    researchAreas: ["Computer Vision", "Deep Learning"],
-    domains: ["Digital Agriculture"],
-    memberIds: [4],
-    publicationIds: [],
-    fundingSource: null,
-    startDate: "2024-01",
-    endDate: null,
-    externalLinks: []
-  },
-  {
-    id: "ai-fault-detection-welding",
-    title: "AI-Enabled Fault Detection in Welding",
-    shortDescription: "Developing computer vision systems for automated quality control and fault detection in industrial welding processes.",
-    longDescription: `This project applies deep learning to industrial quality control, specifically targeting fault detection in welding operations. We're developing real-time computer vision systems that can identify defects, classify weld quality, and provide actionable feedback to operators.
-
-The system uses advanced object detection and classification techniques to analyze weld seams, detect anomalies, and ensure consistent quality. This work has direct applications in manufacturing and can significantly reduce inspection time while improving quality assurance.`,
-    thumbnail: null,
-    status: "active",
-    researchAreas: ["Computer Vision", "Deep Learning"],
-    domains: ["Manufacturing"],
+    researchAreas: ["Large Language Models", "Retrieval-Augmented Generation", "Natural Language Processing", "Information Retrieval"],
+    domains: ["Applied AI", "Knowledge Systems"],
     memberIds: [5],
     publicationIds: [],
     fundingSource: null,
-    startDate: "2023-09",
+    startDate: null,
     endDate: null,
     externalLinks: []
   },
   {
-    id: "agricultural-rag-chatbot",
-    title: "RAG-Based Chatbot for Agricultural Use Cases",
-    shortDescription: "Building conversational AI systems that provide expert agricultural knowledge through retrieval-augmented generation.",
-    longDescription: `We're developing intelligent chatbot systems that combine retrieval-augmented generation with domain-specific agricultural knowledge bases. The system can answer farmer questions, provide crop management advice, and assist with decision-making based on current research and best practices.
-
-This work makes agricultural expertise more accessible, especially to small-scale farmers who may not have easy access to extension services or agronomists. The RAG approach ensures responses are grounded in verified information rather than hallucinated content.`,
+    id: "harvest-pipeline",
+    title: "Harvest",
+    shortDescription: "An end-to-end pipeline consisting of an eco-system of tools that collect, deliver, process, infer and transform the data to produce various visual and actionable results for agricultural use cases.",
+    longDescription: `Currently working on the development of a data ingestion and step orchestration pipeline for precision spraying, which involves waypoint generation for drone missions, batch transfers to HPC systems, and step triggers for downstream ML tasks.`,
     thumbnail: null,
     status: "active",
-    researchAreas: ["NLP", "Deep Learning"],
-    domains: ["Digital Agriculture"],
-    memberIds: [5],
+    researchAreas: ["Computer Vision", "Applied Machine Learning", "Data Engineering", "Distributed Computation"],
+    domains: ["Agriculture"],
+    memberIds: [7],
     publicationIds: [],
     fundingSource: null,
-    startDate: "2024-01",
+    startDate: null,
     endDate: null,
     externalLinks: []
   },
   {
-    id: "zero-shot-object-detection",
-    title: "Zero-Shot and Few-Shot Object Detection Pipeline",
-    shortDescription: "Advanced object detection pipeline using foundation models like SAM for zero-shot and few-shot annotation with visual optimization.",
-    longDescription: `This project develops a state-of-the-art object detection pipeline capable of zero-shot and few-shot annotation using foundation models like the Segment Anything Model (SAM). The system supports multi-modal inputs including segmentation-assisted and text-prompt based detection.
+    id: "digital-agriculture",
+    title: "Digital Agriculture",
+    shortDescription: "AI-powered weed detection, classification, and geospatial prescription mapping for precision agriculture and targeted agrochemical application.",
+    longDescription: `This project focuses on building a Digital Agriculture pipeline that leverages drone and ground-based imagery to automatically detect and classify weeds at high spatial resolution. The system processes aerial and field-level images using advanced deep learning–based object detection and classification techniques to accurately identify weed instances within crop fields.
 
-A key innovation is the visual optimization suite that allows users to interactively fine-tune critical hyperparameters such as patch sizes and confidence thresholds using real-time graphical feedback. This ensures annotation precision while dramatically reducing the need for large labeled datasets.`,
+Detected weeds are georeferenced and converted into structured geospatial outputs in the form of shapefiles. These shapefiles function as prescription maps for precision spot spraying systems, enabling selective application of herbicides and pesticides rather than uniform broadcast spraying.
+
+By integrating visual intelligence with geospatial data engineering, the system reduces chemical usage, lowers operational costs, minimizes environmental impact, and supports sustainable farming practices while maintaining crop productivity.`,
     thumbnail: null,
     status: "active",
-    researchAreas: ["Computer Vision", "Deep Learning"],
-    domains: ["Digital Agriculture"],
-    memberIds: [6],
-    publicationIds: [],
-    fundingSource: null,
-    startDate: "2023-08",
-    endDate: null,
-    externalLinks: []
-  },
-  {
-    id: "gpu-multi-instance-inference",
-    title: "GPU Multi-Instance Inference Optimization",
-    shortDescription: "Improving GPU utilization and throughput through multi-instance inference strategies for computer vision workloads.",
-    longDescription: `This research focuses on optimizing GPU resource utilization for computer vision inference workloads. We're developing strategies for GPU multi-instance inference that can significantly improve throughput and reduce latency for production ML systems.
-
-The work addresses the challenge of underutilized GPUs in inference scenarios where single models don't fully saturate the hardware. Our techniques enable multiple model instances or different models to share GPU resources efficiently, improving cost-effectiveness of ML deployments.`,
-    thumbnail: null,
-    status: "active",
-    researchAreas: ["HPC", "Distributed Systems"],
-    domains: ["Cloud Infrastructure"],
+    researchAreas: ["Computer Vision", "Object Detection", "Image Classification", "Geospatial Data Processing", "Remote Sensing", "Precision Agriculture"],
+    domains: ["Digital Agriculture", "Smart Farming", "Applied Artificial Intelligence"],
     memberIds: [8],
     publicationIds: [],
     fundingSource: null,
-    startDate: "2024-02",
+    startDate: null,
     endDate: null,
     externalLinks: []
   },
   {
-    id: "corn-residue-soil-analysis",
-    title: "Vision-Based Corn Residue and Soil Aggregate Analysis",
-    shortDescription: "Computer vision pipeline for accurate estimation of corn residue cover and soil aggregate size in agricultural fields.",
-    longDescription: `This project develops computer vision techniques for analyzing agricultural field conditions, specifically targeting corn residue cover estimation and soil aggregate size distribution. These measurements are critical for soil health assessment and erosion control.
+    id: "zero-shot-annotation-pipeline",
+    title: "Training free zero/few-shot Image Annotation Pipeline",
+    shortDescription: "Accelerating dataset creation through a human-in-the-loop architecture that leverages foundation models (SAM3, OWLv2, DINOv3) for intelligent bounding box prediction and similarity matching.",
+    longDescription: `One of the most significant bottlenecks in training modern computer vision models is the scarcity of high-quality, labeled data. Creating accurate bounding box annotations at scale is notoriously slow and expensive. To solve this, I architected an end-to-end object detection pipeline designed to rapidly bootstrap dataset creation using a combination of zero-shot proposal generation and few-shot similarity matching.
 
-Our vision-based approach provides non-invasive, scalable alternatives to manual field measurements. The system can process drone or ground-based imagery to automatically quantify residue cover percentages and soil aggregate characteristics, enabling large-scale soil health monitoring.`,
+Rather than relying on manual labor for every image, the system utilizes an active learning, human-in-the-loop approach. The architecture is broken down into four core stages:
+
+Few-Shot Initialization & Support Generation: The process begins with a manual annotation step to provide initial ground truth (GT) samples. Users can draw manual boxes or use SAM3 via single-click and text prompts for rapid box prediction. The system then generates support embeddings from these ground truths, utilizing patch size optimization to accurately compare the GTs with model-drawn boxes.
+Object Proposal Generation: The pipeline scans new, unannotated images and generates generic object proposals (bounding boxes) using zero-shot capabilities from foundation models like SAM3 and OWLv2.
+Embedding & Feature Extraction: Once proposals are generated, the system extracts rich feature embeddings (encodings) for each proposed region using advanced vision models such as DINOv3 or BioCLIP2.
+Human-in-the-Loop Similarity Matching: The core decision engine performs similarity matching between the encoded proposals and the established ground truth "support" embeddings.
+To ensure high accuracy, the matching system utilizes multiple gates and confidence thresholds. If the system is highly confident, the annotation is applied automatically. However, if the similarity score falls into an ambiguous threshold (e.g., struggling to differentiate between background vs. object, or between overlapping classes), the prediction is escalated to a human reviewer. The user confirms or corrects the anchor prototype, and this validated data is instantly fed back into the system to refine its accuracy for subsequent predictions.`,
     thumbnail: null,
     status: "active",
-    researchAreas: ["Computer Vision", "Deep Learning"],
-    domains: ["Digital Agriculture"],
+    researchAreas: ["Computer Vision", "Few-Shot/Zero-Shot Learning", "Active Learning", "Foundation Models"],
+    domains: ["ML Infrastructure", "Data Annotation", "Full Stack Engineering"],
+    memberIds: [6],
+    publicationIds: [],
+    fundingSource: null,
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "geodiffcert-diffusiondepth",
+    title: "GeoDiffCert: DiffusionDepth for Earth Observation",
+    shortDescription: "Building trustworthy geospatial AI systems by unifying automated data collection, physics-aware diffusion adaptation, and uncertainty-calibrated learning for satellite and drone imagery.",
+    longDescription: `This project builds trustworthy geospatial AI systems for satellite and drone imagery. While Earth observation data is abundant, reliable task-specific supervision is scarce and models often fail under region, sensor, or seasonal shifts.
+
+We address this through a unified framework that:
+
+Collects structured training data at scale from geographic infrastructure (e.g., OpenStreetMap),
+Adapts diffusion foundation models to remote sensing with minimal target data, and
+Trains models with calibrated uncertainty and verification gates so they generalize and know when they may be wrong.
+The framework is validated on shallow-water bathymetry from Sentinel-2 and aerial monocular depth for digital agriculture, where physics and field measurements provide measurable ground truth.
+
+The goal is end-to-end, reliable geospatial AI that bridges data collection, generative modeling, and expert-in-the-loop validation.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: ["Geospatial AI", "Computer Vision", "Diffusion Models", "Monocular Depth Estimation", "Multi-modal Remote Sensing", "Domain Adaptation", "Uncertainty Quantification", "Semi-Supervised Learning"],
+    domains: ["Satellite Imagery", "Aerial Imagery", "Bathymetry", "Digital Agriculture", "Environmental Monitoring", "Earth Observation", "GIS Systems"],
+    memberIds: [2],
+    publicationIds: [],
+    fundingSource: null,
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "corn-residue-segmentation",
+    title: "Weakly Supervised Corn Residue Segmentation via Brightness-Guided Pseudo-Labeling",
+    shortDescription: "Training residue segmentation models from simple brightness cues in tractor-mounted imagery to estimate residue cover and generate field-scale maps.",
+    longDescription: `Corn residue remaining on the soil surface after tillage is a key indicator of soil conservation and management quality, influencing erosion risk, moisture retention, and long-term soil health. However, field-scale residue assessment is often constrained by labor-intensive manual protocols and sparse sampling. This project develops an automated, high-resolution residue mapping pipeline using geo-referenced imagery captured from a tractor-mounted camera during routine field operations.
+
+A central challenge is the lack of dense pixel-level annotations needed to train supervised segmentation models at scale. To address this, we leverage an interpretable visual cue observed in our data: corn residue fragments often appear brighter than surrounding soil. We use brightness-guided pseudo-labels as weak supervision to train segmentation models that predict residue masks from RGB imagery. Model outputs are converted into per-image residue cover fractions and paired with GPS metadata to generate field-scale residue cover maps. The resulting residue estimates are validated against on-the-ground residue measurements collected in the same field, enabling field-relevant evaluation of segmentation-based residue cover estimation.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: ["Computer Vision", "Semantic Segmentation", "Weakly Supervised Learning", "Precision Agriculture"],
+    domains: ["Agronomy", "Soil Conservation", "Tillage/Residue Management", "Field Robotics & Sensing"],
     memberIds: [9],
     publicationIds: [],
     fundingSource: null,
-    startDate: "2023-09",
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "probfuse-dashboard",
+    title: "ProbFuse Dashboard: Climate‑Aware Conservation Recommendations for Ohio Row Crops",
+    shortDescription: "A probabilistic geospatial engine that fuses soil, climate, and policy data to generate uncertainty‑aware NRCS conservation practice recommendations for Maumee Basin farms.",
+    longDescription: `ProbFuse is an interactive decision-support tool for conservation planners, educators, and farmers in the Maumee River Basin. It helps users quickly assess climate and soil risks and identify suitable NRCS conservation practices and programs (e.g., Cover Crop 340, Nutrient Management 590, EQIP funding pathways). Users select or click a field to generate a farm profile with soil series, hydrologic group, drainage class, texture, recent weather, and optional user-entered soil test/management data. Behind the scenes, a lightweight Bayesian fusion engine integrates SSURGO soil data, long-term climate records, and conservation adoption indicators to produce uncertainty-aware risk scores for runoff- and leaching-driven nutrient loss. These scores feed into transparent, NRCS-aligned rules that prioritize practices and funding opportunities.
+
+Key contributions:
+
+A reproducible middleware pipeline that aligns heterogeneous federal datasets (SSURGO, climate archives, program data) into a clean, analysis-ready layer for precision agriculture.
+A probabilistic fusion model that outperforms county-average baselines in matching recommendations to real adoption and funding patterns.
+By combining geospatial ML with uncertainty quantification and an accessible web interface, ProbFuse lowers information barriers and supports more targeted, climate-resilient conservation in northwest Ohio row-crop systems.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: ["Geospatial Machine Learning", "Probabilistic Modeling", "Human‑Centered Decision Support", "Data Integration & Fusion"],
+    domains: ["Agricultural Conservation", "Environmental Policy", "Water Quality & Nutrient Management", "Precision Agriculture"],
+    memberIds: [10],
+    publicationIds: [],
+    fundingSource: null,
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "tree-detection-change-mapping",
+    title: "A Deep Learning Framework for Individual Tree Detection and Change Mapping",
+    shortDescription: "This work aims to an automated framework for detecting and monitoring individual trees over time using high-resolution satellite imagery and deep learning.",
+    longDescription: `We aim to introduces an end-to-end computational framework for large-scale monitoring of individual trees using high-resolution satellite imagery and deep learning for Uganda. It combines automated image acquisition and preprocessing, neural network–based tree detection, temporal matching of tree instances across years, and a change analysis module to identify persistence or disappearance at the tree level. The framework will be designed to operate over extensive geographic areas and multi-year time horizons, producing spatially explicit outputs that quantify tree presence, density, and temporal dynamics. By enabling consistent, repeatable monitoring of scattered trees, it supports scalable environmental assessment, land management analysis, and long-term ecosystem monitoring applications, like Agroforestry.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: ["Computer Vision", "Remote Sensing"],
+    domains: ["Agroforestry", "Deep Learning", "Remote Sensing"],
+    memberIds: [2],
+    publicationIds: [],
+    fundingSource: null,
+    startDate: null,
     endDate: null,
     externalLinks: []
   }
