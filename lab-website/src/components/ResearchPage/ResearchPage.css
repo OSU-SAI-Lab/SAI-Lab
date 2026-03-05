@@ -2,6 +2,7 @@
 
 /* Hero Section */
 .research-hero {
+  /* background: var(--color-primary); */
   background: linear-gradient(135deg, #bb0000 0%, #8b0000 100%);
   color: white;
   padding: 4rem 2rem 3rem 2rem;

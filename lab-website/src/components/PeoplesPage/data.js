@@ -40,17 +40,19 @@ export const labMembers = [
     website: "https://www.linkedin.com/in/anirudh-potlapally-30659a1ab/",
     email: "potlapally.2@buckeyemail.osu.edu",
     interests: [
-      "High-Performance Computing for AI",
+      "AI for Science",
       "ML Systems",
       "Multimodal Foundation Models",
+      "High-Performance Computing for AI",
       "Efficient Inference",
-      "AI for Science"
+     
     ],
     projects: [
-      "Distributed ML Training",
-      "Cloud Resource Management"
+      "WILD-OV: Modular multi-modal vision pipeline for weakly supervised localization and few-shot object detection in domain-specific imagery.",
+      "SmartWilds: Heterogeneous edge-to-cloud multimodal AI system for large-scale wildlife monitoring using camera traps, UAVs, and bioacoustic sensors.",
+      "HARVEST: HPC-driven AI infrastructure for semi-supervised learning, efficient training, large-scale inference, and visualization in precision agriculture."
     ],
-    publications: "https://scholar.google.com/citations?user=izzBqmcAAAAJ&hl=en"
+    publications: "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://scholar.google.com/citations%3Fuser%3DizzBqmcAAAAJ%26hl%3Den&ved=2ahUKEwjp5LPC2s2SAxWJGDQIHc_ZEeUQFnoECBsQAQ&usg=AOvVaw0WqcnKdtwPqewvf3c9mrV_"
   },
 
   {
@@ -190,7 +192,7 @@ export const labMembers = [
     role: "masters",
     title: "Graduate Student",
     department: "Computer Science and Engineering",
-    photo: "https://via.placeholder.com/300x300?text=Grad+Student+5",
+    photo: "./profilepics/Yathish.jpeg",
     location: "Dreese Labs 484",
     email: "shiradanahallimahadevappa.1@osu.edu",
     website: "http://www.linkedin.com/in/yathish-mahadevappa-171645240",
@@ -281,6 +283,7 @@ export const labMembers = [
     photo: "https://via.placeholder.com/300x300?text=Undergrad+2",
     location: "Dreese Labs 486",
     email: "undergrad2@osu.edu",
+    website: "https://kamaths.info",
     interests: [
       "Web Development",
       "UI/UX Design",
