@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import './PeoplesPage.css';
 import { labMembers } from './data.js';
 
@@ -73,21 +73,10 @@ export default function People() {
 
   return (
     <div className="people-page">
-      {/* Header */}
-      {/* <header className="header">
-        <div className="header-content">
-          <div className="lab-title">
-            <h1>Systems and AI Lab</h1>
-            <p className="university">The Ohio State University</p>
-            <p className="department">Computer Science and Engineering</p>
-          </div>
-        </div>
-      </header> */}
       <section className="people-hero">
-      <h1>People</h1>
-      <p>Members of the Systems and AI Lab</p>
+        <h1>People</h1>
+        <p>Members of the Systems and AI Lab</p>
       </section>
-
 
       {/* Filters */}
       <div className="filters-section">
@@ -176,34 +165,48 @@ export default function People() {
         )}
       </main>
 
-      <footer className="footer">
-        <p>&copy; 2024 Systems and AI Lab, The Ohio State University</p>
-      </footer>
+     <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Systems and AI Lab, The Ohio State University</p>
+    </footer>
     </div>
   );
 }
 
 /* ---------------- Person Card ---------------- */
 
-// function PersonCard({ member }) {
-//   return (
-//     <article className="person-card">
-//       <img src={member.photo} alt={member.name} className="card-image" />
-
-//       <h3 className="person-name">{member.name}</h3>
-//       <p className="person-title">{member.title}</p>
-
-//       <div className="interests-tags">
-//         {member.interests.map((i, idx) => (
-//           <span key={idx} className="interest-tag">{i}</span>
-//         ))}
-//       </div>
-//     </article>
-//   );
-// }
 function PersonCard({ member }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if user is on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Toggle card expansion (only on mobile)
+  const handleCardClick = (e) => {
+    // Don't toggle if clicking on a link
+    if (e.target.tagName === 'A' || e.target.closest('a')) {
+      return;
+    }
+    
+    if (isMobile) {
+      setIsExpanded(!isExpanded);
+    }
+  };
+
   return (
-    <article className="person-card">
+    <article 
+      className={`person-card ${isExpanded ? 'expanded' : ''}`}
+      onClick={handleCardClick}
+    >
       <img
         src={member.photo}
         alt={member.name}
@@ -213,22 +216,16 @@ function PersonCard({ member }) {
       <h3 className="person-name">{member.name}</h3>
       <p className="person-title">{member.title}</p>
 
-      {/* Location
-      {member.location && (
-        <p className="person-location">{member.location}</p>
-      )} */}
-
       {/* Interests */}
-      <div className="interests-tags">
-        {member.interests.map((i, idx) => (
-          <span key={idx} className="interest-tag">{i}</span>
-        ))}
-      </div>
       <div className="interests-section">
-        {/* Research interests here */}
+        <div className="interests-tags">
+          {member.interests.map((i, idx) => (
+            <span key={idx} className="interest-tag">{i}</span>
+          ))}
+        </div>
       </div>
 
-     {/* Projects Section */}
+      {/* Projects Section */}
       {member.projects && member.projects.length > 0 && (
         <div className="projects-section">
           <h4 className="section-label">Current Projects</h4>
@@ -241,39 +238,41 @@ function PersonCard({ member }) {
       )}
 
       {/* Links */}
-    <div className="card-links">
-    {member.website && (
-      <a
-        href={member.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="card-link"
-      >
-        Website
-      </a>
-    )}
+      <div className="card-links">
+        {member.website && (
+          <a
+            href={member.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Website
+          </a>
+        )}
 
-    {member.email && (
-      <a
-        href={`mailto:${member.email}`}
-        className="card-link"
-      >
-        Email
-      </a>
-    )}
+        {member.email && (
+          <a
+            href={`mailto:${member.email}`}
+            className="card-link"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Email
+          </a>
+        )}
 
-    {member.publications && (
-      <a
-        href={member.publications}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="card-link"
-      >
-        Publications
-      </a>
-    )}
-  </div>
+        {member.publications && (
+          <a
+            href={member.publications}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-link"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Publications
+          </a>
+        )}
+      </div>
     </article>
   );
 }
-

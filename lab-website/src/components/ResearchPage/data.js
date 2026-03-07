@@ -175,5 +175,104 @@ By combining geospatial ML with uncertainty quantification and an accessible web
     startDate: null,
     endDate: null,
     externalLinks: []
+  },
+
+  {
+    id: "geospatial-depth-estimation",
+    title: "Geospatial Depth Estimation using Diffusion Models",
+    shortDescription: "Diffusion-based monocular depth estimation for large-scale orthomosaic terrain imagery.",
+    longDescription: `This project focuses on advancing monocular depth estimation for large-scale geospatial imagery using diffusion-based generative models. We constructed a custom dataset of 10,000+ high-resolution orthomosaic .tif images and implemented efficient lazy loading and preprocessing pipelines to enable scalable training and evaluation.
+
+Using the Marigold diffusion pipeline, we performed depth estimation with image tiling strategies optimized for large satellite and drone imagery. The system integrates geospatial metadata extraction (geo-coordinates, altitude, spatio-temporal attributes) via Rasterio and GeoPandas to support terrain-aware modeling.
+
+To improve segmentation quality and computational efficiency, we used contour-based masking to filter irrelevant regions, reducing compute overhead by approximately 40% while improving segmentation precision.
+
+The project contributes toward scalable geospatial perception systems applicable to environmental monitoring, agricultural analytics, and terrain modeling.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: [
+      "Computer Vision",
+      "Geospatial AI",
+      "Generative Models",
+      "Remote Sensing"
+    ],
+    domains: [
+      "Climate & Environmental Monitoring",
+      "Precision Agriculture",
+      "Terrain Analysis",
+      "UAV/Drone Imaging"
+    ],
+    memberIds: [11, 3],  // Mrunal Hole (11), Aswathnarayan Radhakrishnan (3)
+    publicationIds: [],
+    fundingSource: null,
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "digitalagedu-curriculum-toolkit",
+    title: "DigitalAgEdu – AI Curriculum Generation Toolkit",
+    shortDescription: "A schema-validated, config-driven pipeline for automated AI curriculum generation tailored for digital agriculture education.",
+    longDescription: `DigitalAgEdu is a production-grade, config-driven curriculum generation toolkit designed to automate the creation of structured AI learning programs for high school classrooms. The system is implemented as a modular Python CLI using Typer, Pydantic, and Jinja2, enabling schema-validated configuration inputs and reproducible template-based content rendering.
+
+Built on the foundation of the Presidential AI Challenge work involving digital agriculture pipelines for soybean leaf segmentation and bacterial blight detection (using SAM2 + DINOv2 on Ohio Supercomputer Center infrastructure), DigitalAgEdu extends this work into an educational framework. The toolkit transforms complex AI research projects into accessible, project-based learning modules for students.
+
+The architecture supports YAML/JSON configuration parsing, strict data validation, and modular content pipelines, allowing extensible and scalable generation workflows. The system automates the full pipeline from validated configuration to rendered curriculum artifacts and is packaged for pip-based deployment with CI/CD readiness.
+
+Designed with scalability, testability, and reproducibility in mind, DigitalAgEdu demonstrates how AI-assisted tooling can support automated educational content generation in domains such as digital agriculture and applied AI training, making cutting-edge research accessible to K-12 education.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: [
+      "AI in Education",
+      "LLM Systems",
+      "Educational Technology",
+      "Automated Content Generation",
+      "Computer Vision"
+    ],
+    domains: [
+      "Digital Agriculture",
+      "K-12 Education",
+      "Technical Training",
+      "Curriculum Design",
+      "STEM Education"
+    ],
+    memberIds: [11],  // Mrunal Hole
+    publicationIds: [],
+    fundingSource: "Presidential AI Challenge",
+    startDate: null,
+    endDate: null,
+    externalLinks: []
+  },
+  {
+    id: "presidential-ai-challenge-mentorship",
+    title: "Presidential AI Challenge - Columbus School for Girls Mentorship",
+    shortDescription: "Mentoring high school students in developing AI solutions for digital agriculture applications.",
+    longDescription: `This project involves mentoring students from Columbus School for Girls as part of the Presidential AI Challenge, guiding them through hands-on AI development for real-world agricultural applications.
+
+The mentorship program focuses on teaching computer vision, deep learning, and deployment strategies through project-based learning. Students work with the DigitalAgEdu curriculum toolkit to learn about image segmentation, model training, and agricultural AI applications including crop disease detection and precision farming techniques.
+
+The program emphasizes practical skills development in Python, machine learning frameworks (PyTorch, SAM2, DINOv2), data preprocessing, and model evaluation, while exposing students to high-performance computing environments through the Ohio Supercomputer Center.
+
+This initiative bridges cutting-edge AI research with K-12 STEM education, demonstrating how university-level research can be made accessible and engaging for younger learners while inspiring the next generation of AI researchers.`,
+    thumbnail: null,
+    status: "active",
+    researchAreas: [
+      "AI in Education",
+      "Computer Vision",
+      "Deep Learning",
+      "Educational Outreach"
+    ],
+    domains: [
+      "Digital Agriculture",
+      "K-12 Education",
+      "STEM Mentorship",
+      "AI for Social Good"
+    ],
+    memberIds: [11, 12, 13],  // Mrunal Hole (11), Naveen Kamath (12), Rishi Makineni (13)
+    publicationIds: [],
+    fundingSource: "Presidential AI Challenge",
+    startDate: null,
+    endDate: null,
+    externalLinks: []
   }
 ];
