@@ -206,18 +206,18 @@ export const events = [
     mode: "In-Person",
     location: "Tucson, AZ",
     description:
-      "SAI Lab graduate researchers Satyaki Roy Chowdry and Aswathnarayanan Radhakrishnan presented posters on satellite bathymetry and geospatial AI at WACV.",
+      "SAI Lab graduate researchers Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan presented posters on satellite bathymetry and geospatial AI at WACV.",
     link: null,
 
     author: "SAI Lab",
     body: `
       <p>
         Two graduate researchers from the Systems and AI (SAI) Lab, Satyaki Roy
-        Chowdry and Aswathnarayanan Radhakrishnan, presented their work at the
+        Chowdhury and Aswathnarayanan Radhakrishnan, presented their work at the
         WACV.
       </p>
       <p>
-        Satyaki Roy Chowdry presented <em>"From Bands to Depth: Understanding
+        Satyaki Roy Chowdhury presented <em>"From Bands to Depth: Understanding
         Bathymetry Decisions on Sentinel‑2,"</em> which examines the use of
         multispectral satellite data for depth estimation and improved
         understanding of aquatic environments.
@@ -239,30 +239,30 @@ export const events = [
       {
         type: "image",
         src: SatyakiPresenting,
-        alt: "Satyaki Roy Chowdry presenting his poster on bathymetry",
+        alt: "Satyaki Roy Chowdhury presenting his poster on bathymetry",
         caption:
-          "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
+          "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry.",
       },
       {
         type: "image",
         src: SatyakiWACV,
-        alt: "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
+        alt: "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry.",
         caption:
-          "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
+          "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry.",
       },
       {
           type: "image",
           src: SatyakiAndAsh,
-          alt: "Satyaki Roy Chowdry and Aswathnarayanan Radhakrishnan",
+          alt: "Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan",
           caption:
-            "Satyaki Roy Chowdry and Aswathnarayanan Radhakrishnan",
+            "Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan",
         },
     ],
     tags: ["Research", "Remote Sensing", "Geospatial AI", "Graduate"],
 
     members: [
       {
-        name: "Satyaki Roy Chowdry",
+        name: "Satyaki Roy Chowdhury",
         profileUrl: "https://engineering.osu.edu/people/chowdhury.207",
       },
       {
@@ -280,18 +280,18 @@ export const events = [
     mode: "In-Person",
     location: "The Ohio State University, CSE Department",
     description:
-      "SAI Lab graduate researchers Satyaki Roy Chowdry and Aswathnarayanan Radhakrishnan presented posters on satellite bathymetry and geospatial AI at CSE Graduate Visit Day.",
+      "SAI Lab graduate researchers Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan presented posters on satellite bathymetry and geospatial AI at CSE Graduate Visit Day.",
     link: null,
 
     author: "SAI Lab",
     body: `
       <p>
         Two graduate researchers from the Systems and AI (SAI) Lab, Satyaki Roy
-        Chowdry and Aswathnarayanan Radhakrishnan, presented their work at the
+        Chowdhury and Aswathnarayanan Radhakrishnan, presented their work at the
         recent CSE Graduate Visit Day.
       </p>
       <p>
-        Satyaki Roy Chowdry presented <em>"From Bands to Depth: Understanding
+        Satyaki Roy Chowdhury presented <em>"From Bands to Depth: Understanding
         Bathymetry Decisions on Sentinel‑2,"</em> which examines the use of
         multispectral satellite data for depth estimation and improved
         understanding of aquatic environments.
@@ -313,9 +313,9 @@ export const events = [
       {
         type: "image",
         src: satyakiPoster,
-        alt: "Satyaki Roy Chowdry presenting his poster on bathymetry",
+        alt: "Satyaki Roy Chowdhury presenting his poster on bathymetry",
         caption:
-          "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
+          "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry.",
       },
       {
         type: "image",
@@ -342,7 +342,7 @@ export const events = [
 
     members: [
       {
-        name: "Satyaki Roy Chowdry",
+        name: "Satyaki Roy Chowdhury",
         profileUrl: "https://engineering.osu.edu/people/chowdhury.207",
       },
       {
