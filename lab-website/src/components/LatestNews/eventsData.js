@@ -17,6 +17,8 @@ import SatyakiAndAsh from "./images/SatyakiAndAsh.JPG"
 import SatyakiAndAsh2 from "./images/SatyakiAndAsh2.JPG"
 import SatyakiPresenting from "./images/SatyakiPresenting.JPG"
 import SatyakiPresenting2 from "./images/SatyakiPresenting2.JPG"
+import SatyakiWACV from "./images/Satyaki_WACV.jpg"
+
 
 
 export const events = [
@@ -243,7 +245,7 @@ export const events = [
       },
       {
         type: "image",
-        src: SatyakiPresenting2,
+        src: SatyakiWACV,
         alt: "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
         caption:
           "Satyaki Roy Chowdry presents his research on Sentinel‑2 bathymetry.",
