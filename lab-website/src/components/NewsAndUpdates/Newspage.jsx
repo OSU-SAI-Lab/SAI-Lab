@@ -1,7 +1,18 @@
 import { useState } from "react";
 import "./NewsPage.css";
 
+// Ordered newest-first for easy additions — just add new entries at the top
 const newsData = [
+  {
+    id: 11,
+    date: "2026-03-16",
+    title:
+      "Hari Subramoni Receives NVIDIA Academic Grant Program Award for Edge AI Crop Disease Detection",
+    description:
+      "Assistant Professor Hari Subramoni was awarded an NVIDIA Academic Grant for the project \"Deploying Edge AI for Crop Disease Detection at OSU Extension Offices,\" receiving 32K A100 GPU-hours and two Jetson AGX Orin Dev Kits to design farm-deployable edge computing systems across four Ohio counties.",
+    tag: "Award",
+    link: "https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/",
+  },
   {
     id: 1,
     date: "2026-01-27",
@@ -12,14 +23,24 @@ const newsData = [
     link: "https://icicle.osu.edu/news/2026/01/icicle-mentors-high-school-students-presidential-ai-challenge",
   },
   {
-    id: 2,
-    date: "2023-11-18",
+    id: 4,
+    date: "2025-04-28",
     title:
-      'NSF ICICLE Workshop "Unlocking the Potential of AI" at Central Ohio\'s One Day Hackathon',
+      "NSF ICICLE Faculty Members Receive Two Lumley Interdisciplinary Research Awards",
     description:
-      "ICICLE presented a workshop on AI at the High School I/O hackathon held at Columbus School for Girls, introducing high schoolers to the potential of artificial intelligence and ICICLE's research.",
-    tag: "Outreach",
-    link: "https://icicle.osu.edu/news/2023/12/november-2023-nsf-icicle-workshop-columbus-school-girls-part-central-ohios-one-day-hackathon-high-schoolers",
+      "ICICLE faculty were recognized with two Lumley Interdisciplinary Research Awards from Ohio State's College of Engineering, honoring outstanding collaborative research across departmental boundaries.",
+    tag: "Award",
+    link: "https://icicle.osu.edu/news/2025/04/nsf-icicle-faculty-members-receive-two-lumley-interdisciplinary-research-awards",
+  },
+  {
+    id: 7,
+    date: "2025-03-06",
+    title:
+      "Ohio Supercomputer Center Press Release: NSF ICICLE Project Helping Empower Farmers Through AI and HPC",
+    description:
+      "OSC highlighted ICICLE's work using drone imagery and AI-powered analysis to help farmers detect crop stress, optimize irrigation, and make data-driven decisions — demonstrating how AI can be democratized for non-tech industries.",
+    tag: "News",
+    link: "https://icicle.osu.edu/news/2025/03/ohio-supercomputer-center-osc-press-release-nsf-icicle-project-helping-empower-farmers-through-ai-and-hpc",
   },
   {
     id: 3,
@@ -31,16 +52,6 @@ const newsData = [
     tag: "Outreach",
     link: "https://www.youtube.com/watch?v=9-zxiB30jfk",
     recording: true,
-  },
-  {
-    id: 4,
-    date: "2025-04-28",
-    title:
-      "NSF ICICLE Faculty Members Receive Two Lumley Interdisciplinary Research Awards",
-    description:
-      "ICICLE faculty were recognized with two Lumley Interdisciplinary Research Awards from Ohio State's College of Engineering, honoring outstanding collaborative research across departmental boundaries.",
-    tag: "Award",
-    link: "https://icicle.osu.edu/news/2025/04/nsf-icicle-faculty-members-receive-two-lumley-interdisciplinary-research-awards",
   },
   {
     id: 5,
@@ -62,16 +73,6 @@ const newsData = [
     link: "https://icicle.osu.edu/news/2024/05/nsf-icicle-team-wins-third-place-isc24",
   },
   {
-    id: 7,
-    date: "2025-03-06",
-    title:
-      "Ohio Supercomputer Center Press Release: NSF ICICLE Project Helping Empower Farmers Through AI and HPC",
-    description:
-      "OSC highlighted ICICLE's work using drone imagery and AI-powered analysis to help farmers detect crop stress, optimize irrigation, and make data-driven decisions — demonstrating how AI can be democratized for non-tech industries.",
-    tag: "News",
-    link: "https://icicle.osu.edu/news/2025/03/ohio-supercomputer-center-osc-press-release-nsf-icicle-project-helping-empower-farmers-through-ai-and-hpc",
-  },
-  {
     id: 8,
     date: "2024-03-01",
     title: "NSF ICICLE & AIIRA Sign MOU to Strengthen Collaboration",
@@ -79,6 +80,16 @@ const newsData = [
       "ICICLE and the AI Institute for Resilient Agriculture (AIIRA) signed a Memorandum of Understanding to combine AIIRA's agricultural data collection with ICICLE's HPC-accelerated training solutions for AI models.",
     tag: "News",
     link: "https://icicle.osu.edu/news/2024/03/u.s.-national-science-foundation-nsf-icicle-aiira-sign-mou-strengthen-collaboration",
+  },
+  {
+    id: 2,
+    date: "2023-11-18",
+    title:
+      'NSF ICICLE Workshop "Unlocking the Potential of AI" at Central Ohio\'s One Day Hackathon',
+    description:
+      "ICICLE presented a workshop on AI at the High School I/O hackathon held at Columbus School for Girls, introducing high schoolers to the potential of artificial intelligence and ICICLE's research.",
+    tag: "Outreach",
+    link: "https://icicle.osu.edu/news/2023/12/november-2023-nsf-icicle-workshop-columbus-school-girls-part-central-ohios-one-day-hackathon-high-schoolers",
   },
   {
     id: 9,
