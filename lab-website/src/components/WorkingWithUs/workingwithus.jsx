@@ -54,6 +54,19 @@ function WorkingWithUs() {
           </div>
           <div className="section-content">
             <p className="intro-text">{workingWithUsData.undergraduate.intro}</p>
+            {/* Lab Structure */}
+            <div className="info-card" style={{ marginBottom: '1.5rem' }}>
+              <h3>Working With the Lab</h3>
+              <p>{workingWithUsData.undergraduate.labStructure.overview}</p>
+              <ul className="feature-list" style={{ marginTop: '1rem' }}>
+                {workingWithUsData.undergraduate.labStructure.points.map((point, idx) => (
+                  <li key={idx}>
+                    <span className="checkmark">✓</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
             
             <div className="info-grid">
               {/* Prerequisites */}
