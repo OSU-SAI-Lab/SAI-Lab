@@ -29,12 +29,17 @@ export const workingWithUsData = {
       "  • A brief presentation or demo of work to the group"
     ],
     labStructure: {
-  overview: "Students interested in working with the lab will usually start with an initial volunteer period, which gives them a chance to learn about the lab and gives me a chance to evaluate fit, commitment, and readiness. Students who show strong performance and engagement may then continue with me for course credit or in a paid role, depending on project needs and funding availability.",
+  overview:
+    "Students interested in working with the lab will usually start with an initial volunteer period, which gives them a chance to learn about the lab and gives me a chance to evaluate fit, commitment, and readiness.",
+
+  continuation:
+    "Students who show strong performance and engagement may then continue with me for course credit or in a paid role, depending on project needs and funding availability.",
+
   points: [
-    "The lab operates in a startup-like mode, the best fit is someone who is proactive, eager to learn, and comfortable stepping into new challenges",
-    "Students should expect to contribute at least 10–20 hours per week through a combination of research and development activities",
-    "Because our projects often involve collaboration with people from other disciplines, students should be open to interdisciplinary teamwork and learning from different domains",
-    "Some work may also involve field visits, testing, or data collection outside the lab environment"
+    "The lab operates in a startup-like mode. The best fit is someone who is proactive, eager to learn, and comfortable stepping into new challenges.",
+    "Students should expect to contribute at least 10–20 hours per week through a combination of research and development activities.",
+    "Because our projects often involve collaboration with people from other disciplines, students should be open to interdisciplinary teamwork and learning from different domains.",
+    "Some work may also involve field visits, testing, or data collection outside the lab environment."
   ]
 },
   },

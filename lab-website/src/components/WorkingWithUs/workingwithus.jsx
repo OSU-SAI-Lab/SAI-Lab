@@ -58,6 +58,7 @@ function WorkingWithUs() {
             <div className="info-card" style={{ marginBottom: '1.5rem' }}>
               <h3>Working With the Lab</h3>
               <p>{workingWithUsData.undergraduate.labStructure.overview}</p>
+              <p>{workingWithUsData.undergraduate.labStructure.continuation}</p>
               <ul className="feature-list" style={{ marginTop: '1rem' }}>
                 {workingWithUsData.undergraduate.labStructure.points.map((point, idx) => (
                   <li key={idx}>
