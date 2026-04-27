@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./NewsPage.css";
 
-// Ordered newest-first for easy additions — just add new entries at the top
+// Ordered newest-first for easy additions — just add new entries at the top - new comment and stuff
 const newsData = [
   {
     id: 11,
