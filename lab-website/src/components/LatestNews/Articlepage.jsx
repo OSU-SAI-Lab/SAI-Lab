@@ -3,7 +3,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { getArticleById } from "./eventsData";
-import "./articlepage.css";
+import "./Articlepage.css";
 
 export default function ArticlePage() {
   const { id } = useParams();
