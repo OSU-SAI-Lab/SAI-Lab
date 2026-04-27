@@ -1,5 +1,5 @@
 import React from "react";
-import "./EventsPage.css";
+import "./Modern_EventsPage.css";
 
 const OSUEventPage = () => {
     const calendarSrc = encodeURIComponent("b12c3144325ee668d013dcf7ee42ff7e2e804d104c5a2cf3669d39645db63c7e@group.calendar.google.com");
