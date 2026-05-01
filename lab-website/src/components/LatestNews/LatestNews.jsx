@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { events } from "./eventsData";
-import "./latestnews.css";
+import "./LatestNews.css";
 
 // Sort events by date, most recent first
 const sortedEvents = [...events].sort(

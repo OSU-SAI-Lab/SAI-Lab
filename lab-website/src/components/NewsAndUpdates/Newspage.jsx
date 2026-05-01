@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NewsPage.css";
+import "./Newspage.css";
 
 // Ordered newest-first for easy additions — just add new entries at the top - new comment and stuff
 const newsData = [

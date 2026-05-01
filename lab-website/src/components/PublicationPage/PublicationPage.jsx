@@ -19,7 +19,9 @@ export default function PublicationsPage() {
     "Technical Reports",
     "Ph.D. Dissertations",
     "M.S. Theses",
-    "B.S. Theses"
+    "M.S. Project",
+    "B.S. Honors Theses",
+    "B.S. Project"
   ];
 
   const filtered = useMemo(() => {
