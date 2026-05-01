@@ -396,3 +396,72 @@
     padding: 1.5rem;
   }
 }
+
+/* Accordion Styles */
+.accordion-container {
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3748;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: #edf2f7;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+}
+
+.role-grid {
+  display: grid;
+  /* Reduced the minmax width to 180px to accommodate the 4th column better */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Adding a subtle highlight to the expectations column to make it stand out */
+.role-grid div:last-child {
+  padding-left: 10px;
+  border-left: 2px solid #edf2f7;
+}
+
+.role-grid h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.role-grid ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #a0aec0;
+}
