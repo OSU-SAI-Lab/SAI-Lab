@@ -15,9 +15,9 @@ export const workingWithUsData = {
     applicationProcess: [
       "Schedule an initial meeting to discuss research interests in high-performance computing and how they align with current projects",
       "Prepare a brief 1–2 page document summarizing:",
-      "  • Relevant coursework and grades",
-      "  • Programming experience (HPC, MPI, CUDA/OpenMP if any)",
-      "  • Any prior project or internship experience"
+      "Relevant coursework and grades",
+      "Programming experience (HPC, MPI, CUDA/OpenMP if any)",
+      "Any prior project or internship experience"
     ],
     
     expectations: [
@@ -25,8 +25,8 @@ export const workingWithUsData = {
       "Maintain a research log (e.g., Lab's Git repo + shared notes) documenting tasks, experiments, and results every week",
       "Follow basic research professionalism: meet deadlines, communicate blockers early, and do not share code/data outside the group without permission",
       "At the end of each semester, prepare:",
-      "  • A short written summary of contributions",
-      "  • A brief presentation or demo of work to the group"
+      "A short written summary of contributions",
+      "A brief presentation or demo of work to the group"
     ],
     labStructure: {
   overview:
@@ -55,9 +55,9 @@ export const workingWithUsData = {
     
     applicationProcess: [
       "Schedule an initial meeting with an updated CV highlighting:",
-      "  • HPC, systems, networking, Deep Learning, or parallel programming experience",
-      "  • Prior research, theses, or publications (if any)",
-      "  • Preferred timeline (thesis vs non-thesis, graduation target)",
+      "HPC, systems, networking, Deep Learning, or parallel programming experience",
+      "Prior research, theses, or publications (if any)",
+      "Preferred timeline (thesis vs non-thesis, graduation target)",
       "Decide early whether you are targeting a thesis option and define a tentative research direction within the first semester"
     ],
     
@@ -70,8 +70,8 @@ export const workingWithUsData = {
     
     fundingRequirements: [
       "Before requesting funding discussions:",
-      "  • Demonstrate consistent productivity over ~2 semesters",
-      "  • Show ownership of a well-defined part of a project (design, implementation, or evaluation)"
+      "Demonstrate consistent productivity over ~2 semesters",
+      "Show ownership of a well-defined part of a project (design, implementation, or evaluation)"
     ]
   },
   k12: {
