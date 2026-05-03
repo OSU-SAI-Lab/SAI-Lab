@@ -1,104 +1,178 @@
+/* Container and Page Layout */
 .events-page {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.events-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  color: #333;
+}
+
+/* Grid Layout for Segregated Boxes */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* The "Rectangular Box" (Card) Styling */
+.event-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+/* Header within the card */
+.event-card-header {
+  padding: 12px 20px;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.event-sl {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.event-date {
+  flex-shrink: 0;
+  color: #444;
+}
+
+.event-location {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  text-align: right;
+}
+
+/* Content Area */
+.event-card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Tags appear above the title */
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.event-card-body h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.event-card-body h3 a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.event-card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+.event-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Tags for quick info */
+.tag {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Footer / Action Buttons */
+.event-card-footer {
+  padding: 15px 20px;
+  background: #fff;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ba0c2f;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+/* Theme variations for sections */
+.upcoming-theme .section-title {
+  border-bottom-color: #2e7d32;
+  color: #2e7d32;
+}
+
+.past-theme .section-title {
+  border-bottom-color: #856404;
+  color: #856404;
+}
+
+/* Empty State Styling */
+.no-events-card {
+  background: #f9f9f9;
+  border: 2px dashed #ddd;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .section-container {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  
-  .section-header {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .section-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  
-  /* Upcoming Theme (Green) */
-  .upcoming-theme .section-header {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-  }
-  
-  /* Past Theme (Yellow) */
-  .past-theme .section-header {
-    background-color: #fff9e6;
-    color: #856404;
-  }
-  
-  .section-content {
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  .conference-block {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .conference-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .blue-text {
-    color: #2b6cb0;
-  }
-  
-  .events-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-  
-  .events-table th {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 8px;
-    color: #666;
-    font-weight: 600;
-  }
-  
-  .date-row td {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    padding: 12px;
-    font-size: 1.1rem;
-  }
-  
-  .detail-row td {
-    padding: 15px 8px;
-    vertical-align: top;
+
+  .event-location {
+    margin-left: 0;
     text-align: left;
   }
-  
-  .event-title {
-    font-weight: 500;
-  }
-  
-  .event-type {
-    font-size: 0.8rem;
-    color: #555;
-    margin-top: 4px;
-  }
-  
-  @media (max-width: 768px) {
-    .events-table th { display: none; }
-    .detail-row td { 
-      display: block; 
-      width: 100%;
-      padding: 5px 15px;
-    }
-    .date-row td { text-align: center; }
-  }
+}

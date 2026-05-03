@@ -5,120 +5,109 @@ import icicleFlyer from '../../assets/pdf/icicle-webinar-series-feb-27.pdf';
 const EventsTab = () => {
   const upcomingEvents = [
     {
-      conference: "HARVEST-Vision: Second International Workshop on Applications of CV and HPC in Agriculture",
-      city: "Tucson, Arizona",
-      dates: "March 6, 2026",
-      link: "https://icicle-ai.github.io/harvest/",
-      sessions: [
-        {
-          dateLabel: "Wednesday, November 19",
-          time: "12:30PM - 1:00PM",
-          location: "Booth #414",
-          title: "Thor Ultra 800G AI Ethernet NIC",
-          type: "[Talk]",
-          speakers: "Hemal Shah, Broadcom"
-        }
-      ]
-    }
+      slNo: 1,
+      date: "May 5, 2026",
+      title: "Tutorial Using ICICLE Digital Agriculture Pipeline",
+      tags: ["Tutorial"],
+      location: "San Diego Supercomputer Center (SDSC) Auditorium, San Diego, CA",
+      link: "https://na.eventscloud.com/website/91919/agenda/",
+      description: "A hands-on tutorial on the ICICLE Digital Agriculture Pipeline, presented at the NRP Annual Meeting Tutorial Day.",
+    },
+    {
+      slNo: 2,
+      date: "May 6, 2026",
+      title: "AI Institute",
+      tags: ["Talk"],
+      location: "Qualcomm Institute (QI) Auditorium, San Diego, CA",
+      link: "https://na.eventscloud.com/website/91919/agenda/",
+      description: "A talk on the AI Institute, presented as part of the AI for Agriculture session at the NRP Annual Meeting.",
+    },
+    {
+      slNo: 3,
+      date: "May 6, 2026",
+      title: "Panel Discussion - AI for Agriculture",
+      tags: ["Panel"],
+      location: "Qualcomm Institute (QI) Auditorium, San Diego, CA",
+      link: "https://na.eventscloud.com/website/91919/agenda/",
+      description: "A panel discussion on AI for Agriculture featuring Ryan Dinubilo (F3 Innovate), Hari Subramoni (Ohio State University), and Konstantin Karydis (UC Riverside).",
+    },
   ];
 
   const pastEvents = [
     {
-      conference: "ICICLE Webinar: AI In Agriculture, AI-as-a-Service",
-      city: "Online",
-      dates: "February 27, 2026",
-      link: "https://www.youtube.com/watch?v=PN-J_Rbg15w",
-      flyer: icicleFlyer,
-      sessions: [
-        {
-          dateLabel: "Saturday, January 31",
-          time: "TBD",
-          location: "Main Hall",
-          title: "Parallel Programming Paradigms",
-          type: "[Keynote]",
-          speakers: "Lab Member Name"
-        }
-      ]
+      slNo: 1,
+      date: "March 6, 2026",
+      title: "HARVEST-Vision: Second International Workshop on Applications of CV and HPC in Agriculture",
+      tags: ["Workshop"],
+      location: "Tucson, Arizona",
+      link: "https://icicle-ai.github.io/harvest/",
+      description: "A workshop focused on the intersection of computer vision, high-performance computing, and agricultural technology.",
     },
     {
-      conference: "HARVEST: First International Workshop on Applications of HPC and AI in Agriculture",
-      city: "San Diego, CA",
-      dates: "September 9-10, 2025",
+      slNo: 2,
+      date: "February 27, 2026",
+      title: "ICICLE Webinar: AI In Agriculture, AI-as-a-Service",
+      tags: ["Presentation"],
+      location: "Online",
+      link: "https://www.youtube.com/watch?v=PN-J_Rbg15w",
+      flyer: icicleFlyer,
+      description: "Exploring the delivery of AI capabilities through service-oriented architectures in rural settings.",
+    },
+    {
+      slNo: 3,
+      date: "September 9–10, 2025",
+      title: "HARVEST: First International Workshop",
+      tags: ["Workshop"],
+      location: "San Diego, CA",
       link: "https://icicle-ai.github.io/harvest/#/past-events/2025",
-      sessions: [
-        {
-          dateLabel: "Saturday, January 31",
-          time: "TBD",
-          location: "Main Hall",
-          title: "Parallel Programming Paradigms",
-          type: "[Keynote]",
-          speakers: "Lab Member Name"
-        }
-      ]
-    }
+      description: "The inaugural workshop bringing together researchers in HPC and AI for agricultural innovation.",
+    },
   ];
 
-  const EventSection = ({ sectionTitle, events, themeClass }) => (
-    <div className={`section-container ${themeClass}`}>
-      <div className="section-header">
-        <h2>{sectionTitle}</h2>
+  const EventCard = ({ event }) => (
+    <div className="event-card">
+      <div className="event-card-header">
+        <span className="event-sl">#{event.slNo}</span>
+        <span className="event-date">{event.date}</span>
+        <span className="event-location">📍 {event.location}</span>
       </div>
-      <div className="section-content">
-        {events.map((event, idx) => (
-          <div key={idx} className="conference-block">
-            <h3 className="conference-title">
-              <span className="blue-text"><a href={event.link}>{event.conference}</a></span> — {event.city} ({event.dates})
-              {event.flyer && (
-                <span className="flyer-link"> | <a href={event.flyer} target="_blank" rel="noopener noreferrer">📄 Flyer</a></span>
-              )}
-            </h3>
-            
-            {/* <table className="events-table">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th>Event</th>
-                  <th>Speaker(s)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {event.sessions.map((session, sIdx) => (
-                  <React.Fragment key={sIdx}>
-                    <tr className="date-row">
-                      <td colSpan="4">{session.dateLabel}</td>
-                    </tr>
-                    <tr className="detail-row">
-                      <td>{session.time}</td>
-                      <td>{session.location}</td>
-                      <td>
-                        <div className="event-title">{session.title}</div>
-                        <div className="event-type">{session.type}</div>
-                      </td>
-                      <td>{session.speakers}</td>
-                    </tr>
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table> */}
-          </div>
-        ))}
+      <div className="event-card-body">
+        <div className="event-tags">
+          {event.tags?.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        </div>
+        <h3><a href={event.link} target="_blank" rel="noopener noreferrer">{event.title}</a></h3>
+        <p>{event.description}</p>
+      </div>
+      <div className="event-card-footer">
+        <a href={event.link} className="btn-link" target="_blank" rel="noopener noreferrer">View Event</a>
+        {event.flyer && (
+          <a href={event.flyer} className="btn-link secondary" target="_blank" rel="noopener noreferrer">📄 Flyer</a>
+        )}
       </div>
     </div>
   );
 
   return (
-    <div className="events-page">
-      <EventSection 
-        sectionTitle="Upcoming Events" 
-        events={upcomingEvents} 
-        themeClass="upcoming-theme" 
-      />
-      <EventSection 
-        sectionTitle="Past Events" 
-        events={pastEvents} 
-        themeClass="past-theme" 
-      />
+    <div className="events-container">
+      <section className="events-section upcoming-theme">
+        <h2 className="section-title">Upcoming Events</h2>
+        {upcomingEvents.length > 0 ? (
+          <div className="events-grid">
+            {upcomingEvents.map((e, i) => <EventCard key={i} event={e} />)}
+          </div>
+        ) : (
+          <div className="no-events-card">
+            <p>No upcoming events currently scheduled. Please check our Google Calendar for weekly social hours.</p>
+          </div>
+        )}
+      </section>
+
+      <section className="events-section past-theme">
+        <h2 className="section-title">Past Events</h2>
+        <div className="events-grid">
+          {pastEvents.map((e, i) => <EventCard key={i} event={e} />)}
+        </div>
+      </section>
     </div>
   );
 };

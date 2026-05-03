@@ -1,104 +1,163 @@
 /* Working With Us Page Styles */
 
-.working-with-us {
-  min-height: 100vh;
-  background: #fafafa;
+/* Root page wrapper — ensures no inherited transforms flip the content,
+   and pulls the hero flush against the navbar by negating any global
+   page-content top padding (adjust the value to match your layout's padding). */
+.working-with-us-page {
+  transform: none !important;
+  -webkit-transform: none !important;
+  direction: ltr !important;
+  margin-top: -2rem; /* negate global page-content padding-top — adjust if needed */
 }
 
-/* Hero Section
-.hero-section {
+/* 1. Hero Wrapper: Full width, flush against navbar (no gap) */
+.working-with-us-hero-container {
+  width: 100%;
   background: linear-gradient(135deg, #bb0000 0%, #8b0000 100%);
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-section h1 {
-  font-family: 'Crimson Pro', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  opacity: 0.95;
-  font-weight: 400;
-} */
-/* Fix inverted/mirrored text */
-.working-with-us .hero-section,
-.working-with-us .hero-section *,
-.working-with-us .hero-content,
-.working-with-us .hero-content * {
+  margin-top: 0;
+  padding-top: 0;
+  /* Explicitly undo any inherited flip transforms */
   transform: none !important;
   -webkit-transform: none !important;
 }
 
-/* Remove white gap */
-.working-with-us {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-/* .page-content {
-  padding-top: 0 !important;
-} */
-
-/* Remove padding-top from page-content for this page */
-.working-with-us {
-  margin-top: -80px;
-  padding-top: 80px; 
-}
-
-/* Hero Section - Reinforced */
-.working-with-us .hero-section {
-  background: linear-gradient(135deg, #bb0000 0%, #8b0000 100%) !important;
-  color: white !important;
-  padding: 4rem 2rem 3rem 2rem;
-  padding-top: 80px;
+.working-with-us-hero-container .hero-section {
+  padding: 4rem 2rem;
   text-align: center;
+  color: white;
   transform: none !important;
-  display: flex; 
-  justify-content: center;  
-  align-items: center;  
-  margin-top: -80px;
+  -webkit-transform: none !important;
 }
 
-
-.working-with-us .hero-content {
+.working-with-us-hero-container .hero-content {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  transform: none !important;
+  -webkit-transform: none !important;
 }
 
-.working-with-us .hero-section h1 {
-  color: white !important;
+.working-with-us-hero-container h1 {
   font-family: 'Crimson Pro', serif;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
   transform: none !important;
-  text-align: center;
+  -webkit-transform: none !important;
+  direction: ltr !important;
+  unicode-bidi: normal !important;
 }
 
-.working-with-us .hero-subtitle {
-  color: white !important;
+.working-with-us-hero-container .hero-subtitle {
   font-size: 1.25rem;
   opacity: 0.95;
+  color: white;
   transform: none !important;
-  text-align: center;
+  -webkit-transform: none !important;
+  direction: ltr !important;
+  unicode-bidi: normal !important;
 }
-/* Content Container */
+
+/* 2. Main content background */
+.working-with-us {
+  min-height: 100vh;
+  background: #fafafa;
+  flex: 1;
+  min-width: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* 3. Content Layout: flush below hero, no white gap */
+.working-with-us-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+/* 4. Content container */
 .content-container {
+  flex: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 0 2rem 3rem 2rem;
+}
+
+/* ─── Sticky side nav ─── */
+.side-nav {
+  width: 196px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 5rem;
+  align-self: flex-start;
+  padding: 1.25rem 0 1rem 0;
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.side-nav-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a0aec0;
+  margin: 0 0 0.75rem 1rem;
+  padding: 0;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #e2e8f0;
+}
+
+.side-nav ul li {
+  margin: 0;
+}
+
+.side-nav ul li button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #718096;
+  text-align: left;
+  transition: color 0.15s ease;
+  line-height: 1.4;
+}
+
+.side-nav ul li button:hover {
+  color: #2d3748;
+}
+
+.side-nav-indicator {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.side-nav ul li.active button {
+  color: #bb0000;
+  font-weight: 600;
+}
+
+.side-nav ul li.active .side-nav-indicator {
+  background: #bb0000;
 }
 
 /* Opportunity Sections */
@@ -333,70 +392,6 @@
   box-shadow: 0 4px 12px rgba(187,0,0,0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.25rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .content-container {
-    padding: 2rem 1.5rem;
-  }
-  
-  .opportunity-section {
-    padding: 1.75rem;
-  }
-  
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .section-header h2 {
-    font-size: 1.75rem;
-  }
-  
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .contact-icon {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 3rem 1.5rem;
-  }
-  
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  
-  .opportunity-section {
-    padding: 1.5rem;
-  }
-  
-  .section-header h2 {
-    font-size: 1.5rem;
-  }
-  
-  .apply-section {
-    padding: 1.5rem;
-  }
-}
-
 /* Accordion Styles */
 .accordion-container {
   margin-top: 1rem;
@@ -436,12 +431,10 @@
 
 .role-grid {
   display: grid;
-  /* Reduced the minmax width to 180px to accommodate the 4th column better */
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
 }
 
-/* Adding a subtle highlight to the expectations column to make it stand out */
 .role-grid div:last-child {
   padding-left: 10px;
   border-left: 2px solid #edf2f7;
@@ -464,4 +457,127 @@
 .arrow {
   font-size: 1.5rem;
   color: #a0aec0;
+}
+
+/* Make major headers look interactive */
+.section-header.collapsible {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.section-header.collapsible:hover {
+  background-color: #f7fafc;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-toggle-icon {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+  color: #a0aec0;
+}
+
+.section-toggle-icon.open {
+  transform: rotate(90deg);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure closed sections have minimal margin */
+.opportunity-section.is-closed {
+  margin-bottom: 10px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .side-nav {
+    width: 196px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    padding: 1.25rem 0 1rem 0;
+    margin-top: 2rem;
+  }
+
+  .working-with-us-layout {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .working-with-us-hero-container h1 {
+    font-size: 2.25rem;
+  }
+
+  .working-with-us-hero-container .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .content-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .opportunity-section {
+    padding: 1.75rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .working-with-us-hero-container .hero-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .working-with-us-hero-container h1 {
+    font-size: 2rem;
+  }
+
+  .opportunity-section {
+    padding: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .apply-section {
+    padding: 1.5rem;
+  }
 }
