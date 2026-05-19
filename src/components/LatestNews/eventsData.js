@@ -18,6 +18,7 @@ import SatyakiAndAsh2 from "./images/SatyakiAndAsh2.JPG"
 import SatyakiPresenting from "./images/SatyakiPresenting.JPG"
 import SatyakiPresenting2 from "./images/SatyakiPresenting2.JPG"
 import SatyakiWACV from "./images/Satyaki_WACV.jpg"
+import CSG from "./images/CSG.jpeg"
 
 
 
@@ -334,6 +335,65 @@ export const events = [
       },
     ],
   },
+  {
+  id: 5,
+  title: "SAI Lab and ICICLE Participate in An Evening of Inquiry at Columbus School for Girls",
+  type: "Outreach / Mentorship",
+  date: "April 2026",
+  time: null,
+  mode: "In-Person",
+  location: "Columbus School for Girls, Columbus, Ohio",
+  description:
+    "Faculty and students from the SAI Lab attended An Evening of Inquiry at the Columbus School for Girls on April 28, 2026, celebrating student-led research and K–12 engagement in AI.",
+  link: null,
+
+  author: "SAI Lab",
+  body: `
+    <p>
+      Faculty and students from the Systems and AI Lab recently attended in An Evening of Inquiry at the Columbus School for Girls on April 28, 2026, an event celebrating student‑led research, creativity, and interdisciplinary exploration. This collaboration was carried out under the ambit of the ICICLE AI Institute, which supports educational outreach and K–12 engagement in artificial intelligence and computing.
+    </p>
+    <p>
+      The evening featured a vibrant poster session highlighting projects from participants in the Presidential AI Challenge. Several students mentored by our lab presented their work, including Caroline Lanning, Iva Karagirova, Wendy Yi, and Kendall Leff. Their projects reflected a strong engagement with emerging AI concepts and demonstrated thoughtful application of computational methods to real‑world problems, aligned with ICICLE's mission to broaden access to AI education and research.
+    </p>
+    <p>
+      Our lab's involvement was led by graduate student Mrunal Hole, who coordinated mentorship and research support for the school's Presidential AI Challenge participants. Mrunal worked closely with undergraduate researchers Naveen Kamath and Rishi Makineni, who assisted with guidance, project development, and preparation for the poster session, all as part of ICICLE‑supported outreach activities. Their collaboration was supported on‑site by Lisa M. Abrams, PhD (she/her/hers), Computer Science and Math Faculty and Dean of Academics for the Upper School at Columbus School for Girls, whose leadership helped foster an inclusive and intellectually engaging environment.
+    </p>
+    <p>
+      The poster session provided an opportunity for meaningful dialogue between students, mentors, and attendees, reinforcing the value of mentorship and early research exposure in AI and systems. The evening concluded with a reception featuring live music and informal discussions, further strengthening connections between the school and the broader research community.
+    </p>
+    <p>
+      A group photograph captured the collaborative spirit of the event, featuring lead graduate student Mrunal Hole, undergraduate students Naveen Kamath and Rishi Makineni, Lisa M. Abrams, PhD, and participating students from Columbus School for Girls, all taking part under the ICICLE AI Institute's educational outreach initiative.
+    </p>
+    <p>
+      We are proud to support initiatives like the Presidential AI Challenge that empower young researchers and build pathways into computing and AI. Events like this reflect the growing importance of partnerships between academic research labs and K–12 institutions in shaping the future of technology and education under the umbrella of ICICLE AI Institute.
+    </p>
+  `,
+  media: [
+    {
+      type: "image",
+      src: CSG,
+      alt: "Group photo at An Evening of Inquiry at Columbus School for Girls",
+      caption:
+        "Lisa M. Abrams PhD, Mrunal Hole, Naveen Kamath, Rishi Makineni, and participating students from Columbus School for Girls at An Evening of Inquiry, April 28, 2026.",
+    },
+  ],
+  tags: ["Outreach", "Mentorship", "K-12", "AI Ethics", "ICICLE"],
+
+  members: [
+    {
+      name: "Mrunal Hole",
+      profileUrl: "https://www.linkedin.com/in/mrunalhole/",
+    },
+    {
+      name: "Naveen Kamath",
+      profileUrl: "https://kamaths.info",
+    },
+    {
+      name: "Rishi Makineni",
+      profileUrl: "https://www.linkedin.com/in/rishikesh-makineni/",
+    },
+  ],
+},
 ];
 
 // Helper lookup for ArticlePage: find by id from the URL param
