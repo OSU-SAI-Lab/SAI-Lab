@@ -365,7 +365,7 @@ export const events = [
       A group photograph captured the collaborative spirit of the event, featuring lead graduate student Mrunal Hole, undergraduate students Naveen Kamath and Rishi Makineni, Lisa M. Abrams, PhD, and participating students from Columbus School for Girls, all taking part under the ICICLE AI Institute's educational outreach initiative.
     </p>
     <p>
-      We are proud to support initiatives like the Presidential AI Challenge that empower young researchers and build pathways into computing and AI. Events like this reflect the growing importance of partnerships between academic research labs and K–12 institutions in shaping the future of technology and education under the umbrella of ICICLE AI Institute.
+      We are proud to support initiatives like the Presidential AI Challenge that empower young researchers and build pathways into computing and AI. Events like this reflect the growing importance of partnerships between academic research labs and K-12 institutions in shaping the future of technology and education under the umbrella of ICICLE AI Institute.
     </p>
   `,
   media: [
@@ -377,7 +377,7 @@ export const events = [
         "Lisa M. Abrams PhD, Mrunal Hole, Naveen Kamath, Rishi Makineni, and participating students from Columbus School for Girls at An Evening of Inquiry, April 28, 2026.",
     },
   ],
-  tags: ["Outreach", "Mentorship", "K-12", "AI Ethics", "ICICLE"],
+  tags: ["Outreach", "Mentorship", "K-12", "AI for Education", "ICICLE"],
 
   members: [
     {
