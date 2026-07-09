@@ -109,6 +109,15 @@ const newsData = [
     tag: "News",
     link: "https://icicle.osu.edu/news/2023/08/u.s.-national-science-foundation-ai-institutes-advances-optimization-ai4opt-and-intelligent-cyberinfrastructure-computational-learning-environment-icicle-sign-mou-strengthen-collaboration",
   },
+  {
+    id: 12,
+    date: "2026-05-05",
+    title: "Seventh National Research Platform (7NRP) Workshop at UC San Diego",
+    description:
+      "A three-day UC San Diego workshop featuring tutorials, technical talks, panels, and media on research cyberinfrastructure, AI, networking, education, and digital agriculture, including the ICICLE Digital Agriculture Pipeline tutorial.",
+    tag: "Outreach",
+    link: "https://nrp.ai/7nrp-workshop/",
+  },
 ];
 
 const FILTERS = ["All", "News", "Award", "Outreach"];

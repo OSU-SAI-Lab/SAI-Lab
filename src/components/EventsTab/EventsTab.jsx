@@ -36,6 +36,15 @@ const EventsTab = () => {
   const pastEvents = [
     {
       slNo: 1,
+      date: "May 5, 2026",
+      title: "Seventh National Research Platform (7NRP) Workshop",
+      tags: ["Workshop"],
+      location: "San Diego, CA",
+      link: "https://nrp.ai/7nrp-workshop/",
+      description: "A three-day UC San Diego workshop on research cyberinfrastructure, AI, networking, education, and digital agriculture."
+    },
+    {
+      slNo: 2,
       date: "March 6, 2026",
       title: "HARVEST-Vision: Second International Workshop on Applications of CV and HPC in Agriculture",
       tags: ["Workshop"],
@@ -44,7 +53,7 @@ const EventsTab = () => {
       description: "A workshop focused on the intersection of computer vision, high-performance computing, and agricultural technology.",
     },
     {
-      slNo: 2,
+      slNo: 3,
       date: "February 27, 2026",
       title: "ICICLE Webinar: AI In Agriculture, AI-as-a-Service",
       tags: ["Presentation"],
@@ -54,7 +63,7 @@ const EventsTab = () => {
       description: "Exploring the delivery of AI capabilities through service-oriented architectures in rural settings.",
     },
     {
-      slNo: 3,
+      slNo: 4,
       date: "September 9–10, 2025",
       title: "HARVEST: First International Workshop",
       tags: ["Workshop"],
