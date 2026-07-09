@@ -4,7 +4,10 @@ import icicleFlyer from '../../assets/pdf/icicle-webinar-series-feb-27.pdf';
 
 const EventsTab = () => {
   const upcomingEvents = [
-    {
+  ];
+
+  const pastEvents = [
+{
       slNo: 1,
       date: "May 5, 2026",
       title: "Tutorial Using ICICLE Digital Agriculture Pipeline",
@@ -31,20 +34,8 @@ const EventsTab = () => {
       link: "https://na.eventscloud.com/website/91919/agenda/",
       description: "A panel discussion on AI for Agriculture featuring Ryan Dinubilo (F3 Innovate), Hari Subramoni (Ohio State University), and Konstantin Karydis (UC Riverside).",
     },
-  ];
-
-  const pastEvents = [
     {
-      slNo: 1,
-      date: "May 5, 2026",
-      title: "Seventh National Research Platform (7NRP) Workshop",
-      tags: ["Workshop"],
-      location: "San Diego, CA",
-      link: "https://nrp.ai/7nrp-workshop/",
-      description: "A three-day UC San Diego workshop on research cyberinfrastructure, AI, networking, education, and digital agriculture."
-    },
-    {
-      slNo: 2,
+      slNo: 4,
       date: "March 6, 2026",
       title: "HARVEST-Vision: Second International Workshop on Applications of CV and HPC in Agriculture",
       tags: ["Workshop"],
@@ -53,7 +44,7 @@ const EventsTab = () => {
       description: "A workshop focused on the intersection of computer vision, high-performance computing, and agricultural technology.",
     },
     {
-      slNo: 3,
+      slNo: 5,
       date: "February 27, 2026",
       title: "ICICLE Webinar: AI In Agriculture, AI-as-a-Service",
       tags: ["Presentation"],
@@ -63,7 +54,7 @@ const EventsTab = () => {
       description: "Exploring the delivery of AI capabilities through service-oriented architectures in rural settings.",
     },
     {
-      slNo: 4,
+      slNo: 6,
       date: "September 9–10, 2025",
       title: "HARVEST: First International Workshop",
       tags: ["Workshop"],
