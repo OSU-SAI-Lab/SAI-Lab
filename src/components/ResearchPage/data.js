@@ -10,7 +10,7 @@ We design and deploy deep learning pipelines to analyze welding videos in real t
     status: "active",
     researchAreas: ["Computer Vision", "Deep Learning", "Applied Machine Learning", "Industrial AI"],
     domains: ["Smart Manufacturing", "Welding and Materials Engineering", "Industrial Automation"],
-    memberIds: [5],
+    memberIds: [6],  // Pratham Sharma
     publicationIds: [],
     fundingSource: "American Engineering and Manufacturing (AEM)",
     startDate: null,
@@ -28,7 +28,7 @@ The system enables users to upload and query their own documents, leveraging LLa
     status: "active",
     researchAreas: ["Large Language Models", "Retrieval-Augmented Generation", "Natural Language Processing", "Information Retrieval"],
     domains: ["Applied AI", "Knowledge Systems"],
-    memberIds: [5],
+    memberIds: [6],  // Pratham Sharma
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -44,7 +44,7 @@ The system enables users to upload and query their own documents, leveraging LLa
     status: "active",
     researchAreas: ["Computer Vision", "Applied Machine Learning", "Data Engineering", "Distributed Computation"],
     domains: ["Agriculture"],
-    memberIds: [7],
+    memberIds: [8],  // Harikesh Byrandurga Gopinath
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -64,7 +64,7 @@ By integrating visual intelligence with geospatial data engineering, the system 
     status: "active",
     researchAreas: ["Computer Vision", "Object Detection", "Image Classification", "Geospatial Data Processing", "Remote Sensing", "Precision Agriculture"],
     domains: ["Digital Agriculture", "Smart Farming", "Applied Artificial Intelligence"],
-    memberIds: [8],
+    memberIds: [17],  // Parth Gupta
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -88,7 +88,7 @@ To ensure high accuracy, the matching system utilizes multiple gates and confide
     status: "active",
     researchAreas: ["Computer Vision", "Few-Shot/Zero-Shot Learning", "Active Learning", "Foundation Models"],
     domains: ["ML Infrastructure", "Data Annotation", "Full Stack Engineering"],
-    memberIds: [6],
+    memberIds: [7],  // Brijesh Nanda
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -113,7 +113,7 @@ The goal is end-to-end, reliable geospatial AI that bridges data collection, gen
     status: "active",
     researchAreas: ["Geospatial AI", "Computer Vision", "Diffusion Models", "Monocular Depth Estimation", "Multi-modal Remote Sensing", "Domain Adaptation", "Uncertainty Quantification", "Semi-Supervised Learning"],
     domains: ["Satellite Imagery", "Aerial Imagery", "Bathymetry", "Digital Agriculture", "Environmental Monitoring", "Earth Observation", "GIS Systems"],
-    memberIds: [2],
+    memberIds: [2],  // Anirudh Potlapally
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -131,7 +131,7 @@ A central challenge is the lack of dense pixel-level annotations needed to train
     status: "active",
     researchAreas: ["Computer Vision", "Semantic Segmentation", "Weakly Supervised Learning", "Precision Agriculture"],
     domains: ["Agronomy", "Soil Conservation", "Tillage/Residue Management", "Field Robotics & Sensing"],
-    memberIds: [9],
+    memberIds: [18],  // Yathish Mahadevappa
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -153,7 +153,7 @@ By combining geospatial ML with uncertainty quantification and an accessible web
     status: "active",
     researchAreas: ["Geospatial Machine Learning", "Probabilistic Modeling", "Human‑Centered Decision Support", "Data Integration & Fusion"],
     domains: ["Agricultural Conservation", "Environmental Policy", "Water Quality & Nutrient Management", "Precision Agriculture"],
-    memberIds: [10],
+    memberIds: [19],  // Khushboo Mundada
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -169,7 +169,7 @@ By combining geospatial ML with uncertainty quantification and an accessible web
     status: "active",
     researchAreas: ["Computer Vision", "Remote Sensing"],
     domains: ["Agroforestry", "Deep Learning", "Remote Sensing"],
-    memberIds: [2],
+    memberIds: [2],  // Anirudh Potlapally
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -202,7 +202,7 @@ The project contributes toward scalable geospatial perception systems applicable
       "Terrain Analysis",
       "UAV/Drone Imaging"
     ],
-    memberIds: [11, 3],  // Mrunal Hole (11), Aswathnarayan Radhakrishnan (3)
+    memberIds: [20, 3],  // Mrunal Hole (20), Aswathnarayan Radhakrishnan (3)
     publicationIds: [],
     fundingSource: null,
     startDate: null,
@@ -236,7 +236,7 @@ Designed with scalability, testability, and reproducibility in mind, DigitalAgEd
       "Curriculum Design",
       "STEM Education"
     ],
-    memberIds: [11],  // Mrunal Hole
+    memberIds: [20],  // Mrunal Hole
     publicationIds: [],
     fundingSource: "Presidential AI Challenge",
     startDate: null,
@@ -268,7 +268,7 @@ This initiative bridges cutting-edge AI research with K-12 STEM education, demon
       "STEM Mentorship",
       "AI for Social Good"
     ],
-    memberIds: [11, 12, 13],  // Mrunal Hole (11), Naveen Kamath (12), Rishi Makineni (13)
+    memberIds: [20, 11],  // Mrunal Hole (20), Naveen Kamath (11)
     publicationIds: [],
     fundingSource: "Presidential AI Challenge",
     startDate: null,

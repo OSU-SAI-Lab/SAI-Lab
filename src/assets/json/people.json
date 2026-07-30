@@ -1,0 +1,424 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Dr. Hari Subramoni",
+      "role": "faculty",
+      "title": "Assistant Professor",
+      "department": "Computer Science and Engineering",
+      "photo": "Hari.png",
+      "location": "Dreese Labs 395",
+      "website": "https://cse.osu.edu/people/subramoni.1",
+      "email": "subramoni.1@osu.edu",
+      "interests": [
+        "High-Performance Computing",
+        "High-Performance Interconnects and Protocols",
+        "Parallel Programming Models",
+        "Message Passing Interface",
+        "Distributed Deep Learning",
+        "Digital Agriculture",
+        "Conversational Interfaces"
+      ],
+      "projects": [
+        "Scalable ML Infrastructure",
+        "HPC Optimization",
+        "Distributed Training Systems"
+      ],
+      "publications": "https://scholar.google.com/citations?user=ykYaLmAAAAAJ&hl=en"
+    },
+    {
+      "id": 2,
+      "name": "Anirudh Potlapally",
+      "role": "phd",
+      "title": "PhD Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Anirudh.jpg",
+      "location": "Dreese Labs 480",
+      "website": "https://www.linkedin.com/in/anirudh-potlapally-30659a1ab/",
+      "email": "potlapally.2@buckeyemail.osu.edu",
+      "interests": [
+        "AI for Science",
+        "ML Systems",
+        "Multimodal Foundation Models",
+        "High-Performance Computing for AI",
+        "Efficient Inference"
+      ],
+      "projects": [
+        "WILD-OV: Modular multi-modal vision pipeline for weakly supervised localization and few-shot object detection in domain-specific imagery.",
+        "SmartWilds: Heterogeneous edge-to-cloud multimodal AI system for large-scale wildlife monitoring using camera traps, UAVs, and bioacoustic sensors.",
+        "HARVEST: HPC-driven AI infrastructure for semi-supervised learning, efficient training, large-scale inference, and visualization in precision agriculture."
+      ],
+      "publications": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://scholar.google.com/citations%3Fuser%3DizzBqmcAAAAJ%26hl%3Den&ved=2ahUKEwjp5LPC2s2SAxWJGDQIHc_ZEeUQFnoECBsQAQ&usg=AOvVaw0WqcnKdtwPqewvf3c9mrV_"
+    },
+    {
+      "id": 3,
+      "name": "Aswathnarayan Radhakrishnan",
+      "role": "phd",
+      "title": "PhD Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Aswath.jpeg",
+      "location": "Dreese Labs 480",
+      "website": "https://www.linkedin.com/in/radhakrishnan97/",
+      "email": "radhakrishnan.39@buckeyemail.osu.edu",
+      "interests": [
+        "Spatio-Temporal Geospatial AI",
+        "Multimodal Earth Observation",
+        "Domain Adaptation and Semi-Supervised Learning",
+        "Diffusion and Generative Models",
+        "Scalable Geospatial AI Systems"
+      ],
+      "projects": [
+        "Geoharmonizer Workflow Orchestrator: An HPC-native library and CLI for transforming heterogeneous geospatial data into AI-ready multidimensional data cubes through low-code, end-to-end workflow orchestration."
+      ],
+      "publications": "https://scholar.google.com/citations?user=A-SUUsoAAAAJ&hl=en"
+    },
+    {
+      "id": 4,
+      "name": "Satyaki Roy Chowdhury",
+      "role": "phd",
+      "title": "PhD Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Satyaki.jpeg",
+      "location": "Dreese Labs 481",
+      "website": "https://satyakiroy10.github.io",
+      "email": "chowdhury.207@osu.edu",
+      "interests": [
+        "Computer Vision",
+        "Representation Learning",
+        "Inverse Problems",
+        "Efficient Generative Modelling"
+      ],
+      "projects": [
+        "Agroforestry change monitoring in Uganda.",
+        "Remote Sensing Image Super-Resolution"
+      ],
+      "publications": "https://scholar.google.com/citations?user=8BDLY10AAAAJ&hl=en"
+    },
+    {
+      "id": 5,
+      "name": "Shyama Kumari Arunachalam",
+      "role": "phd",
+      "title": "PhD Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Shyama.jpeg",
+      "location": "Dreese Labs 486",
+      "email": "arunachalam.31@osu.edu",
+      "website": "https://www.linkedin.com/in/shyama-arunachalam/",
+      "interests": [
+        "AI for Software Engineering",
+        "AI in Agriculture",
+        "Language Models"
+      ],
+      "projects": [
+        "Building a Workflow Orchestrator to run customizable end-to-end model training, inference, and visualization pipelines."
+      ],
+      "publications": null
+    },
+    {
+      "id": 6,
+      "name": "Pratham Sharma",
+      "role": "masters",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Pratham.jpeg",
+      "location": "Dreese Labs 482",
+      "website": "https://www.linkedin.com/in/prathamsharma22/",
+      "email": "sharma.1460@buckeyemail.osu.edu",
+      "interests": [
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
+        "Artificial Intelligence"
+      ],
+      "projects": [
+        "- AI enabled fault detection in welding industry.",
+        "- RAG based chatbot for agricultural use case."
+      ],
+      "publications": null
+    },
+    {
+      "id": 7,
+      "name": "Brijesh Nanda",
+      "role": "employee",
+      "title": "Employee",
+      "department": "Computer Science and Engineering",
+      "photo": "Brijesh.JPG",
+      "location": "Dreese Labs 482",
+      "website": "https://brijesh-nanda-by.github.io/Portfolio/",
+      "email": "brundayogananda.1@buckeyemail.osu.edu",
+      "interests": [
+        "Computer Vision - Object detection and Auto-Labelling"
+      ],
+      "projects": [
+        "Advanced Object Detection Pipeline capable of Zero-Shot and Few-Shot annotation using Foundation Models like SAM3. The system supports multi-modal inputs—including segmentation-assisted and text-prompt based detection—and features a visual optimization suite. This allows users to interactively fine-tune critical hyperparameters, such as patch sizes and confidence thresholds, using real-time graphical feedback to ensure annotation precision."
+      ],
+      "publications": null
+    },
+    {
+      "id": 8,
+      "name": "Harikesh Byrandurga Gopinath",
+      "role": "masters",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Harikesh.jpg",
+      "location": "Dreese Labs 483",
+      "email": "byrandurgagopinath.1@buckeyemail.osu.edu",
+      "website": "https://www.linkedin.com/in/harikesh-gopinath",
+      "interests": [
+        "Distributed Systems",
+        "Microservices",
+        "Machine Learning",
+        "HPC Systems",
+        "Databases"
+      ],
+      "projects": [
+        "Lab Website Development",
+        "Research Data Platform"
+      ],
+      "publications": "https://ijisae.org/index.php/IJISAE/article/view/2210"
+    },
+    {
+      "id": 9,
+      "name": "Geethasri Devarajan Shanmugam",
+      "role": "masters",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Geethasri.jpg",
+      "location": "Dreese Labs 485",
+      "email": "devarajanshanmugam.1@osu.edu",
+      "website": "https://www.linkedin.com/in/geethasri-d/",
+      "interests": [
+        "Computer Vision",
+        "Natural Language Processing",
+        "HPC"
+      ],
+      "projects": [
+        "Fertiliser Pellet Mass Estimation"
+      ],
+      "publications": null
+    },
+    {
+      "id": 10,
+      "name": "Anagha Kalyanaraman",
+      "role": "masters",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Anagha.png",
+      "location": "Dreese Labs 486",
+      "email": "anaghakalyanaraman.1@osu.edu",
+      "website": "https://www.linkedin.com/in/anaghakalyanaraman/",
+      "interests": [
+        "Machine Learning Systems",
+        "Distributed Training",
+        "Large Language Models (LLMs)",
+        "Full-Stack AI Application Development"
+      ],
+      "projects": [
+        "Building a modular training framework for the ICICLE-AI Workflow Orchestrator that supports YOLO and Hugging Face models for classification, detection, and segmentation, with automated job submission on OSC through Tapis."
+      ],
+      "publications": null
+    },
+    {
+      "id": 11,
+      "name": "Naveen Kamath",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Computer Science and Engineering",
+      "photo": "Naveens_Headshot.jpg",
+      "location": "Dreese Labs 486",
+      "website": "https://kamaths.info",
+      "email": "kamath.62@osu.edu",
+      "interests": [
+        "Computer Vision",
+        "Deep Learning",
+        "Cloud Computing"
+      ],
+      "projects": [
+        "Mentoring Columbus School for Girls in Presidential AI Challenge",
+        "Maintaining SAI Lab Website"
+      ],
+      "publications": null
+    },
+    {
+      "id": 12,
+      "name": "Amrithaa Ashok Kumar",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Computer Science and Engineering",
+      "photo": "Amrithaa.jpg",
+      "location": "Dreese Labs 486",
+      "website": "https://www.linkedin.com/in/amrithaa-ak/",
+      "email": "ashokkumar.15@osu.edu",
+      "interests": [
+        "Mechanistic interpretability",
+        "Agentic Systems",
+        "AI for Science"
+      ],
+      "projects": [
+        "building an end-to-end retrieval-augmented agricultural AI assistant and developing an unsupervised SAR-based pipeline for crop classification and cultivated-area estimation in rural areas"
+      ],
+      "publications": "https://scholar.google.com/citations?user=8A-nVDsAAAAJ&hl=en"
+    },
+    {
+      "id": 13,
+      "name": "Jason Seh",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Computer Science and Engineering",
+      "photo": "Jason.jpeg",
+      "location": "Dreese Labs 486",
+      "email": "undergrad2@osu.edu",
+      "website": "https://jason-seh-portfolio.vercel.app/",
+      "interests": [
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "projects": [
+        "DigitalAgEdu - AI Curriculum Generation"
+      ],
+      "publications": null
+    },
+    {
+      "id": 14,
+      "name": "Qifeng Chen",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Electrical and Computer Engineering",
+      "photo": "Qifeng.jpg",
+      "location": "Dreese Labs 486",
+      "email": "chen.13967@osu.edu",
+      "website": "https://www.linkedin.com/in/qifeng-chen-4a8115323/",
+      "interests": [],
+      "projects": [
+        "To be updated"
+      ],
+      "publications": null
+    },
+    {
+      "id": 15,
+      "name": "Maanav Jajodia",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Computer Science and Engineering",
+      "photo": "Maanav.png",
+      "location": "Dreese Labs 486",
+      "email": "maanavjajodia@gmail.com",
+      "website": "https://www.linkedin.com/in/maanavj18",
+      "interests": [
+        "Computer Vision",
+        "Artificial Intelligence",
+        "Machine Learning"
+      ],
+      "projects": [
+        "To be updated"
+      ],
+      "publications": null
+    },
+    {
+      "id": 16,
+      "name": "Aashi Sharma",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "department": "Computer Science and Engineering",
+      "photo": "aashi_sharma.png",
+      "location": "Dreese Labs 486",
+      "email": "sharma.1488@osu.edu",
+      "website": "https://www.linkedin.com/in/aashi-s-9199152b8/",
+      "interests": [
+        "Artificial Intelligence",
+        "Large Language Models",
+        "Retrieval-Augmented Generation"
+      ],
+      "projects": [
+        "RAG-Based Conversational AI Chatbot for OSU Extension Agents"
+      ],
+      "publications": null
+    },
+    {
+      "id": 17,
+      "name": "Parth Gupta",
+      "role": "past",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "prof_parth.png",
+      "location": "Dreese Labs 483",
+      "email": "gupta.1543@osu.edu",
+      "website": "https://www.linkedin.com/in/parth-gupta-7a1685196/",
+      "interests": [
+        "Computer Vision",
+        "Deep Learning",
+        "Software Engineering"
+      ],
+      "projects": [
+        "Digital Agriculture Pipeline (Harvest), GPU Multi-Instance Inference for Improved Utilization and Throughput."
+      ],
+      "publications": null
+    },
+    {
+      "id": 18,
+      "name": "Yathish Mahadevappa",
+      "role": "past",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Yathish.jpeg",
+      "location": "Dreese Labs 484",
+      "email": "shiradanahallimahadevappa.1@osu.edu",
+      "website": "http://www.linkedin.com/in/yathish-mahadevappa-171645240",
+      "interests": [
+        "Computer Vision",
+        "Deep Learning",
+        "Machine Learning",
+        "Digital Agriculture"
+      ],
+      "projects": [
+        "Vision-Based Pipeline for Accurate Corn Residue Cover and Soil Aggregate size Estimation in Agricultural Fields."
+      ],
+      "publications": null
+    },
+    {
+      "id": 19,
+      "name": "Khushboo Mundada",
+      "role": "past",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "khush.png",
+      "location": "Dreese Labs 484",
+      "email": "mundada.10@osu.edu",
+      "website": "https://www.linkedin.com/in/khushboo10/",
+      "interests": [
+        "Geospatial Analytics",
+        "Natural Language Processing",
+        "High-Performance Computing",
+        "AWS Deployment"
+      ],
+      "projects": [
+        "Policy Regime Database, Agricultural ML Pipeline Deployment"
+      ],
+      "publications": null
+    },
+    {
+      "id": 20,
+      "name": "Mrunal Hole",
+      "role": "past",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Mrunal.png",
+      "location": "Dreese Labs 485",
+      "email": "hole.17@osu.edu",
+      "website": "https://www.linkedin.com/in/mrunalhole/",
+      "interests": [
+        "Geospatial Machine Learning",
+        "Computer Vision",
+        "Precision Digital Agriculture",
+        "Cloud Computing"
+      ],
+      "projects": [
+        "Monocular depth estimation for outdoor scenes using geospatial context and drone imagery",
+        "Computer vision–based methods for precision digital agriculture",
+        "Exploratory data analysis and optimization of geospatial datasets"
+      ],
+      "publications": null
+    }
+  ]
+}

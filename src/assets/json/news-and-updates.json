@@ -1,0 +1,132 @@
+{
+  "items": [
+    {
+      "id": 13,
+      "date": "2026-07-22",
+      "title": "ICICLE Team Presents AI & Cyberinfrastructure at ExploreAg Technology Camp",
+      "description": "SAI Lab / ICICLE members presented AI and cyberinfrastructure tools to high school students at ExploreAg — Ag Technology Camp, with hands-on demos of Smart Labeling, Segmentation, and Intelligent Edge Management services.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>Institute team members Brijesh Nanda B Y, Harikesh Byrandurga Gopinath, Qifeng Chen, Aswathnarayan Radhakrishnan and Neelima Savardekar had the privilege of presenting at the ExploreAg - Ag Technology Camp in Columbus, Ohio and represent NSF ICICLE AI Institute.</p><p>Discussed how cutting-edge technology—from precision data to automation—is actively changing the way we grow, harvest, and sustain our food supply. This was an excellent opportunity for the high school students to get their hands on ICICLE's AI &amp; CI Service pipeline using <a href=\"https://icicle-ai.github.io/training-catalog/docs/Smart%20Labeling%20Service%20for%20Object%20Detection/explanation\" target=\"_blank\" rel=\"noopener noreferrer\">Smart Labeling Service</a>, Segmentation Service &amp; Intelligent Edge Management Service to process images.</p><p>Talked all things ag tech, explored real-world applications, and looked at where the industry is heading next. Incredible energy from the students exploring how tech and STEM drive modern farming.</p><p>A huge thank you to the ExploreAg team at Ohio Farm Bureau, Ohio State University College of Food, Agricultural, and Environmental Sciences (CFAES Food, Agricultural and Biological Engineering Department) for hosting such a high-impact experience for the high school students as they look at various career pathways related to food and agriculture in Ohio.</p>",
+      "media": [
+        {"type":"image","srcKey":"ExploreAg1","alt":"Group photo at ExploreAg - Ag Technology Camp","caption":"Group photo at ExploreAg - Ag Technology Camp."},
+        {"type":"image","srcKey":"ExploreAg2","alt":"ICICLE's AI & CI Service pipeline using Smart Labeling Service","caption":"ICICLE's AI & CI Service pipeline using Smart Labeling Service."},
+        {"type":"image","srcKey":"ExploreAg3","alt":"Harikesh is presenting the ICICLE's Segmentation Service & Intelligent Edge Management Service to process images.","caption":"Harikesh is presenting the ICICLE's Segmentation Service & Intelligent Edge Management Service to process images."},
+        {"type":"image","srcKey":"ExploreAg4","alt":"Team Introduction at ExploreAg - Ag Technology Camp","caption":"Team Introduction at ExploreAg - Ag Technology Camp"}
+      ],
+      "members": [
+        {"name":"Brijesh Nanda","profileUrl":"https://brijesh-nanda-by.github.io/Portfolio/"},
+        {"name":"Harikesh Byrandurga Gopinath","profileUrl":"https://www.linkedin.com/in/harikesh-gopinath"},
+        {"name":"Qifeng Chen","profileUrl":"https://www.linkedin.com/in/qifeng-chen-4a8115323/"},
+        {"name":"Aswathnarayan Radhakrishnan","profileUrl":"https://www.linkedin.com/in/radhakrishnan97/"}
+      ]
+    },
+    {
+      "id": 11,
+      "date": "2026-03-16",
+      "title": "Hari Subramoni Receives NVIDIA Academic Grant Program Award for Edge AI Crop Disease Detection",
+      "description": "Assistant Professor Hari Subramoni was awarded an NVIDIA Academic Grant for the project \"Deploying Edge AI for Crop Disease Detection at OSU Extension Offices,\" receiving 32K A100 GPU-hours and two Jetson AGX Orin Dev Kits to design farm-deployable edge computing systems across four Ohio counties.",
+      "tag": "Award",
+      "link": "https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/"
+    },
+    {
+      "id": 1,
+      "date": "2026-01-27",
+      "title": "ICICLE Mentors High School Students for the Presidential AI Challenge",
+      "description": "ICICLE team members mentored high school students participating in the Presidential AI Challenge, a national initiative encouraging K-12 youth to develop AI-powered solutions addressing community challenges.",
+      "tag": "Outreach",
+      "link": "https://icicle.osu.edu/news/2026/01/icicle-mentors-high-school-students-presidential-ai-challenge"
+    },
+    {
+      "id": 4,
+      "date": "2025-04-28",
+      "title": "NSF ICICLE Faculty Members Receive Two Lumley Interdisciplinary Research Awards",
+      "description": "ICICLE faculty were recognized with two Lumley Interdisciplinary Research Awards from Ohio State's College of Engineering, honoring outstanding collaborative research across departmental boundaries.",
+      "tag": "Award",
+      "link": "https://icicle.osu.edu/news/2025/04/nsf-icicle-faculty-members-receive-two-lumley-interdisciplinary-research-awards"
+    },
+    {
+      "id": 7,
+      "date": "2025-03-06",
+      "title": "Ohio Supercomputer Center Press Release: NSF ICICLE Project Helping Empower Farmers Through AI and HPC",
+      "description": "OSC highlighted ICICLE's work using drone imagery and AI-powered analysis to help farmers detect crop stress, optimize irrigation, and make data-driven decisions — demonstrating how AI can be democratized for non-tech industries.",
+      "tag": "News",
+      "link": "https://icicle.osu.edu/news/2025/03/ohio-supercomputer-center-osc-press-release-nsf-icicle-project-helping-empower-farmers-through-ai-and-hpc"
+    },
+    {
+      "id": 3,
+      "date": "2025-02-27",
+      "title": "NSF ICICLE Webinar: AI-enabled Digital Agriculture — An Overview of ICICLE Software Components",
+      "description": "A webinar covering ICICLE's software components including HARVEST, Open Pass & ArrayMorph, demonstrating how AI-enabled tools are advancing digital agriculture research and practice.",
+      "tag": "Outreach",
+      "link": "https://www.youtube.com/watch?v=9-zxiB30jfk",
+      "recording": true
+    },
+    {
+      "id": 5,
+      "date": "2024-09-01",
+      "title": "Hari Subramoni Receives the Prestigious Intel Rising Star Faculty Award",
+      "description": "Assistant Professor Hari Subramoni was named one of just 8 recipients nationally of the 2024 Intel Rising Star Faculty Award, recognizing his work on HPC systems for AI and democratizing AI for agriculture.",
+      "tag": "Award",
+      "link": "https://icicle.osu.edu/news/2024/09/nsf-icicle-faculty-member-hari-subramoni-receives-prestigious-intel-rising-star-award"
+    },
+    {
+      "id": 6,
+      "date": "2024-05-01",
+      "title": "NSF ICICLE Team Wins Third Place at ISC24",
+      "description": "The ICICLE team earned third place at ISC High Performance 2024 in Hamburg, Germany for their research poster in the High Performance Computing category.",
+      "tag": "Award",
+      "link": "https://icicle.osu.edu/news/2024/05/nsf-icicle-team-wins-third-place-isc24"
+    },
+    {
+      "id": 8,
+      "date": "2024-03-01",
+      "title": "NSF ICICLE & AIIRA Sign MOU to Strengthen Collaboration",
+      "description": "ICICLE and the AI Institute for Resilient Agriculture (AIIRA) signed a Memorandum of Understanding to combine AIIRA's agricultural data collection with ICICLE's HPC-accelerated training solutions for AI models.",
+      "tag": "News",
+      "link": "https://icicle.osu.edu/news/2024/03/u.s.-national-science-foundation-nsf-icicle-aiira-sign-mou-strengthen-collaboration"
+    },
+    {
+      "id": 2,
+      "date": "2023-11-18",
+      "title": "NSF ICICLE Workshop \"Unlocking the Potential of AI\" at Central Ohio's One Day Hackathon",
+      "description": "ICICLE presented a workshop on AI at the High School I/O hackathon held at Columbus School for Girls, introducing high schoolers to the potential of artificial intelligence and ICICLE's research.",
+      "tag": "Outreach",
+      "link": "https://icicle.osu.edu/news/2023/12/november-2023-nsf-icicle-workshop-columbus-school-girls-part-central-ohios-one-day-hackathon-high-schoolers"
+    },
+    {
+      "id": 9,
+      "date": "2023-10-01",
+      "title": "OSC Hosts NSF ICICLE Meeting: Planning Year Three of the AI Project",
+      "description": "The Ohio Supercomputer Center hosted a planning meeting for NSF ICICLE's third year, bringing together researchers and partners to chart the next phase of the AI institute's work.",
+      "tag": "News",
+      "link": "https://icicle.osu.edu/news/2023/10/osc-hosts-nsf-icicle-meeting-planning-year-three-artificial-intelligence-project"
+    },
+    {
+      "id": 10,
+      "date": "2023-08-01",
+      "title": "NSF AI Institutes AI4OPT and ICICLE Sign MOU to Strengthen Collaboration",
+      "description": "ICICLE partnered with the AI Institute for Advances in Optimization (AI4OPT) through a formal MOU, combining expertise in intelligent cyberinfrastructure and computational learning with optimization research.",
+      "tag": "News",
+      "link": "https://icicle.osu.edu/news/2023/08/u.s.-national-science-foundation-ai-institutes-advances-optimization-ai4opt-and-intelligent-cyberinfrastructure-computational-learning-environment-icicle-sign-mou-strengthen-collaboration"
+    },
+    {
+      "id": 12,
+      "date": "2026-05-05",
+      "title": "Hari Subramoni Presents ICICLE Digital Agriculture and AI at the 7NRP Workshop",
+      "description": "NSF ICICLE faculty member Hari Subramoni presented ICICLE's Digital Agriculture Pipeline, introduced the institute's AI and cyberinfrastructure research, and participated in a panel discussion on AI and robotics in agriculture at the Seventh National Research Platform Workshop.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>NSF ICICLE faculty member Hari Subramoni represented The Ohio State University and the NSF ICICLE AI Institute at the Seventh National Research Platform (7NRP) Workshop, held May 5–7, 2026, at the University of California San Diego in La Jolla, California.</p><p>On May 5, Hari led the tutorial <a href=\"https://www.youtube.com/watch?v=aWNKyELFJOs\" target=\"_blank\" rel=\"noopener noreferrer\">Using ICICLE Digital Agriculture Pipeline</a>. The session introduced ICICLE's end-to-end digital agriculture workflow, connecting field data collection and processing with artificial intelligence and high-performance computing resources.</p><iframe width=\"100%\" height=\"360\" src=\"https://www.youtube.com/embed/aWNKyELFJOs\" title=\"Using ICICLE Digital Agriculture Pipeline\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><p>On May 6, Hari delivered a presentation titled <a href=\"https://www.youtube.com/watch?v=a4FDUwRPWJc\" target=\"_blank\" rel=\"noopener noreferrer\">AI Institute</a>. He introduced the mission of the NSF ICICLE AI Institute and its work to develop accessible, reusable, and intelligent cyberinfrastructure across edge devices, cloud platforms, and high-performance computing systems.</p><iframe width=\"100%\" height=\"360\" src=\"https://www.youtube.com/embed/a4FDUwRPWJc\" title=\"AI Institute\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><p>Hari later joined Ryan Dinubilo of F3 Innovate and Konstantin Karydis of the University of California Riverside for a <a href=\"https://www.youtube.com/watch?v=AZHa4lQ-l5s\" target=\"_blank\" rel=\"noopener noreferrer\">Panel Discussion</a> on artificial intelligence in agriculture. The discussion followed presentations on agricultural AI, intelligent cyberinfrastructure, and mobile robots for automated field data collection and analysis.</p><iframe width=\"100%\" height=\"360\" src=\"https://www.youtube.com/embed/AZHa4lQ-l5s\" title=\"Panel Discussion\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe><p>Through the tutorial, presentation, and panel discussion, Hari highlighted how ICICLE connects foundational AI and cyberinfrastructure research with practical digital agriculture applications. The sessions demonstrated the importance of integrating field sensors, edge computing, AI models, robotics, data management, and shared computing resources into reliable end-to-end agricultural workflows.</p><p>View the complete <a href=\"https://nrp.ai/7nrp-workshop/\" target=\"_blank\" rel=\"noopener noreferrer\">7NRP Workshop schedule, presentations, and recorded media</a>.</p>",
+      "media": [],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://cse.osu.edu/people/subramoni.1"
+        }
+      ]
+    }
+  ]
+}
