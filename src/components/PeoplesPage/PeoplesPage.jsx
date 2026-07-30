@@ -60,17 +60,20 @@ export default function People() {
   const groupedMembers = useMemo(() => ({
     faculty: filteredMembers.filter(m => m.role === 'faculty'),
     phd: filteredMembers.filter(m => m.role === 'phd'),
+    employee: filteredMembers.filter(m => m.role === 'employee'),
     masters: filteredMembers.filter(m => m.role === 'masters'),
-    undergraduate: filteredMembers.filter(m => m.role === 'undergraduate')
+    undergraduate: filteredMembers.filter(m => m.role === 'undergraduate'),
+    past: filteredMembers.filter(m => m.role === 'past'),
   }), [filteredMembers]);
-
+  
   const roleLabels = {
     faculty: 'Faculty',
     phd: 'PhD Students',
+    employee: 'Employees',   // 或 'Employee'
     masters: 'Graduate Students',
-    undergraduate: 'Undergraduate Students'
+    undergraduate: 'Undergraduate Students',
+    past: 'Alumni and Former Students',
   };
-
   return (
     <div className="people-page">
       <section className="people-hero">
@@ -216,25 +219,31 @@ function PersonCard({ member }) {
       <h3 className="person-name">{member.name}</h3>
       <p className="person-title">{member.title}</p>
 
-      {/* Interests */}
-      <div className="interests-section">
-        <div className="interests-tags">
-          {member.interests.map((i, idx) => (
-            <span key={idx} className="interest-tag">{i}</span>
-          ))}
-        </div>
-      </div>
+      {member.role !== 'past' && (
+        <>
+          {/* Interests */}
+          {member.interests?.length > 0 && (
+            <div className="interests-section">
+              <div className="interests-tags">
+                {member.interests.map((i, idx) => (
+                  <span key={idx} className="interest-tag">{i}</span>
+                ))}
+              </div>
+            </div>
+          )}
 
-      {/* Projects Section */}
-      {member.projects && member.projects.length > 0 && (
-        <div className="projects-section">
-          <h4 className="section-label">Current Projects</h4>
-          <ul className="projects-list">
-            {member.projects.map((project, idx) => (
-              <li key={idx}>{project}</li>
-            ))}
-          </ul>
-        </div>
+          {/* Projects Section */}
+          {member.projects && member.projects.length > 0 && (
+            <div className="projects-section">
+              <h4 className="section-label">Current Projects</h4>
+              <ul className="projects-list">
+                {member.projects.map((project, idx) => (
+                  <li key={idx}>{project}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </>
       )}
 
       {/* Links */}

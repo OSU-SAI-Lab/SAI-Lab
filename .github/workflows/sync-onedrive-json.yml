@@ -1,0 +1,70 @@
+name: Sync OneDrive JSON
+
+on:
+  repository_dispatch:
+    types:
+      - sync_onedrive_json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: onedrive-json-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-json:
+    runs-on: ubuntu-latest
+
+    env:
+      FILE_NAME: ${{ github.event.client_payload.file_name }}
+      FILE_CONTENT_BASE64: ${{ github.event.client_payload.content_base64 }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Validate file name
+        shell: bash
+        run: |
+          case "$FILE_NAME" in
+            events.json|latest-news.json|news-and-updates.json|people.json|publications.json)
+              echo "Accepted file: $FILE_NAME"
+              ;;
+            *)
+              echo "Unsupported file: $FILE_NAME"
+              exit 1
+              ;;
+          esac
+
+      - name: Write and validate JSON
+        shell: bash
+        run: |
+          printf '%s' "$FILE_CONTENT_BASE64" \
+            | base64 --decode \
+            > "src/assets/json/$FILE_NAME"
+
+          python -m json.tool \
+            "src/assets/json/$FILE_NAME" \
+            > /dev/null
+
+          echo "Updated src/assets/json/$FILE_NAME"
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          git config user.name "OneDrive Sync Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "src/assets/json/$FILE_NAME"
+
+          if git diff --cached --quiet; then
+            echo "No JSON changes detected."
+            exit 0
+          fi
+
+          git commit -m "Sync $FILE_NAME from OneDrive"
+          git push origin HEAD:main

@@ -1,0 +1,300 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "SAI Lab and ICICLE Showcase AI-Enabled Agriculture Tools at Farm Science Review 2025",
+      "type": "Exhibition / Demo",
+      "date": "September 2025",
+      "sortDate": "2025-09-16",
+      "time": null,
+      "mode": "In-Person",
+      "location": "Molly Caren Agricultural Center, London, Ohio",
+      "description": "Members of the SAI Lab team, part of the NSF ICICLE AI Institute, demonstrated AI-enabled digital agriculture tools at Farm Science Review 2025, highlighting practical HPC and AI workflows for on-farm decision-making.",
+      "link": null,
+      "author": "SAI Lab",
+      "body": "<p>Members of the SAI Lab team, who are also part of the NSF ICICLE AI Institute, showcased AI-enabled digital agriculture tools at Farm Science Review 2025, held September 16–18 at Ohio State's Molly Caren Agricultural Center in London, Ohio. The three-day show brings together more than 100,000 farmers, agribusiness professionals, and students to explore new technologies, management practices, and research-based recommendations from Ohio State and partners.</p><p>At the ICICLE exhibit, visitors saw how high-performance computing (HPC) and artificial intelligence can support practical decision-making on the farm, from crop and soil monitoring to equipment efficiency. Demonstrations highlighted how ICICLE's software components and data pipelines connect field data with AI models, enabling timely insights that can help farmers manage inputs, reduce risk, and improve profitability.</p><p>Hands-on demos included AI-powered tools for field imagery analysis, object detection, and decision support that can be integrated into existing farm operations. SAI Lab researchers—who contribute to the NSF ICICLE AI Institute—and extension specialists were on-site to answer questions, gather feedback from producers, and discuss opportunities for on-farm collaboration and testing.</p><p>By bringing these capabilities to Farm Science Review, the SAI Lab and ICICLE team aims to make advanced AI and HPC systems more accessible, interoperable, and impactful for producers of all sizes. The exhibit emphasized practical workflows that move from data collection in fields to actionable recommendations that support sustainable and resilient agricultural systems.</p>",
+      "media": [],
+      "tags": [
+        "Digital Agriculture",
+        "HPC",
+        "AI",
+        "Outreach",
+        "ICICLE"
+      ],
+      "members": [
+        {
+          "name": "Harikesh Sunkara",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Parth Patel",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "ICICLE Mentors High School Students for the Presidential AI Challenge",
+      "type": "Outreach / Mentorship",
+      "date": "January 2026",
+      "sortDate": "2026-01-01",
+      "time": null,
+      "mode": "In-Person",
+      "location": "The Ohio State University",
+      "description": "ICICLE researchers mentored high school students participating in the Presidential AI Challenge, guiding teams through problem formulation, ethical AI considerations, and solution development.",
+      "link": "https://icicle.osu.edu/news/2026/01/icicle-mentors-high-school-students-presidential-ai-challenge",
+      "author": "ICICLE Communications",
+      "body": "<p>Researchers from the ICICLE AI Institute at The Ohio State University dedicated their time and expertise to mentoring high school students participating in the prestigious Presidential AI Challenge. Over the course of several weeks, ICICLE team members guided student teams through the end-to-end process of formulating real-world problems, designing responsible AI solutions, and presenting their work to a panel of judges.</p><p>The Presidential AI Challenge is a national competition that encourages young learners to explore the transformative potential of artificial intelligence while grappling with the ethical considerations that come with deploying these technologies. Students were tasked with identifying a problem in their community and proposing an AI-driven solution that balances innovation with fairness, transparency, and accountability.</p><p>ICICLE mentors helped students refine their ideas, navigate data collection and preprocessing, and critically evaluate the societal impacts of their proposals. The mentorship sessions also introduced students to core concepts in cyberinfrastructure, giving them a glimpse into the large-scale computing systems that power modern AI research.</p><p>\"Working with these students was incredibly inspiring,\" said one of the ICICLE mentors. \"Their creativity and eagerness to learn reminds us why outreach is such a vital part of our mission.\"</p>",
+      "media": [
+        {
+          "type": "image",
+          "src": "/images/articles/presidential-ai-challenge-1.jpg",
+          "alt": "ICICLE mentors working with high school students",
+          "caption": "ICICLE researchers guide student teams at Ohio State."
+        },
+        {
+          "type": "image",
+          "src": "/images/articles/presidential-ai-challenge-2.jpg",
+          "alt": "Students presenting their AI solutions",
+          "caption": "Student teams present their AI-driven community solutions."
+        },
+        {
+          "type": "pdf",
+          "src": "/documents/presidential-ai-challenge-overview.pdf",
+          "alt": "Presidential AI Challenge Overview",
+          "caption": "Program overview and guidelines (PDF)."
+        }
+      ],
+      "tags": [
+        "Outreach",
+        "Mentorship",
+        "K-12",
+        "AI Ethics"
+      ],
+      "members": [
+        {
+          "name": "Mrunal Hole",
+          "profileUrl": "https://www.linkedin.com/in/mrunalhole/"
+        },
+        {
+          "name": "Naveen Kamath",
+          "profileUrl": "https://kamaths.info"
+        },
+        {
+          "name": "Rishi Makineni",
+          "profileUrl": "https://www.linkedin.com/in/rishikesh-makineni/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "SAI Lab Student Presents Research at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "type": "Research Presentation",
+      "date": "March 2026",
+      "sortDate": "2026-03-01",
+      "time": null,
+      "mode": "In-Person",
+      "location": "Tucson, AZ",
+      "description": "SAI Lab graduate researcher, Satyaki Roy Chowdhury, presented posters on satellite bathymetry at WACV.",
+      "link": null,
+      "author": "SAI Lab",
+      "body": "<p>Satyaki Roy Chowdhury, a graduate researchers from the Systems and AI (SAI) Lab, presented his work at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2026), held in Tucson, Arizona.</p><p>WACV is the premier international computer vision event organized jointly by the IEEE and the Computer Vision Foundation (CVF), comprising the main conference and several co-located workshops and tutorials. It is ranked among the top ten venues in the Computer Vision and Pattern Recognition category according to Google Scholar's H5-index, and has consistently held a CORE ranking of A. Proceedings are published by IEEE and indexed in the IEEE Xplore Digital Library, giving accepted papers broad visibility across the global research community.</p><p>Satyaki Roy Chowdhury presented \"From Bands to Depth: Understanding Bathymetry Decisions on Sentinel‑2,\" which examines the use of multispectral satellite data for depth estimation and improved understanding of aquatic environments.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "SatyakiPresenting",
+          "alt": "Satyaki Roy Chowdhury presenting his poster on bathymetry",
+          "caption": "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry."
+        },
+        {
+          "type": "image",
+          "srcKey": "SatyakiWACV",
+          "alt": "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry.",
+          "caption": "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry."
+        },
+        {
+          "type": "image",
+          "srcKey": "SatyakiAndAsh",
+          "alt": "Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan",
+          "caption": "Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan"
+        }
+      ],
+      "tags": [
+        "Research",
+        "Remote Sensing",
+        "Geospatial AI",
+        "Graduate"
+      ],
+      "members": [
+        {
+          "name": "Satyaki Roy Chowdhury",
+          "profileUrl": "https://engineering.osu.edu/people/chowdhury.207"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "SAI Lab Students Present Research at CSE Graduate Visit Day",
+      "type": "Research Presentation",
+      "date": "March 2026",
+      "sortDate": "2026-03-15",
+      "time": null,
+      "mode": "In-Person",
+      "location": "The Ohio State University, CSE Department",
+      "description": "SAI Lab graduate researchers Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan presented posters on satellite bathymetry and geospatial AI at CSE Graduate Visit Day.",
+      "link": null,
+      "author": "SAI Lab",
+      "body": "<p>Two graduate researchers from the Systems and AI (SAI) Lab, Satyaki Roy Chowdhury and Aswathnarayanan Radhakrishnan, presented their work at the recent CSE Graduate Visit Day.</p><p>Satyaki Roy Chowdhury presented <em>\"From Bands to Depth: Understanding Bathymetry Decisions on Sentinel‑2,\"</em> which examines the use of multispectral satellite data for depth estimation and improved understanding of aquatic environments.</p><p>Aswathnarayanan Radhakrishnan presented <em>\"Mining Earth's Digital Strata for Geospatial AI: Bridging Data Collection, Synthesis, and Self‑Training for Intelligent Earth Observation,\"</em> focusing on advancing geospatial AI through integrated data pipelines and self-training frameworks.</p><p>Their posters reflect the SAI Lab's commitment to advancing research at the intersection of artificial intelligence, remote sensing, and Earth systems science.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "satyakiPoster",
+          "alt": "Satyaki Roy Chowdhury presenting his poster on bathymetry",
+          "caption": "Satyaki Roy Chowdhury presents his research on Sentinel‑2 bathymetry."
+        },
+        {
+          "type": "image",
+          "srcKey": "ashPoster",
+          "alt": "Aswathnarayanan Radhakrishnan presenting his poster on geospatial AI",
+          "caption": "Aswathnarayanan Radhakrishnan presents his work on geospatial AI pipelines."
+        },
+        {
+          "type": "image",
+          "srcKey": "bathymetry",
+          "alt": "From Bands to Depth: Understanding Bathymetry Decisions on Sentinel‑2",
+          "caption": "From Bands to Depth: Understanding Bathymetry Decisions on Sentinel‑2"
+        },
+        {
+          "type": "pdf",
+          "srcKey": "ashPosterPdf",
+          "alt": "Ash's Poster",
+          "caption": "Ash's Poster"
+        }
+      ],
+      "tags": [
+        "Research",
+        "Remote Sensing",
+        "Geospatial AI",
+        "Graduate"
+      ],
+      "members": [
+        {
+          "name": "Satyaki Roy Chowdhury",
+          "profileUrl": "https://engineering.osu.edu/people/chowdhury.207"
+        },
+        {
+          "name": "Aswathnarayanan Radhakrishnan",
+          "profileUrl": "https://www.linkedin.com/in/radhakrishnan97/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "SAI Lab and ICICLE Participate in An Evening of Inquiry at Columbus School for Girls",
+      "type": "Outreach / Mentorship",
+      "date": "April 2026",
+      "sortDate": "2026-04-28",
+      "time": null,
+      "mode": "In-Person",
+      "location": "Columbus School for Girls, Columbus, Ohio",
+      "description": "Faculty and students from the SAI Lab attended An Evening of Inquiry at the Columbus School for Girls on April 28, 2026, celebrating student-led research and K–12 engagement in AI.",
+      "link": null,
+      "author": "SAI Lab",
+      "body": "<p>Faculty and students from the Systems and AI Lab recently attended in An Evening of Inquiry at the <a href=\"https://www.columbusschoolforgirls.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Columbus School for Girls</a> on April 28, 2026, an event celebrating student‑led research, creativity, and interdisciplinary exploration. This collaboration was carried out under the ambit of the <a href=\"https://icicle.osu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">ICICLE</a> AI Institute, which supports educational outreach and K–12 engagement in artificial intelligence and computing.</p><p>The evening featured a vibrant poster session highlighting projects from participants in the <a href=\"https://www.ai.gov/initiatives/presidential-challenge\" target=\"_blank\" rel=\"noopener noreferrer\">Presidential AI Challenge</a>. Several students mentored by our lab presented their work, including Caroline Lanning, Iva Karagirova, Wendy Yi, and Kendall Leff. Their projects reflected a strong engagement with emerging AI concepts and demonstrated thoughtful application of computational methods to real‑world problems, aligned with ICICLE's mission to broaden access to AI education and research.</p><p>Our lab's involvement was led by graduate student Mrunal Hole, who coordinated mentorship and research support for the school's Presidential AI Challenge participants. Mrunal worked closely with undergraduate researchers Naveen Kamath and Rishi Makineni, who assisted with guidance, project development, and preparation for the poster session, all as part of ICICLE‑supported outreach activities. Their collaboration was supported on‑site by <a href=\"https://www.linkedin.com/in/lisa-abrams-96aa8560/\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Lisa M. Abrams</a>, PhD, Computer Science and Math Faculty and Dean of Academics for the Upper School at Columbus School for Girls, whose leadership helped foster an inclusive and intellectually engaging environment.</p><p>The poster session provided an opportunity for meaningful dialogue between students, mentors, and attendees, reinforcing the value of mentorship and early research exposure in AI and systems. The evening concluded with a reception featuring live music and informal discussions, further strengthening connections between the school and the broader research community.</p><p>A group photograph captured the collaborative spirit of the event, featuring lead graduate student Mrunal Hole, undergraduate students Naveen Kamath and Rishi Makineni, Lisa M. Abrams, PhD, and participating students from Columbus School for Girls, all taking part under the ICICLE AI Institute's educational outreach initiative.</p><p>We are proud to support initiatives like the Presidential AI Challenge that empower young researchers and build pathways into computing and AI. Events like this reflect the growing importance of partnerships between academic research labs and K-12 institutions in shaping the future of technology and education under the umbrella of ICICLE AI Institute.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "CSG",
+          "alt": "Group photo at An Evening of Inquiry at Columbus School for Girls",
+          "caption": "Lisa M. Abrams PhD, Mrunal Hole, Naveen Kamath, Rishi Makineni, and participating students from Columbus School for Girls at An Evening of Inquiry, April 28, 2026."
+        }
+      ],
+      "tags": [
+        "Outreach",
+        "Mentorship",
+        "K-12",
+        "AI for Education",
+        "ICICLE"
+      ],
+      "members": [
+        {
+          "name": "Mrunal Hole",
+          "profileUrl": "https://www.linkedin.com/in/mrunalhole/"
+        },
+        {
+          "name": "Naveen Kamath",
+          "profileUrl": "https://kamaths.info"
+        },
+        {
+          "name": "Rishi Makineni",
+          "profileUrl": "https://www.linkedin.com/in/rishikesh-makineni/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "ICICLE Team Presents AI & Cyberinfrastructure at ExploreAg Technology Camp",
+      "type": "Outreach / Mentorship",
+      "date": "July 2026",
+      "sortDate": "2026-07-22",
+      "time": null,
+      "mode": "In-Person",
+      "location": "Columbus, Ohio",
+      "description": "SAI Lab / ICICLE members presented AI and cyberinfrastructure tools to high school students at ExploreAg — Ag Technology Camp, with hands-on demos of Smart Labeling, Segmentation, and Intelligent Edge Management services.",
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>Institute team members Brijesh Nanda B Y, Harikesh Byrandurga Gopinath, Qifeng Chen, Aswathnarayan Radhakrishnan and Neelima Savardekar had the privilege of presenting at the ExploreAg - Ag Technology Camp in Columbus, Ohio and represent NSF ICICLE AI Institute.</p><p>Discussed how cutting-edge technology—from precision data to automation—is actively changing the way we grow, harvest, and sustain our food supply. This was an excellent opportunity for the high school students to get their hands on ICICLE's AI &amp; CI Service pipeline using <a href=\"https://icicle-ai.github.io/training-catalog/docs/Smart%20Labeling%20Service%20for%20Object%20Detection/explanation\" target=\"_blank\" rel=\"noopener noreferrer\">Smart Labeling Service</a>, Segmentation Service &amp; Intelligent Edge Management Service to process images.</p><p>Talked all things ag tech, explored real-world applications, and looked at where the industry is heading next. Incredible energy from the students exploring how tech and STEM drive modern farming.</p><p>A huge thank you to the ExploreAg team at Ohio Farm Bureau, Ohio State University College of Food, Agricultural, and Environmental Sciences (CFAES Food, Agricultural and Biological Engineering Department) for hosting such a high-impact experience for the high school students as they look at various career pathways related to food and agriculture in Ohio.</p>",      "media": [
+        {
+          "type": "image",
+          "srcKey": "ExploreAg1",
+          "alt": "Group photo at ExploreAg - Ag Technology Camp",
+          "caption": "Group photo at ExploreAg - Ag Technology Camp."
+        },
+        {
+          "type": "image",
+          "srcKey": "ExploreAg2",
+          "alt": "ICICLE's AI & CI Service pipeline using Smart Labeling Service",
+          "caption": "ICICLE's AI & CI Service pipeline using Smart Labeling Service."
+        },
+        {
+          "type": "image",
+          "srcKey": "ExploreAg3",
+          "alt": "Harikesh is presenting the ICICLE's Segmentation Service & Intelligent Edge Management Service to process images.",
+          "caption": "Harikesh is presenting the ICICLE's Segmentation Service & Intelligent Edge Management Service to process images."
+        },
+        {
+          "type": "image",
+          "srcKey": "ExploreAg4",
+          "alt": "Team Introduction at ExploreAg - Ag Technology Camp",
+          "caption": "Team Introduction at ExploreAg - Ag Technology Camp"
+        }
+        ],
+
+      "tags": [
+        "Outreach",
+        "Digital Agriculture",
+        "AI",
+        "K-12",
+        "ICICLE"
+      ],
+      "members": [
+        {
+          "name": "Brijesh Nanda",
+          "profileUrl": "https://brijesh-nanda-by.github.io/Portfolio/"
+        },
+        {
+          "name": "Harikesh Byrandurga Gopinath",
+          "profileUrl": "https://www.linkedin.com/in/harikesh-gopinath"
+        },
+        {
+          "name": "Qifeng Chen",
+          "profileUrl": "https://www.linkedin.com/in/qifeng-chen-4a8115323/"
+        },
+        {
+          "name": "Aswathnarayan Radhakrishnan",
+          "profileUrl": "https://www.linkedin.com/in/radhakrishnan97/"
+        }
+      ]
+    }
+  ]
+}

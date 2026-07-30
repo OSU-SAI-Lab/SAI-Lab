@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { events } from "./eventsData";
 import "./LatestNews.css";
 
-// Sort events by date, most recent first
+// Sort by sortDate (ISO), most recent first
 const sortedEvents = [...events].sort(
-  (a, b) => new Date(b.date) - new Date(a.date)
+  (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
 );
 
 export default function LatestNews() {

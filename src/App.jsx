@@ -10,6 +10,7 @@ import WorkingWithUs from "./components/WorkingWithUs/workingwithus";
 import EventsTab from "./components/EventsTab/EventsTab";
 import ArticlePage from "./components/LatestNews/Articlepage";
 import NewsPage from "./components/NewsAndUpdates/Newspage";
+import NewsArticlePage from "./components/NewsAndUpdates/NewsArticlePage";
 
 
 import "./App.css";
@@ -35,8 +36,8 @@ function App() {
             <Route index element={<PublicationsPage />} />
           </Route>
 
-          <Route path="/news-and-updates" element={<NewsPage />}/>
-
+          <Route path="/news-and-updates" element={<NewsPage />} />
+          <Route path="/news-and-updates/:id" element={<NewsArticlePage />} />
 
           <Route path="/workingwithus" element={<WorkingWithUs />} />
 
