@@ -80,14 +80,9 @@ function NavBar() {
               Publications
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/news-and-updates" onClick={handleNavLinkClick}>
-              News & Updates
+            <Nav.Link as={NavLink} to="/events" onClick={handleNavLinkClick}>
+              Events
             </Nav.Link>
-
-
-          <Nav.Link as={NavLink} to="/events" onClick={handleNavLinkClick}>
-            Events
-          </Nav.Link>
 
           <Nav.Link as={NavLink} to="/people">
               People

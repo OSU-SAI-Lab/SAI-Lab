@@ -164,7 +164,7 @@ export default function PublicationsPage() {
                     <div style={{ color: "#337ab7", marginBottom: "4px" }}>
                       {pub.authorsArr.map((auth, i) => (
                         <React.Fragment key={i}>
-                          {auth.toLowerCase().includes("subramoni") ? <strong>{auth}</strong> : auth}
+                          {auth.toLowerCase().includes("subramoni") || auth.toLowerCase().includes("potlapally") ? <strong>{auth}</strong> : auth}
                           {i < pub.authorsArr.length - 1 ? ", " : ""}
                         </React.Fragment>
                       ))}

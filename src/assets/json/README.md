@@ -7,8 +7,7 @@ Edit these files to update the website. Prefer changing JSON/images here instead
 | File | Used by |
 |------|---------|
 | `latest-news.json` | Home Latest News + article detail |
-| `news-and-updates.json` | News & Updates page |
-| `events.json` | Events page |
+| `news-and-updates.json` | Events page |
 | `people.json` | People page (and Research member links by `id`) |
 | `publications.json` | Publications page |
 
@@ -18,7 +17,6 @@ Edit these files to update the website. Prefer changing JSON/images here instead
 |--------|----------|
 | `images/people/` | Profile photos — set `"photo": "Filename.ext"` in `people.json` |
 | `images/articles/` | Article images/PDFs — reference via `srcKey` in news JSON + import in loader |
-| `images/events/` | Event flyers — reference via `flyerKey` in `events.json` + import in EventsTab |
 
 ## Tips
 

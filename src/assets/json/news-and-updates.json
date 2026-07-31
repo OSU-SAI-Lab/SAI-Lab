@@ -31,6 +31,28 @@
       "link": "https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/"
     },
     {
+      "id": 15,
+      "date": "2026-03-06",
+      "title": "HARVEST-Vision 2026 Advances Computer Vision and High-Performance Computing in Agriculture",
+      "description": "The second HARVEST-Vision workshop brought together researchers and practitioners in computer vision, high-performance computing, and agriculture to share innovative approaches and advance accessible, interdisciplinary digital agriculture.",
+      "tag": "News",
+      "link": "https://icicle-ai.github.io/harvest/"
+    },
+    {
+      "id": 14,
+      "date": "2026-02-27",
+      "title": "ICICLE Webinar: AI in Agriculture",
+      "description": "The NSF-funded ICICLE AI Institute hosted a webinar highlighting how artificial intelligence supports scalable, data-driven decision-making across modern agricultural systems.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>On February 27, 2026, the NSF-funded ICICLE AI Institute hosted the webinar “AI in Agriculture,” highlighting how artificial intelligence is supporting scalable, data-driven decision-making across modern agricultural systems.</p><p>The webinar showcased ICICLE’s Data-to-Action (DTA) pipeline, which supports end-to-end workflows that integrate data ingestion, model training, inference, and interactive decision support. Demonstrations included a Retrieval-Augmented Generation chatbot for querying agricultural datasets and ICICLE resources, real-time object detection and classification pipelines for identifying crop health conditions and field objects, and a precision spot-spraying application for site-specific weed management.</p><p>Together, these demonstrations illustrated ICICLE’s efforts to make agricultural AI more accessible, interoperable, and impactful. The webinar also emphasized the importance of collaboration among computer scientists, agricultural engineers, researchers, and other domain stakeholders in advancing sustainable farming technologies.</p><p>The full webinar recording is available on <a href=\"https://www.youtube.com/watch?v=PN-J_Rbg15w\" target=\"_blank\" rel=\"noopener noreferrer\">YouTube</a>.</p><div style=\"position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:32px;border-radius:12px\"><iframe src=\"https://www.youtube.com/embed/PN-J_Rbg15w\" title=\"ICICLE Webinar: AI in Agriculture\" style=\"position:absolute;inset:0;width:100%;height:100%;border:0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>",
+      "media": [],
+      "members": [
+        {"name":"Hari Subramoni","profileUrl":"https://cse.osu.edu/people/subramoni.1"}
+      ]
+    },
+    {
       "id": 1,
       "date": "2026-01-27",
       "title": "ICICLE Mentors High School Students for the Presidential AI Challenge",

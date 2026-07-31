@@ -7,7 +7,6 @@ import PublicationsLayout from "./components/PublicationPage/PublicationsLayout"
 import PublicationsPage from "./components/PublicationPage/PublicationPage";
 import People from "./components/PeoplesPage/PeoplesPage";
 import WorkingWithUs from "./components/WorkingWithUs/workingwithus";
-import EventsTab from "./components/EventsTab/EventsTab";
 import ArticlePage from "./components/LatestNews/Articlepage";
 import NewsPage from "./components/NewsAndUpdates/Newspage";
 import NewsArticlePage from "./components/NewsAndUpdates/NewsArticlePage";
@@ -36,15 +35,13 @@ function App() {
             <Route index element={<PublicationsPage />} />
           </Route>
 
-          <Route path="/news-and-updates" element={<NewsPage />} />
-          <Route path="/news-and-updates/:id" element={<NewsArticlePage />} />
+          <Route path="/events" element={<NewsPage />} />
+          <Route path="/events/:id" element={<NewsArticlePage />} />
 
           <Route path="/workingwithus" element={<WorkingWithUs />} />
 
           {/* Article detail — linked from Latest News section on homepage */}
           <Route path="/news/:id" element={<ArticlePage />} />
-
-          <Route path="/events" element={<EventsTab />} />
         </Routes>
       </div>
     </>

@@ -40,7 +40,7 @@ function NewsCard({ item, index }) {
       return;
     }
     if (localArticle) {
-      navigate(`/news-and-updates/${item.id}`);
+      navigate(`/events/${item.id}`);
     }
   };
 
@@ -60,7 +60,7 @@ function NewsCard({ item, index }) {
         {externalOnly && <span className="news-read-more">Read more →</span>}
         {localArticle && (
           <Link
-            to={`/news-and-updates/${item.id}`}
+            to={`/events/${item.id}`}
             className="news-read-more"
             onClick={(e) => e.stopPropagation()}
           >
@@ -107,7 +107,7 @@ export default function NewsPage() {
   return (
     <div className="news-app">
       <div className="news-hero">
-        <h1>News &amp; Updates</h1>
+        <h1>Events</h1>
         <p>
           Latest research milestones, awards, and community outreach from our
           lab at The Ohio State University.

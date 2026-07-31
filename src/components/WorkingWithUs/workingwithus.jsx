@@ -7,7 +7,7 @@ function WorkingWithUs() {
   const [activeSection, setActiveSection] = useState('k12');
 
   const [openSections, setOpenSections] = useState({
-    k12: true,
+    k12: false,
     undergrad: false,
     masters: false,
     phd: false,
