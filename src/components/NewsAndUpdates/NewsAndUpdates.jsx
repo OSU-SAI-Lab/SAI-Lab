@@ -327,7 +327,7 @@ export default function NewsAndUpdates() {
               lineHeight: 1.15,
             }}
           >
-            Events
+            News & Updates
           </h1>
           <p
             style={{

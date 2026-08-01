@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           case "$FILE_NAME" in
-            latest-news.json|news-and-updates.json|people.json|publications.json)
+            latest-news.json|news-and-updates.json|people.json|publications.json|upcoming.json)
               echo "Accepted file: $FILE_NAME"
               ;;
             *)

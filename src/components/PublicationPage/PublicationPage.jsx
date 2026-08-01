@@ -170,16 +170,28 @@ export default function PublicationsPage() {
                       ))}
                     </div>
                     <strong>{pub.title}</strong>, {pub.venue}, {pub.year}.
-                    {pub.link && (
+                    {(pub.link || pub.slides) && (
                       <div style={{ marginTop: "8px" }}>
-                        <a
-                          href={pub.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold" }}
-                        >
-                          [Full Text]
-                        </a>
+                        {pub.link && (
+                          <a
+                            href={pub.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold", marginRight: "12px" }}
+                          >
+                            [Full Text]
+                          </a>
+                        )}
+                        {pub.slides && (
+                          <a
+                            href={pub.slides}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold" }}
+                          >
+                            [Slides]
+                          </a>
+                        )}
                       </div>
                     )}
                   </td>
