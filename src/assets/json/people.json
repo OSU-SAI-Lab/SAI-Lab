@@ -44,9 +44,9 @@
         "Efficient Inference"
       ],
       "projects": [
-        "WILD-OV: Modular multi-modal vision pipeline for weakly supervised localization and few-shot object detection in domain-specific imagery.",
-        "SmartWilds: Heterogeneous edge-to-cloud multimodal AI system for large-scale wildlife monitoring using camera traps, UAVs, and bioacoustic sensors.",
-        "HARVEST: HPC-driven AI infrastructure for semi-supervised learning, efficient training, large-scale inference, and visualization in precision agriculture."
+        "WILD-OV: Multi-modal vision for weakly supervised localization and few-shot detection.",
+        "SmartWilds: Edge-to-cloud multimodal AI for large-scale wildlife monitoring.",
+        "HARVEST: HPC-driven AI infrastructure for precision agriculture."
       ],
       "publications": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://scholar.google.com/citations%3Fuser%3DizzBqmcAAAAJ%26hl%3Den&ved=2ahUKEwjp5LPC2s2SAxWJGDQIHc_ZEeUQFnoECBsQAQ&usg=AOvVaw0WqcnKdtwPqewvf3c9mrV_"
     },
@@ -68,7 +68,7 @@
         "Scalable Geospatial AI Systems"
       ],
       "projects": [
-        "Geoharmonizer Workflow Orchestrator: An HPC-native library and CLI for transforming heterogeneous geospatial data into AI-ready multidimensional data cubes through low-code, end-to-end workflow orchestration."
+        "Geoharmonizer: HPC-native workflow for turning geospatial data into AI-ready data cubes."
       ],
       "publications": "https://scholar.google.com/citations?user=A-SUUsoAAAAJ&hl=en"
     },
@@ -139,18 +139,24 @@
     {
       "id": 7,
       "name": "Brijesh Nanda",
-      "role": "employee",
-      "title": "Employee",
+      "roles": [
+        "staff",
+        "past"
+      ],
+      "title": "Staff",
       "department": "Computer Science and Engineering",
       "photo": "Brijesh.JPG",
       "location": "Dreese Labs 482",
       "website": "https://brijesh-nanda-by.github.io/Portfolio/",
       "email": "brundayogananda.1@buckeyemail.osu.edu",
       "interests": [
-        "Computer Vision - Object detection and Auto-Labelling"
+        "software architecture",
+        "system design",
+        "ML/AI workflows"
       ],
       "projects": [
-        "Advanced Object Detection Pipeline capable of Zero-Shot and Few-Shot annotation using Foundation Models like SAM3. The system supports multi-modal inputs—including segmentation-assisted and text-prompt based detection—and features a visual optimization suite. This allows users to interactively fine-tune critical hyperparameters, such as patch sizes and confidence thresholds, using real-time graphical feedback to ensure annotation precision."
+        "Workflow orchestrator.",
+        "Image preprocessing studio"
       ],
       "publications": null
     },
@@ -214,7 +220,7 @@
         "Full-Stack AI Application Development"
       ],
       "projects": [
-        "Building a modular training framework for the ICICLE-AI Workflow Orchestrator that supports YOLO and Hugging Face models for classification, detection, and segmentation, with automated job submission on OSC through Tapis."
+        "Modular training framework for ICICLE-AI Workflow Orchestrator (YOLO & Hugging Face) with OSC job submission via Tapis."
       ],
       "publications": null
     },
@@ -255,7 +261,7 @@
         "AI for Science"
       ],
       "projects": [
-        "building an end-to-end retrieval-augmented agricultural AI assistant and developing an unsupervised SAR-based pipeline for crop classification and cultivated-area estimation in rural areas"
+        "Retrieval-augmented agricultural AI assistant; unsupervised SAR pipeline for crop classification."
       ],
       "publications": "https://scholar.google.com/citations?user=8A-nVDsAAAAJ&hl=en"
     },
@@ -289,7 +295,9 @@
       "location": "Dreese Labs 486",
       "email": "chen.13967@osu.edu",
       "website": "https://www.linkedin.com/in/qifeng-chen-4a8115323/",
-      "interests": [],
+      "interests": [
+        "Deep Learning"
+      ],
       "projects": [
         "To be updated"
       ],
@@ -321,7 +329,7 @@
       "role": "undergraduate",
       "title": "Undergraduate Research Assistant",
       "department": "Computer Science and Engineering",
-      "photo": "aashi_sharma.png",
+      "photo": "Aashi.png",
       "location": "Dreese Labs 486",
       "email": "sharma.1488@osu.edu",
       "website": "https://www.linkedin.com/in/aashi-s-9199152b8/",
@@ -332,6 +340,26 @@
       ],
       "projects": [
         "RAG-Based Conversational AI Chatbot for OSU Extension Agents"
+      ],
+      "publications": null
+    },
+    {
+      "id": 21,
+      "name": "Aarush Katta",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "photo": null,
+      "email": "katta.29@osu.edu",
+      "website": "https://www.linkedin.com/in/aarushkatta/",
+      "github": "https://github.com/arkseal",
+      "interests": [
+        "AI/ML",
+        "High-Performance Computing",
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "projects": [
+        "To be updated"
       ],
       "publications": null
     },

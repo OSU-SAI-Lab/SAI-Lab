@@ -4,7 +4,7 @@
       "date": "May 6, 2026",
       "sortDate": "2026-05-06",
       "title": "AI Institute",
-      "tags": ["Talk"],
+      "tags": ["Outreach"],
       "location": "Qualcomm Institute (QI) Auditorium, San Diego, CA",
       "link": "https://nrp.ai/7nrp-workshop/",
       "description": "A talk on the AI Institute, presented as part of the AI for Agriculture session at the NRP Annual Meeting."
@@ -13,7 +13,7 @@
       "date": "May 6, 2026",
       "sortDate": "2026-05-06",
       "title": "Panel Discussion - AI for Agriculture",
-      "tags": ["Panel"],
+      "tags": ["Outreach"],
       "location": "Qualcomm Institute (QI) Auditorium, San Diego, CA",
       "link": "https://nrp.ai/7nrp-workshop/",
       "description": "A panel discussion on AI for Agriculture featuring Ryan Dinubilo (F3 Innovate), Hari Subramoni (Ohio State University), and Konstantin Karydis (UC Riverside)."
@@ -22,7 +22,7 @@
       "date": "May 5, 2026",
       "sortDate": "2026-05-05",
       "title": "Tutorial Using ICICLE Digital Agriculture Pipeline",
-      "tags": ["Tutorial"],
+      "tags": ["Outreach"],
       "location": "San Diego Supercomputer Center (SDSC) Auditorium, San Diego, CA",
       "link": "https://nrp.ai/7nrp-workshop/",
       "description": "A hands-on tutorial on the ICICLE Digital Agriculture Pipeline, presented at the NRP Annual Meeting Tutorial Day."
@@ -31,29 +31,47 @@
       "date": "March 6, 2026",
       "sortDate": "2026-03-06",
       "title": "HARVEST-Vision: Second International Workshop on Applications of CV and HPC in Agriculture",
-      "tags": ["Workshop"],
+      "tags": ["Outreach"],
       "location": "Tucson, Arizona",
       "link": "https://icicle-ai.github.io/harvest/",
       "description": "A workshop focused on the intersection of computer vision, high-performance computing, and agricultural technology."
     },
     {
-      "date": "February 27, 2026",
-      "sortDate": "2026-02-27",
-      "title": "ICICLE Webinar: AI In Agriculture, AI-as-a-Service",
-      "tags": ["Presentation"],
-      "location": "Online",
-      "link": "https://www.youtube.com/watch?v=PN-J_Rbg15w",
-      "flyerKey": "icicleWebinarFeb27",
-      "description": "Exploring the delivery of AI capabilities through service-oriented architectures in rural settings."
-    },
-    {
       "date": "July 26–30, 2026",
       "sortDate": "2026-07-26",
       "title": "PEARC26: Resilient Roots + Empowered Communities",
-      "tags": ["Conference"],
+      "tags": ["Outreach"],
       "location": "Minneapolis, MN",
       "link": "https://pearc.acm.org/pearc26/",
       "description": "An annual conference bringing together the research computing and data community to share practices, experiences, and innovations in advanced research computing."
+    },
+    {
+      "date": "August 29 – September 3, 2026",
+      "sortDate": "2026-08-29",
+      "title": "AgWireless’26: Accelerating Concerted 6G, AgTech & Multi-Use Innovation",
+      "tags": ["Outreach"],
+      "location": "Ames, Iowa",
+      "link": "https://arawireless.org/agwireless26/#program",
+      "description": "A multi-day event bringing together researchers, industry leaders, government representatives, and agricultural technology communities to advance 6G, AgTech, rural connectivity, and multi-use innovation through workshops, demonstrations, training, and collaborative discussions."
+    },
+    {
+      "date": "September 22–24, 2026",
+      "sortDate": "2026-09-22",
+      "title": "Farm Science Review 2026",
+      "tags": ["Outreach"],
+      "location": "London, Ohio",
+      "link": "https://fsr.osu.edu/",
+      "description": "Ohio State's annual agricultural event featuring emerging technologies, equipment exhibits, field demonstrations, research, and educational programs for farmers, researchers, students, and agricultural industry professionals."
+    },
+    {
+      "date": "November 2–4, 2026",
+      "sortDate": "2026-11-02",
+      "title": "Summit for AI Institutes Leadership (SAIL) 2026",
+      "tags": ["Outreach"],
+      "location": "San Diego, California",
+      "link": "https://na.eventscloud.com/website/97211/home/",
+      "description": "The annual Summit for AI Institutes Leadership brings together researchers, staff, and leaders from the national AI Institutes to share research, build connections, discuss best practices, and explore opportunities for collaboration. The conference is organized by the NSF AI Institutes Virtual Organization."
     }
   ]
 }
+

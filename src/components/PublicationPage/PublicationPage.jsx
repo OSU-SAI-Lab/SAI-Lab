@@ -164,22 +164,34 @@ export default function PublicationsPage() {
                     <div style={{ color: "#337ab7", marginBottom: "4px" }}>
                       {pub.authorsArr.map((auth, i) => (
                         <React.Fragment key={i}>
-                          {auth.toLowerCase().includes("subramoni") ? <strong>{auth}</strong> : auth}
+                          {auth.toLowerCase().includes("subramoni") || auth.toLowerCase().includes("potlapally") ? <strong>{auth}</strong> : auth}
                           {i < pub.authorsArr.length - 1 ? ", " : ""}
                         </React.Fragment>
                       ))}
                     </div>
                     <strong>{pub.title}</strong>, {pub.venue}, {pub.year}.
-                    {pub.link && (
+                    {(pub.link || pub.slides) && (
                       <div style={{ marginTop: "8px" }}>
-                        <a
-                          href={pub.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold" }}
-                        >
-                          [Full Text]
-                        </a>
+                        {pub.link && (
+                          <a
+                            href={pub.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold", marginRight: "12px" }}
+                          >
+                            [Full Text]
+                          </a>
+                        )}
+                        {pub.slides && (
+                          <a
+                            href={pub.slides}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold" }}
+                          >
+                            [Slides]
+                          </a>
+                        )}
                       </div>
                     )}
                   </td>

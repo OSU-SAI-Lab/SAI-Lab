@@ -1,6 +1,27 @@
 {
   "items": [
     {
+      "id": 17,
+      "date": "2026-07-16",
+      "title": "AI-Driven Conservation Decision Framework Presented at ICPA 2026",
+      "description": "Research led by Khushboo Mundada on an AI-driven decision framework connecting conservation practices, climate conditions, crop yield, and conservation payments was presented at the 17th International Conference on Precision Agriculture in Porto Alegre, Brazil.",
+      "tag": "Research",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>Research developed by Khushboo Mundada was presented at the <a href=\"https://www.ispag.org/Events/ICPA\" target=\"_blank\" rel=\"noopener noreferrer\">17th International Conference on Precision Agriculture (ICPA)</a>, held jointly with the 11th Brazilian Congress on Precision and Digital Agriculture (ConBAP) from July 13–16, 2026, in Porto Alegre, Brazil.</p><p>Presented by Dr. John Fulton, the work introduced an AI-driven decision framework designed to connect agricultural conservation practices, climate conditions, crop-yield outcomes, and conservation-payment decisions. The research was based on Khushboo's thesis work and focused on transforming multiple environmental and management indicators into an interpretable decision matrix that can support agricultural planning and conservation-program evaluation.</p><p>A key component of the framework is the use of probabilistic yield prediction. Instead of producing only a single estimated yield value, the model represents a range of possible outcomes and their associated probabilities. The quality of these predictions is evaluated using the Continuous Ranked Probability Score (CRPS), which compares the complete predicted probability distribution with the actual observed yield. A lower CRPS indicates that the predicted distribution is more accurate and better aligned with the observed outcome.</p><p>The framework also incorporates the Standardized Precipitation Evapotranspiration Index over a 12-month period, known as SPEI-12. This indicator measures whether an area has experienced relatively wet, normal, or dry conditions by considering both precipitation and water loss through evapotranspiration. SPEI-12 allows the model to account for longer-term moisture conditions that may influence crop performance and the effectiveness of conservation practices.</p><p>Another major element is the Conservation Effectiveness Score (CES), which represents a farm's recent conservation-management history. The score combines five years of conservation practices using a weighted-decay structure: 35% for the most recent year, followed by 25%, 20%, 12%, and 8% for the preceding four years. This approach gives greater importance to current management while still recognizing the accumulated benefits of conservation investments made in previous years.</p><p>By combining predicted yield, climate indicators, and conservation-management history, the framework produces a final decision matrix that can help evaluate how conservation performance may be connected to potential payment outcomes. The goal is to provide an understandable and data-informed tool for exploring the relationship between agricultural productivity and sustained conservation practices.</p><p>The presentation received positive feedback from conference attendees. Several participants approached Dr. Fulton after the session to discuss the model and its outputs. Attendees highlighted the value of applying artificial intelligence to agricultural conservation and expressed particular interest in the direct connection between conservation payments and crop-yield outcomes. The project's final decision matrix was also recognized as one of the strongest and most useful results of the work.</p><p>The presentation demonstrates how AI and data-driven agricultural models can move beyond prediction alone by translating complex environmental, management, and production data into practical decision-support information for researchers, conservation professionals, policymakers, and agricultural producers.</p>",
+      "media": [],
+      "members": [
+        {
+          "name": "Khushboo Mundada",
+          "profileUrl": null
+        },
+        {
+          "name": "John Fulton",
+          "profileUrl": null
+        }
+      ]
+    },
+    {
       "id": 13,
       "date": "2026-07-22",
       "title": "ICICLE Team Presents AI & Cyberinfrastructure at ExploreAg Technology Camp",
@@ -31,6 +52,28 @@
       "link": "https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/"
     },
     {
+      "id": 15,
+      "date": "2026-03-06",
+      "title": "HARVEST-Vision 2026 Advances Computer Vision and High-Performance Computing in Agriculture",
+      "description": "The second HARVEST-Vision workshop brought together researchers and practitioners in computer vision, high-performance computing, and agriculture to share innovative approaches and advance accessible, interdisciplinary digital agriculture.",
+      "tag": "News",
+      "link": "https://icicle-ai.github.io/harvest/"
+    },
+    {
+      "id": 14,
+      "date": "2026-02-27",
+      "title": "ICICLE Webinar: AI in Agriculture",
+      "description": "The NSF-funded ICICLE AI Institute hosted a webinar highlighting how artificial intelligence supports scalable, data-driven decision-making across modern agricultural systems.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>On February 27, 2026, the NSF-funded ICICLE AI Institute hosted the webinar “AI in Agriculture,” highlighting how artificial intelligence is supporting scalable, data-driven decision-making across modern agricultural systems.</p><p>The webinar showcased ICICLE’s Data-to-Action (DTA) pipeline, which supports end-to-end workflows that integrate data ingestion, model training, inference, and interactive decision support. Demonstrations included a Retrieval-Augmented Generation chatbot for querying agricultural datasets and ICICLE resources, real-time object detection and classification pipelines for identifying crop health conditions and field objects, and a precision spot-spraying application for site-specific weed management.</p><p>Together, these demonstrations illustrated ICICLE’s efforts to make agricultural AI more accessible, interoperable, and impactful. The webinar also emphasized the importance of collaboration among computer scientists, agricultural engineers, researchers, and other domain stakeholders in advancing sustainable farming technologies.</p><p>The full webinar recording is available on <a href=\"https://www.youtube.com/watch?v=PN-J_Rbg15w\" target=\"_blank\" rel=\"noopener noreferrer\">YouTube</a>.</p><div style=\"position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:32px;border-radius:12px\"><iframe src=\"https://www.youtube.com/embed/PN-J_Rbg15w\" title=\"ICICLE Webinar: AI in Agriculture\" style=\"position:absolute;inset:0;width:100%;height:100%;border:0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe></div>",
+      "media": [],
+      "members": [
+        {"name":"Hari Subramoni","profileUrl":"https://cse.osu.edu/people/subramoni.1"}
+      ]
+    },
+    {
       "id": 1,
       "date": "2026-01-27",
       "title": "ICICLE Mentors High School Students for the Presidential AI Challenge",
@@ -56,12 +99,20 @@
     },
     {
       "id": 3,
-      "date": "2025-02-27",
+      "date": "2025-06-03",
       "title": "NSF ICICLE Webinar: AI-enabled Digital Agriculture — An Overview of ICICLE Software Components",
       "description": "A webinar covering ICICLE's software components including HARVEST, Open Pass & ArrayMorph, demonstrating how AI-enabled tools are advancing digital agriculture research and practice.",
       "tag": "Outreach",
-      "link": "https://www.youtube.com/watch?v=9-zxiB30jfk",
-      "recording": true
+      "link": null,
+      "author": "NSF ICICLE AI Institute",
+      "body": "<p>NSF ICICLE faculty member Hari Subramoni delivered a webinar for the NSF ICICLE AI Institute titled AI-enabled Digital Agriculture - An Overview of ICICLE Software Components. The session presented ICICLE’s work in developing low-cost, open-access, and intelligent cyberinfrastructure powered by high-performance computing and artificial intelligence for agriculture.</p><iframe width=\"100%\" height=\"360\" src=\"https://www.youtube.com/embed/9-zxiB30jfk\" title=\"NSF ICICLE Webinar\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe><p>During the presentation, Hari introduced ICICLE’s end-to-end digital agriculture pipeline, enabling farmers to tailor unique solutions for their farms through the pipeline. He highlighted key software components specifically designed by ICICLE:</p><ul><li><strong>Harvest:</strong> The primary deep learning framework that manages the model training pipeline, semi-supervised image labeling, distributed HPC inference, and visualization dashboard through an easy to use interface.</li><li><strong>ArrayMorph:</strong> A data transfer optimization tool that crops high-resolution satellite/aerial images down to just the target area before transferring, speeding up data transfer by ~1.5x and reducing cloud transfer costs by ~9x.</li><li><strong>OpenPass:</strong> An automated drone navigation and data acquisition software that manages autonomous waypoint planning, field-level image capture, edge data streaming, and optional on-device edge processing.</li></ul><p>Together, these technologies support the broader mission of democratizing AI, bringing high-performance computing and intelligent cyberinfrastructure directly to agricultural communities.</p>",
+      "media": [],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://cse.osu.edu/people/subramoni.1"
+        }
+      ]
     },
     {
       "id": 5,

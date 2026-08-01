@@ -25,7 +25,7 @@ export default function NewsArticlePage() {
         <h2>Article not found</h2>
         <p>The article you're looking for doesn't exist or has been moved.</p>
         <Link to="/news-and-updates" className="article-back-link">
-          ← Back to News &amp; Updates
+          ← Back to News &amp; Events
         </Link>
       </div>
     );
@@ -47,7 +47,7 @@ export default function NewsArticlePage() {
   return (
     <div className="article-page">
       <Link to="/news-and-updates" className="article-back-link">
-        ← Back to News &amp; Updates
+        ← Back to News &amp; Events
       </Link>
 
       <header className="article-header">
