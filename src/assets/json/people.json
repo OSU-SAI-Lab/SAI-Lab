@@ -139,10 +139,7 @@
     {
       "id": 7,
       "name": "Brijesh Nanda",
-      "roles": [
-        "staff",
-        "past"
-      ],
+      "role": "staff",
       "title": "Staff",
       "department": "Computer Science and Engineering",
       "photo": "Brijesh.JPG",
@@ -445,6 +442,27 @@
         "Monocular depth estimation for outdoor scenes using geospatial context and drone imagery",
         "Computer vision–based methods for precision digital agriculture",
         "Exploratory data analysis and optimization of geospatial datasets"
+      ],
+      "publications": null
+    },
+    {
+      "id": 22,
+      "name": "Brijesh Nanda",
+      "role": "past",
+      "title": "Graduate Student",
+      "department": "Computer Science and Engineering",
+      "photo": "Brijesh.JPG",
+      "location": "Dreese Labs 482",
+      "website": "https://brijesh-nanda-by.github.io/Portfolio/",
+      "email": "brundayogananda.1@buckeyemail.osu.edu",
+      "interests": [
+        "software architecture",
+        "system design",
+        "ML/AI workflows"
+      ],
+      "projects": [
+        "Workflow orchestrator.",
+        "Image preprocessing studio"
       ],
       "publications": null
     }
