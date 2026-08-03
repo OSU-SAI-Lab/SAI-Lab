@@ -60,7 +60,7 @@ export default function People() {
   const groupedMembers = useMemo(() => ({
     faculty: filteredMembers.filter(m => m.role === 'faculty'),
     phd: filteredMembers.filter(m => m.role === 'phd'),
-    employee: filteredMembers.filter(m => m.role === 'employee'),
+    staff: filteredMembers.filter(m => m.role === 'staff'),
     masters: filteredMembers.filter(m => m.role === 'masters'),
     undergraduate: filteredMembers.filter(m => m.role === 'undergraduate'),
     past: filteredMembers.filter(m => m.role === 'past'),
@@ -69,7 +69,7 @@ export default function People() {
   const roleLabels = {
     faculty: 'Faculty',
     phd: 'PhD Students',
-    employee: 'Employees',   // 或 'Employee'
+    staff: 'Staff',
     masters: 'Graduate Students',
     undergraduate: 'Undergraduate Students',
     past: 'Alumni and Former Students',
