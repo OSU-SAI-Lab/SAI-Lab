@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": 7,
+      "title": "SAI Lab Undergraduates Advance to Round 2 of AISEHack 2.0",
+      "type": "Hackathon / Research",
+      "date": "August 2026",
+      "sortDate": "2026-08-03",
+      "time": null,
+      "mode": "Online",
+      "location": "International",
+      "description": "Ohio State undergraduates Amrithaa Ashok Kumar, Aarush Katta, and Maanav Jajodia advanced to Round 2 of AISEHack 2.0 in the Remote Sensing and Yield Prediction track.",
+      "link": null,
+      "author": "SAI Lab",
+      "body": "<p>Ohio State undergraduates Amrithaa Ashok Kumar, Aarush Katta, and Maanav Jajodia, who are affiliated with the Systems and AI Lab (SAI Lab) at The Ohio State University and the NSF ICICLE AI Institute, have advanced to Round 2 of AISEHack 2.0, an international AI for Science and Engineering hackathon organized by the Anusandhan National Research Foundation in collaboration with IIIT Hyderabad, GalaxEye, and IIT Madras.</p><p>Their team is competing in the Remote Sensing and Yield Prediction track, which challenges participants to develop robust AI methods for crop-pattern detection and yield prediction using remote sensing and geospatial data.</p><p>In Round 1, the team developed a crop-mapping pipeline that integrates multi-temporal X-band synthetic aperture radar imagery, agricultural masking, temporal feature extraction, and unsupervised machine learning to estimate village-level crop areas in settings with sparse and limited ground-truth data.</p><p>This work reflects the SAI Lab's broader interests in AI, cyberinfrastructure, and data-driven agriculture, while also aligning closely with ICICLE's use-inspired emphasis on digital agriculture.</p><p>AISEHack 2.0 brings together students, researchers, innovators, and AI practitioners to address real-world scientific and engineering challenges, with shortlisted teams moving on to a second online sprint and top finalists advancing to the Grand Finale in Goa, India.</p>",
+      "media": [],
+      "tags": [
+        "Research",
+        "Remote Sensing",
+        "Digital Agriculture",
+        "AI",
+        "ICICLE"
+      ],
+      "members": [
+        {
+          "name": "Amrithaa Ashok Kumar",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Aarush Katta",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Maanav Jajodia",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        }
+      ]
+    },
+    {
       "id": 1,
       "title": "SAI Lab and ICICLE Showcase AI-Enabled Agriculture Tools at Farm Science Review 2025",
       "type": "Exhibition / Demo",
