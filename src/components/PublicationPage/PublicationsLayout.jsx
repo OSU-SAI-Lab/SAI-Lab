@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
 import { Outlet } from "react-router-dom";
-import csvUrl from "../../assets/csv_data/publication.csv?url"; // adjust if needed
+import csvText from "../../assets/csv_data/publication.csv?raw";
 
 const normalizeAuthors = (authors = "") =>
   authors
@@ -9,51 +8,28 @@ const normalizeAuthors = (authors = "") =>
     .map((a) => a.trim())
     .filter(Boolean);
 
-export default function PublicationsLayout() {
-  const [rows, setRows] = useState([]);
-  const [loading, setLoading] = useState(true);
+const { data } = Papa.parse(csvText, {
+  header: true,
+  skipEmptyLines: true,
+  transformHeader: (header) => header.replace(/^\uFEFF/, "").trim(),
+  transform: (value) => (typeof value === "string" ? value.trim() : value),
+});
 
-  useEffect(() => {
-    const fetchCsv = async () => {
-      try {
-        const res = await fetch(csvUrl);
-        const csvText = await res.text();
+const rows = data
+  .filter((row) => row.id && row.title)
+  .map((row) => {
+    const id = Number(row.id);
+    const year = Number(row.year);
 
-        Papa.parse(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          transformHeader: (h) => h.replace(/^\uFEFF/, "").trim(),
-          transform: (v) => (typeof v === "string" ? v.trim() : v),
-          complete: ({ data }) => {
-            const cleaned = data
-              .filter((r) => r.id && r.title)
-              .map((r) => {
-                const idNum = Number(r.id);
-                const yearNum = Number(r.year);
-
-                return {
-                  ...r,
-                  id: Number.isFinite(idNum) ? idNum : r.id,
-                  year: Number.isFinite(yearNum) ? yearNum : r.year,
-                  authorsArr: normalizeAuthors(r.authors),
-                  // Ensure 'type' exists for the sidebar categories; 
-                  // default to 'Journals' if the CSV cell is empty
-                  type: r.type || "Journals", 
-                };
-              });
-
-            setRows(cleaned);
-            setLoading(false);
-          },
-        });
-      } catch (error) {
-        console.error("Error fetching publication CSV:", error);
-        setLoading(false);
-      }
+    return {
+      ...row,
+      id: Number.isFinite(id) ? id : row.id,
+      year: Number.isFinite(year) ? year : row.year,
+      authorsArr: normalizeAuthors(row.authors),
+      type: row.type || "Journals",
     };
+  });
 
-    fetchCsv();
-  }, []);
-
-  return <Outlet context={{ rows, loading }} />;
+export default function PublicationsLayout() {
+  return <Outlet context={{ rows, loading: false }} />;
 }
