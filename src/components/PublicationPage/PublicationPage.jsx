@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import Footer from "../Footer"
+
 export default function PublicationsPage() {
   const { rows, loading } = useOutletContext();
   const [activeCategory, setActiveCategory] = useState("Journals");
@@ -41,6 +42,61 @@ export default function PublicationsPage() {
       return rowType === activeCategory;
     }).sort((a, b) => b.year - a.year);
   }, [rows, activeCategory, selectedYear]);
+
+  // ── Structured data injection ─────────────────────────────────────────────
+  // Generates a JSON-LD ScholarlyArticle list from all publications and injects
+  // it into <head> so search engines can index the lab's research output.
+  useEffect(() => {
+    if (rows.length === 0) return;
+
+    const typeMap = {
+      Journal: "ScholarlyArticle",
+      Journals: "ScholarlyArticle",
+      Conference: "Article",
+      "Conferences & Workshops": "Article",
+      Book: "Book",
+      Books: "Book",
+      "Book Chapters": "Chapter",
+      "Technical Reports": "TechArticle",
+      "Ph.D. Dissertations": "Thesis",
+      "M.S. Theses": "Thesis",
+      "M.S. Project": "Thesis",
+      "B.S. Honors Theses": "Thesis",
+      "B.S. Project": "Thesis",
+    };
+
+    const items = rows.map((pub) => ({
+      "@type": typeMap[pub.type?.trim()] || "ScholarlyArticle",
+      "name": pub.title,
+      "author": pub.authorsArr.map((name) => ({
+        "@type": "Person",
+        "name": name,
+      })),
+      "datePublished": pub.year ? String(pub.year) : undefined,
+      "isPartOf": pub.venue || undefined,
+      "url": pub.link || undefined,
+    }));
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": items,
+    };
+
+    const existing = document.getElementById("publications-structured-data");
+    if (existing) existing.remove();
+
+    const script = document.createElement("script");
+    script.id = "publications-structured-data";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById("publications-structured-data");
+      if (el) el.remove();
+    };
+  }, [rows]);
+
 
   if (loading) return <div style={{ padding: 20 }}>Loading...</div>;
 
@@ -83,7 +139,7 @@ export default function PublicationsPage() {
           .pub-sidebar {
             width: 100%;
             flex-direction: row;
-            overflow-x: auto; /* Allows horizontal scrolling of menu on small screens */
+            overflow-x: auto;
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             padding-bottom: 5px;
@@ -93,7 +149,7 @@ export default function PublicationsPage() {
             margin-bottom: 0;
             margin-right: -1px;
             flex: 0 0 auto;
-            border-left: 1px solid #ddd !important; /* Override desktop highlight style */
+            border-left: 1px solid #ddd !important;
             border-bottom: 3px solid transparent;
           }
 
@@ -118,7 +174,6 @@ export default function PublicationsPage() {
                 style={{
                   backgroundColor: isActive ? "#f4f4f4" : "white",
                   fontWeight: isActive ? "bold" : "normal",
-                  // Desktop-only left border highlight
                   borderLeft: isActive ? "4px solid #337ab7" : "1px solid #ddd",
                 }}
               >
