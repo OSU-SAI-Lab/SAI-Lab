@@ -199,17 +199,17 @@ export default function NewsPage() {
       </div>
 
       <div className="news-content news-content-wide">
-        {featuredEvents.length > 0 && (
-          <section className="upcoming-events" id="upcoming-events">
-            <div className="upcoming-events-header">
-              <h2>
-                <span className="upcoming-events-icon" aria-hidden="true">
-                  📅
-                </span>
-                Upcoming Events
-              </h2>
-            </div>
+        <section className="upcoming-events" id="upcoming-events">
+          <div className="upcoming-events-header">
+            <h2>
+              <span className="upcoming-events-icon" aria-hidden="true">
+                📅
+              </span>
+              Upcoming Events
+            </h2>
+          </div>
 
+          {featuredEvents.length > 0 ? (
             <div className="upcoming-events-grid">
               {featuredEvents.map((event) => (
                 <EventCard
@@ -218,8 +218,12 @@ export default function NewsPage() {
                 />
               ))}
             </div>
-          </section>
-        )}
+          ) : (
+            <div style={{ textAlign: "center", padding: "24px", background: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px dashed #ccc", color: "#666" }}>
+              No upcoming events scheduled at this time. Check back soon!
+            </div>
+          )}
+        </section>
 
         <div className="news-controls" id="news-feed">
           <div className="filter-pills">
@@ -258,8 +262,26 @@ export default function NewsPage() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="news-no-results">
-            No results found. Try adjusting your filters or search query.
+          <div className="news-no-results" style={{ textAlign: "center", padding: "40px 20px" }}>
+            <h3 style={{ fontSize: "18px", marginBottom: "8px", color: "#333" }}>
+              No matching news or events
+            </h3>
+            <p style={{ color: "#666", marginBottom: "16px" }}>
+              {searchQuery
+                ? `No results found for "${searchQuery}".`
+                : `No results under the ${activeFilter} category.`}
+            </p>
+            {(activeFilter !== "All" || searchQuery !== "") && (
+              <button
+                className="news-clear-button"
+                onClick={() => {
+                  setActiveFilter("All");
+                  setSearchQuery("");
+                }}
+              >
+                Clear Search &amp; Filters
+              </button>
+            )}
           </div>
         )}
       </div>

@@ -481,6 +481,22 @@
   font-size: 0.9375rem;
 }
 
+.news-clear-button {
+  padding: 8px 16px;
+  background-color: #BB1B1B;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.news-clear-button:hover {
+  background-color: #8b0000;
+}
+
 /* ===== Animations ===== */
 @keyframes fadeInUp {
   from {
