@@ -3,6 +3,9 @@
     height: 50vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-top: 6%;
+    padding-bottom: 5rem;
   
     background-image: url("../backgrounds/layered-peaks.svg"); /* <- swap SVG here */
     background-size: cover;
@@ -10,7 +13,6 @@
     background-repeat: no-repeat;
   
     color: white;
-    padding-top: 4rem;
 
     transform: scaleY(-1);
   }
@@ -37,7 +39,7 @@
   }
   
   .hero-title {
-    font-size: 4rem; /* Slightly larger */
+    font-size: 3.5rem; /* Slightly larger */
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
@@ -77,27 +79,30 @@
     border-radius: 6px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    text-decoration: none;  
+    display: inline-block;
   }
   
   .hero-btn:hover {
     background-color: #8b0000;
   }
   
-  .hero-btn-outline {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 0.75rem 1.75rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  }
-  
-  .hero-btn-outline:hover {
-    background: white;
-    color: black;
-  }
+.hero-btn-outline {
+  background-color: #bb0000;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn-outline:hover {
+  background-color: #8b0000;
+}
   
 /* Mobile adjustments for the Hero section */
 @media (max-width: 768px) {
