@@ -88,8 +88,10 @@ function WorkingWithUs() {
                 <span className="section-badge">Youth Outreach</span>
               </div>
 
-              {openSections.k12 && (
-                <div className="section-content animate-fade-in">
+              <div
+                className="section-content animate-fade-in"
+                hidden={!openSections.k12}
+              >
                   <p className="intro-text">{workingWithUsData.k12.intro}</p>
 
                   <div className="info-card" style={{ marginBottom: '1.5rem' }}>
@@ -152,7 +154,6 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
             </section>
 
             {/* UNDERGRADUATE SECTION */}
@@ -165,8 +166,10 @@ function WorkingWithUs() {
                 <span className="section-badge">Research Opportunities</span>
               </div>
 
-              {openSections.undergrad && (
-                <div className="section-content animate-fade-in">
+              <div
+                className="section-content animate-fade-in"
+                hidden={!openSections.undergrad}
+              >
                   <p className="intro-text">{workingWithUsData.undergraduate.intro}</p>
                   <div className="info-card" style={{ marginBottom: '1.5rem' }}>
                     <h3>Working With the Lab</h3>
@@ -210,7 +213,6 @@ function WorkingWithUs() {
                     </ul>
                   </div>
                 </div>
-              )}
             </section>
 
             {/* MASTERS SECTION */}
@@ -223,8 +225,10 @@ function WorkingWithUs() {
                 <span className="section-badge">Graduate Research</span>
               </div>
 
-              {openSections.masters && (
-                <div className="section-content animate-fade-in">
+              <div
+                className="section-content animate-fade-in"
+                hidden={!openSections.masters}
+              >
                   <p className="intro-text">{workingWithUsData.masters.intro}</p>
 
                   <div className="info-grid">
@@ -264,7 +268,6 @@ function WorkingWithUs() {
                     </ul>
                   </div>
                 </div>
-              )}
             </section>
 
             {/* PHD SECTION */}
@@ -277,8 +280,10 @@ function WorkingWithUs() {
                 <span className="section-badge">Doctoral Research</span>
               </div>
 
-              {openSections.phd && (
-                <div className="section-content animate-fade-in">
+              <div
+                className="section-content animate-fade-in"
+                hidden={!openSections.phd}
+              >
                   <p className="intro-text">
                     We are always looking for motivated PhD students to join our research group
                     and work on challenging problems in high-performance computing, distributed systems,
@@ -303,7 +308,6 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
             </section>
 
           </div> {/* end content-container */}

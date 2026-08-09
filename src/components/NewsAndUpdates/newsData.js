@@ -14,6 +14,12 @@ import ExploreAg1 from "../../assets/json/images/articles/ExploreAg1.jpg";
 import ExploreAg2 from "../../assets/json/images/articles/ExploreAg2.jpg";
 import ExploreAg3 from "../../assets/json/images/articles/ExploreAg3.jpg";
 import ExploreAg4 from "../../assets/json/images/articles/ExploreAg4.jpg";
+import OH_Fair1 from "../../assets/json/images/articles/OH_Fair1.jpeg";
+import OH_Fair2 from "../../assets/json/images/articles/OH_Fair2.jpg";
+import OH_Fair3 from "../../assets/json/images/articles/OH_Fair3.jpg";
+import PEARC1 from "../../assets/json/images/articles/26_PEARC1.jpg";
+import PEARC2 from "../../assets/json/images/articles/26_PEARC2.jpg";
+import PEARC3 from "../../assets/json/images/articles/26_PEARC3.jpg";
 
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
@@ -21,6 +27,12 @@ const mediaRegistry = {
   ExploreAg2,
   ExploreAg3,
   ExploreAg4,
+  OH_Fair1,
+  OH_Fair2,
+  OH_Fair3,
+  PEARC1,
+  PEARC2,
+  PEARC3,
 };
 
 function resolveMedia(media = []) {
