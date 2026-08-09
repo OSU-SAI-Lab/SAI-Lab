@@ -113,9 +113,9 @@
   }
 
   .hero {
-    height: 40vh;
+    height: 38vh;
     padding-top: 0; /* Removed padding to allow flex centering to work */
-    
+    padding-bottom: 0;
     /* Remove SVG but keep the dark base color */
     background-image: none !important; 
     background-color: #5a1a1a; 
@@ -128,7 +128,9 @@
     justify-content: center;
     text-align: center;
   }
-
+.hero-tagline {
+  color: #999999;
+}
   .hero-content {
     /* Reset the text flip - THIS IS THE KEY FIX */
     transform: none !important; 
@@ -153,7 +155,7 @@
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     letter-spacing: 1px;
     padding: 0 1rem;
     margin-bottom: 0.5rem;
@@ -162,10 +164,10 @@
   }
 
   .hero-subtitle {
-    font-size: 0.85rem; /* Slightly smaller for better mobile fit */
+    font-size: 0.95rem; /* Slightly smaller for better mobile fit */
     letter-spacing: 2px;
     margin-top: 0.5rem;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .hero-buttons {
