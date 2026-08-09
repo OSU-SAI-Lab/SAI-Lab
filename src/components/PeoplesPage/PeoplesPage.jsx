@@ -56,6 +56,14 @@ export default function People() {
     );
   };
 
+  const clearFilters = () => {
+    setSearchTerm('');
+    setSelectedInterests([]);
+    setSelectedRoles([]);
+  };
+
+  const hasActiveFilters = searchTerm !== '' || selectedRoles.length > 0 || selectedInterests.length > 0;
+  const hasDropdownFilters = selectedRoles.length > 0 || selectedInterests.length > 0;
   // Group by role
   const groupedMembers = useMemo(() => ({
     faculty: filteredMembers.filter(m => m.role === 'faculty'),
@@ -65,7 +73,7 @@ export default function People() {
     undergraduate: filteredMembers.filter(m => m.role === 'undergraduate'),
     past: filteredMembers.filter(m => m.role === 'past'),
   }), [filteredMembers]);
-  
+
   const roleLabels = {
     faculty: 'Faculty',
     phd: 'PhD Students',
@@ -133,13 +141,10 @@ export default function People() {
               </div>
             </div>
 
-            {(selectedRoles.length > 0 || selectedInterests.length > 0) && (
+            {hasDropdownFilters && (
               <button
                 className="clear-filters-button"
-                onClick={() => {
-                  setSelectedRoles([]);
-                  setSelectedInterests([]);
-                }}
+                onClick={clearFilters}
               >
                 Clear Filters
               </button>
@@ -148,10 +153,36 @@ export default function People() {
         </div>
       </div>
 
+      {hasDropdownFilters && (
+        <div className="active-filters">
+          {selectedRoles.map(role => (
+            <span key={role} className="filter-pill" onClick={() => toggleRole(role)}>
+              {roleLabels[role] || role}
+              <span className="filter-pill-close">×</span>
+            </span>
+          ))}
+          {selectedInterests.map(interest => (
+            <span key={interest} className="filter-pill" onClick={() => toggleInterest(interest)}>
+              {interest}
+              <span className="filter-pill-close">×</span>
+            </span>
+          ))}
+        </div>
+      )}
+
+
       {/* Main Content */}
       <main className="main-content">
         {filteredMembers.length === 0 ? (
-          <p className="no-results">No members found.</p>
+          <div className="no-results">
+            <h3>No members found</h3>
+            <p style={{ marginBottom: '1rem' }}>Try adjusting your search terms or filters.</p>
+            {hasActiveFilters && (
+              <button className="clear-filters-button" onClick={clearFilters}>
+                Clear Search &amp; Filters
+              </button>
+            )}
+          </div>
         ) : (
           Object.entries(groupedMembers).map(([role, members]) =>
             members.length > 0 && (
@@ -168,9 +199,9 @@ export default function People() {
         )}
       </main>
 
-     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Systems and AI Lab, The Ohio State University</p>
-    </footer>
+      <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Systems and AI Lab, The Ohio State University</p>
+      </footer>
     </div>
   );
 }
@@ -186,10 +217,10 @@ function PersonCard({ member }) {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -199,14 +230,14 @@ function PersonCard({ member }) {
     if (e.target.tagName === 'A' || e.target.closest('a')) {
       return;
     }
-    
+
     if (isMobile) {
       setIsExpanded(!isExpanded);
     }
   };
 
   return (
-    <article 
+    <article
       className={`person-card ${isExpanded ? 'expanded' : ''}`}
       onClick={handleCardClick}
     >

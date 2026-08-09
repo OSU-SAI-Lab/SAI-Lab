@@ -15,56 +15,62 @@ export default function LatestNews() {
       <h2 className="latest-news-title">Latest News</h2>
 
       <div className="latest-news-container">
-        {sortedEvents.map((event) => (
-          <div key={event.id} className="latest-news-card">
-            <h3 className="latest-news-card-title">{event.title}</h3>
+        {sortedEvents.length > 0 ? (
+          sortedEvents.map((event) => (
+            <div key={event.id} className="latest-news-card">
+              <h3 className="latest-news-card-title">{event.title}</h3>
 
-            <p className="latest-news-meta">
-              <strong>{event.type}</strong> · {event.mode}
-            </p>
+              <p className="latest-news-meta">
+                <strong>{event.type}</strong> · {event.mode}
+              </p>
 
-            <p className="latest-news-datetime">
-              {event.date}
-              {event.time && ` · ${event.time}`}
-            </p>
+              <p className="latest-news-datetime">
+                {event.date}
+                {event.time && ` · ${event.time}`}
+              </p>
 
-            <p className="latest-news-location">{event.location}</p>
+              <p className="latest-news-location">{event.location}</p>
 
-            <p className="latest-news-description">{event.description}</p>
+              <p className="latest-news-description">{event.description}</p>
 
-            {event.members && (
-              <div className="latest-news-members">
-                <strong>Lab Members Involved:</strong>
-                <ul>
-                  {event.members.map((m, idx) => (
-                    <li key={idx}>
-                      <a href={m.profileUrl}>{m.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+              {event.members && (
+                <div className="latest-news-members">
+                  <strong>Lab Members Involved:</strong>
+                  <ul>
+                    {event.members.map((m, idx) => (
+                      <li key={idx}>
+                        <a href={m.profileUrl}>{m.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            {/* External link if available, otherwise internal article page */}
-            {event.link ? (
-              <a
-                href={event.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="latest-news-link"
-              >
-                Learn More →
-              </a>
-            ) : (
-              <Link
-                to={`/news/${event.id}`}
-                className="latest-news-link"
-              >
-                Learn More →
-              </Link>
-            )}
+              {/* External link if available, otherwise internal article page */}
+              {event.link ? (
+                <a
+                  href={event.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="latest-news-link"
+                >
+                  Learn More →
+                </a>
+              ) : (
+                <Link
+                  to={`/news/${event.id}`}
+                  className="latest-news-link"
+                >
+                  Learn More →
+                </Link>
+              )}
+            </div>
+          ))
+        ) : (
+          <div style={{ textAlign: "center", padding: "40px 20px", color: "#666", width: "100%" }}>
+            <p style={{ margin: 0, fontSize: "15px" }}>No news articles available at this time.</p>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

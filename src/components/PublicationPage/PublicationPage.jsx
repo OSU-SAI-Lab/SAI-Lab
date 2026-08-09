@@ -102,6 +102,22 @@ export default function PublicationsPage() {
             background-color: #f4f4f4;
             font-weight: bold;
           }
+
+          .pub-clear-button {
+            padding: 8px 16px;
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+          }
+
+          .pub-clear-button:hover {
+            background-color: #286090;
+          }
         }
       `}</style>
 
@@ -201,10 +217,26 @@ export default function PublicationsPage() {
           </table>
 
           {filtered.length === 0 && (
-            <p style={{ color: "#999", marginTop: "20px", textAlign: "center" }}>
-              No publications found in this category.
-            </p>
+            <div style={{ textAlign: "center", padding: "40px 20px" }}>
+              <h3 style={{ fontSize: "18px", color: "#333", marginBottom: "8px" }}>
+                No publications found
+              </h3>
+              <p style={{ margin: "0 0 16px 0", fontSize: "14px", color: "#777" }}>
+                {selectedYear !== "All"
+                  ? `No ${activeCategory} publications found for ${selectedYear}.`
+                  : `No publications available under ${activeCategory}.`}
+              </p>
+              {selectedYear !== "All" && (
+                <button
+                  className="pub-clear-button"
+                  onClick={() => setSelectedYear("All")}
+                >
+                  Show All Years
+                </button>
+              )}
+            </div>
           )}
+
         </div>
 
       </div>
