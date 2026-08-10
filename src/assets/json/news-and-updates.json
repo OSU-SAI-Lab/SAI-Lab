@@ -1,6 +1,88 @@
 {
   "items": [
     {
+      "id": 20,
+      "date": "2026-07-30",
+      "title": "SAI Lab at PEARC 2026",
+      "description": "SAI Lab members participated in PEARC 2026 through tutorials, Birds of a Feather sessions, and demos of ICICLE tools including Smart Labeler, Preprocessing Studio, and Edge Device Manager.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>Members of the SAI Lab participated in <a href=\"https://pearc.acm.org/\" target=\"_blank\" rel=\"noopener noreferrer\">PEARC 2026</a>, engaging with the research computing community through tutorials, Birds of a Feather sessions, live demonstrations, and informal conversations with peers from across the field. The event provided an excellent opportunity to showcase our work in AI-enabled cyberinfrastructure and to learn from others building tools for scalable scientific computing.</p><p>A hands-on tutorial with collaborators from <a href=\"https://tacc.utexas.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">TACC</a> and <a href=\"https://icicle.osu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">ICICLE</a> highlighted several services developed to support machine learning and data-centric research. Attendees explored various ICICLE tools including the <strong>Smart Labeler</strong> developed by members of SAI Lab for streamlining data annotation workflows. The interactive format encouraged discussion about usability, integration, and how these services can fit into larger research pipelines.</p><p>The SAI Lab also contributed to poster and demo sessions featuring the broader ICICLE service ecosystem. These demonstrations showed how tools developed by SAI Lab for ICICLE such as Smart Labeler, No-Code Image Lab (Preprocessing Studio), and Edge Device Manager can work together to support end-to-end AI workflows, from data preparation to deployment on edge devices. Conversations with attendees reinforced the importance of building systems that are not only technically capable, but also practical and accessible for real-world use.</p><p>Another key theme was workflow orchestration. We shared our vision for a pluggable Workflow Orchestrator that can adapt to different research tasks by swapping stages in and out as needed. We also previewed upcoming capabilities, including shapefile generation, which will help generate mission files for drone systems when onboard compute is not available.</p><p>Beyond our own sessions, the Nexus presentation offered useful ideas around cross-cluster data synchronization, synced local development environments, streamlined GPU access, and temporary SSH credential management. These concepts were especially relevant as we continue building cyberinfrastructure that supports flexible, reproducible, and scalable AI research.</p><p>PEARC 2026 was a valuable opportunity for the SAI Lab to share our work, connect with the broader community, and gather ideas that will inform the next generation of our tools and services.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "PEARC1",
+          "alt": "SAI Lab at PEARC 2026",
+          "caption": "SAI Lab participation at PEARC 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "PEARC2",
+          "alt": "PEARC 2026 tutorial and demo sessions",
+          "caption": "Tutorials and demonstrations at PEARC 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "PEARC3"
+        }
+      ],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Brijesh Nanda",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "date": "2026-08-04",
+      "title": "Bringing AI to the Field: ICICLE and SAI Lab Showcase Scalable Agricultural Intelligence at the 2026 Ohio State Fair",
+      "description": "SAI Lab / ICICLE presented Auto-Harvest, Intelligent Edge Management Service (IEMS), and Smart Labeler at the 2026 Ohio State Fair, demonstrating end-to-end AI and cyberinfrastructure for precision agriculture.",
+      "tag": "Outreach",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>The members of SAI Lab / ICICLE had an exceptional opportunity to present ICICLE’s AI-driven cyberinfrastructure at the 2026 Ohio State Fair, demonstrating how advanced computing and intelligent systems are reshaping the future of precision agriculture. Through live, interactive demonstrations, our team from the SAI Lab engaged a wide audience—ranging from farmers and students to industry leaders—bridging cutting-edge research with practical, field-ready solutions.</p><p>At the core of our showcase were three complementary innovations that together enable an end-to-end agricultural intelligence pipeline. First, our Auto-Harvest framework demonstrated how autonomous UAV-based image acquisition integrates with high-performance computing (HPC) pipelines to support timely and precise field interventions. Attendees were particularly interested in how this pipeline reduces manual scouting efforts while enabling data-driven decision-making at scale.</p><p>Second, we presented the Intelligent Edge Management Service (IEMS), developed within the NSF ICICLE AI Institute. IEMS enables seamless orchestration of containerized AI workloads and real-time inference directly on edge devices, even in rural environments with limited connectivity. This capability resonated strongly with participants interested in deploying AI systems beyond traditional cloud settings, highlighting the importance of low-latency, resilient edge-to-cloud architectures.</p><p>Third, our Smart Labeler platform addressed a critical bottleneck in AI adoption: data annotation. By leveraging HPC resources, Smart Labeler supports rapid, scalable, multi-modal dataset labeling across domains, significantly accelerating the development and deployment of AI models.</p><p>Beyond the technical demonstrations, the event provided a valuable platform for dialogue and collaboration. We engaged in meaningful conversations with agricultural practitioners, technology developers, and business leaders exploring how ICICLE’s AI and cyberinfrastructure ecosystem can be integrated into real-world operations. These exchanges underscored a growing demand for scalable, accessible AI solutions that can operate reliably in field conditions.</p><p>The accompanying images capture these interactions—our students and staff demonstrating live systems, walking attendees through workflows, and discussing practical deployment scenarios. These moments highlight not only the technical capabilities of our platforms but also their accessibility and relevance to diverse user communities.</p><p>Overall, the Ohio State Fair served as a powerful venue to translate research into impact. The enthusiasm and curiosity we encountered reaffirm the importance of bringing advanced AI and cyberinfrastructure innovations directly to the public, fostering both awareness and adoption in domains critical to societal and economic sustainability.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "OH_Fair1",
+          "alt": "SAI Lab and ICICLE booth at the 2026 Ohio State Fair with agricultural drone display",
+          "caption": "Live demonstration booth featuring agricultural UAV and edge computing hardware."
+        },
+        {
+          "type": "image",
+          "srcKey": "OH_Fair2",
+          "alt": "OSU CFAES branded exhibit with drone and computing workstation at the Ohio State Fair",
+          "caption": "Auto-Harvest UAV and Intelligent Edge Management Service setup at the fair."
+        },
+        {
+          "type": "image",
+          "srcKey": "OH_Fair3",
+          "alt": "Staff explaining agricultural drone technology to fair attendees",
+          "caption": "Engaging with visitors about AI-driven cyberinfrastructure for agriculture."
+        }
+      ],
+      "members": [
+        {
+          "name": "Brijesh Nanda",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Harikesh Byrandurga Gopinath",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        },
+        {
+          "name": "Qifeng Chen",
+          "profileUrl": "https://osu-sai-lab.github.io/SAI-Lab/people"
+        }
+      ]
+    },
+    {
       "id": 18,
       "date": "2026-08-03",
       "title": "SAI Lab Undergraduates Advance to Round 2 of AISEHack 2.0",

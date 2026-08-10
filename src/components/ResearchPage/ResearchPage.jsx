@@ -79,7 +79,8 @@ export default function ResearchPage() {
     }
   };
 
-  const hasActiveFilters = selectedAreas.length > 0 || selectedDomains.length > 0;
+  const hasActiveFilters = searchTerm !== '' || selectedAreas.length > 0 || selectedDomains.length > 0;
+  const hasDropdownFilters = selectedAreas.length > 0 || selectedDomains.length > 0;
 
   return (
     <div className="research-page">
@@ -137,7 +138,7 @@ export default function ResearchPage() {
               </div>
             </div>
 
-            {hasActiveFilters && (
+            {hasDropdownFilters && (
               <button
                 className="clear-filters-button"
                 onClick={clearFilters}
@@ -149,7 +150,7 @@ export default function ResearchPage() {
         </div>
       </div>
 
-      {hasActiveFilters && (
+      {hasDropdownFilters && (
         <div className="active-filters">
           {selectedAreas.map(area => (
             <span key={area} className="filter-pill" onClick={() => removeFilter('area', area)}>
@@ -174,12 +175,12 @@ export default function ResearchPage() {
         </div>
 
         {filteredProjects.length === 0 ? (
-          <div className="research-no-results">
+          <div className="no-results">
             <h3>No projects found</h3>
             <p>Try adjusting your filters or search terms.</p>
             {hasActiveFilters && (
               <button className="clear-filters-button" onClick={clearFilters}>
-                Clear All Filters
+                Clear Search &amp; Filters
               </button>
             )}
           </div>
