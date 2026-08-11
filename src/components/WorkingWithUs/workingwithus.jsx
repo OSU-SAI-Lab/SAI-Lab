@@ -37,7 +37,7 @@ function WorkingWithUs() {
   };
 
   const toggleRole = (index) => {
-    setExpandedRole(expandedRole === index ? null : index);
+    setExpandedRole((current) => current === index ? null : index);
   };
 
   const scrollToSection = (id) => {
@@ -80,16 +80,17 @@ function WorkingWithUs() {
 
             {/* K-12 SECTION */}
             <section id="k12" className={`opportunity-section ${openSections.k12 ? 'is-open' : 'is-closed'}`}>
-              <div className="section-header collapsible" onClick={() => toggleMajorSection('k12')}>
+              <button type="button" className="section-header collapsible" onClick={() => toggleMajorSection('k12')} aria-expanded={openSections.k12} aria-controls="k12-panel">
                 <div className="header-left">
                   <span className={`section-toggle-icon ${openSections.k12 ? 'open' : ''}`}>▶</span>
-                  <h2>K-12 Students</h2>
+                  <span className="section-title">K-12 Students</span>
                 </div>
                 <span className="section-badge">Youth Outreach</span>
-              </div>
+              </button>
 
               <div
                 className="section-content animate-fade-in"
+                id="k12-panel"
                 hidden={!openSections.k12}
               >
                   <p className="intro-text">{workingWithUsData.k12.intro}</p>
@@ -108,13 +109,12 @@ function WorkingWithUs() {
                   <div className="accordion-container">
                     {workingWithUsData.k12.roles.map((role, idx) => (
                       <div key={idx} className={`accordion-item ${expandedRole === idx ? 'active' : ''}`}>
-                        <button className="accordion-header" onClick={() => toggleRole(idx)}>
+                        <button type="button" className="accordion-header" id={`k12-role-${idx}-button`} onClick={() => toggleRole(idx)} aria-expanded={expandedRole === idx} aria-controls={`k12-role-${idx}-panel`}>
                           {role.title}
                           <span className="arrow">{expandedRole === idx ? '−' : '+'}</span>
                         </button>
 
-                        {expandedRole === idx && (
-                          <div className="accordion-body">
+                          <div className="accordion-body" id={`k12-role-${idx}-panel`} role="region" aria-labelledby={`k12-role-${idx}-button`} hidden={expandedRole !== idx}>
                             <div className="role-grid">
                               <div>
                                 <h4>Desired Skills</h4>
@@ -134,7 +134,6 @@ function WorkingWithUs() {
                               </div>
                             </div>
                           </div>
-                        )}
                       </div>
                     ))}
                   </div>
@@ -158,16 +157,17 @@ function WorkingWithUs() {
 
             {/* UNDERGRADUATE SECTION */}
             <section id="undergrad" className={`opportunity-section ${openSections.undergrad ? 'is-open' : 'is-closed'}`}>
-              <div className="section-header collapsible" onClick={() => toggleMajorSection('undergrad')}>
+              <button type="button" className="section-header collapsible" onClick={() => toggleMajorSection('undergrad')} aria-expanded={openSections.undergrad} aria-controls="undergrad-panel">
                 <div className="header-left">
                   <span className={`section-toggle-icon ${openSections.undergrad ? 'open' : ''}`}>▶</span>
-                  <h2>Undergraduate Students</h2>
+                  <span className="section-title">Undergraduate Students</span>
                 </div>
                 <span className="section-badge">Research Opportunities</span>
-              </div>
+              </button>
 
               <div
                 className="section-content animate-fade-in"
+                id="undergrad-panel"
                 hidden={!openSections.undergrad}
               >
                   <p className="intro-text">{workingWithUsData.undergraduate.intro}</p>
@@ -217,16 +217,17 @@ function WorkingWithUs() {
 
             {/* MASTERS SECTION */}
             <section id="masters" className={`opportunity-section ${openSections.masters ? 'is-open' : 'is-closed'}`}>
-              <div className="section-header collapsible" onClick={() => toggleMajorSection('masters')}>
+              <button type="button" className="section-header collapsible" onClick={() => toggleMajorSection('masters')} aria-expanded={openSections.masters} aria-controls="masters-panel">
                 <div className="header-left">
                   <span className={`section-toggle-icon ${openSections.masters ? 'open' : ''}`}>▶</span>
-                  <h2>Master's Students</h2>
+                  <span className="section-title">Master's Students</span>
                 </div>
                 <span className="section-badge">Graduate Research</span>
-              </div>
+              </button>
 
               <div
                 className="section-content animate-fade-in"
+                id="masters-panel"
                 hidden={!openSections.masters}
               >
                   <p className="intro-text">{workingWithUsData.masters.intro}</p>
@@ -272,16 +273,17 @@ function WorkingWithUs() {
 
             {/* PHD SECTION */}
             <section id="phd" className={`opportunity-section ${openSections.phd ? 'is-open' : 'is-closed'}`}>
-              <div className="section-header collapsible" onClick={() => toggleMajorSection('phd')}>
+              <button type="button" className="section-header collapsible" onClick={() => toggleMajorSection('phd')} aria-expanded={openSections.phd} aria-controls="phd-panel">
                 <div className="header-left">
                   <span className={`section-toggle-icon ${openSections.phd ? 'open' : ''}`}>▶</span>
-                  <h2>PhD Students</h2>
+                  <span className="section-title">PhD Students</span>
                 </div>
                 <span className="section-badge">Doctoral Research</span>
-              </div>
+              </button>
 
               <div
                 className="section-content animate-fade-in"
+                id="phd-panel"
                 hidden={!openSections.phd}
               >
                   <p className="intro-text">

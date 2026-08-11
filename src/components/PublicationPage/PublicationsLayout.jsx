@@ -27,6 +27,11 @@ const rows = data
       year: Number.isFinite(year) ? year : row.year,
       authorsArr: normalizeAuthors(row.authors),
       type: row.type || "Journals",
+      paper: row.paper || "",
+      code: row.code || "",
+      project: row.project || "",
+      projectName: row.project_name || row.projectName || "",
+      doi: row.doi || "",
     };
   });
 

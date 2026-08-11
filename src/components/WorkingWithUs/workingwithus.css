@@ -177,6 +177,10 @@
 
 /* Section Header */
 .section-header {
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -185,7 +189,7 @@
   border-bottom: 3px solid #bb0000;
 }
 
-.section-header h2 {
+.section-header .section-title {
   font-family: 'Crimson Pro', serif;
   font-size: 2rem;
   font-weight: 600;
@@ -423,6 +427,13 @@
   background: #edf2f7;
 }
 
+.accordion-header:focus-visible,
+.section-header.collapsible:focus-visible,
+.side-nav button:focus-visible {
+  outline: 3px solid #bb0000;
+  outline-offset: 3px;
+}
+
 .accordion-body {
   padding: 1.5rem;
   background: white;
@@ -466,6 +477,7 @@
   justify-content: space-between;
   align-items: center;
   transition: background 0.2s;
+  width: 100%;
 }
 
 .section-header.collapsible:hover {
@@ -542,7 +554,7 @@
     gap: 0.5rem;
   }
 
-  .section-header h2 {
+  .section-header .section-title {
     font-size: 1.75rem;
   }
 
@@ -573,7 +585,7 @@
     padding: 1.5rem;
   }
 
-  .section-header h2 {
+  .section-header .section-title {
     font-size: 1.5rem;
   }
 

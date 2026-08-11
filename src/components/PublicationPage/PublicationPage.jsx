@@ -1,300 +1,162 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { ExternalLink, FileText, Github, Search, X } from "lucide-react";
 import { useOutletContext } from "react-router-dom";
-import Footer from "../Footer"
+import Footer from "../Footer";
+import "../../assets/css/publicationspage.css";
+
+const LAB_AUTHOR_PATTERNS = [
+  /\bsubramoni\b/i,
+  /\bpotlapally\b/i,
+  /\bradhakrishnan\b/i,
+  /\broy chowdhury\b/i,
+  /\barunachalam\b/i,
+  /\bpratham sharma\b/i,
+  /\bbrijesh nanda\b/i,
+  /\bbrunda yogananda\b/i,
+  /\bmundada\b/i,
+];
+
+const TOPIC_RULES = [
+  ["Large language models", /large language|\bllm|transformer|language model/i],
+  ["Distributed AI", /distributed|deep learning|dnn training|model parallel|tensorflow|pytorch/i],
+  ["Computer vision", /vision|image|object detection|segmentation|camera trap|woundnet/i],
+  ["High-performance computing", /\bhpc\b|high.performance|gpu|accelerat|scalab/i],
+  ["MPI & communication", /\bmpi\b|rdma|collective|allreduce|alltoall|infiniband|communication|interconnect/i],
+  ["SmartNICs", /smartnic|bluefield|\bdpu\b/i],
+  ["AI for science", /agricultur|ecolog|wildlife|phenolog|scientific|geospatial|remote sensing/i],
+];
+
+const categoryLabel = (type = "") => {
+  if (/conference|workshop/i.test(type)) return "Conference";
+  if (/journal/i.test(type)) return "Journal";
+  if (/thes|dissertation|project/i.test(type)) return "Thesis & project";
+  if (/report/i.test(type)) return "Technical report";
+  if (/book/i.test(type)) return "Book";
+  return type || "Publication";
+};
+
+const getTopics = (publication) => {
+  const source = `${publication.title} ${publication.venue}`;
+  const matches = TOPIC_RULES.filter(([, pattern]) => pattern.test(source)).map(([name]) => name);
+  return matches.slice(0, 2).length ? matches.slice(0, 2) : ["Systems research"];
+};
+
+const isLabAuthor = (name) => LAB_AUTHOR_PATTERNS.some((pattern) => pattern.test(name));
+
+function AuthorList({ authors }) {
+  return (
+    <p className="publication-authors">
+      {authors.map((author, index) => (
+        <React.Fragment key={`${author}-${index}`}>
+          {isLabAuthor(author) ? <strong className="lab-author">{author}</strong> : author}
+          {index < authors.length - 1 ? ", " : ""}
+        </React.Fragment>
+      ))}
+    </p>
+  );
+}
+
+function PublicationLink({ href, children, icon = ExternalLink }) {
+  if (!href) return null;
+  return (
+    <a className="publication-link" href={href} target="_blank" rel="noreferrer">
+      {React.createElement(icon, { size: 14, "aria-hidden": true })} {children}
+    </a>
+  );
+}
+
+function PublicationCard({ publication, onTopic }) {
+  const topics = getTopics(publication);
+  const doiUrl = publication.doi
+    ? publication.doi.startsWith("http") ? publication.doi : `https://doi.org/${publication.doi}`
+    : publication.link?.includes("doi.org/") ? publication.link : null;
+
+  return (
+    <article className="publication-card">
+      <div className="publication-tags" aria-label="Publication tags">
+        <span className="publication-tag venue-tag">{categoryLabel(publication.type)}</span>
+        {topics.map((topic) => (
+          <button className="publication-tag topic-tag" key={topic} onClick={() => onTopic(topic)}>{topic}</button>
+        ))}
+        {publication.projectName && <span className="publication-tag project-tag">{publication.projectName}</span>}
+      </div>
+      <h3>{publication.title}</h3>
+      <AuthorList authors={publication.authorsArr} />
+      <p className="publication-venue"><span>{publication.venue}</span><span aria-hidden="true">·</span><span>{publication.year}</span></p>
+      <div className="publication-links" aria-label={`Links for ${publication.title}`}>
+        <PublicationLink href={publication.paper || publication.link} icon={FileText}>Paper PDF</PublicationLink>
+        <PublicationLink href={publication.code} icon={Github}>Code</PublicationLink>
+        <PublicationLink href={publication.project}>Project</PublicationLink>
+        <PublicationLink href={doiUrl}>DOI</PublicationLink>
+        <PublicationLink href={publication.slides} icon={FileText}>Slides</PublicationLink>
+      </div>
+    </article>
+  );
+}
 
 export default function PublicationsPage() {
   const { rows, loading } = useOutletContext();
-  const [activeCategory, setActiveCategory] = useState("Journals");
-  const [selectedYear, setSelectedYear] = useState("All");
+  const [category, setCategory] = useState("All");
+  const [topic, setTopic] = useState("All");
+  const [query, setQuery] = useState("");
 
-  const years = useMemo(() => {
-    const allYears = rows.flatMap(r => r.year ? [r.year] : []);
-    return [...new Set(allYears)].sort((a, b) => b - a);
-  }, [rows]);
+  const categories = useMemo(() => ["All", ...new Set(rows.map((row) => categoryLabel(row.type)))], [rows]);
+  const topics = useMemo(() => ["All", ...new Set(rows.flatMap(getTopics))], [rows]);
+  const filtered = useMemo(() => rows.filter((publication) => {
+    const haystack = `${publication.title} ${publication.authors} ${publication.venue}`.toLowerCase();
+    return (category === "All" || categoryLabel(publication.type) === category)
+      && (topic === "All" || getTopics(publication).includes(topic))
+      && (!query.trim() || haystack.includes(query.trim().toLowerCase()));
+  }), [rows, category, topic, query]);
+  const grouped = useMemo(() => Object.entries(Object.groupBy(filtered, ({ year }) => year || "Undated"))
+    .sort(([a], [b]) => Number(b) - Number(a)), [filtered]);
 
-  const categories = [
-    "Books",
-    "Journals",
-    "Book Chapters",
-    "Conferences & Workshops",
-    "Technical Reports",
-    "Ph.D. Dissertations",
-    "M.S. Theses",
-    "M.S. Project",
-    "B.S. Honors Theses",
-    "B.S. Project"
-  ];
-
-  const filtered = useMemo(() => {
-    return rows.filter((r) => {
-      const rowType = r.type?.trim();
-      const rowYear = r.year;
-
-      if (selectedYear !== "All" && String(rowYear) !== String(selectedYear)) {
-        return false;
-      }
-
-      if (activeCategory === "Journals") return rowType === "Journal" || rowType === "Journals";
-      if (activeCategory === "Books") return rowType === "Book" || rowType === "Books";
-      if (activeCategory === "Conferences & Workshops") return rowType === "Conference" || rowType === "Conferences & Workshops";
-      if (activeCategory === "Technical Reports") return rowType === "Technical Report" || rowType === "Technical Reports";
-
-      return rowType === activeCategory;
-    }).sort((a, b) => b.year - a.year);
-  }, [rows, activeCategory, selectedYear]);
-
-  // ── Structured data injection ─────────────────────────────────────────────
-  // Generates a JSON-LD ScholarlyArticle list from all publications and injects
-  // it into <head> so search engines can index the lab's research output.
   useEffect(() => {
-    if (rows.length === 0) return;
-
-    const typeMap = {
-      Journal: "ScholarlyArticle",
-      Journals: "ScholarlyArticle",
-      Conference: "Article",
-      "Conferences & Workshops": "Article",
-      Book: "Book",
-      Books: "Book",
-      "Book Chapters": "Chapter",
-      "Technical Reports": "TechArticle",
-      "Ph.D. Dissertations": "Thesis",
-      "M.S. Theses": "Thesis",
-      "M.S. Project": "Thesis",
-      "B.S. Honors Theses": "Thesis",
-      "B.S. Project": "Thesis",
-    };
-
-    const items = rows.map((pub) => ({
-      "@type": typeMap[pub.type?.trim()] || "ScholarlyArticle",
-      "name": pub.title,
-      "author": pub.authorsArr.map((name) => ({
-        "@type": "Person",
-        "name": name,
-      })),
-      "datePublished": pub.year ? String(pub.year) : undefined,
-      "isPartOf": pub.venue || undefined,
-      "url": pub.link || undefined,
-    }));
-
-    const schema = {
-      "@context": "https://schema.org",
-      "@graph": items,
-    };
-
-    const existing = document.getElementById("publications-structured-data");
-    if (existing) existing.remove();
-
+    if (!rows.length) return undefined;
+    const schema = { "@context": "https://schema.org", "@graph": rows.map((pub) => ({
+      "@type": "ScholarlyArticle", name: pub.title,
+      author: pub.authorsArr.map((name) => ({ "@type": "Person", name })),
+      datePublished: String(pub.year || ""), isPartOf: pub.venue || undefined,
+      url: pub.paper || pub.link || undefined,
+    })) };
     const script = document.createElement("script");
     script.id = "publications-structured-data";
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(schema);
+    document.getElementById(script.id)?.remove();
     document.head.appendChild(script);
-
-    return () => {
-      const el = document.getElementById("publications-structured-data");
-      if (el) el.remove();
-    };
+    return () => script.remove();
   }, [rows]);
 
-
-  if (loading) return <div style={{ padding: 20 }}>Loading...</div>;
+  if (loading) return <main className="publications-page"><p>Loading publications…</p></main>;
+  const clearFilters = () => { setCategory("All"); setTopic("All"); setQuery(""); };
+  const hasFilters = category !== "All" || topic !== "All" || query;
 
   return (
     <>
-      <style>{`
-        .pub-container {
-          display: flex;
-          font-family: sans-serif;
-          padding: 20px;
-          gap: 40px;
-          flex-direction: row;
-        }
+      <main className="publications-page">
+        <header className="publications-hero">
+          <p className="publications-eyebrow">Research output</p>
+          <h1>Publications</h1>
+          <p>Peer-reviewed publications by the Systems and AI Lab</p>
+        </header>
 
-        .pub-sidebar {
-          width: 220px;
-          flex-shrink: 0;
-          display: flex;
-          flex-direction: column;
-        }
+        <section className="publication-controls" aria-label="Publication filters">
+          <label className="publication-search"><Search size={18} aria-hidden="true" /><span className="sr-only">Search publications</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search titles, authors, or venues" /></label>
+          <label><span>Type</span><select value={category} onChange={(event) => setCategory(event.target.value)}>{categories.map((item) => <option key={item}>{item}</option>)}</select></label>
+          <label><span>Topic</span><select value={topic} onChange={(event) => setTopic(event.target.value)}>{topics.map((item) => <option key={item}>{item}</option>)}</select></label>
+          {hasFilters && <button className="clear-filters" onClick={clearFilters}><X size={15} /> Clear</button>}
+        </section>
 
-        .pub-sidebar-item {
-          padding: 12px 15px;
-          border: 1px solid #ddd;
-          margin-bottom: -1px;
-          cursor: pointer;
-          font-size: 14px;
-          color: #333;
-          transition: all 0.2s;
-        }
-
-        /* Mobile View Styles */
-        @media (max-width: 768px) {
-          .pub-container {
-            flex-direction: column;
-            gap: 20px;
-            padding: 10px;
-          }
-
-          .pub-sidebar {
-            width: 100%;
-            flex-direction: row;
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 5px;
-          }
-
-          .pub-sidebar-item {
-            margin-bottom: 0;
-            margin-right: -1px;
-            flex: 0 0 auto;
-            border-left: 1px solid #ddd !important;
-            border-bottom: 3px solid transparent;
-          }
-
-          .active-mobile-tab {
-            border-bottom: 3px solid #337ab7 !important;
-            background-color: #f4f4f4;
-            font-weight: bold;
-          }
-
-          .pub-clear-button {
-            padding: 8px 16px;
-            background-color: #337ab7;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: bold;
-            transition: background-color 0.2s ease;
-          }
-
-          .pub-clear-button:hover {
-            background-color: #286090;
-          }
-        }
-      `}</style>
-
-      <div className="pub-container">
-        {/* Navigation Menu */}
-        <div className="pub-sidebar">
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat;
-            return (
-              <div
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`pub-sidebar-item ${isActive ? "active-mobile-tab" : ""}`}
-                style={{
-                  backgroundColor: isActive ? "#f4f4f4" : "white",
-                  fontWeight: isActive ? "bold" : "normal",
-                  borderLeft: isActive ? "4px solid #337ab7" : "1px solid #ddd",
-                }}
-              >
-                {cat}
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Main Content */}
-        <div style={{ flexGrow: 1 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #337ab7", paddingBottom: "10px", marginBottom: "10px" }}>
-            <h2 style={{ margin: 0, color: "#333" }}>
-              {activeCategory} ({filtered.length})
-            </h2>
-            <select
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(e.target.value)}
-              style={{
-                padding: "5px 10px",
-                fontSize: "14px",
-                borderRadius: "4px",
-                border: "1px solid #ddd",
-                outline: "none",
-                cursor: "pointer"
-              }}
-            >
-              <option value="All">All Years</option>
-              {years.map(year => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
-          </div>
-
-          <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "10px" }}>
-            <tbody>
-              {filtered.map((pub, index) => (
-                <tr key={pub.id} style={{ borderBottom: "1px solid #eee" }}>
-                  <td style={{ padding: "15px 10px", verticalAlign: "top", width: "30px", color: "#999", fontSize: "13px" }}>
-                    {index + 1}
-                  </td>
-                  <td style={{ padding: "15px 10px", fontSize: "14px", lineHeight: "1.6" }}>
-                    <div style={{ color: "#337ab7", marginBottom: "4px" }}>
-                      {pub.authorsArr.map((auth, i) => (
-                        <React.Fragment key={i}>
-                          {auth.toLowerCase().includes("subramoni") || auth.toLowerCase().includes("potlapally") ? <strong>{auth}</strong> : auth}
-                          {i < pub.authorsArr.length - 1 ? ", " : ""}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                    <strong>{pub.title}</strong>, {pub.venue}, {pub.year}.
-                    {(pub.link || pub.slides) && (
-                      <div style={{ marginTop: "8px" }}>
-                        {pub.link && (
-                          <a
-                            href={pub.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold", marginRight: "12px" }}
-                          >
-                            [Full Text]
-                          </a>
-                        )}
-                        {pub.slides && (
-                          <a
-                            href={pub.slides}
-                            target="_blank"
-                            rel="noreferrer"
-                            style={{ color: "#337ab7", textDecoration: "none", fontSize: "12px", fontWeight: "bold" }}
-                          >
-                            [Slides]
-                          </a>
-                        )}
-                      </div>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          {filtered.length === 0 && (
-            <div style={{ textAlign: "center", padding: "40px 20px" }}>
-              <h3 style={{ fontSize: "18px", color: "#333", marginBottom: "8px" }}>
-                No publications found
-              </h3>
-              <p style={{ margin: "0 0 16px 0", fontSize: "14px", color: "#777" }}>
-                {selectedYear !== "All"
-                  ? `No ${activeCategory} publications found for ${selectedYear}.`
-                  : `No publications available under ${activeCategory}.`}
-              </p>
-              {selectedYear !== "All" && (
-                <button
-                  className="pub-clear-button"
-                  onClick={() => setSelectedYear("All")}
-                >
-                  Show All Years
-                </button>
-              )}
-            </div>
-          )}
-
-        </div>
-
-      </div>
+        <div className="publication-summary"><strong>{filtered.length}</strong> {filtered.length === 1 ? "publication" : "publications"}<span><strong className="lab-author-key">Lab author</strong> highlighted</span></div>
+        {grouped.map(([year, publications]) => (
+          <section className="publication-year" key={year} aria-labelledby={`year-${year}`}>
+            <div className="year-heading"><h2 id={`year-${year}`}>{year}</h2><span>{publications.length}</span></div>
+            <div className="publication-list">{publications.map((publication) => <PublicationCard key={publication.id} publication={publication} onTopic={setTopic} />)}</div>
+          </section>
+        ))}
+        {!grouped.length && <div className="publications-empty"><h2>No publications found</h2><p>Try a broader search or clear the current filters.</p><button onClick={clearFilters}>Clear filters</button></div>}
+      </main>
       <Footer />
     </>
   );
