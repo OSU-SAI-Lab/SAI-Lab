@@ -1,99 +1,65 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../assets/css/navbar.css";
 
+const navigationItems = [
+  { label: "Research", to: "/research" },
+  { label: "Publications", to: "/publications" },
+  { label: "News & Events", to: "/news-and-updates" },
+  { label: "People", to: "/people" },
+  { label: "Working With Us", to: "/workingwithus" },
+];
+
 function NavBar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const [menuState, setMenuState] = useState({ open: false, path: location.pathname });
+  const menuOpen = menuState.open && menuState.path === location.pathname;
+  const closeMenu = () => setMenuState({ open: false, path: location.pathname });
 
-  useEffect(() => {
-    // Scroll to top when route changes
-    window.scrollTo(0, 0);
-    // Close menu when route changes
-    setMenuOpen(false);
+  const handleToggle = (nextOpen) => {
+    setMenuState({ open: nextOpen, path: location.pathname });
+  };
 
-    // On non-homepage routes, always show solid navbar
-    if (!isHomePage) {
-      setScrolled(true);
-      return;
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape" && menuOpen) {
+      closeMenu();
+      document.querySelector(".lab-navbar .navbar-toggler")?.focus();
     }
-
-    // On homepage, check scroll position
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    // Check initial scroll position
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHomePage, location.pathname]);
-
-  const handleToggle = () => {
-    setMenuOpen(prev => !prev);
-  };
-
-  const handleCollapseToggle = (isOpen) => {
-    setMenuOpen(isOpen);
-  };
-
-  const handleNavLinkClick = () => {
-    setMenuOpen(false);
   };
 
   return (
     <Navbar
+      as="header"
       expand="lg"
       fixed="top"
-      className={`lab-navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "drawer-open" : ""}`}
+      expanded={menuOpen}
+      onToggle={handleToggle}
+      onKeyDown={handleKeyDown}
+      className={`lab-navbar ${menuOpen ? "drawer-open" : ""}`}
     >
       <Container className="navbar-container">
-        <Navbar.Brand as={NavLink} to="/" className="navbar-brand">
+        <Navbar.Brand as={NavLink} to="/" className="navbar-brand" onClick={closeMenu}>
           SAI Lab
         </Navbar.Brand>
 
-        <Navbar.Toggle 
-          aria-controls="basic-navbar-nav" 
+        <Navbar.Toggle
+          aria-controls="primary-navigation"
           aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           className="navbar-toggler"
-          onClick={handleToggle}
         />
 
-        <Navbar.Collapse 
-          id="basic-navbar-nav" 
-          className="navbar-collapse"
-          in={menuOpen}
-          onToggle={handleCollapseToggle}
-        >
-          <Nav className="navbar-nav-center">
-            <Nav.Link as={NavLink} to="/research" onClick={handleNavLinkClick}>
-              Research
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/publications" onClick={handleNavLinkClick}>
-              Publications
-            </Nav.Link>
-
-            <Nav.Link as={NavLink} to="/news-and-updates" onClick={handleNavLinkClick}>
-              News & Events
-            </Nav.Link>
-
-          <Nav.Link as={NavLink} to="/people">
-              People
-            </Nav.Link>
-
-
-           <Nav.Link as={NavLink} to="/workingwithus" onClick={handleNavLinkClick}>
-            Working With Us
-          </Nav.Link>
-
-          
+        <Navbar.Collapse id="primary-navigation" className="navbar-collapse">
+          <Nav as="nav" aria-label="Primary navigation" className="navbar-nav-center">
+            {navigationItems.map(({ label, to }) => (
+              <Nav.Link key={to} as={NavLink} to={to} onClick={closeMenu}>
+                {label}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

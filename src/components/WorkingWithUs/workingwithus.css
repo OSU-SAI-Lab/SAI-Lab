@@ -409,6 +409,13 @@
   background: #edf2f7;
 }
 
+.accordion-header:focus-visible,
+.section-header.collapsible:focus-visible,
+.side-nav ul li button:focus-visible {
+  outline: 3px solid #bb0000;
+  outline-offset: 3px;
+}
+
 .accordion-body {
   padding: 1.5rem;
   background: white;

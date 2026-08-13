@@ -1,12 +1,11 @@
-/* Default: transparent on hero section */
 .lab-navbar {
-  background-color: transparent !important;
+  background-color: rgba(10, 10, 10, 0.96) !important;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
   font-weight: 600;
   position: fixed;
   width: 100%;
-  z-index: 10;
-  backdrop-filter: none;
+  z-index: 1030;
+  backdrop-filter: blur(8px);
   min-height: 56px;
 }
 
@@ -35,10 +34,9 @@
   filter: invert(1);
 }
 
-/* Remove focus glow on toggler */
-.lab-navbar .navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
+.lab-navbar .navbar-toggler:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.75);
+  outline: 2px solid transparent;
 }
 
 /* Navbar collapse container - only use flex when shown */
@@ -83,14 +81,36 @@
 }
 
 .lab-navbar .nav-link {
+  border-radius: 4px;
   padding: 0.5rem 1rem;
+  position: relative;
   white-space: nowrap;
 }
 
-/* After scroll: turn black with slight blur (modern UI) */
-.lab-navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.9) !important;
-  backdrop-filter: blur(6px);
+.lab-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lab-navbar .nav-link.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff !important;
+}
+
+.lab-navbar .nav-link.active::after {
+  background: #fff;
+  border-radius: 2px;
+  bottom: 2px;
+  content: "";
+  height: 2px;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.lab-navbar .navbar-brand:focus-visible,
+.lab-navbar .nav-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
+  outline: 2px solid transparent;
 }
 
 /* Mobile responsive adjustments */
@@ -144,5 +164,14 @@
   .lab-navbar .nav-link {
     width: 100%;
     padding: 0.75rem 1rem;
+  }
+
+  .lab-navbar .nav-link.active::after {
+    bottom: 7px;
+    left: 0;
+    right: auto;
+    top: 7px;
+    width: 3px;
+    height: auto;
   }
 }

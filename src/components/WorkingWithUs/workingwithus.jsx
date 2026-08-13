@@ -119,7 +119,7 @@ function WorkingWithUs() {
   };
 
   const toggleRole = (index) => {
-    setExpandedRole(expandedRole === index ? null : index);
+    setExpandedRole((current) => (current === index ? null : index));
   };
 
   const scrollToSection = (id) => {
@@ -369,9 +369,12 @@ function WorkingWithUs() {
               }`}
             >
               <button
+                type="button"
+                id="k12-button"
                 className="section-header collapsible"
                 onClick={() => toggleMajorSection('k12')}
                 aria-expanded={openSections.k12}
+                aria-controls="k12-panel"
               >
                 <div className="header-left">
                   <span
@@ -390,8 +393,8 @@ function WorkingWithUs() {
                 </span>
               </button>
 
-              {openSections.k12 && (
-                <div className="section-content animate-fade-in">
+              <div hidden={!openSections.k12}>
+                <div className="section-content animate-fade-in" id="k12-panel" role="region" aria-labelledby="k12-button">
                   {renderDecisionSummary('k12')}
 
                   <p className="intro-text">
@@ -428,8 +431,12 @@ function WorkingWithUs() {
                         }`}
                       >
                         <button
+                          type="button"
                           className="accordion-header"
+                          id={`k12-role-${idx}-button`}
                           onClick={() => toggleRole(idx)}
+                          aria-expanded={expandedRole === idx}
+                          aria-controls={`k12-role-${idx}-panel`}
                         >
                           {role.title}
 
@@ -439,7 +446,7 @@ function WorkingWithUs() {
                         </button>
 
                         {expandedRole === idx && (
-                          <div className="accordion-body">
+                          <div className="accordion-body" id={`k12-role-${idx}-panel`} role="region" aria-labelledby={`k12-role-${idx}-button`}>
                             <div className="role-grid">
                               <div>
                                 <h4>Desired Skills</h4>
@@ -512,7 +519,7 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </section>
 
             {/* ========================================================= */}
@@ -541,9 +548,12 @@ function WorkingWithUs() {
               }`}
             >
               <button
+                type="button"
+                id="undergrad-button"
                 className="section-header collapsible"
                 onClick={() => toggleMajorSection('undergrad')}
                 aria-expanded={openSections.undergrad}
+                aria-controls="undergrad-panel"
               >
                 <div className="header-left">
                   <span
@@ -562,8 +572,8 @@ function WorkingWithUs() {
                 </span>
               </button>
 
-              {openSections.undergrad && (
-                <div className="section-content animate-fade-in">
+              <div hidden={!openSections.undergrad}>
+                <div className="section-content animate-fade-in" id="undergrad-panel" role="region" aria-labelledby="undergrad-button">
                   {renderDecisionSummary('undergrad')}
 
                   <p className="intro-text">
@@ -664,7 +674,7 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </section>
 
             {/* ========================================================= */}
@@ -678,9 +688,12 @@ function WorkingWithUs() {
               }`}
             >
               <button
+                type="button"
+                id="masters-button"
                 className="section-header collapsible"
                 onClick={() => toggleMajorSection('masters')}
                 aria-expanded={openSections.masters}
+                aria-controls="masters-panel"
               >
                 <div className="header-left">
                   <span
@@ -699,8 +712,8 @@ function WorkingWithUs() {
                 </span>
               </button>
 
-              {openSections.masters && (
-                <div className="section-content animate-fade-in">
+              <div hidden={!openSections.masters}>
+                <div className="section-content animate-fade-in" id="masters-panel" role="region" aria-labelledby="masters-button">
                   {renderDecisionSummary('masters')}
 
                   <p className="intro-text">
@@ -787,7 +800,7 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </section>
 
             {/* ========================================================= */}
@@ -801,9 +814,12 @@ function WorkingWithUs() {
               }`}
             >
               <button
+                type="button"
+                id="phd-button"
                 className="section-header collapsible"
                 onClick={() => toggleMajorSection('phd')}
                 aria-expanded={openSections.phd}
+                aria-controls="phd-panel"
               >
                 <div className="header-left">
                   <span
@@ -822,8 +838,8 @@ function WorkingWithUs() {
                 </span>
               </button>
 
-              {openSections.phd && (
-                <div className="section-content animate-fade-in">
+              <div hidden={!openSections.phd}>
+                <div className="section-content animate-fade-in" id="phd-panel" role="region" aria-labelledby="phd-button">
                   {renderDecisionSummary('phd')}
 
                   <p className="intro-text">
@@ -870,7 +886,7 @@ function WorkingWithUs() {
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
             </section>
           </div>
         </main>
