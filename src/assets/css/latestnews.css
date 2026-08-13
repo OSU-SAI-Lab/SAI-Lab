@@ -1,21 +1,23 @@
 .events-page {
-  padding: 60px 100px;
+  padding: 5px 100px 60px;
   min-height: 100vh;
-  background-color: #ffffff; /* This will now show through the SVG */
-  
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+  background-color: #ffffff;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
     url("../backgrounds/polygon-scatter-haikei.svg");
-    
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+
   overflow-x: hidden;
 }
 
 .latest-news-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 30px;
@@ -113,7 +115,7 @@
 }
 
 /* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .events-page {
     padding: 40px 20px;
     background-attachment: scroll; /* Performance fix for mobile */
