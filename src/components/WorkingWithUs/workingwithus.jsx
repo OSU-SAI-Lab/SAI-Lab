@@ -2,16 +2,44 @@ import React, { useEffect, useState } from 'react';
 import './workingwithus.css';
 import { workingWithUsData } from './workingwithusdata';
 
+const defaultOpenSections = {
+  k12: false,
+  undergrad: false,
+  masters: false,
+  phd: false,
+};
+
+const audienceSections = {
+  k12: { stateKey: 'k12' },
+  undergraduate: { stateKey: 'undergrad' },
+  masters: { stateKey: 'masters' },
+  phd: { stateKey: 'phd' },
+};
+
+const getHashSectionId = () => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  const hash = window.location.hash.replace(/^#/, '');
+
+  if (!hash) {
+    return null;
+  }
+
+  try {
+    const sectionId = decodeURIComponent(hash);
+    return audienceSections[sectionId] ? sectionId : null;
+  } catch {
+    return null;
+  }
+};
+
 function WorkingWithUs() {
   const [expandedRole, setExpandedRole] = useState(null);
   const [activeSection, setActiveSection] = useState('start');
 
-  const [openSections, setOpenSections] = useState({
-    k12: false,
-    undergrad: false,
-    masters: false,
-    phd: false,
-  });
+  const [openSections, setOpenSections] = useState(defaultOpenSections);
 
   /*
    * Applicant-facing information required by Issue 15.
@@ -80,10 +108,21 @@ function WorkingWithUs() {
     },
   };
 
+  const audienceSummaries = {
+    k12:
+      'Exploratory outreach for K-12 students, families, teachers, and counselors who want an introduction to Systems and AI research. Activities depend on lab availability and are designed for learning, demonstrations, or visits rather than formal research appointments.',
+    undergraduate:
+      'Research opportunities for undergraduate students ready to build systems, AI, HPC, or distributed-systems experience through sustained project work. Students should be prepared to learn actively, communicate consistently, and contribute over multiple terms when possible.',
+    masters:
+      "Graduate research opportunities for master's students with relevant technical preparation and interest in contributing to active lab projects. Fit depends on project needs, advisor capacity, and the student's research goals.",
+    phd:
+      'Doctoral research opportunities for students pursuing long-term work in high-performance computing, distributed systems, AI infrastructure, and related areas. Prospective PhD students should be ready for sustained, publication-oriented research with the group.',
+  };
+
   const navItems = [
     { id: 'start', label: 'Start Here' },
     { id: 'k12', label: 'K-12 Outreach' },
-    { id: 'undergrad', label: 'Undergraduate' },
+    { id: 'undergraduate', label: 'Undergraduate' },
     { id: 'masters', label: "Master's Students" },
     { id: 'phd', label: 'PhD Opportunities' },
   ];
@@ -111,11 +150,60 @@ function WorkingWithUs() {
     };
   }, []);
 
+  useEffect(() => {
+    const restoreSectionFromHash = () => {
+      const sectionId = getHashSectionId();
+
+      if (!sectionId) {
+        setOpenSections(defaultOpenSections);
+        return;
+      }
+
+      const { stateKey } = audienceSections[sectionId];
+
+      setOpenSections((prev) => ({
+        ...prev,
+        [stateKey]: true,
+      }));
+
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }, 100);
+    };
+
+    restoreSectionFromHash();
+
+    window.addEventListener('hashchange', restoreSectionFromHash);
+    window.addEventListener('popstate', restoreSectionFromHash);
+
+    return () => {
+      window.removeEventListener('hashchange', restoreSectionFromHash);
+      window.removeEventListener('popstate', restoreSectionFromHash);
+    };
+  }, []);
+
   const toggleMajorSection = (sectionId) => {
+    const section = audienceSections[sectionId];
+
+    if (!section) {
+      return;
+    }
+
     setOpenSections((prev) => ({
       ...prev,
-      [sectionId]: !prev[sectionId],
+      [section.stateKey]: !prev[section.stateKey],
     }));
+
+    if (!openSections[section.stateKey]) {
+      window.history.pushState(null, '', `#${sectionId}`);
+    }
   };
 
   const toggleRole = (index) => {
@@ -123,11 +211,17 @@ function WorkingWithUs() {
   };
 
   const scrollToSection = (id) => {
-    if (id !== 'start') {
+    const section = audienceSections[id];
+
+    if (section) {
       setOpenSections((prev) => ({
         ...prev,
-        [id]: true,
+        [section.stateKey]: true,
       }));
+
+      if (window.location.hash !== `#${id}`) {
+        window.history.pushState(null, '', `#${id}`);
+      }
     }
 
     setTimeout(() => {
@@ -186,6 +280,10 @@ function WorkingWithUs() {
       </div>
     );
   };
+
+  const renderAudienceSummary = (sectionId) => (
+    <p className="audience-summary">{audienceSummaries[sectionId]}</p>
+  );
 
   return (
     <div className="working-with-us-page">
@@ -283,7 +381,7 @@ function WorkingWithUs() {
                   <div className="research-pathway-list">
                     <button
                       className="pathway-card"
-                      onClick={() => scrollToSection('undergrad')}
+                      onClick={() => scrollToSection('undergraduate')}
                     >
                       <span className="pathway-card-type">
                         Research Opportunity
@@ -392,6 +490,8 @@ function WorkingWithUs() {
                   Youth Outreach
                 </span>
               </button>
+
+              {renderAudienceSummary('k12')}
 
               <div hidden={!openSections.k12}>
                 <div className="section-content animate-fade-in" id="k12-panel" role="region" aria-labelledby="k12-button">
@@ -542,18 +642,18 @@ function WorkingWithUs() {
             {/* ========================================================= */}
 
             <section
-              id="undergrad"
+              id="undergraduate"
               className={`opportunity-section ${
                 openSections.undergrad ? 'is-open' : 'is-closed'
               }`}
             >
               <button
                 type="button"
-                id="undergrad-button"
+                id="undergraduate-button"
                 className="section-header collapsible"
-                onClick={() => toggleMajorSection('undergrad')}
+                onClick={() => toggleMajorSection('undergraduate')}
                 aria-expanded={openSections.undergrad}
-                aria-controls="undergrad-panel"
+                aria-controls="undergraduate-panel"
               >
                 <div className="header-left">
                   <span
@@ -572,8 +672,10 @@ function WorkingWithUs() {
                 </span>
               </button>
 
+              {renderAudienceSummary('undergraduate')}
+
               <div hidden={!openSections.undergrad}>
-                <div className="section-content animate-fade-in" id="undergrad-panel" role="region" aria-labelledby="undergrad-button">
+                <div className="section-content animate-fade-in" id="undergraduate-panel" role="region" aria-labelledby="undergraduate-button">
                   {renderDecisionSummary('undergrad')}
 
                   <p className="intro-text">
@@ -712,6 +814,8 @@ function WorkingWithUs() {
                 </span>
               </button>
 
+              {renderAudienceSummary('masters')}
+
               <div hidden={!openSections.masters}>
                 <div className="section-content animate-fade-in" id="masters-panel" role="region" aria-labelledby="masters-button">
                   {renderDecisionSummary('masters')}
@@ -837,6 +941,8 @@ function WorkingWithUs() {
                   Doctoral Research
                 </span>
               </button>
+
+              {renderAudienceSummary('phd')}
 
               <div hidden={!openSections.phd}>
                 <div className="section-content animate-fade-in" id="phd-panel" role="region" aria-labelledby="phd-button">
