@@ -1,0 +1,25 @@
+name: Bug report
+description: Something on the website looks wrong or does not work.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://osu-sai-lab.github.io/SAI-Lab/people
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: A screenshot is more useful than a long description.
