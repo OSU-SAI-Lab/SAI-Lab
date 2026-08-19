@@ -362,6 +362,25 @@
       "publications": null
     },
     {
+      "id": 22,
+      "name": "Sadhika Kamchetty",
+      "role": "undergraduate",
+      "title": "Undergraduate Research Assistant",
+      "photo": null,
+      "email": "kamchetty.1@osu.edu",
+      "website": "https://www.linkedin.com/in/sadhikakamchetty/",
+      "interests": [
+        "AI/ML",
+        "High-Performance Computing Systems",
+        "Deep Learning"
+      ],
+      "projects": [
+        "Website Maintenance",
+        "To be updated"
+      ],
+      "publications": null
+    },
+    {
       "id": 17,
       "name": "Parth Gupta",
       "role": "past",
