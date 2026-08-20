@@ -1,0 +1,50 @@
+name: Content update
+description: Request an update to existing website content.
+title: "[Content] "
+labels: ["content"]
+
+body:
+  - type: dropdown
+    id: page
+    attributes:
+      label: Page
+      options:
+        - Home
+        - Research
+        - Publications
+        - News & Updates
+        - People
+        - Working With Us
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: action
+    attributes:
+      label: Change
+      options:
+        - Add content
+        - Edit content
+        - Remove content
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: What should change?
+      description: Include the current content and the requested replacement when applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Files or media
+      description: Attach any relevant images, PDFs, posters, or other files.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes

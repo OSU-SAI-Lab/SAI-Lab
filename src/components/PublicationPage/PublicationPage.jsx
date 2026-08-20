@@ -108,8 +108,17 @@ export default function PublicationsPage() {
       && (topic === "All" || getTopics(publication).includes(topic))
       && (!query.trim() || haystack.includes(query.trim().toLowerCase()));
   }), [rows, category, topic, query]);
-  const grouped = useMemo(() => Object.entries(Object.groupBy(filtered, ({ year }) => year || "Undated"))
-    .sort(([a], [b]) => Number(b) - Number(a)), [filtered]);
+  const grouped = useMemo(() => {
+    const publicationsByYear = {};
+
+    for (const publication of filtered) {
+      const year = publication.year || "Undated";
+      (publicationsByYear[year] ??= []).push(publication);
+    }
+
+    return Object.entries(publicationsByYear)
+      .sort(([a], [b]) => Number(b) - Number(a));
+  }, [filtered]);
 
   useEffect(() => {
     if (!rows.length) return undefined;
