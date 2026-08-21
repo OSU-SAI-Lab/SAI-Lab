@@ -209,6 +209,14 @@
   margin-bottom: 2rem;
 }
 
+.audience-summary {
+  max-width: 850px;
+  margin: -0.4rem 0 1.5rem;
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -530,6 +538,11 @@
 
   .section-header h2 {
     font-size: 1.75rem;
+  }
+
+  .audience-summary {
+    margin-top: -0.25rem;
+    font-size: 0.98rem;
   }
 
   .info-grid {
