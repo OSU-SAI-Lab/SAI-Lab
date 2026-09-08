@@ -1,6 +1,73 @@
 {
   "items": [
     {
+      "id": 8,
+      "title": "SAI Lab Showcases ICICLE-Enabled Agricultural AI at AgWireless’26 and the Farm Progress Show",
+      "type": "Exhibition / Demo",
+      "date": "September 8, 2026",
+      "sortDate": "2026-09-08",
+      "time": null,
+      "mode": "In-Person",
+      "location": null,
+      "description": "SAI Lab Showcases ICICLE-Enabled Agricultural AI at AgWireless’26 and the Farm Progress Show; Brijesh Nanda B Y receives Best Poster Award for the No-Code Workflow Studio; the SAI Lab team engages farmers, researchers, and industry partners on practical AI and edge-computing challenges in agriculture.",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>The Systems and AI (SAI) Lab recently participated in AgWireless’26 and the Farm Progress Show, bringing research demonstrations in artificial intelligence, workflow automation, and edge computing to a community of agricultural producers, technology developers, researchers, and industry leaders.</p><p>The events provided a valuable opportunity to present technologies developed under the umbrella of the NSF ICICLE AI Institute and to engage directly with the people and organizations working to advance connected, data-driven agriculture. AgWireless’26 combined an ARA User Program, an NSF workshop on rural-focused NextG and agricultural innovation, and demonstrations at the Farm Progress Show; the ICICLE AI Institute was among the featured exhibitors.</p><h2>Demonstrating practical agricultural AI</h2><p>At the events, the SAI Lab presented two complementary technologies intended to make advanced computing capabilities more usable in agricultural environments.</p><h3>No-Code Workflow Studio</h3><p>Led by Brijesh Nanda B Y, the No-Code Workflow Studio enables users to design and deploy automation workflows without writing software code. The team demonstrated a precision zone-spraying workflow to show how agricultural users could configure an automated, data-informed process for a field-level application.</p><p>The work addresses a recurring barrier in the adoption of advanced agricultural technology: powerful tools often require specialized programming or systems expertise. By providing a no-code interface, the platform is designed to help domain users focus on defining their operational workflow rather than implementing its underlying software components.</p><h3>Intelligent Edge Management Service</h3><p>Led by Harikesh Byrandurga Gopinath, the Intelligent Edge Management Service focuses on managing edge devices and data in distributed settings. Agricultural deployments often involve heterogeneous sensors, cameras, machines, networks, and computing resources that operate far from centralized data centers. Effective management of these resources is essential for dependable field data collection, communication, and timely AI-enabled analysis.</p><p>Together, the No-Code Workflow Studio and Intelligent Edge Management Service represent complementary parts of a broader agricultural intelligence pipeline: making it easier to specify automation and supporting the reliable edge infrastructure needed to execute it.</p><h2>Best Poster recognition</h2><p>A highlight of the week was the recognition of Brijesh Nanda B Y’s poster, “No-Code Workflow Studio,” with the Best Poster Award.</p><p>The award recognizes the technical contribution and its potential relevance to accessible agricultural automation. It also reflects the importance of designing AI and cyberinfrastructure tools that can be used by a broad range of stakeholders—not only specialists with extensive software-development experience. AgWireless’26 included a formal poster and demo session with Best Poster and Honorable Mention awards.</p><h2>Learning through collaboration</h2><p>Beyond demonstrations and presentations, the SAI Lab used the events to learn from agricultural stakeholders and explore future collaborative opportunities.</p><p>Conversations with farmers, researchers, and industry participants centered on practical challenges that continue to shape the future of agricultural technology: reliable rural connectivity, integration across diverse edge devices, usable interfaces, scalable data management, and the translation of AI prototypes into systems that can support real operational decisions.</p><p>The team also participated in the ARA User Program and Arathon, which brought participants together for hands-on engagement with ARA systems and data. The experience supported the lab’s ongoing exploration of how ARA infrastructure and agricultural data may inform future digital-twin and edge-AI research directions. The ARA User Program and Arathon were core components of AgWireless’26.</p><p>Early discussions with organizations including Raptor Dynamics and Airstrike Ag also opened channels for potential future exchange and collaboration. These conversations remain exploratory, but they provide useful insight into areas of shared interest across the AgTech ecosystem.</p><h2>Moving from research to impact</h2><p>The SAI Lab’s participation at AgWireless’26 and the Farm Progress Show reflects a broader commitment to developing AI systems that are not only technically advanced, but also practical, accessible, and responsive to real-world conditions.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "AgWirelessTeam",
+          "alt": "SAI Lab team at the AgWireless 2026 and Farm Progress Show exhibit",
+          "caption": "SAI Lab members Dr. Hari Subramoni, Brijesh Nanda B Y, and Harikesh Byrandurga Gopinath represented ICICLE-enabled agricultural AI and edge-computing research at AgWireless’26 and the Farm Progress Show."
+        },
+        {
+          "type": "image",
+          "srcKey": "AgWirelessWorkflow",
+          "alt": "Brijesh Nanda B Y presenting the No-Code Workflow Studio",
+          "caption": "Brijesh Nanda B Y presents the No-Code Workflow Studio and a precision zone-spraying use case."
+        },
+        {
+          "type": "image",
+          "srcKey": "AgWirelessEdge",
+          "alt": "Harikesh Byrandurga Gopinath demonstrating the Intelligent Edge Management Service",
+          "caption": "Harikesh Byrandurga Gopinath discusses the Intelligent Edge Management Service, which addresses the management of distributed field devices and data."
+        },
+        {
+          "type": "image",
+          "srcKey": "AgWirelessAward",
+          "alt": "Brijesh Nanda B Y with the Best Poster Award for No-Code Workflow Studio",
+          "caption": "Brijesh Nanda B Y receives recognition for the No-Code Workflow Studio poster."
+        },
+        {
+          "type": "image",
+          "srcKey": "AgWirelessCommunity",
+          "alt": "SAI Lab team engaging with agricultural technology event participants",
+          "caption": "Direct discussions with farmers, researchers, and industry participants helped ground future SAI Lab research in field-relevant needs."
+        }
+      ],
+      "tags": [
+        "Outreach",
+        "Digital Agriculture",
+        "AI",
+        "Edge Computing",
+        "ICICLE"
+      ],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://cse.osu.edu/people/subramoni.1"
+        },
+        {
+          "name": "Brijesh Nanda B Y",
+          "profileUrl": "https://brijesh-nanda-by.github.io/Portfolio/"
+        },
+        {
+          "name": "Harikesh Byrandurga Gopinath",
+          "profileUrl": "https://www.linkedin.com/in/harikesh-gopinath"
+        }
+      ]
+    },
+    {
       "id": 7,
       "title": "SAI Lab Undergraduates Advance to Round 2 of AISEHack 2.0",
       "type": "Hackathon / Research",

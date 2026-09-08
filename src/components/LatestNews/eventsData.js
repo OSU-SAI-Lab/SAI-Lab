@@ -22,6 +22,11 @@ import ExploreAg1 from "../../assets/json/images/articles/ExploreAg1.jpg";
 import ExploreAg2 from "../../assets/json/images/articles/ExploreAg2.jpg";
 import ExploreAg3 from "../../assets/json/images/articles/ExploreAg3.jpg";
 import ExploreAg4 from "../../assets/json/images/articles/ExploreAg4.jpg";
+import AgWirelessTeam from "../../assets/json/images/articles/agwireless-2026-team.jpg";
+import AgWirelessWorkflow from "../../assets/json/images/articles/agwireless-2026-no-code-workflow.jpg";
+import AgWirelessEdge from "../../assets/json/images/articles/agwireless-2026-edge-management.jpg";
+import AgWirelessAward from "../../assets/json/images/articles/agwireless-2026-best-poster-award.jpg";
+import AgWirelessCommunity from "../../assets/json/images/articles/agwireless-2026-community-engagement.jpg";
 
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
@@ -37,6 +42,11 @@ const mediaRegistry = {
   ExploreAg2,
   ExploreAg3,
   ExploreAg4,
+  AgWirelessTeam,
+  AgWirelessWorkflow,
+  AgWirelessEdge,
+  AgWirelessAward,
+  AgWirelessCommunity,
 };
 
 function resolveMedia(media = []) {
