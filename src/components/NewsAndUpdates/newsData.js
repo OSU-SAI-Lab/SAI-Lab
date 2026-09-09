@@ -20,6 +20,11 @@ import OH_Fair3 from "../../assets/json/images/articles/OH_Fair3.jpg";
 import PEARC1 from "../../assets/json/images/articles/26_PEARC1.jpg";
 import PEARC2 from "../../assets/json/images/articles/26_PEARC2.jpg";
 import PEARC3 from "../../assets/json/images/articles/26_PEARC3.jpg";
+import AgWirelessTeam from "../../assets/json/images/articles/agwireless-2026-team.jpg";
+import AgWirelessWorkflow from "../../assets/json/images/articles/agwireless-2026-no-code-workflow.jpg";
+import AgWirelessEdge from "../../assets/json/images/articles/agwireless-2026-edge-management.jpg";
+import AgWirelessAward from "../../assets/json/images/articles/agwireless-2026-best-poster-award.jpg";
+import AgWirelessCommunity from "../../assets/json/images/articles/agwireless-2026-community-engagement.jpg";
 
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
@@ -33,6 +38,11 @@ const mediaRegistry = {
   PEARC1,
   PEARC2,
   PEARC3,
+  AgWirelessTeam,
+  AgWirelessWorkflow,
+  AgWirelessEdge,
+  AgWirelessAward,
+  AgWirelessCommunity,
 };
 
 function resolveMedia(media = []) {
