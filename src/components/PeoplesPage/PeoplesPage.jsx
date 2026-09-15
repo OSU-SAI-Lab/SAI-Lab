@@ -238,79 +238,87 @@ function PersonCard({ member }) {
 
   return (
     <article
-      className={`person-card ${isExpanded ? 'expanded' : ''}`}
+      className={`card person-card ${isExpanded ? 'expanded' : ''}`}
       onClick={handleCardClick}
     >
-      <img
-        src={member.photo}
-        alt={member.name}
-        className="card-image"
-      />
+      <div className="card-media">
+        <img
+          src={member.photo}
+          alt={member.name}
+          className="card-image"
+        />
+      </div>
 
-      <h3 className="person-name">{member.name}</h3>
-      <p className="person-title">{member.title}</p>
+      <div className="card-body">
+        <div className="card-header">
+          <h3 className="card-title person-name">{member.name}</h3>
+        </div>
+        <p className="card-subtitle person-title">{member.title}</p>
 
-      {member.role !== 'past' && (
-        <>
-          {/* Interests */}
-          {member.interests?.length > 0 && (
-            <div className="interests-section">
-              <div className="interests-tags">
-                {member.interests.map((i, idx) => (
-                  <span key={idx} className="interest-tag">{i}</span>
-                ))}
+        {member.role !== 'past' && (
+          <>
+            {/* Interests */}
+            {member.interests?.length > 0 && (
+              <div className="interests-section">
+                <div className="card-tags interests-tags">
+                  {member.interests.map((i, idx) => (
+                    <span key={idx} className="card-tag interest-tag">{i}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Projects Section */}
-          {member.projects && member.projects.length > 0 && (
-            <div className="projects-section">
-              <h4 className="section-label">Current Projects</h4>
-              <ul className="projects-list">
-                {member.projects.map((project, idx) => (
-                  <li key={idx}>{project}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </>
-      )}
-
-      {/* Links */}
-      <div className="card-links">
-        {member.website && (
-          <a
-            href={member.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-link"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Website
-          </a>
+            {/* Projects Section */}
+            {member.projects && member.projects.length > 0 && (
+              <div className="projects-section">
+                <h4 className="section-label">Current Projects</h4>
+                <ul className="projects-list">
+                  {member.projects.map((project, idx) => (
+                    <li key={idx}>{project}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
         )}
 
-        {member.email && (
-          <a
-            href={`mailto:${member.email}`}
-            className="card-link"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Email
-          </a>
-        )}
+        {/* Links */}
+        {(member.website || member.email || member.publications) && (
+          <div className="card-footer card-links">
+            {member.website && (
+              <a
+                href={member.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-cta-link card-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Website
+              </a>
+            )}
 
-        {member.publications && (
-          <a
-            href={member.publications}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-link"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Publications
-          </a>
+            {member.email && (
+              <a
+                href={`mailto:${member.email}`}
+                className="card-cta-link card-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Email
+              </a>
+            )}
+
+            {member.publications && (
+              <a
+                href={member.publications}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-cta-link card-link"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Publications
+              </a>
+            )}
+          </div>
         )}
       </div>
     </article>

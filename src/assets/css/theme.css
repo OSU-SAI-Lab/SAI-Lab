@@ -1,5 +1,6 @@
 /* Import distinctive fonts */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import './cards.css';
 
 /* CSS Variables for consistent theming across the entire site */
 :root {
