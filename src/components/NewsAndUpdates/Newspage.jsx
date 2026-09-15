@@ -38,7 +38,7 @@ function hasLocalArticle(item) {
 
 function EventCard({ event }) {
   return (
-    <article className="upcoming-event-card">
+    <article className="card upcoming-event-card">
       <div className="upcoming-event-card-header">
         <span className="upcoming-event-sl">#{event.slNo}</span>
         <span className="upcoming-event-date">{event.date}</span>
@@ -47,13 +47,13 @@ function EventCard({ event }) {
         )}
       </div>
 
-      <div className="upcoming-event-card-body">
+      <div className="card-body upcoming-event-card-body">
         {event.tags?.length > 0 && (
-          <div className="upcoming-event-tags">
+          <div className="card-tags upcoming-event-tags">
             {event.tags.map((tag) => (
               <span
                 key={`${event.title}-${tag}`}
-                className={`upcoming-event-tag tag-${tag.toLowerCase()}`}
+                className={`card-tag upcoming-event-tag tag-${tag.toLowerCase()}`}
               >
                 {tag}
               </span>
@@ -61,7 +61,7 @@ function EventCard({ event }) {
           </div>
         )}
 
-        <h3>
+        <h3 className="card-title">
           {event.link ? (
             <a href={event.link} target="_blank" rel="noopener noreferrer">
               {event.title}
@@ -71,33 +71,33 @@ function EventCard({ event }) {
           )}
         </h3>
 
-        {event.description && <p>{event.description}</p>}
-      </div>
+        {event.description && <p className="card-description">{event.description}</p>}
 
-      {(event.link || event.flyer) && (
-        <div className="upcoming-event-card-footer">
-          {event.link && (
-            <a
-              href={event.link}
-              className="upcoming-event-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Event
-            </a>
-          )}
-          {event.flyer && (
-            <a
-              href={event.flyer}
-              className="upcoming-event-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📄 Flyer
-            </a>
-          )}
-        </div>
-      )}
+        {(event.link || event.flyer) && (
+          <div className="card-footer upcoming-event-card-footer">
+            {event.link && (
+              <a
+                href={event.link}
+                className="card-cta-link upcoming-event-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Event
+              </a>
+            )}
+            {event.flyer && (
+              <a
+                href={event.flyer}
+                className="card-cta-link upcoming-event-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📄 Flyer
+              </a>
+            )}
+          </div>
+        )}
+      </div>
     </article>
   );
 }
