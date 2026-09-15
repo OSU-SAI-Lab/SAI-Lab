@@ -43,35 +43,77 @@
 
 /* Card Specific Typography */
 .latest-news-card-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #222;
-  line-height: 1.3;
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+  color: #171717;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-.latest-news-meta {
-  font-size: 0.9rem;
+.latest-news-metadata {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.latest-news-meta-primary,
+.latest-news-meta-secondary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.latest-news-meta-primary {
+  gap: 8px;
+}
+
+.latest-news-type {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(187, 0, 0, 0.08);
+  color: #8b0000;
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.latest-news-mode {
   color: #666;
-  margin-bottom: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
-.latest-news-datetime, .latest-news-location {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 8px;
+.latest-news-meta-secondary {
+  gap: 4px 10px;
+  color: #777;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.latest-news-meta-secondary > span + span::before {
+  content: "·";
+  margin-right: 10px;
+  color: #aaa;
+}
+
+.latest-news-location {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .latest-news-description {
   font-size: 1rem;
   line-height: 1.5;
   color: #444;
-  margin: 15px 0;
+  margin: 0 0 16px;
 }
 
 .latest-news-members {
-  margin-top: auto; /* Pushes members/link to bottom of card */
-  padding-top: 15px;
+  margin-top: 2px;
+  padding-top: 14px;
   border-top: 1px solid #eee;
   font-size: 0.85rem;
 }
@@ -91,9 +133,14 @@
   text-decoration: underline;
 }
 
+.latest-news-card-footer {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
 .latest-news-link {
-  display: inline-block;
-  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
   color: #bb0000;
   font-weight: 700;
   text-decoration: none;
@@ -102,6 +149,41 @@
   letter-spacing: 0.5px;
 }
 
+.latest-news-link:hover {
+  color: #8b0000;
+  text-decoration: underline;
+}
+
+.latest-news-link:focus-visible {
+  outline: 3px solid rgba(187, 0, 0, 0.25);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
-  .latest-news-page { padding: 40px 20px; background-attachment: scroll; }
+  .latest-news-page {
+    padding: 40px 20px;
+    background-attachment: scroll;
+  }
+
+  .latest-news-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .latest-news-card {
+    padding: 20px;
+  }
+
+  .latest-news-card-title {
+    font-size: 1.4rem;
+  }
+
+  .latest-news-location {
+    flex-basis: 100%;
+  }
+
+  .latest-news-meta-secondary > .latest-news-location::before {
+    display: none;
+  }
 }
