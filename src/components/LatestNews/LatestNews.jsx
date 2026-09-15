@@ -17,23 +17,31 @@ export default function LatestNews() {
       <div className="latest-news-container">
         {sortedEvents.length > 0 ? (
           sortedEvents.map((event) => (
-            <div key={event.id} className="latest-news-card">
+            <article key={event.id} className="latest-news-card">
               <h3 className="latest-news-card-title">{event.title}</h3>
 
-              <p className="latest-news-meta">
-                <strong>{event.type}</strong> · {event.mode}
-              </p>
+              <div className="latest-news-metadata" aria-label="News details">
+                <div className="latest-news-meta-primary">
+                  {event.type && (
+                    <span className="latest-news-type">{event.type}</span>
+                  )}
+                  {event.mode && (
+                    <span className="latest-news-mode">{event.mode}</span>
+                  )}
+                </div>
 
-              <p className="latest-news-datetime">
-                {event.date}
-                {event.time && ` · ${event.time}`}
-              </p>
-
-              <p className="latest-news-location">{event.location}</p>
+                <div className="latest-news-meta-secondary">
+                  {event.date && <span>{event.date}</span>}
+                  {event.time && <span>{event.time}</span>}
+                  {event.location && (
+                    <span className="latest-news-location">{event.location}</span>
+                  )}
+                </div>
+              </div>
 
               <p className="latest-news-description">{event.description}</p>
 
-              {event.members && (
+              {event.members?.length > 0 && (
                 <div className="latest-news-members">
                   <strong>Lab Members Involved:</strong>
                   <ul>
@@ -47,24 +55,26 @@ export default function LatestNews() {
               )}
 
               {/* External link if available, otherwise internal article page */}
-              {event.link ? (
-                <a
-                  href={event.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="latest-news-link"
-                >
-                  Learn More →
-                </a>
-              ) : (
-                <Link
-                  to={`/news/${event.id}`}
-                  className="latest-news-link"
-                >
-                  Learn More →
-                </Link>
-              )}
-            </div>
+              <div className="latest-news-card-footer">
+                {event.link ? (
+                  <a
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="latest-news-link"
+                  >
+                    Learn More →
+                  </a>
+                ) : (
+                  <Link
+                    to={`/news/${event.id}`}
+                    className="latest-news-link"
+                  >
+                    Learn More →
+                  </Link>
+                )}
+              </div>
+            </article>
           ))
         ) : (
           <div style={{ textAlign: "center", padding: "40px 20px", color: "#666", width: "100%" }}>
