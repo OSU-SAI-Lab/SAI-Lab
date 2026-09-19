@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import './ResearchPage.css';
 import { projects } from './data.js';
 import ProjectCard from './ProjectCard';
-import Footer from '../Footer';
 
 export default function ResearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -192,8 +191,6 @@ export default function ResearchPage() {
           </div>
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }
