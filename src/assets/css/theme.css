@@ -1,6 +1,7 @@
 /* Import distinctive fonts */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 @import './cards.css';
+@import './sections.css';
 
 /* CSS Variables for consistent theming across the entire site */
 :root {
@@ -23,6 +24,14 @@
   
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
+
+  /* Section and Typography Tokens */
+  --section-spacing: 3.5rem;
+  --section-spacing-mobile: 2.25rem;
+  --section-max-width: 1200px;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.4rem;
 }
 
 /* Global Styles */

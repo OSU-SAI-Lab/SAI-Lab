@@ -167,7 +167,7 @@ export default function ResearchPage() {
         </div>
       )}
 
-      <main className="research-main-content">
+      <main className="research-main-content site-section">
         <div className="research-results-header">
           <div className="research-results-count">
             {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
@@ -185,7 +185,7 @@ export default function ResearchPage() {
             )}
           </div>
         ) : (
-          <div className="projects-grid">
+          <div className="projects-grid section-grid">
             {filteredProjects.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}

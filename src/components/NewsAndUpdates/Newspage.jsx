@@ -199,9 +199,9 @@ export default function NewsPage() {
       </div>
 
       <div className="news-content news-content-wide">
-        <section className="upcoming-events" id="upcoming-events">
-          <div className="upcoming-events-header">
-            <h2>
+        <section className="upcoming-events site-section" id="upcoming-events">
+          <div className="upcoming-events-header section-header">
+            <h2 className="section-title">
               <span className="upcoming-events-icon" aria-hidden="true">
                 📅
               </span>
@@ -210,7 +210,7 @@ export default function NewsPage() {
           </div>
 
           {featuredEvents.length > 0 ? (
-            <div className="upcoming-events-grid">
+            <div className="upcoming-events-grid section-grid">
               {featuredEvents.map((event) => (
                 <EventCard
                   key={`${event.sortDate}-${event.title}`}
@@ -225,65 +225,71 @@ export default function NewsPage() {
           )}
         </section>
 
-        <div className="news-controls" id="news-feed">
-          <div className="filter-pills">
-            {FILTERS.map((f) => (
-              <button
-                key={f}
-                className={`filter-pill${activeFilter === f ? " active" : ""}`}
-                onClick={() => setActiveFilter(f)}
-              >
-                {f}
-                <span className="filter-pill-count">{counts[f]}</span>
-              </button>
+        <section className="news-feed-section site-section" id="news-feed">
+          <div className="news-feed-header section-header">
+            <h2 className="section-title">News &amp; Updates</h2>
+          </div>
+
+          <div className="news-controls">
+            <div className="filter-pills">
+              {FILTERS.map((f) => (
+                <button
+                  key={f}
+                  className={`filter-pill${activeFilter === f ? " active" : ""}`}
+                  onClick={() => setActiveFilter(f)}
+                >
+                  {f}
+                  <span className="filter-pill-count">{counts[f]}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className="news-search-wrapper">
+              <input
+                type="text"
+                className="news-search-input"
+                placeholder="Search news & events..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <span className="news-search-icon">⌕</span>
+            </div>
+          </div>
+
+          <div className="news-results-count">
+            Showing {filtered.length} of {newsItems.length} entries
+          </div>
+
+          <div className="news-card-list section-list">
+            {filtered.map((item, i) => (
+              <NewsCard key={item.id} item={item} index={i} />
             ))}
           </div>
 
-          <div className="news-search-wrapper">
-            <input
-              type="text"
-              className="news-search-input"
-              placeholder="Search news & events..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <span className="news-search-icon">⌕</span>
-          </div>
-        </div>
-
-        <div className="news-results-count">
-          Showing {filtered.length} of {newsItems.length} entries
-        </div>
-
-        <div className="news-card-list">
-          {filtered.map((item, i) => (
-            <NewsCard key={item.id} item={item} index={i} />
-          ))}
-        </div>
-
-        {filtered.length === 0 && (
-          <div className="news-no-results" style={{ textAlign: "center", padding: "40px 20px" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "8px", color: "#333" }}>
-              No matching news or events
-            </h3>
-            <p style={{ color: "#666", marginBottom: "16px" }}>
-              {searchQuery
-                ? `No results found for "${searchQuery}".`
-                : `No results under the ${activeFilter} category.`}
-            </p>
-            {(activeFilter !== "All" || searchQuery !== "") && (
-              <button
-                className="news-clear-button"
-                onClick={() => {
-                  setActiveFilter("All");
-                  setSearchQuery("");
-                }}
-              >
-                Clear Search &amp; Filters
-              </button>
-            )}
-          </div>
-        )}
+          {filtered.length === 0 && (
+            <div className="news-no-results" style={{ textAlign: "center", padding: "40px 20px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "8px", color: "#333" }}>
+                No matching news or events
+              </h3>
+              <p style={{ color: "#666", marginBottom: "16px" }}>
+                {searchQuery
+                  ? `No results found for "${searchQuery}".`
+                  : `No results under the ${activeFilter} category.`}
+              </p>
+              {(activeFilter !== "All" || searchQuery !== "") && (
+                <button
+                  className="news-clear-button"
+                  onClick={() => {
+                    setActiveFilter("All");
+                    setSearchQuery("");
+                  }}
+                >
+                  Clear Search &amp; Filters
+                </button>
+              )}
+            </div>
+          )}
+        </section>
       </div>
     </div>
   );

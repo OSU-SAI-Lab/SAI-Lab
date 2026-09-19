@@ -142,7 +142,7 @@
 }
 
 .project-description-section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-spacing, 3.5rem);
 }
 
 .project-short-description {
@@ -168,7 +168,7 @@
 
 /* Team Section */
 .project-team-section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-spacing, 3.5rem);
   padding: 2rem;
   background: white;
   border-radius: 12px;
@@ -177,11 +177,11 @@
 
 .project-section-title {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: var(--font-size-h2, 2rem);
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
   border-bottom: 3px solid var(--color-primary);
   display: inline-block;
 }
@@ -236,7 +236,7 @@
 
 /* External Links Section */
 .project-links-section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-spacing, 3.5rem);
   padding: 2rem;
   background: white;
   border-radius: 12px;

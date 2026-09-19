@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Unified Section Design System (SAI Lab)
+   Normalized section patterns, typography hierarchy, and spacing tokens
+   ========================================================================== */
+
+/* Standard Section Container */
+.site-section,
+.standard-section {
+  width: 100%;
+  max-width: var(--section-max-width, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--section-spacing, 3.5rem);
+  box-sizing: border-box;
+}
+
+/* Section Header Structure */
+.section-header {
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Standard Heading Hierarchy */
+/* h1: Page titles (e.g., hero titles) */
+.page-title,
+.hero-title,
+.research-hero h1,
+.people-hero h1,
+.news-hero h1,
+.publications-hero h1,
+.working-with-us-hero-container h1 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h1, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* h2: Section titles */
+.section-title,
+h2.section-title,
+.standard-section-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2, 2rem);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.25;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-primary);
+  display: inline-block;
+}
+
+/* Optional Intro Text */
+.section-intro,
+.section-header .section-intro {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* h3: Subsection and Card titles */
+.subsection-title,
+.section-subtitle,
+h3.subsection-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h3, 1.4rem);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Standard Content Layouts */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-sizing: border-box;
+}
+
+/* Optional Call to Action (CTA) */
+.section-cta {
+  margin-top: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.section-cta-btn:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  :root {
+    --section-spacing: var(--section-spacing-mobile, 2.25rem);
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.25rem;
+  }
+
+  .site-section,
+  .standard-section {
+    margin-bottom: var(--section-spacing, 2.25rem);
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-intro {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.15rem;
+  }
+}
