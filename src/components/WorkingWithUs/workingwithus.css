@@ -159,7 +159,7 @@
   background: white;
   border-radius: 12px;
   padding: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--section-spacing, 3.5rem);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -169,7 +169,7 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-.section-header {
+.opportunity-section .section-header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -178,9 +178,9 @@
   border-bottom: 3px solid #bb0000;
 }
 
-.section-header h2 {
+.opportunity-section .section-header h2 {
   font-family: 'Crimson Pro', serif;
-  font-size: 2rem;
+  font-size: var(--font-size-h2, 2rem);
   font-weight: 600;
   color: #1a1a1a;
   margin: 0;
@@ -418,7 +418,7 @@
 }
 
 .accordion-header:focus-visible,
-.section-header.collapsible:focus-visible,
+.opportunity-section .section-header.collapsible:focus-visible,
 .side-nav ul li button:focus-visible {
   outline: 3px solid #bb0000;
   outline-offset: 3px;
@@ -460,7 +460,7 @@
   color: #a0aec0;
 }
 
-.section-header.collapsible {
+.opportunity-section .section-header.collapsible {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -468,7 +468,7 @@
   transition: background 0.2s;
 }
 
-.section-header.collapsible:hover {
+.opportunity-section .section-header.collapsible:hover {
   background-color: #f7fafc;
 }
 
@@ -530,13 +530,13 @@
     padding: 1.75rem;
   }
 
-  .section-header {
+  .opportunity-section .section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .section-header h2 {
+  .opportunity-section .section-header h2 {
     font-size: 1.75rem;
   }
 
@@ -572,7 +572,7 @@
     padding: 1.5rem;
   }
 
-  .section-header h2 {
+  .opportunity-section .section-header h2 {
     font-size: 1.5rem;
   }
 
@@ -582,7 +582,7 @@
 }
 
 .category-divider {
-  margin: 3.5rem 0 1.5rem;
+  margin: var(--section-spacing, 3.5rem) 0 1.5rem;
   padding: 0 0 1.25rem;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -790,7 +790,7 @@
   background: #ffffff;
 }
 
-button.section-header {
+.opportunity-section button.section-header {
   width: 100%;
   border-top: none;
   border-left: none;
@@ -800,12 +800,12 @@ button.section-header {
   font-family: inherit;
 }
 
-.section-header.collapsible {
+.opportunity-section .section-header.collapsible {
   padding-left: 0;
   padding-right: 0;
 }
 
-.section-header.collapsible:focus-visible {
+.opportunity-section .section-header.collapsible:focus-visible {
   outline: 3px solid rgba(187, 0, 0, 0.2);
   outline-offset: 4px;
   border-radius: 4px;
@@ -884,7 +884,7 @@ button.section-header {
     padding: 1.25rem;
   }
 
-  button.section-header {
+  .opportunity-section button.section-header {
     align-items: flex-start;
   }
 }

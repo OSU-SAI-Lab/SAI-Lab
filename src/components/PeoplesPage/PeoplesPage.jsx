@@ -186,9 +186,11 @@ export default function People() {
         ) : (
           Object.entries(groupedMembers).map(([role, members]) =>
             members.length > 0 && (
-              <section key={role} className="role-section">
-                <h2 className="role-heading">{roleLabels[role]}</h2>
-                <div className="members-grid">
+              <section key={role} className="role-section site-section">
+                <div className="section-header">
+                  <h2 className="role-heading section-title">{roleLabels[role]}</h2>
+                </div>
+                <div className="members-grid section-grid">
                   {members.map(member => (
                     <PersonCard key={member.id} member={member} />
                   ))}
