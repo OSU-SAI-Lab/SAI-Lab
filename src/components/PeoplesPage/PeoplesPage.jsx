@@ -198,10 +198,6 @@ export default function People() {
           )
         )}
       </main>
-
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Systems and AI Lab, The Ohio State University</p>
-      </footer>
     </div>
   );
 }

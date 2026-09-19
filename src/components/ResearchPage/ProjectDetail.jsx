@@ -3,7 +3,6 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import './ProjectDetail.css';
 import { projects } from './data.js';
 import { labMembers } from '../PeoplesPage/data.js';
-import Footer from '../Footer';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -150,8 +149,6 @@ export default function ProjectDetail() {
           </section>
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }

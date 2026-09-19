@@ -453,16 +453,6 @@
   font-size: 1.125rem;
 }
 
-/* Footer */
-.footer {
-  background: #1a1a1a;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-}
-
 /* Animations */
 @keyframes fadeIn {
   from {

@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import HomePage from "./components/HomePage/HomePage";
 import ResearchPage from "./components/ResearchPage/ResearchPage";
 import ProjectDetail from "./components/ResearchPage/ProjectDetail";
@@ -20,9 +21,9 @@ function App() {
     location.pathname === "/" || location.pathname === "/SAI-Lab/";
 
   return (
-    <>
+    <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <NavBar />
-      <div className={isHomePage ? "" : "page-content"}>
+      <div className={isHomePage ? "" : "page-content"} style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
 
@@ -44,7 +45,8 @@ function App() {
           <Route path="/news/:id" element={<ArticlePage />} />
         </Routes>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 
