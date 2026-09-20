@@ -3,6 +3,7 @@ import './ResearchPage.css';
 import { projects } from './data.js';
 import ProjectCard from './ProjectCard';
 import Footer from '../Footer';
+import FilterDropdown, { FilterOption } from '../FilterDropdown';
 
 export default function ResearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -94,6 +95,7 @@ export default function ResearchPage() {
           <div className="search-box">
             <input
               type="text"
+              aria-label="Search projects"
               placeholder="Search projects..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
@@ -102,44 +104,33 @@ export default function ResearchPage() {
           </div>
 
           <div className="filter-controls">
-            <div className="filter-group">
-              <button className="filter-dropdown-button">
-                Research Areas {selectedAreas.length > 0 && `(${selectedAreas.length})`}
-              </button>
-              <div className="filter-dropdown-content">
-                {allAreas.map(area => (
-                  <label key={area} className="filter-checkbox">
-                    <input
-                      type="checkbox"
-                      checked={selectedAreas.includes(area)}
-                      onChange={() => toggleArea(area)}
-                    />
-                    <span>{area}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+            <FilterDropdown label="Research Areas" selectedCount={selectedAreas.length}>
+              {allAreas.map(area => (
+                <FilterOption
+                  key={area}
+                  checked={selectedAreas.includes(area)}
+                  onToggle={() => toggleArea(area)}
+                >
+                  {area}
+                </FilterOption>
+              ))}
+            </FilterDropdown>
 
-            <div className="filter-group">
-              <button className="filter-dropdown-button">
-                Domains {selectedDomains.length > 0 && `(${selectedDomains.length})`}
-              </button>
-              <div className="filter-dropdown-content">
-                {allDomains.map(domain => (
-                  <label key={domain} className="filter-checkbox">
-                    <input
-                      type="checkbox"
-                      checked={selectedDomains.includes(domain)}
-                      onChange={() => toggleDomain(domain)}
-                    />
-                    <span>{domain}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+            <FilterDropdown label="Domains" selectedCount={selectedDomains.length}>
+              {allDomains.map(domain => (
+                <FilterOption
+                  key={domain}
+                  checked={selectedDomains.includes(domain)}
+                  onToggle={() => toggleDomain(domain)}
+                >
+                  {domain}
+                </FilterOption>
+              ))}
+            </FilterDropdown>
 
-            {hasDropdownFilters && (
+            {hasActiveFilters && (
               <button
+                type="button"
                 className="clear-filters-button"
                 onClick={clearFilters}
               >
@@ -151,36 +142,51 @@ export default function ResearchPage() {
       </div>
 
       {hasDropdownFilters && (
-        <div className="active-filters">
+        <div className="active-filters" aria-label="Active filters">
+          <span className="active-filters-label">Active filters:</span>
           {selectedAreas.map(area => (
-            <span key={area} className="filter-pill" onClick={() => removeFilter('area', area)}>
+            <button
+              key={area}
+              type="button"
+              className="filter-pill"
+              onClick={() => removeFilter('area', area)}
+              aria-label={`Remove ${area} filter`}
+            >
               {area}
-              <span className="filter-pill-close">×</span>
-            </span>
+              <span className="filter-pill-close" aria-hidden="true">×</span>
+            </button>
           ))}
           {selectedDomains.map(domain => (
-            <span key={domain} className="filter-pill" onClick={() => removeFilter('domain', domain)}>
+            <button
+              key={domain}
+              type="button"
+              className="filter-pill"
+              onClick={() => removeFilter('domain', domain)}
+              aria-label={`Remove ${domain} filter`}
+            >
               {domain}
-              <span className="filter-pill-close">×</span>
-            </span>
+              <span className="filter-pill-close" aria-hidden="true">×</span>
+            </button>
           ))}
         </div>
       )}
 
       <main className="research-main-content">
-        <div className="research-results-header">
-          <div className="research-results-count">
-            {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+        {hasActiveFilters && (
+          <div className="research-results-header">
+            <div className="research-results-count" aria-live="polite">
+              Showing {filteredProjects.length} of {projects.length} {projects.length === 1 ? 'project' : 'projects'}
+            </div>
           </div>
-        </div>
+        )}
 
         {filteredProjects.length === 0 ? (
-          <div className="no-results">
+          <div className="research-no-results">
             <h3>No projects found</h3>
             <p>Try adjusting your filters or search terms.</p>
             {hasActiveFilters && (
-              <button className="clear-filters-button" onClick={clearFilters}>
-                Clear Search &amp; Filters
+              <button type="button" className="clear-filters-button" onClick={clearFilters}>
+                Clear Filters
               </button>
             )}
           </div>
