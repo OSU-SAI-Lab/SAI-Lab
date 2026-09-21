@@ -1,0 +1,89 @@
+.home-previews {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 1rem;
+}
+
+.home-preview-section { margin-bottom: 5rem; }
+
+.home-preview-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: .75rem;
+}
+
+.home-preview-heading h2, .openings-preview h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+}
+
+.home-preview-heading a, .research-preview-card > span, .openings-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-preview-heading a:hover, .home-preview-heading a:focus-visible, .research-preview-card:hover > span, .research-preview-card:focus-visible > span, .openings-link:hover, .openings-link:focus-visible { text-decoration: underline; }
+
+.research-preview-grid, .people-preview-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.research-preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.research-preview-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 255px;
+  padding: 1.5rem;
+  color: var(--color-text);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.research-preview-card:hover, .research-preview-card:focus-visible, .person-preview-card:hover, .person-preview-card:focus-visible { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.research-preview-card h3, .publication-preview h3, .person-preview-card h3 { font-size: 1.15rem; margin: .35rem 0 .7rem; line-height: 1.3; }
+.research-preview-card p:not(.preview-kicker) { color: var(--color-text-light); margin-bottom: 1rem; }
+.research-preview-card > span { margin-top: auto; }
+.preview-kicker { margin: 0; color: var(--color-primary); font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+
+.publication-preview-list { border-top: 1px solid var(--color-border); }
+.publication-preview { display: flex; justify-content: space-between; gap: 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); }
+.publication-preview h3 { margin-bottom: .45rem; }
+.publication-preview p { margin: 0; color: var(--color-text-light); }
+.publication-preview-venue { font-style: italic; }
+.publication-preview > a { align-self: center; flex: 0 0 auto; color: var(--color-primary); font-weight: 600; }
+
+.people-preview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.person-preview-card { color: var(--color-text); text-decoration: none; text-align: center; }
+.person-preview-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; margin: 0 auto 1rem; max-width: 180px; box-shadow: var(--shadow-sm); }
+.person-preview-card h3 { margin-bottom: .2rem; }
+.person-preview-card p { color: var(--color-text-light); margin: 0; }
+
+.openings-preview { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(2rem, 5vw, 4rem); color: white; background: #2c2c2c; border-left: 6px solid var(--color-primary); }
+.openings-preview h2 { margin: .3rem 0 .75rem; }
+.openings-preview > div > p:not(.preview-kicker) { max-width: 650px; margin: 0; }
+.openings-link { flex: 0 0 auto; padding: .75rem 1.1rem; color: white; border: 1px solid white; }
+
+@media (max-width: 800px) {
+  .research-preview-grid { grid-template-columns: 1fr; }
+  .people-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .publication-preview, .openings-preview { align-items: flex-start; flex-direction: column; gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .home-previews { padding: 3rem 1.1rem 1px; }
+  .home-preview-heading { align-items: flex-start; flex-direction: column; }
+  .people-preview-grid { gap: 1.5rem .75rem; }
+}
