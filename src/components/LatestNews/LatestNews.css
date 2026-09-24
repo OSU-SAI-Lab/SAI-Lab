@@ -21,7 +21,7 @@
 
 .latest-news-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
 }
 
@@ -116,6 +116,12 @@
   outline: 3px solid rgba(187, 0, 0, 0.25);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+/* Tablet: two columns prevent cramped cards at laptop and tablet widths. */
+@media (max-width: 1100px) {
+  .latest-news-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .latest-news-page { padding: 50px 40px; }
 }
 
 @media (max-width: 768px) {
