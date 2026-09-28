@@ -1,6 +1,54 @@
 {
   "items": [
     {
+      "id": 9,
+      "title": "SAI Lab Brings End-to-End Agricultural AI Workflows to Farm Science Review 2026",
+      "description": "SAI Lab brings precision spot spraying, Smart Labeler, Intelligent Edge Management Service (IEMS), and Ask the Farm to Farm Science Review 2026, connecting field data collection, AI, high-performance computing, and agricultural decision support.",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>The SAI Lab team, participating under the umbrella of the ICICLE AI Institute, will demonstrate a set of practical AI systems for precision agriculture at Farm Science Review 2026. The team’s demonstrations connect drone imagery, AI-assisted labeling, high-performance computing, edge deployment, and geospatial decision support into workflows designed for real agricultural settings.</p><p>Farm Science Review takes place September 22–24 at the Molly Caren Agricultural Center near London, Ohio.</p><h2>Precision spot spraying: From scouting to targeted treatment</h2><p>The centerpiece of the SAI Lab demonstrations is a precision spot-spraying workflow that converts drone imagery into a targeted weed-treatment mission.</p><p>The workflow begins with a drone scouting plan created on a laptop. Once the drone collects field imagery, the images are automatically sent to a high-performance computing cluster for analysis. AI models perform zero-shot annotation to identify plants and weeds, and the resulting detections are assembled into a GeoPackage containing the farm boundary, detections, spray zones, and no-spray zones.</p><p>Using that spatial information, the workflow generates a waypoint-based flight plan for a spray drone. The drone can then apply treatment only in locations identified as requiring it.</p><p>This is an example of how integrated AI and computing infrastructure can support site-specific management: the system moves from image collection to geospatial analysis to an operational spray plan with minimal manual transfer between steps. By targeting treatment where weeds are detected, precision spot spraying may help reduce pesticide use and treatment costs while supporting more sustainable field operations.</p><h2>Smart Labeler: Faster labels for agricultural AI</h2><p>The SAI Lab will also demonstrate <strong>Smart Labeler</strong>, a system intended to make dataset labeling faster, more flexible, and easier to review.</p><p>High-quality labeled data remain a major bottleneck for building and evaluating machine-learning models. Smart Labeler enables users to label new image datasets using coordinate prompts or text prompts, then modify, filter, and analyze the generated labels. Its workflows are applicable across agriculture, ecology, and other visual-data domains.</p><p>The demonstration includes two complementary labeling modes:</p><ul><li><strong>Zero-shot labeling:</strong> Models identify objects of interest without requiring examples from the new dataset.</li><li><strong>Few-shot labeling:</strong> Previously annotated images are used as ground-truth examples to guide labeling of additional images.</li></ul><p>Smart Labeler combines multiple models across object proposal and classification stages, including SAM3, OWLv2, and DINOv3. This multi-model design is intended to support detection and classification of field-relevant objects while allowing users to inspect and improve the labels before using them downstream.</p><p>For agricultural researchers and practitioners, the practical value is clear: faster creation of curated datasets can shorten the time required to develop, adapt, or evaluate AI models for new crops, weed species, field conditions, or sensing platforms.</p><h2>IEMS: Managing AI at the agricultural edge</h2><p>The SAI Lab team will also show how computer-vision models can run and be managed directly at field sites through the <strong>Intelligent Edge Management Service (IEMS)</strong>.</p><p>For the demonstration, a YOLO weed-detection model runs on a field-hardened NVIDIA Jetson AGX Xavier edge device paired with Hikrobot GigE cameras. Rather than requiring an operator to manually log into each deployed computer, IEMS manages the operational workflow from a central portal:</p><ul><li>It deploys the packaged AI container and model weights to the edge device.</li><li>It provides access to the live camera feed.</li><li>It allows users to start, stop, and monitor inference from a laptop.</li><li>It supports management of a small fleet of in-field sensing devices.</li></ul><p>This demonstration addresses a common challenge in agricultural AI: a model that works in the lab still needs a dependable route to deployment, monitoring, and updating in an outdoor environment. The IEMS workflow illustrates a path from a trained detector to a field-deployed application without treating every sensor box as a separate manual configuration task.</p><h2>Ask the Farm: Conversational field intelligence</h2><p>The fourth demonstration, <strong>Ask the Farm</strong>, provides a natural-language interface to harmonized public agricultural and environmental data.</p><p>Visitors can select a field at the Molly Caren Agricultural Center or upload their own field boundary, then ask questions about crop history, soils, rainfall, drainage, topography, and related landscape characteristics. The system is built on data layers ingested through ICICLE AI’s Earth Data Hub, including Sentinel-2 imagery, USDA crop maps, NRCS soil information, USGS hydrography and terrain layers, and rainfall data.</p><p>Ask the Farm uses open-source foundational large language models, developed with expert input and run on national academic high-performance computing resources. Importantly, the tool is designed to ground responses in the underlying geospatial information: it reports the data source, resolution, and date where applicable, and it identifies when the available records cannot answer a question.</p><p>For users, the goal is not simply to make maps easier to query. It is to make heterogeneous field-relevant information easier to discover, interpret, and connect to agricultural decision-making.</p><h2>Demonstrating the full pipeline</h2><p>Taken together, the SAI Lab demonstrations show a full agricultural AI pipeline:</p><table><thead><tr><th scope=\"col\">Stage</th><th scope=\"col\">Demonstrated capability</th></tr></thead><tbody><tr><td>Field data collection</td><td>Drone scouting and fixed-camera sensing</td></tr><tr><td>Data preparation</td><td>Zero-shot and few-shot annotation through Smart Labeler</td></tr><tr><td>Scalable computing</td><td>HPC-based image analysis and geospatial workflow execution</td></tr><tr><td>Operational action</td><td>Waypoint generation for precision spot spraying</td></tr><tr><td>Field deployment</td><td>Edge-based weed detection managed through IEMS</td></tr><tr><td>Field intelligence</td><td>Conversational access to harmonized agricultural and environmental data</td></tr></tbody></table><p>The team’s participation at Farm Science Review reflects a broader focus on translating AI systems research into usable agricultural workflows. Visitors will be able to see how these components connect—from collecting field data, to creating and running models, to producing field-level information and actions.</p><p>Farm Science Review 2026 is the 64th edition of the event and the 44th held at the Molly Caren Agricultural Center.</p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "FarmScienceReview2026Demo",
+          "alt": "Laptops, cameras, and monitors displaying agricultural AI demonstrations at Farm Science Review 2026",
+          "caption": "The SAI Lab demonstration setup connects field imagery, geospatial information, and AI tools."
+        },
+        {
+          "type": "image",
+          "srcKey": "FarmScienceReview2026Sensing",
+          "alt": "Camera demonstration rig positioned above sample plants inside the Farm Science Review exhibit",
+          "caption": "A sensing demonstration brings agricultural computer vision into the exhibit."
+        },
+        {
+          "type": "image",
+          "srcKey": "FarmScienceReview2026Visitors",
+          "alt": "Visitors listening to a presentation beside the agricultural AI demonstration at Farm Science Review 2026",
+          "caption": "Visitors learn about SAI Lab agricultural AI workflows at Farm Science Review 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "FarmScienceReview2026Presentation",
+          "alt": "Presenters and seated attendees at the SAI Lab Farm Science Review 2026 exhibit",
+          "caption": "The SAI Lab team presents its agricultural AI demonstrations to event attendees."
+        }
+      ],
+      "members": [],
+      "type": "Exhibition / Demo",
+      "date": "September 22–24, 2026",
+      "sortDate": "2026-09-22",
+      "time": null,
+      "mode": "In-Person",
+      "location": "Molly Caren Agricultural Center, near London, Ohio",
+      "tags": [
+        "Outreach",
+        "Digital Agriculture",
+        "AI",
+        "Edge Computing",
+        "ICICLE"
+      ]
+    },
+    {
       "id": 8,
       "title": "SAI Lab Showcases ICICLE-Enabled Agricultural AI at AgWireless’26 and the Farm Progress Show",
       "type": "Exhibition / Demo",
