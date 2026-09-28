@@ -28,8 +28,17 @@ import AgWirelessEdge from "../../assets/json/images/articles/agwireless-2026-ed
 import AgWirelessAward from "../../assets/json/images/articles/agwireless-2026-best-poster-award.jpg";
 import AgWirelessCommunity from "../../assets/json/images/articles/agwireless-2026-community-engagement.jpg";
 
+import FarmScienceReview2026Demo from "../../assets/json/images/articles/farm-science-review-2026-demo-setup.jpeg";
+import FarmScienceReview2026Sensing from "../../assets/json/images/articles/farm-science-review-2026-camera-rig.jpeg";
+import FarmScienceReview2026Visitors from "../../assets/json/images/articles/farm-science-review-2026-visitor-engagement.jpeg";
+import FarmScienceReview2026Presentation from "../../assets/json/images/articles/farm-science-review-2026-team-presentation.jpeg";
+
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
+  FarmScienceReview2026Demo,
+  FarmScienceReview2026Sensing,
+  FarmScienceReview2026Visitors,
+  FarmScienceReview2026Presentation,
   satyakiPoster,
   ashPoster,
   bathymetry,
