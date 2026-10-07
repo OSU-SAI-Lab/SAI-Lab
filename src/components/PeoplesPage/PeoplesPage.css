@@ -345,7 +345,7 @@
 /* Members Grid */
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -522,6 +522,14 @@
 }
 
 /* ========== MOBILE RESPONSIVE STYLES ========== */
+
+/* Tablet: two equal columns keep cards balanced without squeezing content. */
+@media (max-width: 1023px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
 
 /* Tablets and Medium Screens */
 @media (max-width: 768px) {
@@ -908,4 +916,9 @@
   .card-image {
     height: 200px;
   }
+}
+
+/* Keep tablet cards in two columns while retaining compact controls below 768px. */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
