@@ -13,6 +13,7 @@ const routes = [
   "/research",
   "/publications",
   "/news-and-updates",
+  "/demos",
   "/people",
   "/workingwithus",
 ];
@@ -40,6 +41,11 @@ const metadata = {
     title: "News & Events | Systems & AI Lab | The Ohio State University",
     description:
       "Latest news, events, and updates from the Systems and AI Lab.",
+  },
+  "/demos": {
+    title: "Demos | Systems & AI Lab | The Ohio State University",
+    description:
+      "Watch demonstrations of intelligent systems, scientific AI services, edge management, and digital agriculture from the Systems and AI Lab.",
   },
   "/people": {
     title: "People | Systems & AI Lab | The Ohio State University",
