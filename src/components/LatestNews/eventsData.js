@@ -33,8 +33,29 @@ import FarmScienceReview2026Sensing from "../../assets/json/images/articles/farm
 import FarmScienceReview2026Visitors from "../../assets/json/images/articles/farm-science-review-2026-visitor-engagement.jpeg";
 import FarmScienceReview2026Presentation from "../../assets/json/images/articles/farm-science-review-2026-team-presentation.jpeg";
 
+import HackOhio2026Panda from "../../assets/json/images/articles/hackohio-2026-panda-icicle.jpg";
+import HackOhio2026Shearer from "../../assets/json/images/articles/hackohio-2026-shearer-precision-agriculture.jpg";
+import HackOhio2026Brijesh from "../../assets/json/images/articles/hackohio-2026-brijesh-presentation.jpg";
+import HackOhio2026StudentTeam from "../../assets/json/images/articles/hackohio-2026-student-team-presentation.jpg";
+
+import HackOhio2026Award1 from "../../assets/json/images/articles/hackohio-2026-team-award-1.jpg";
+import HackOhio2026Award2 from "../../assets/json/images/articles/hackohio-2026-team-award-2.jpg";
+import HackOhio2026Group from "../../assets/json/images/articles/hackohio-2026-group-photo.jpg";
+
+import HackOhio2026FirstPlace from "../../assets/json/images/articles/hackohio-2026-first-place.jpg";
+
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
+  HackOhio2026FirstPlace,
+  HackOhio2026Award1,
+  HackOhio2026Award2,
+  HackOhio2026Group,
+
+  HackOhio2026Panda,
+  HackOhio2026Shearer,
+  HackOhio2026Brijesh,
+  HackOhio2026StudentTeam,
+
   FarmScienceReview2026Demo,
   FarmScienceReview2026Sensing,
   FarmScienceReview2026Visitors,
@@ -70,6 +91,7 @@ function resolveMedia(media = []) {
 
 export const events = rawNews.items.map((item) => ({
   ...item,
+  awardMedia: resolveMedia(item.awardMedia || []),
   media: resolveMedia(item.media),
 }));
 

@@ -1,6 +1,100 @@
 {
   "items": [
     {
+      "id": 10,
+      "title": "SAI Lab and ICICLE Bring Hands-On Edge AI Learning to HackOHI/O 2026",
+      "description": "SAI Lab and ICICLE engaged students at HackOHI/O 2026 in a hands-on computer vision workflow, from leaf-image annotation and model training to evaluation and edge deployment.",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p><em>Students explored the machine learning lifecycle—from leaf-image annotation to edge deployment—using ICICLE’s AI and cyberinfrastructure services.</em></p><p>The SAI Lab joined the <a href=\"https://icicle.osu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">NSF ICICLE AI Institute</a> at HackOHI/O 2026 to deliver a hands-on workshop and hackathon challenge centered on the theme <strong>“One day. One leaf. One model at the edge.”</strong> The activities introduced students to an end-to-end computer vision workflow, connecting data preparation, model training, evaluation, and deployment through ICICLE’s AI and cyberinfrastructure services.</p><p>The event opened with keynote presentations by <a href=\"https://www.linkedin.com/in/scott-shearer-90102a7/\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Scott Shearer</a>, Professor and Chair of Food, Agricultural and Biological Engineering at The Ohio State University, and <a href=\"https://www.linkedin.com/in/dhabaleswar-k-dk-panda-bab6892/\" target=\"_blank\" rel=\"noopener noreferrer\">Dr. Dhabaleswar K. (DK) Panda</a>, Director of the NSF ICICLE AI Institute. Their presentations introduced ICICLE’s services and the role of edge AI in digital agriculture. Dr. Neelima Savardekar, Managing Director of the NSF ICICLE AI Institute, led the evaluation panel.</p><h2>Connecting the Pieces of an AI Workflow</h2><p>Using leaf images as a concrete application, participants worked through four connected stages of the machine learning lifecycle:</p><ul><li><strong>Annotate:</strong> Label leaf images using Smart Labeler, ICICLE’s Intelligent Semantic Segmentation &amp; Annotation service.</li><li><strong>Train:</strong> Configure and run lightweight YOLO segmentation models through the Workflow Orchestrator, ICICLE’s No-Code Workflow Studio.</li><li><strong>Infer:</strong> Evaluate trained models on held-out test images.</li><li><strong>Deploy:</strong> Deploy trained models to edge devices through the Intelligent Edge Management Service (IEMS).</li></ul><p>The workshop brought these stages together in a single learning experience, helping students understand how annotations, data flow, workflow configuration, and deployment fit into a complete AI system.</p><h2>Encouraging Feedback from Participants</h2><p>Participant evaluations highlighted the value of hands-on activities and individualized support. Of the <strong>11 survey respondents, nine reported higher AI knowledge</strong> at the end of the workshop, and <strong>eight rated the workshop’s contribution to their AI knowledge as “Very good” or “Excellent.”</strong></p><p>Students particularly valued the opportunity to train vision models, create workflows, and receive direct assistance from the instructional team. One participant wrote:</p><blockquote><p>“ICICLE was a great way to learn about training AI models, and the workflow guide was very helpful.”</p></blockquote><h2>Making AI Workflows More Accessible</h2><p>The workshop connected ICICLE’s research and software development with hands-on student learning. By bringing multiple services into one guided experience, it gave participants an opportunity to explore the relationships between data, models, computational resources, and deployment.</p><p>For the SAI Lab, the experience underscored the importance of pairing accessible tools with practical understanding: helping students run models while recognizing the decisions and dependencies that shape an end-to-end AI application.</p><h2>A Collaborative Team Effort</h2><p>The workshop was supported by ICICLE Institute and OSU SAI Lab team members <a href=\"https://www.linkedin.com/in/harisubramoni/\" target=\"_blank\" rel=\"noopener noreferrer\">Hari Subramoni</a>, <a href=\"https://www.linkedin.com/in/brijesh-nanda-b-y/\" target=\"_blank\" rel=\"noopener noreferrer\">Brijesh Nanda B Y</a>, <a href=\"https://www.linkedin.com/in/amrithaa-ak/\" target=\"_blank\" rel=\"noopener noreferrer\">Amrithaa Ashok Kumar</a>, <a href=\"https://www.linkedin.com/in/harikesh-gopinath/\" target=\"_blank\" rel=\"noopener noreferrer\">Harikesh Byrandurga Gopinath</a>, and <a href=\"https://www.linkedin.com/in/naveen-kamath-434668287/\" target=\"_blank\" rel=\"noopener noreferrer\">Naveen Kamath</a>.</p><p>The SAI Lab thanks the <a href=\"https://hack.osu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">OHI/O organizers</a>, especially <strong>Cal King, Elizabeth Strong, and Arnab Nandi</strong>, for the opportunity to engage with students at HackOHI/O. We also thank the speakers for connecting the activities to broader research and application goals, and the instructional team for its preparation and hands-on support.</p><p>Above all, thank you to the participating students for their curiosity, enthusiasm, and willingness to explore.</p>",
+      "awardMedia": [
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026FirstPlace",
+          "alt": "1st Place — ICICLE AI in Agriculture Studio at HackOHI/O 2026.",
+          "caption": "1st Place — ICICLE AI in Agriculture Studio at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Award1",
+          "alt": "2nd Place — Apple Leaf Analysis, ICICLE AI in Agriculture Studio at HackOHI/O 2026.",
+          "caption": "2nd Place — Apple Leaf Analysis, ICICLE AI in Agriculture Studio at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Award2",
+          "alt": "3rd Place — Fruitiger Trio, ICICLE AI in Agriculture Studio at HackOHI/O 2026.",
+          "caption": "3rd Place — Fruitiger Trio, ICICLE AI in Agriculture Studio at HackOHI/O 2026."
+        }
+      ],
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Group",
+          "alt": "HackOHI/O 2026 workshop participants and organizers pose for a group photo.",
+          "caption": "Workshop participants and organizers at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Panda",
+          "alt": "Dr. Dhabaleswar K. (DK) Panda introduces the NSF ICICLE AI Institute at HackOHI/O 2026.",
+          "caption": "Dr. Dhabaleswar K. (DK) Panda introduces the NSF ICICLE AI Institute at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Shearer",
+          "alt": "Dr. Scott Shearer introduces precision agriculture at HackOHI/O 2026.",
+          "caption": "Dr. Scott Shearer introduces precision agriculture at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026Brijesh",
+          "alt": "Brijesh Nanda B Y presents at HackOHI/O 2026.",
+          "caption": "Brijesh Nanda B Y presents at HackOHI/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "HackOhio2026StudentTeam",
+          "alt": "A student team delivers a presentation at HackOHI/O 2026.",
+          "caption": "A student team delivers a presentation at HackOHI/O 2026."
+        }
+      ],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://www.linkedin.com/in/harisubramoni/"
+        },
+        {
+          "name": "Brijesh Nanda B Y",
+          "profileUrl": "https://www.linkedin.com/in/brijesh-nanda-b-y/"
+        },
+        {
+          "name": "Amrithaa Ashok Kumar",
+          "profileUrl": "https://www.linkedin.com/in/amrithaa-ak/"
+        },
+        {
+          "name": "Harikesh Byrandurga Gopinath",
+          "profileUrl": "https://www.linkedin.com/in/harikesh-gopinath/"
+        },
+        {
+          "name": "Naveen Kamath",
+          "profileUrl": "https://www.linkedin.com/in/naveen-kamath-434668287/"
+        }
+      ],
+      "type": "Workshop / Hackathon",
+      "date": "October 27, 2026",
+      "sortDate": "2026-10-27",
+      "time": null,
+      "mode": null,
+      "location": null,
+      "tags": [
+        "Outreach",
+        "AI",
+        "Edge Computing",
+        "ICICLE"
+      ]
+    },
+    {
       "id": 9,
       "title": "SAI Lab Brings End-to-End Agricultural AI Workflows to Farm Science Review 2026",
       "description": "SAI Lab brings precision spot spraying, Smart Labeler, Intelligent Edge Management Service (IEMS), and Ask the Farm to Farm Science Review 2026, connecting field data collection, AI, high-performance computing, and agricultural decision support.",
