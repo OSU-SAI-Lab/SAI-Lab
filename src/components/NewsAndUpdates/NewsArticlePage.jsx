@@ -1,3 +1,4 @@
+import ArticleAwards from "../LatestNews/ArticleAwards";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { getNewsArticleById } from "./newsData";
@@ -139,6 +140,8 @@ export default function NewsArticlePage() {
         className="article-body"
         dangerouslySetInnerHTML={{ __html: article.body }}
       />
+
+      <ArticleAwards media={article.awardMedia} />
 
       {article.members && article.members.length > 0 && (
         <div className="article-members">
