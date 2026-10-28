@@ -10,6 +10,7 @@ const navigationItems = [
   { label: "Research", to: "/research" },
   { label: "Publications", to: "/publications" },
   { label: "News & Events", to: "/news-and-updates" },
+  { label: "Demos", to: "/demos" },
   { label: "People", to: "/people" },
   { label: "Working With Us", to: "/workingwithus" },
 ];

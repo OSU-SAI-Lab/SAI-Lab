@@ -117,7 +117,7 @@
     {
       "id": 6,
       "name": "Pratham Sharma",
-      "role": "masters",
+      "role": "past",
       "title": "Graduate Student",
       "department": "Computer Science and Engineering",
       "photo": "Pratham.jpeg",
@@ -366,7 +366,7 @@
       "name": "Sadhika Kamchetty",
       "role": "undergraduate",
       "title": "Undergraduate Research Assistant",
-      "photo": null,
+      "photo": "SadhikaKamchetty.JPG",
       "email": "kamchetty.1@osu.edu",
       "website": "https://www.linkedin.com/in/sadhikakamchetty/",
       "interests": [
