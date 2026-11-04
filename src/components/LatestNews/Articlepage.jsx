@@ -1,3 +1,4 @@
+import ArticleAwards from "./ArticleAwards";
 // src/components/ArticlePage/ArticlePage.jsx
 
 import { useParams, Link } from "react-router-dom";
@@ -140,6 +141,8 @@ export default function ArticlePage() {
         className="article-body"
         dangerouslySetInnerHTML={{ __html: article.body }}
       />
+
+      <ArticleAwards media={article.awardMedia} />
 
       {/* Lab members involved */}
       {article.members && article.members.length > 0 && (

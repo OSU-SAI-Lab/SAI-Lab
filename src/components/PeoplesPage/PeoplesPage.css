@@ -148,6 +148,19 @@
   background: white;
 }
 
+.filter-dropdown-button:focus-visible,
+.clear-filters-button:focus-visible,
+.filter-pill:focus-visible {
+  outline: 3px solid rgba(187, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+.filter-group.has-selection .filter-dropdown-button {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(187, 0, 0, 0.06);
+}
+
 .filter-dropdown-content {
   display: none;
   position: absolute;
@@ -163,8 +176,7 @@
   padding: 0.5rem;
 }
 
-.filter-group:hover .filter-dropdown-content,
-.filter-group:focus-within .filter-dropdown-content {
+.filter-group.is-open .filter-dropdown-content {
   display: block;
 }
 
@@ -188,6 +200,11 @@
   margin-right: 0.75rem;
   cursor: pointer;
   accent-color: var(--color-primary);
+}
+
+.filter-checkbox input[type="checkbox"]:focus-visible {
+  outline: 3px solid rgba(187, 0, 0, 0.3);
+  outline-offset: 2px;
 }
 
 .filter-checkbox span {
@@ -280,6 +297,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.active-filters-label {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .filter-pill {
@@ -289,7 +313,9 @@
   padding: 0.4rem 0.75rem;
   background: var(--color-primary, #bb0000);
   color: white;
+  border: 0;
   border-radius: 20px;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
@@ -306,11 +332,20 @@
   font-weight: bold;
 }
 
+.people-results-header {
+  margin-bottom: 2rem;
+}
+
+.people-results-count {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+}
+
 
 /* Members Grid */
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -478,6 +513,14 @@
 
 /* ========== MOBILE RESPONSIVE STYLES ========== */
 
+/* Tablet: two equal columns keep cards balanced without squeezing content. */
+@media (max-width: 1023px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 /* Tablets and Medium Screens */
 @media (max-width: 768px) {
 
@@ -560,7 +603,7 @@
   }
 
   /* When filter is active (has selections) */
-  .filter-group:has(input:checked) .filter-dropdown-button {
+  .filter-group.has-selection .filter-dropdown-button {
     background: var(--color-primary);
     color: white;
     border-color: var(--color-primary);
@@ -582,8 +625,7 @@
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   }
 
-  .filter-group:hover .filter-dropdown-content,
-  .filter-group:focus-within .filter-dropdown-content {
+  .filter-group.is-open .filter-dropdown-content {
     display: block;
     transform: translateY(0);
   }
@@ -864,4 +906,9 @@
   .card-image {
     height: 200px;
   }
+}
+
+/* Keep tablet cards in two columns while retaining compact controls below 768px. */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

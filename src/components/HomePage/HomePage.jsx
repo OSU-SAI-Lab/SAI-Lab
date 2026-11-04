@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import HomePreviews from "./HomePreviews";
 import LatestNews from "../LatestNews/LatestNews.jsx";
 
 function HomePage() {
@@ -6,6 +7,7 @@ function HomePage() {
     return(
         <>
         <Hero />
+        <HomePreviews />
         <LatestNews/>
         </>
     );

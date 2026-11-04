@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import './PeoplesPage.css';
 import { labMembers } from './data.js';
+import FilterDropdown, { FilterOption } from '../FilterDropdown';
 
 export default function People() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -95,6 +96,7 @@ export default function People() {
           <div className="search-box">
             <input
               type="text"
+              aria-label="Search people by name or expertise"
               placeholder="Search by name or expertise..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
@@ -104,45 +106,34 @@ export default function People() {
 
           <div className="filter-controls">
             {/* Role Filter */}
-            <div className="filter-group">
-              <button className="filter-dropdown-button">
-                Roles {selectedRoles.length > 0 && `(${selectedRoles.length})`}
-              </button>
-              <div className="filter-dropdown-content">
-                {Object.keys(roleLabels).map(role => (
-                  <label key={role} className="filter-checkbox">
-                    <input
-                      type="checkbox"
-                      checked={selectedRoles.includes(role)}
-                      onChange={() => toggleRole(role)}
-                    />
-                    <span>{roleLabels[role]}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+            <FilterDropdown label="Roles" selectedCount={selectedRoles.length}>
+              {Object.keys(roleLabels).map(role => (
+                <FilterOption
+                  key={role}
+                  checked={selectedRoles.includes(role)}
+                  onToggle={() => toggleRole(role)}
+                >
+                  {roleLabels[role]}
+                </FilterOption>
+              ))}
+            </FilterDropdown>
 
             {/* Interest Filter */}
-            <div className="filter-group">
-              <button className="filter-dropdown-button">
-                Interests {selectedInterests.length > 0 && `(${selectedInterests.length})`}
-              </button>
-              <div className="filter-dropdown-content">
-                {allInterests.map(interest => (
-                  <label key={interest} className="filter-checkbox">
-                    <input
-                      type="checkbox"
-                      checked={selectedInterests.includes(interest)}
-                      onChange={() => toggleInterest(interest)}
-                    />
-                    <span>{interest}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+            <FilterDropdown label="Interests" selectedCount={selectedInterests.length}>
+              {allInterests.map(interest => (
+                <FilterOption
+                  key={interest}
+                  checked={selectedInterests.includes(interest)}
+                  onToggle={() => toggleInterest(interest)}
+                >
+                  {interest}
+                </FilterOption>
+              ))}
+            </FilterDropdown>
 
-            {hasDropdownFilters && (
+            {hasActiveFilters && (
               <button
+                type="button"
                 className="clear-filters-button"
                 onClick={clearFilters}
               >
@@ -154,18 +145,31 @@ export default function People() {
       </div>
 
       {hasDropdownFilters && (
-        <div className="active-filters">
+        <div className="active-filters" aria-label="Active filters">
+          <span className="active-filters-label">Active filters:</span>
           {selectedRoles.map(role => (
-            <span key={role} className="filter-pill" onClick={() => toggleRole(role)}>
+            <button
+              key={role}
+              type="button"
+              className="filter-pill"
+              onClick={() => toggleRole(role)}
+              aria-label={`Remove ${roleLabels[role] || role} filter`}
+            >
               {roleLabels[role] || role}
-              <span className="filter-pill-close">×</span>
-            </span>
+              <span className="filter-pill-close" aria-hidden="true">×</span>
+            </button>
           ))}
           {selectedInterests.map(interest => (
-            <span key={interest} className="filter-pill" onClick={() => toggleInterest(interest)}>
+            <button
+              key={interest}
+              type="button"
+              className="filter-pill"
+              onClick={() => toggleInterest(interest)}
+              aria-label={`Remove ${interest} filter`}
+            >
               {interest}
-              <span className="filter-pill-close">×</span>
-            </span>
+              <span className="filter-pill-close" aria-hidden="true">×</span>
+            </button>
           ))}
         </div>
       )}
@@ -173,13 +177,21 @@ export default function People() {
 
       {/* Main Content */}
       <main className="main-content">
+        {hasActiveFilters && (
+          <div className="people-results-header">
+            <div className="people-results-count" aria-live="polite">
+              Showing {filteredMembers.length} of {labMembers.length} {labMembers.length === 1 ? 'person' : 'people'}
+            </div>
+          </div>
+        )}
+
         {filteredMembers.length === 0 ? (
           <div className="no-results">
             <h3>No members found</h3>
             <p style={{ marginBottom: '1rem' }}>Try adjusting your search terms or filters.</p>
             {hasActiveFilters && (
-              <button className="clear-filters-button" onClick={clearFilters}>
-                Clear Search &amp; Filters
+              <button type="button" className="clear-filters-button" onClick={clearFilters}>
+                Clear Filters
               </button>
             )}
           </div>

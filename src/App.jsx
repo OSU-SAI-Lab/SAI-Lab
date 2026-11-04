@@ -11,6 +11,7 @@ import WorkingWithUs from "./components/WorkingWithUs/workingwithus";
 import ArticlePage from "./components/LatestNews/Articlepage";
 import NewsPage from "./components/NewsAndUpdates/Newspage";
 import NewsArticlePage from "./components/NewsAndUpdates/NewsArticlePage";
+import DemosPage from "./components/DemosPage/DemosPage";
 
 
 import "./App.css";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/research/:slug" element={<ProjectDetail />} />
 
           <Route path="/people" element={<People />} />
+          <Route path="/demos" element={<DemosPage />} />
           
           <Route path="/publications" element={<PublicationsLayout />}>
             <Route index element={<PublicationsPage />} />

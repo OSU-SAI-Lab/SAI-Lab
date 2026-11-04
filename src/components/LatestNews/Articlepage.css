@@ -238,6 +238,20 @@
     text-decoration: underline;
   }
   
+  .article-awards {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid #e4e4e4;
+  }
+
+  .article-awards .article-slideshow {
+    margin-top: 20px;
+  }
+
+  .article-awards .slide-image {
+    object-fit: contain;
+  }
+
   /* ── Lab members ── */
   .article-members {
     margin-top: 48px;
@@ -307,5 +321,3 @@
       height: 320px;
     }
   }
-
-  
