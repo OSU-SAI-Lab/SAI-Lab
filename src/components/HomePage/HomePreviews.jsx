@@ -38,11 +38,15 @@ export default function HomePreviews() {
         <SectionHeading id="featured-research" title="Featured Research" link="/research" label="Explore all research" />
         <div className="research-preview-grid">
           {featuredProjects.map((project) => (
-            <Link className="research-preview-card" to={`/research/${project.id}`} key={project.id}>
-              <p className="preview-kicker">{project.researchAreas[0]}</p>
-              <h3>{project.title}</h3>
-              <p>{project.shortDescription}</p>
-              <span>View project <span aria-hidden="true">→</span></span>
+            <Link className="card research-preview-card" to={`/research/${project.id}`} key={project.id}>
+              <div className="card-body">
+                <p className="preview-kicker">{project.researchAreas[0]}</p>
+                <h3 className="card-title">{project.title}</h3>
+                <p className="card-description">{project.shortDescription}</p>
+                <div className="card-footer">
+                  <span className="card-cta-link">View project <span aria-hidden="true">→</span></span>
+                </div>
+              </div>
             </Link>
           ))}
         </div>

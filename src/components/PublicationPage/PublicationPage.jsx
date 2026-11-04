@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { ExternalLink, FileText, Github, Search, X } from "lucide-react";
 import { useOutletContext } from "react-router-dom";
+import EmptyState from "../EmptyState";
 import "../../assets/css/publicationspage.css";
 
 const LAB_AUTHOR_PATTERNS = [
@@ -119,21 +120,23 @@ export default function PublicationsPage() {
       .sort(([a], [b]) => Number(b) - Number(a));
   }, [filtered]);
 
-  useEffect(() => {
-    if (!rows.length) return undefined;
-    const schema = { "@context": "https://schema.org", "@graph": rows.map((pub) => ({
-      "@type": "ScholarlyArticle", name: pub.title,
-      author: pub.authorsArr.map((name) => ({ "@type": "Person", name })),
-      datePublished: String(pub.year || ""), isPartOf: pub.venue || undefined,
-      url: pub.paper || pub.link || undefined,
-    })) };
-    const script = document.createElement("script");
-    script.id = "publications-structured-data";
-    script.type = "application/ld+json";
-    script.textContent = JSON.stringify(schema);
-    document.getElementById(script.id)?.remove();
-    document.head.appendChild(script);
-    return () => script.remove();
+  // Rendered inline (not injected in an effect) so the JSON-LD is part of the
+  // pre-rendered HTML that crawlers receive (Issue 21).
+  const structuredData = useMemo(() => {
+    if (!rows.length) return null;
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": rows.map((pub) => ({
+        "@type": "ScholarlyArticle",
+        headline: pub.title,
+        author: pub.authorsArr.map((name) => ({ "@type": "Person", name })),
+        datePublished: pub.year ? String(pub.year) : undefined,
+        isPartOf: pub.venue ? { "@type": "CreativeWork", name: pub.venue } : undefined,
+        url: pub.paper || pub.link || undefined,
+      })),
+    };
+    // Escape "<" so a title can never close the <script> element early.
+    return JSON.stringify(schema).replace(/</g, "\\u003c");
   }, [rows]);
 
   if (loading) return <main className="publications-page"><p>Loading publications…</p></main>;
@@ -153,7 +156,7 @@ export default function PublicationsPage() {
           <label className="publication-search"><Search size={18} aria-hidden="true" /><span className="sr-only">Search publications</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search titles, authors, or venues" /></label>
           <label><span>Type</span><select value={category} onChange={(event) => setCategory(event.target.value)}>{categories.map((item) => <option key={item}>{item}</option>)}</select></label>
           <label><span>Topic</span><select value={topic} onChange={(event) => setTopic(event.target.value)}>{topics.map((item) => <option key={item}>{item}</option>)}</select></label>
-          {hasFilters && <button className="clear-filters" onClick={clearFilters}><X size={15} /> Clear</button>}
+          {hasFilters && <button className="clear-filters" onClick={clearFilters}><X size={15} aria-hidden="true" /> Clear Filters</button>}
         </section>
 
         <div className="publication-summary"><strong>{filtered.length}</strong> {filtered.length === 1 ? "publication" : "publications"}<span><strong className="lab-author-key">Lab author</strong> highlighted</span></div>
@@ -163,7 +166,14 @@ export default function PublicationsPage() {
             <div className="publication-list">{publications.map((publication) => <PublicationCard key={publication.id} publication={publication} onTopic={setTopic} />)}</div>
           </section>
         ))}
-        {!grouped.length && <div className="publications-empty"><h2>No publications found</h2><p>Try a broader search or clear the current filters.</p><button onClick={clearFilters}>Clear filters</button></div>}
+        {!grouped.length && <EmptyState onClear={hasFilters ? clearFilters : undefined} />}
+        {structuredData && (
+          <script
+            type="application/ld+json"
+            id="publications-structured-data"
+            dangerouslySetInnerHTML={{ __html: structuredData }}
+          />
+        )}
       </main>
     </>
   );

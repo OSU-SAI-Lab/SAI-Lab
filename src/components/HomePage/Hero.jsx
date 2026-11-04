@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "../../assets/css/hero.css";
 
@@ -14,6 +15,14 @@ function Hero() {
           Advancing machine learning, distributed systems, and intelligent
           computation for real-world impact.
         </p>
+        <nav className="hero-buttons" aria-label="Get started">
+          <Link to="/research" className="hero-btn">
+            Research
+          </Link>
+          <Link to="/workingwithus" className="hero-btn hero-btn-outline">
+            Working With Us
+          </Link>
+        </nav>
       </Container>
     </header>
   );
