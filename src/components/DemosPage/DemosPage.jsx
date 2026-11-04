@@ -1,4 +1,3 @@
-import Footer from "../Footer";
 import "./DemosPage.css";
 
 const demos = [
@@ -80,7 +79,6 @@ export default function DemosPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import './PeoplesPage.css';
 import { labMembers } from './data.js';
 import FilterDropdown, { FilterOption } from '../FilterDropdown';
+import EmptyState from '../EmptyState';
 
 export default function People() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -186,15 +187,7 @@ export default function People() {
         )}
 
         {filteredMembers.length === 0 ? (
-          <div className="no-results">
-            <h3>No members found</h3>
-            <p style={{ marginBottom: '1rem' }}>Try adjusting your search terms or filters.</p>
-            {hasActiveFilters && (
-              <button type="button" className="clear-filters-button" onClick={clearFilters}>
-                Clear Filters
-              </button>
-            )}
-          </div>
+          <EmptyState onClear={hasActiveFilters ? clearFilters : undefined} />
         ) : (
           Object.entries(groupedMembers).map(([role, members]) =>
             members.length > 0 && (

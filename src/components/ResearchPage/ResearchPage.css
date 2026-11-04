@@ -166,23 +166,6 @@
 }
 
 /* No Results */
-.research-no-results {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--color-text-light);
-}
-
-.research-no-results h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.research-no-results p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
 /* Animations */
 @keyframes fadeIn {
   from {

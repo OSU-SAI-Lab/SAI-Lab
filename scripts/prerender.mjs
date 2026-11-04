@@ -85,6 +85,8 @@ function injectMetadata(html, route) {
       /<title>.*?<\/title>/,
       `<title>${escapeHtml(page.title)}</title>`,
     )
+    // Drop the template's default description so each page has exactly one.
+    .replace(/\s*<meta name="description"[^>]*>/, "")
     .replace("</head>", `    ${tags}\n  </head>`);
 }
 

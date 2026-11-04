@@ -481,13 +481,6 @@
 }
 
 /* No Results */
-.no-results {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--color-text-light);
-  font-size: 1.125rem;
-}
-
 /* Animations */
 @keyframes fadeIn {
   from {

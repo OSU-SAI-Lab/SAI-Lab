@@ -2,6 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { events } from "./eventsData";
+import EmptyState from "../EmptyState";
 import "./LatestNews.css";
 
 // Sort by sortDate (ISO), most recent first
@@ -80,9 +81,11 @@ export default function LatestNews() {
             </article>
           ))
         ) : (
-          <div style={{ textAlign: "center", padding: "40px 20px", color: "#666", width: "100%" }}>
-            <p style={{ margin: 0, fontSize: "15px" }}>No news articles available at this time.</p>
-          </div>
+          <EmptyState
+            compact
+            title={null}
+            message="No news articles available at this time."
+          />
         )}
       </div>
     </div>

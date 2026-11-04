@@ -1,6 +1,7 @@
 .hero {
     position: relative;
-    height: 50vh;
+    /* min-height (not height) so the CTAs can never be clipped (Issue 7). */
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,51 +60,59 @@
   .hero-tagline {
     font-size: 1.2rem;
     opacity: 0.9;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     color: black;
   }
   
   .hero-buttons {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
   }
-  
-  .hero-btn {
-    background-color: #bb0000;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.75rem;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    text-decoration: none;  
-    display: inline-block;
-  }
-  
-  .hero-btn:hover {
-    background-color: #8b0000;
-  }
-  
-.hero-btn-outline {
-  background-color: #bb0000;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.75rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  display: inline-block;
-}
 
-.hero-btn-outline:hover {
-  background-color: #8b0000;
-}
-  
+  /* Primary CTA */
+  .hero-btn {
+    display: inline-block;
+    min-width: 11rem;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out;
+  }
+
+  .hero-btn:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: #fff;
+  }
+
+  .hero-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--color-primary);
+  }
+
+  /* Secondary CTA */
+  .hero-btn-outline {
+    background-color: #fff;
+    color: var(--color-primary);
+  }
+
+  .hero-btn-outline:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+  }
+
 /* Mobile adjustments for the Hero section */
 @media (max-width: 1024px) {
   /* Force a solid black navbar on mobile home page */
@@ -113,9 +122,10 @@
   }
 
   .hero {
-    height: 38vh;
-    padding-top: 0; /* Removed padding to allow flex centering to work */
-    padding-bottom: 0;
+    min-height: 38vh;
+    /* Navbar is fixed (56px); pad so content clears it and stays centred. */
+    padding-top: calc(56px + 1.5rem);
+    padding-bottom: 2rem;
     /* Remove SVG but keep the dark base color */
     background-image: none !important; 
     background-color: #5a1a1a; 
@@ -135,8 +145,6 @@
     /* Reset the text flip - THIS IS THE KEY FIX */
     transform: none !important; 
     
-    /* Offset for the navbar height so content looks visually centered */
-    margin-top: 60px; 
     width: 100%;
     position: relative;
     z-index: 2;
@@ -171,14 +179,14 @@
   }
 
   .hero-buttons {
-    flex-direction: column;
-    align-items: center;
     gap: 0.75rem;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
   }
 
-  .hero-btn, .hero-btn-outline {
-    width: 80%;
-    padding: 0.6rem 1.2rem;
+  .hero-btn {
+    min-width: 0;
+    flex: 1 1 10rem;
+    max-width: 16rem;
+    padding: 0.65rem 1.2rem;
   }
 }

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import EmptyState from "../EmptyState";
 import "./Newspage.css";
 import { newsItems } from "./newsData";
 import eventsJson from "../../assets/json/upcoming.json";
@@ -102,59 +103,67 @@ function EventCard({ event }) {
   );
 }
 
-function NewsCard({ item, index }) {
-  const navigate = useNavigate();
+function NewsCard({ item }) {
   const localArticle = hasLocalArticle(item);
-  const externalOnly = Boolean(item.link) && !item.recording;
-  const clickable = externalOnly || localArticle;
+  const externalLink = item.link && !item.recording ? item.link : null;
+  const articleUrl = localArticle ? `/news-and-updates/${item.id}` : null;
 
-  const handleCardClick = () => {
-    if (item.recording) return;
-    if (item.link) {
-      window.open(item.link, "_blank");
-      return;
-    }
-    if (localArticle) {
-      navigate(`/news-and-updates/${item.id}`);
-    }
-  };
+  // The title is the primary link; a stretched ::after makes the whole card
+  // clickable while keeping a real, keyboard-focusable anchor (no div onClick).
+  let title = item.title;
+  if (articleUrl) {
+    title = (
+      <Link to={articleUrl} className="news-card-link">
+        {item.title}
+      </Link>
+    );
+  } else if (externalLink) {
+    title = (
+      <a
+        href={externalLink}
+        className="news-card-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {item.title}
+      </a>
+    );
+  }
 
   return (
-    <div
-      className={`news-card${clickable ? " clickable" : ""}`}
-      style={{ animationDelay: `${index * 0.06}s` }}
-      onClick={handleCardClick}
-    >
-      <div className="news-card-header">
-        <TagBadge tag={item.tag} />
-        <span className="news-card-date">{formatDate(item.date)}</span>
-      </div>
-      <h3>{item.title}</h3>
-      <p>{item.description}</p>
-      <div className="news-card-footer">
-        {externalOnly && <span className="news-read-more">Read more →</span>}
-        {localArticle && (
-          <Link
-            to={`/news-and-updates/${item.id}`}
-            className="news-read-more"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Read more →
-          </Link>
-        )}
-        {item.recording && item.link && (
-          <a
-            className="news-recording"
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-          >
-            ▶ Recording available
-          </a>
+    <article className="card news-card">
+      <div className="card-body">
+        <div className="news-card-meta">
+          <TagBadge tag={item.tag} />
+          <time className="news-card-date" dateTime={item.date}>
+            {formatDate(item.date)}
+          </time>
+        </div>
+
+        <h3 className="card-title news-card-title">{title}</h3>
+        <p className="card-description">{item.description}</p>
+
+        {(articleUrl || externalLink || (item.recording && item.link)) && (
+          <div className="card-footer news-card-footer">
+            {(articleUrl || externalLink) && (
+              <span className="card-cta-link news-read-more" aria-hidden="true">
+                Read more →
+              </span>
+            )}
+            {item.recording && item.link && (
+              <a
+                className="card-cta-link news-recording"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ▶ Recording available
+              </a>
+            )}
+          </div>
         )}
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -219,9 +228,11 @@ export default function NewsPage() {
               ))}
             </div>
           ) : (
-            <div style={{ textAlign: "center", padding: "24px", background: "rgba(0,0,0,0.02)", borderRadius: "8px", border: "1px dashed #ccc", color: "#666" }}>
-              No upcoming events scheduled at this time. Check back soon!
-            </div>
+            <EmptyState
+              compact
+              title={null}
+              message="No upcoming events scheduled at this time. Check back soon!"
+            />
           )}
         </section>
 
@@ -256,34 +267,25 @@ export default function NewsPage() {
         </div>
 
         <div className="news-card-list">
-          {filtered.map((item, i) => (
-            <NewsCard key={item.id} item={item} index={i} />
+          {filtered.map((item) => (
+            <NewsCard key={item.id} item={item} />
           ))}
         </div>
 
-        {filtered.length === 0 && (
-          <div className="news-no-results" style={{ textAlign: "center", padding: "40px 20px" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "8px", color: "#333" }}>
-              No matching news or events
-            </h3>
-            <p style={{ color: "#666", marginBottom: "16px" }}>
-              {searchQuery
-                ? `No results found for "${searchQuery}".`
-                : `No results under the ${activeFilter} category.`}
-            </p>
-            {(activeFilter !== "All" || searchQuery !== "") && (
-              <button
-                className="news-clear-button"
-                onClick={() => {
-                  setActiveFilter("All");
-                  setSearchQuery("");
-                }}
-              >
-                Clear Search &amp; Filters
-              </button>
-            )}
-          </div>
-        )}
+        {filtered.length === 0 &&
+          (activeFilter !== "All" || searchQuery !== "" ? (
+            <EmptyState
+              onClear={() => {
+                setActiveFilter("All");
+                setSearchQuery("");
+              }}
+            />
+          ) : (
+            <EmptyState
+              title="No news yet"
+              message="News and events will appear here as they are announced."
+            />
+          ))}
       </div>
     </div>
   );

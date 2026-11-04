@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import './ResearchPage.css';
 import { projects } from './data.js';
 import ProjectCard from './ProjectCard';
-import Footer from '../Footer';
+import EmptyState from '../EmptyState';
 import FilterDropdown, { FilterOption } from '../FilterDropdown';
 
 export default function ResearchPage() {
@@ -181,15 +181,7 @@ export default function ResearchPage() {
         )}
 
         {filteredProjects.length === 0 ? (
-          <div className="research-no-results">
-            <h3>No projects found</h3>
-            <p>Try adjusting your filters or search terms.</p>
-            {hasActiveFilters && (
-              <button type="button" className="clear-filters-button" onClick={clearFilters}>
-                Clear Filters
-              </button>
-            )}
-          </div>
+          <EmptyState onClear={hasActiveFilters ? clearFilters : undefined} />
         ) : (
           <div className="projects-grid">
             {filteredProjects.map(project => (
