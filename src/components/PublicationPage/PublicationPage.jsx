@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { ExternalLink, FileText, Github, Search, X } from "lucide-react";
 import { useOutletContext } from "react-router-dom";
-import Footer from "../Footer";
 import "../../assets/css/publicationspage.css";
 
 const LAB_AUTHOR_PATTERNS = [
@@ -166,7 +165,6 @@ export default function PublicationsPage() {
         ))}
         {!grouped.length && <div className="publications-empty"><h2>No publications found</h2><p>Try a broader search or clear the current filters.</p><button onClick={clearFilters}>Clear filters</button></div>}
       </main>
-      <Footer />
     </>
   );
 }

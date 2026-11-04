@@ -198,8 +198,6 @@ export default function ResearchPage() {
           </div>
         )}
       </main>
-
-      <Footer />
     </div>
   );
 }
