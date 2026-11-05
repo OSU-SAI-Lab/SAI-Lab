@@ -679,15 +679,17 @@
 
   /* Cards - Single column on mobile */
   .members-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
     padding: 0;
   }
 
   /* ===== COLLAPSIBLE CARDS ON MOBILE ===== */
+  /* No auto margins here: they stop grid items stretching, so each card
+     shrank to its own content width and the cards came out uneven. */
   .person-card {
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
     cursor: pointer;
     position: relative;
   }
