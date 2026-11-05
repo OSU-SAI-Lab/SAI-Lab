@@ -5,10 +5,16 @@ import { events } from "./eventsData";
 import EmptyState from "../EmptyState";
 import "./LatestNews.css";
 
+// Number of entries shown in the homepage preview. The full list lives on
+// the News & Events archive; the underlying data is never truncated.
+const HOMEPAGE_NEWS_LIMIT = 3;
+
 // Sort by sortDate (ISO), most recent first
 const sortedEvents = [...events].sort(
   (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
 );
+
+const previewEvents = sortedEvents.slice(0, HOMEPAGE_NEWS_LIMIT);
 
 export default function LatestNews() {
   return (
@@ -16,8 +22,8 @@ export default function LatestNews() {
       <h2 className="latest-news-title">Latest News</h2>
 
       <div className="latest-news-container">
-        {sortedEvents.length > 0 ? (
-          sortedEvents.map((event) => (
+        {previewEvents.length > 0 ? (
+          previewEvents.map((event) => (
             <article key={event.id} className="card latest-news-card">
               <div className="card-body">
                 <div className="card-header">
@@ -88,6 +94,14 @@ export default function LatestNews() {
           />
         )}
       </div>
+
+      {previewEvents.length > 0 && (
+        <div className="latest-news-archive">
+          <Link to="/news-and-updates" className="latest-news-archive-link">
+            View all news &amp; events <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

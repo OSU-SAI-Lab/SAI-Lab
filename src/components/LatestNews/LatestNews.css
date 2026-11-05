@@ -25,6 +25,36 @@
   gap: 30px;
 }
 
+/* Archive link shown after the homepage preview list (Issue 22). */
+.latest-news-archive {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.latest-news-archive-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.latest-news-archive-link:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.latest-news-archive-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 .latest-news-card-title {
   font-size: 1.55rem;
   font-weight: 800;
