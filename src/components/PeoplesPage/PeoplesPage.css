@@ -9,9 +9,9 @@
 
 /* Header Styles */
 .header {
-  background: #8b0000;
+  background: var(--color-primary-dark);
   color: white;
-  padding: 4rem 2rem 3rem;
+  padding: 4rem var(--space-8) var(--space-12);
   position: relative;
   overflow: hidden;
 }
@@ -27,21 +27,21 @@
   font-family: var(--font-serif);
   font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2);
   letter-spacing: -0.02em;
   animation: fadeInUp 0.6s ease;
 }
 
 .university {
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
   animation: fadeInUp 0.6s ease 0.1s backwards;
 }
 
 .department {
-  font-size: 1rem;
+  font-size: var(--text-base);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   animation: fadeInUp 0.6s ease 0.2s backwards;
@@ -49,9 +49,9 @@
 
 /* People Hero Section */
 .people-hero {
-  background: linear-gradient(135deg, #bb0000 0%, #8b0000 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
-  padding: 4rem 2rem 3rem 2rem;
+  padding: 4rem var(--space-8) var(--space-12) var(--space-8);
   text-align: center;
   margin-top: -80px;
   padding-top: 80px;
@@ -61,13 +61,13 @@
   font-family: 'Crimson Pro', serif;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
   color: white;
   letter-spacing: -0.02em;
 }
 
 .people-hero p {
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
   color: white;
   opacity: 0.95;
   font-weight: 400;
@@ -77,7 +77,7 @@
 .filters-section {
   background: white;
   border-bottom: 1px solid var(--color-border);
-  padding: 2rem 2rem;
+  padding: var(--space-8) var(--space-8);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -85,7 +85,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  gap: 1.5rem;
+  gap: var(--space-6);
   flex-wrap: wrap;
   align-items: center;
 }
@@ -109,11 +109,11 @@
 
 .search-input {
   width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  padding: var(--space-3) var(--space-4) var(--space-3) 2.5rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: var(--text-base);
   border: 2px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--color-bg);
   transition: all var(--transition-normal);
 }
@@ -122,7 +122,7 @@
   outline: none;
   border-color: var(--color-primary);
   background: white;
-  box-shadow: 0 0 0 3px rgba(187, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
 }
 
 .filter-group {
@@ -131,12 +131,12 @@
 }
 
 .filter-dropdown-button {
-  padding: 0.875rem 1.5rem;
+  padding: 0.875rem var(--space-6);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   border: 2px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--color-bg);
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -151,14 +151,14 @@
 .filter-dropdown-button:focus-visible,
 .clear-filters-button:focus-visible,
 .filter-pill:focus-visible {
-  outline: 3px solid rgba(187, 0, 0, 0.3);
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.3);
   outline-offset: 2px;
 }
 
 .filter-group.has-selection .filter-dropdown-button {
   border-color: var(--color-primary);
   color: var(--color-primary);
-  background: rgba(187, 0, 0, 0.06);
+  background: rgba(var(--color-primary-rgb), 0.06);
 }
 
 .filter-dropdown-content {
@@ -166,14 +166,14 @@
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
   background: white;
   border: 2px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   min-width: 220px;
   z-index: 1000;
-  padding: 0.5rem;
+  padding: var(--space-2);
 }
 
 .filter-group.is-open .filter-dropdown-content {
@@ -183,9 +183,9 @@
 .filter-checkbox {
   display: flex;
   align-items: center;
-  padding: 0.625rem 0.75rem;
+  padding: 0.625rem var(--space-3);
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   transition: background var(--transition-fast);
   user-select: none;
 }
@@ -197,13 +197,13 @@
 .filter-checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  margin-right: 0.75rem;
+  margin-right: var(--space-3);
   cursor: pointer;
   accent-color: var(--color-primary);
 }
 
 .filter-checkbox input[type="checkbox"]:focus-visible {
-  outline: 3px solid rgba(187, 0, 0, 0.3);
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.3);
   outline-offset: 2px;
 }
 
@@ -213,12 +213,12 @@
 }
 
 .clear-filters-button {
-  padding: 0.875rem 1.5rem;
+  padding: 0.875rem var(--space-6);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   border: 2px solid var(--color-primary);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: white;
   color: var(--color-primary);
   cursor: pointer;
@@ -232,17 +232,17 @@
 
 .filter-controls {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-4);
   flex-wrap: wrap;
 }
 
 .filter-select {
-  padding: 0.875rem 2.5rem 0.875rem 1rem;
+  padding: 0.875rem 2.5rem 0.875rem var(--space-4);
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   border: 2px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--color-bg);
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -259,14 +259,14 @@
 .filter-select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(187, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
 }
 
 /* Main Content */
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: var(--space-12) var(--space-8);
   flex: 1;
 }
 
@@ -281,11 +281,11 @@
 
 .role-heading {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 2rem;
-  padding-bottom: 0.75rem;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-3);
   border-bottom: 3px solid var(--color-primary);
   display: inline-block;
 }
@@ -293,10 +293,10 @@
 .active-filters {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem 0;
+  padding: var(--space-4) var(--space-8) 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-2);
   align-items: center;
 }
 
@@ -309,31 +309,31 @@
 .filter-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.75rem;
-  background: var(--color-primary, #bb0000);
+  gap: var(--space-2);
+  padding: 0.4rem var(--space-3);
+  background: var(--color-primary);
   color: white;
   border: 0;
   border-radius: 20px;
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .filter-pill:hover {
-  background: #8b0000;
+  background: var(--color-primary-dark);
 }
 
 .filter-pill-close {
-  font-size: 1rem;
+  font-size: var(--text-base);
   line-height: 1;
   font-weight: bold;
 }
 
 .people-results-header {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 .people-results-count {
@@ -346,7 +346,7 @@
 .members-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  gap: var(--space-8);
 }
 
 /* Person Card Specifics */
@@ -369,13 +369,13 @@
 .person-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .detail-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
   font-size: 0.9rem;
   color: var(--color-text-light);
 }
@@ -393,11 +393,11 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-lighter);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2);
 }
 
 .interests-section {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
 }
 
 .interests-tags {
@@ -411,7 +411,7 @@
   padding: 0.3rem 0.65rem;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.8rem;
   color: var(--color-text);
   font-weight: 500;
@@ -425,7 +425,7 @@
 }
 
 .projects-section {
-  margin-top: 0.25rem;
+  margin-top: var(--space-1);
 }
 
 .projects-list {
@@ -433,12 +433,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
-  padding-left: 1.25rem;
+  padding-left: var(--space-5);
   margin: 0;
 }
 
 .projects-list li {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--color-text);
   position: relative;
 }
@@ -487,7 +487,7 @@
 
 .card-link:hover {
   color: var(--color-primary-dark);
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .link-icon {
@@ -526,7 +526,7 @@
 @media (max-width: 1023px) {
   .members-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: var(--space-6);
   }
 }
 
@@ -535,8 +535,8 @@
 
   /* Hero Section */
   .people-hero {
-    padding: 2rem 1.5rem;
-    padding-top: calc(2rem + 80px);
+    padding: var(--space-8) var(--space-6);
+    padding-top: calc(var(--space-8) + 80px);
     margin-top: -80px;
   }
 
@@ -550,12 +550,12 @@
 
   /* Filters Section - Compact Mobile Design */
   .filters-section {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .filters-container {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-3);
     align-items: stretch;
   }
 
@@ -567,9 +567,9 @@
   }
 
   .search-input {
-    padding: 0.625rem 0.75rem 0.625rem 2.25rem;
+    padding: 0.625rem var(--space-3) 0.625rem 2.25rem;
     font-size: 0.9rem;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .search-icon {
@@ -582,10 +582,10 @@
   .filter-controls {
     width: 100%;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: var(--space-2);
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0.25rem 0;
+    padding: var(--space-1) 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     /* Firefox */
@@ -603,8 +603,8 @@
 
   .filter-dropdown-button {
     width: auto;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.85rem;
+    padding: var(--space-2) 0.875rem;
+    font-size: var(--text-sm);
     white-space: nowrap;
     border-radius: 20px;
     /* Pill shape */
@@ -647,11 +647,11 @@
     height: 4px;
     background: #ddd;
     border-radius: 2px;
-    margin: 0.75rem auto 0.5rem;
+    margin: var(--space-3) auto var(--space-2);
   }
 
   .filter-checkbox {
-    padding: 0.75rem 1rem;
+    padding: var(--space-3) var(--space-4);
   }
 
   .filter-checkbox span {
@@ -661,15 +661,15 @@
   /* Clear Filters - Compact Pill */
   .clear-filters-button {
     width: auto;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.85rem;
+    padding: var(--space-2) 0.875rem;
+    font-size: var(--text-sm);
     border-radius: 20px;
     flex-shrink: 0;
   }
 
   /* Main Content */
   .main-content {
-    padding: 2rem 1rem;
+    padding: var(--space-8) var(--space-4);
   }
 
   /* Section Headings */
@@ -680,7 +680,7 @@
   /* Cards - Single column on mobile */
   .members-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
+    gap: var(--space-6);
     padding: 0;
   }
 
@@ -746,7 +746,7 @@
     right: 0;
     bottom: 0;
     background: white;
-    padding-left: 0.5rem;
+    padding-left: var(--space-2);
     color: var(--color-text-light);
   }
 
@@ -778,10 +778,10 @@
   /* Card Content - Compact when collapsed */
   .person-card .card-body,
   .card-content {
-    padding: 1rem;
+    padding: var(--space-4);
     padding-bottom: 2.5rem;
     /* Space for expand arrow */
-    padding-left: 1.25rem;
+    padding-left: var(--space-5);
   }
 
   .person-name {
@@ -794,8 +794,8 @@
 
   /* Interest Tags - Smaller on mobile */
   .interest-tag {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2);
   }
 
   /* Projects */
@@ -805,13 +805,13 @@
 
   /* Card Links */
   .card-links {
-    gap: 0.75rem;
+    gap: var(--space-3);
     flex-direction: row;
     justify-content: center;
   }
 
   .card-link {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
   }
 
   /* Smooth transitions */
@@ -829,8 +829,8 @@
 
   /* Hero */
   .people-hero {
-    padding: 1.5rem 1rem;
-    padding-top: calc(1.5rem + 80px);
+    padding: var(--space-6) var(--space-4);
+    padding-top: calc(var(--space-6) + 80px);
   }
 
   .people-hero h1 {
@@ -838,17 +838,17 @@
   }
 
   .people-hero p {
-    font-size: 1rem;
+    font-size: var(--text-base);
   }
 
   /* Filters - Even more compact */
   .filters-section {
-    padding: 0.75rem;
+    padding: var(--space-3);
   }
 
   .search-input {
-    padding: 0.5rem 0.625rem 0.5rem 2rem;
-    font-size: 0.85rem;
+    padding: var(--space-2) 0.625rem var(--space-2) var(--space-8);
+    font-size: var(--text-sm);
   }
 
   .search-icon {
@@ -858,27 +858,27 @@
   }
 
   .filter-dropdown-button {
-    padding: 0.4rem 0.75rem;
+    padding: 0.4rem var(--space-3);
     font-size: 0.8rem;
   }
 
   .clear-filters-button {
-    padding: 0.4rem 0.75rem;
+    padding: 0.4rem var(--space-3);
     font-size: 0.8rem;
   }
 
   /* Main Content */
   .main-content {
-    padding: 1.5rem 0.75rem;
+    padding: var(--space-6) var(--space-3);
   }
 
   .role-heading {
-    font-size: 1.5rem;
+    font-size: var(--text-xl);
   }
 
   /* Cards */
   .members-grid {
-    gap: 1.25rem;
+    gap: var(--space-5);
   }
 
   .card-image-container {
@@ -898,7 +898,7 @@
   }
 
   .person-title {
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
   }
 
   .interest-tag {
@@ -907,7 +907,7 @@
   }
 
   .projects-list li {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
   }
 
   .card-link {
@@ -918,12 +918,12 @@
 /* Landscape Phones */
 @media (max-width: 768px) and (orientation: landscape) {
   .people-hero {
-    padding: 1.5rem;
-    padding-top: calc(1.5rem + 80px);
+    padding: var(--space-6);
+    padding-top: calc(var(--space-6) + 80px);
   }
 
   .people-hero h1 {
-    font-size: 2rem;
+    font-size: var(--text-2xl);
   }
 
   .card-image-container {

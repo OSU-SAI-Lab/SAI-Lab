@@ -43,7 +43,7 @@
     font-size: 3.5rem; /* Slightly larger */
     font-weight: 800;
     letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-2);
     color: white;
     /* Deep, soft shadow for depth without the 'fuzzy' glow look */
     text-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -65,10 +65,10 @@
   }
   
   .hero-buttons {
-    margin-top: 1.5rem;
+    margin-top: var(--space-6);
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-4);
     justify-content: center;
   }
 
@@ -76,12 +76,12 @@
   .hero-btn {
     display: inline-block;
     min-width: 11rem;
-    padding: 0.75rem 1.75rem;
+    padding: var(--space-3) 1.75rem;
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     border: 2px solid var(--color-primary);
-    border-radius: 6px;
-    font-size: 1rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -92,25 +92,25 @@
   .hero-btn:hover {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
-    color: #fff;
+    color: var(--color-white);
   }
 
   .hero-btn:focus-visible {
-    outline: 3px solid #fff;
+    outline: 3px solid var(--color-white);
     outline-offset: 3px;
     box-shadow: 0 0 0 6px var(--color-primary);
   }
 
   /* Secondary CTA */
   .hero-btn-outline {
-    background-color: #fff;
+    background-color: var(--color-white);
     color: var(--color-primary);
   }
 
   .hero-btn-outline:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
   }
 
 /* Mobile adjustments for the Hero section */
@@ -124,8 +124,8 @@
   .hero {
     min-height: 38vh;
     /* Navbar is fixed (56px); pad so content clears it and stays centred. */
-    padding-top: calc(56px + 1.5rem);
-    padding-bottom: 2rem;
+    padding-top: calc(56px + var(--space-6));
+    padding-bottom: var(--space-8);
     /* Remove SVG but keep the dark base color */
     background-image: none !important; 
     background-color: #5a1a1a; 
@@ -139,7 +139,7 @@
     text-align: center;
   }
 .hero-tagline {
-  color: #999999;
+  color: var(--color-text-lighter);
 }
   .hero-content {
     /* Reset the text flip - THIS IS THE KEY FIX */
@@ -165,8 +165,8 @@
   .hero-title {
     font-size: 2.4rem;
     letter-spacing: 1px;
-    padding: 0 1rem;
-    margin-bottom: 0.5rem;
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-2);
     /* Added subtle shadow to pop against solid background */
     text-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
@@ -174,13 +174,13 @@
   .hero-subtitle {
     font-size: 0.95rem; /* Slightly smaller for better mobile fit */
     letter-spacing: 2px;
-    margin-top: 0.5rem;
+    margin-top: var(--space-2);
     opacity: 1;
   }
 
   .hero-buttons {
-    gap: 0.75rem;
-    margin-top: 1.25rem;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
   }
 
   .hero-btn {

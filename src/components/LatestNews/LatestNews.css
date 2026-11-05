@@ -8,7 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #ffffff; 
+  background-color: var(--color-white); 
 }
 
 /* Page Header */
@@ -38,7 +38,7 @@
   gap: 0.4rem;
   padding: 0.7rem 1.4rem;
   border: 2px solid var(--color-primary);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
@@ -47,7 +47,7 @@
 
 .latest-news-archive-link:hover {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .latest-news-archive-link:focus-visible {
@@ -81,10 +81,10 @@
 
 .latest-news-type {
   padding: 4px 9px;
-  border-radius: 999px;
-  background: rgba(187, 0, 0, 0.08);
+  border-radius: var(--radius-pill);
+  background: rgba(var(--color-primary-rgb), 0.08);
   color: var(--color-primary-dark);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   font-weight: 650;
   line-height: 1.2;
 }
@@ -120,10 +120,10 @@
 }
 
 .latest-news-members {
-  margin-top: 0.25rem;
-  padding-top: 0.75rem;
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
   border-top: 1px dashed var(--color-border);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--color-text-light);
 }
 
@@ -143,7 +143,7 @@
 }
 
 .latest-news-link:focus-visible {
-  outline: 3px solid rgba(187, 0, 0, 0.25);
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.25);
   outline-offset: 3px;
   border-radius: 2px;
 }
