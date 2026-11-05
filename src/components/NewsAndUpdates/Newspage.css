@@ -94,10 +94,7 @@
   }
 }
 
-.upcoming-event-card-header {
-  padding: 12px 1.5rem;
-  background-color: transparent;
-  border-bottom: 1px solid var(--color-border);
+.upcoming-event-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -163,10 +160,6 @@
 @media (max-width: 640px) {
   .upcoming-events-grid {
     grid-template-columns: 1fr;
-  }
-
-  .upcoming-event-card-header {
-    padding: 12px 1.25rem;
   }
 
   .upcoming-event-location {

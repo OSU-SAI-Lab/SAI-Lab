@@ -443,6 +443,22 @@
   position: relative;
 }
 
+.project-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* The mobile expand/collapse button is hidden on larger screens, where cards show everything. */
+.person-card-toggle {
+  display: none;
+}
+
 .projects-list li::before {
   content: '→';
   position: absolute;
@@ -663,34 +679,52 @@
 
   /* Cards - Single column on mobile */
   .members-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
     padding: 0;
   }
 
   /* ===== COLLAPSIBLE CARDS ON MOBILE ===== */
+  /* No auto margins here: they stop grid items stretching, so each card
+     shrank to its own content width and the cards came out uneven. */
   .person-card {
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
     cursor: pointer;
     position: relative;
   }
 
-  /* Add expand indicator */
-  .person-card::after {
-    content: '▼';
+  /* Expand/collapse toggle (a real button so it works with a keyboard) */
+  .person-card-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
     color: var(--color-primary);
     font-size: 0.9rem;
-    transition: transform 0.3s ease;
+    cursor: pointer;
     z-index: 1;
   }
 
-  /* When expanded */
-  .person-card.expanded::after {
+  .person-card-toggle span {
+    transition: transform 0.3s ease;
+  }
+
+  .person-card.expanded .person-card-toggle span {
     transform: rotate(180deg);
+  }
+
+  .person-card-toggle:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: -3px;
   }
 
   /* Collapsed state - hide details by default */

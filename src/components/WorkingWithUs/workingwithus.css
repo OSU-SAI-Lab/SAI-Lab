@@ -178,12 +178,21 @@
   border-bottom: 3px solid #bb0000;
 }
 
-.section-header h2 {
+.section-header h2,
+.section-header .section-title {
   font-family: 'Crimson Pro', serif;
   font-size: 2rem;
   font-weight: 600;
   color: #1a1a1a;
   margin: 0;
+}
+
+/* <h2> wrapper around collapsible section buttons: no styling of its own. */
+.section-heading {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 .section-badge {
@@ -536,7 +545,8 @@
     gap: 0.5rem;
   }
 
-  .section-header h2 {
+  .section-header h2,
+  .section-header .section-title {
     font-size: 1.75rem;
   }
 
@@ -572,7 +582,8 @@
     padding: 1.5rem;
   }
 
-  .section-header h2 {
+  .section-header h2,
+  .section-header .section-title {
     font-size: 1.5rem;
   }
 

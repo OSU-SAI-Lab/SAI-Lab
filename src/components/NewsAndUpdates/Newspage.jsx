@@ -40,14 +40,6 @@ function hasLocalArticle(item) {
 function EventCard({ event }) {
   return (
     <article className="card upcoming-event-card">
-      <div className="upcoming-event-card-header">
-        <span className="upcoming-event-sl">#{event.slNo}</span>
-        <span className="upcoming-event-date">{event.date}</span>
-        {event.location && (
-          <span className="upcoming-event-location">📍 {event.location}</span>
-        )}
-      </div>
-
       <div className="card-body upcoming-event-card-body">
         {event.tags?.length > 0 && (
           <div className="card-tags upcoming-event-tags">
@@ -71,6 +63,19 @@ function EventCard({ event }) {
             event.title
           )}
         </h3>
+
+        {/* Date and location come after the title so the event name is read first. */}
+        <div className="upcoming-event-meta">
+          <span className="upcoming-event-sl">#{event.slNo}</span>
+          <time className="upcoming-event-date" dateTime={event.sortDate}>
+            {event.date}
+          </time>
+          {event.location && (
+            <span className="upcoming-event-location">
+              <span aria-hidden="true">📍</span> {event.location}
+            </span>
+          )}
+        </div>
 
         {event.description && <p className="card-description">{event.description}</p>}
 
