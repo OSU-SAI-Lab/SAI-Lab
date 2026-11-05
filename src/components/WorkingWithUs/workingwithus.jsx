@@ -196,13 +196,23 @@ function WorkingWithUs() {
       return;
     }
 
+    const isOpening = !openSections[section.stateKey];
+
     setOpenSections((prev) => ({
       ...prev,
-      [section.stateKey]: !prev[section.stateKey],
+      [section.stateKey]: isOpening,
     }));
 
-    if (!openSections[section.stateKey]) {
+    if (isOpening) {
       window.history.pushState(null, '', `#${sectionId}`);
+    } else if (window.location.hash === `#${sectionId}`) {
+      // Closing the section the URL points to: drop the hash so a refresh or
+      // shared link doesn't reopen it. replaceState doesn't fire hashchange.
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname + window.location.search
+      );
     }
   };
 
@@ -278,6 +288,39 @@ function WorkingWithUs() {
           </p>
         </div>
       </div>
+    );
+  };
+
+  /*
+   * Collapsible section header. The <button> sits inside the <h2> (not the
+   * other way round), so the heading stays in the outline and the button only
+   * contains phrasing content.
+   */
+  const renderSectionHeader = (sectionId, title, badge, badgeClass = '') => {
+    const isOpen = openSections[audienceSections[sectionId].stateKey];
+
+    return (
+      <h2 className="section-heading">
+        <button
+          type="button"
+          id={`${sectionId}-button`}
+          className="section-header collapsible"
+          onClick={() => toggleMajorSection(sectionId)}
+          aria-expanded={isOpen}
+          aria-controls={`${sectionId}-panel`}
+        >
+          <span className="header-left">
+            <span
+              className={`section-toggle-icon ${isOpen ? 'open' : ''}`}
+              aria-hidden="true"
+            >
+              ▶
+            </span>
+            <span className="section-title">{title}</span>
+          </span>
+          <span className={`section-badge ${badgeClass}`.trim()}>{badge}</span>
+        </button>
+      </h2>
     );
   };
 
@@ -466,30 +509,7 @@ function WorkingWithUs() {
                 openSections.k12 ? 'is-open' : 'is-closed'
               }`}
             >
-              <button
-                type="button"
-                id="k12-button"
-                className="section-header collapsible"
-                onClick={() => toggleMajorSection('k12')}
-                aria-expanded={openSections.k12}
-                aria-controls="k12-panel"
-              >
-                <div className="header-left">
-                  <span
-                    className={`section-toggle-icon ${
-                      openSections.k12 ? 'open' : ''
-                    }`}
-                  >
-                    ▶
-                  </span>
-
-                  <h2>K-12 Students</h2>
-                </div>
-
-                <span className="section-badge outreach-badge">
-                  Youth Outreach
-                </span>
-              </button>
+              {renderSectionHeader('k12', 'K-12 Students', 'Youth Outreach', 'outreach-badge')}
 
               {renderAudienceSummary('k12')}
 
@@ -540,7 +560,7 @@ function WorkingWithUs() {
                         >
                           {role.title}
 
-                          <span className="arrow">
+                          <span className="arrow" aria-hidden="true">
                             {expandedRole === idx ? '−' : '+'}
                           </span>
                         </button>
@@ -647,30 +667,7 @@ function WorkingWithUs() {
                 openSections.undergrad ? 'is-open' : 'is-closed'
               }`}
             >
-              <button
-                type="button"
-                id="undergraduate-button"
-                className="section-header collapsible"
-                onClick={() => toggleMajorSection('undergraduate')}
-                aria-expanded={openSections.undergrad}
-                aria-controls="undergraduate-panel"
-              >
-                <div className="header-left">
-                  <span
-                    className={`section-toggle-icon ${
-                      openSections.undergrad ? 'open' : ''
-                    }`}
-                  >
-                    ▶
-                  </span>
-
-                  <h2>Undergraduate Students</h2>
-                </div>
-
-                <span className="section-badge">
-                  Research Opportunities
-                </span>
-              </button>
+              {renderSectionHeader('undergraduate', 'Undergraduate Students', 'Research Opportunities')}
 
               {renderAudienceSummary('undergraduate')}
 
@@ -789,30 +786,7 @@ function WorkingWithUs() {
                 openSections.masters ? 'is-open' : 'is-closed'
               }`}
             >
-              <button
-                type="button"
-                id="masters-button"
-                className="section-header collapsible"
-                onClick={() => toggleMajorSection('masters')}
-                aria-expanded={openSections.masters}
-                aria-controls="masters-panel"
-              >
-                <div className="header-left">
-                  <span
-                    className={`section-toggle-icon ${
-                      openSections.masters ? 'open' : ''
-                    }`}
-                  >
-                    ▶
-                  </span>
-
-                  <h2>Master&apos;s Students</h2>
-                </div>
-
-                <span className="section-badge">
-                  Graduate Research
-                </span>
-              </button>
+              {renderSectionHeader('masters', "Master's Students", 'Graduate Research')}
 
               {renderAudienceSummary('masters')}
 
@@ -917,30 +891,7 @@ function WorkingWithUs() {
                 openSections.phd ? 'is-open' : 'is-closed'
               }`}
             >
-              <button
-                type="button"
-                id="phd-button"
-                className="section-header collapsible"
-                onClick={() => toggleMajorSection('phd')}
-                aria-expanded={openSections.phd}
-                aria-controls="phd-panel"
-              >
-                <div className="header-left">
-                  <span
-                    className={`section-toggle-icon ${
-                      openSections.phd ? 'open' : ''
-                    }`}
-                  >
-                    ▶
-                  </span>
-
-                  <h2>PhD Students</h2>
-                </div>
-
-                <span className="section-badge">
-                  Doctoral Research
-                </span>
-              </button>
+              {renderSectionHeader('phd', 'PhD Students', 'Doctoral Research')}
 
               {renderAudienceSummary('phd')}
 

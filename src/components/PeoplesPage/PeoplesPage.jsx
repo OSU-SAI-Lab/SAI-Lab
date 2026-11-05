@@ -1,6 +1,8 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useId } from 'react';
+import { Link } from 'react-router-dom';
 import './PeoplesPage.css';
 import { labMembers } from './data.js';
+import { projects as researchProjects } from '../ResearchPage/data.js';
 import FilterDropdown, { FilterOption } from '../FilterDropdown';
 import EmptyState from '../EmptyState';
 
@@ -209,32 +211,36 @@ export default function People() {
 
 /* ---------------- Person Card ---------------- */
 
+// memberId -> research projects they belong to, so cards can link to /research/:id.
+const projectsByMember = researchProjects.reduce((map, project) => {
+  project.memberIds.forEach(id => {
+    if (!map.has(id)) map.set(id, []);
+    map.get(id).push(project);
+  });
+  return map;
+}, new Map());
+
 function PersonCard({ member }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const detailsId = useId();
 
-  // Detect if user is on mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+  const linkedProjects = projectsByMember.get(member.id) ?? [];
+  const otherProjects = member.projects ?? [];
+  const hasProjects = linkedProjects.length > 0 || otherProjects.length > 0;
+  const hasLinks = Boolean(member.website || member.email || member.publications);
+  const isCurrent = member.role !== 'past';
+  // The toggle (shown on mobile only) is needed only when some details are collapsible.
+  const hasDetails = hasLinks || (isCurrent && (hasProjects || member.interests?.length > 0));
 
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+  const toggle = () => setIsExpanded(open => !open);
 
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Toggle card expansion (only on mobile)
+  // Tapping anywhere on the card is a pointer shortcut for the toggle button;
+  // keyboard and screen-reader users use the button itself.
   const handleCardClick = (e) => {
-    // Don't toggle if clicking on a link
-    if (e.target.tagName === 'A' || e.target.closest('a')) {
+    if (!hasDetails || e.target.closest('a, button')) {
       return;
     }
-
-    if (isMobile) {
-      setIsExpanded(!isExpanded);
-    }
+    toggle();
   };
 
   return (
@@ -250,13 +256,13 @@ function PersonCard({ member }) {
         />
       </div>
 
-      <div className="card-body">
+      <div className="card-body" id={detailsId}>
         <div className="card-header">
           <h3 className="card-title person-name">{member.name}</h3>
         </div>
         <p className="card-subtitle person-title">{member.title}</p>
 
-        {member.role !== 'past' && (
+        {isCurrent && (
           <>
             {/* Interests */}
             {member.interests?.length > 0 && (
@@ -270,12 +276,19 @@ function PersonCard({ member }) {
             )}
 
             {/* Projects Section */}
-            {member.projects && member.projects.length > 0 && (
+            {hasProjects && (
               <div className="projects-section">
                 <h4 className="section-label">Current Projects</h4>
                 <ul className="projects-list">
-                  {member.projects.map((project, idx) => (
-                    <li key={idx}>{project}</li>
+                  {linkedProjects.map(project => (
+                    <li key={project.id}>
+                      <Link to={`/research/${project.id}`} className="project-link">
+                        {project.title}
+                      </Link>
+                    </li>
+                  ))}
+                  {otherProjects.map((project, idx) => (
+                    <li key={`text-${idx}`}>{project}</li>
                   ))}
                 </ul>
               </div>
@@ -284,7 +297,7 @@ function PersonCard({ member }) {
         )}
 
         {/* Links */}
-        {(member.website || member.email || member.publications) && (
+        {hasLinks && (
           <div className="card-footer card-links">
             {member.website && (
               <a
@@ -292,7 +305,6 @@ function PersonCard({ member }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-cta-link card-link"
-                onClick={(e) => e.stopPropagation()}
               >
                 Website
               </a>
@@ -302,7 +314,6 @@ function PersonCard({ member }) {
               <a
                 href={`mailto:${member.email}`}
                 className="card-cta-link card-link"
-                onClick={(e) => e.stopPropagation()}
               >
                 Email
               </a>
@@ -314,7 +325,6 @@ function PersonCard({ member }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-cta-link card-link"
-                onClick={(e) => e.stopPropagation()}
               >
                 Publications
               </a>
@@ -322,6 +332,19 @@ function PersonCard({ member }) {
           </div>
         )}
       </div>
+
+      {hasDetails && (
+        <button
+          type="button"
+          className="person-card-toggle"
+          onClick={toggle}
+          aria-expanded={isExpanded}
+          aria-controls={detailsId}
+          aria-label={`Details for ${member.name}`}
+        >
+          <span aria-hidden="true">▼</span>
+        </button>
+      )}
     </article>
   );
 }
