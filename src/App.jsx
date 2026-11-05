@@ -22,9 +22,9 @@ function App() {
     location.pathname === "/" || location.pathname === "/SAI-Lab/";
 
   return (
-    <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="app-layout">
       <NavBar />
-      <div className={isHomePage ? "" : "page-content"} style={{ flex: 1 }}>
+      <div className={isHomePage ? "app-main" : "app-main page-content"}>
         <Routes>
           <Route path="/" element={<HomePage />} />
 

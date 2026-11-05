@@ -11,7 +11,7 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--space-6);
 }
 
 .footer-grid {
@@ -40,20 +40,20 @@
 .footer-subtitle {
   font-size: 0.9rem;
   color: var(--color-text-light);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
   font-weight: 500;
 }
 
 .footer-dept {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--color-text-lighter);
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-3);
 }
 
 .footer-github-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
   font-size: 0.9rem;
   color: var(--color-primary);
   text-decoration: none;
@@ -67,7 +67,7 @@
 }
 
 .footer-heading {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -113,15 +113,15 @@
 }
 
 .footer-bottom {
-  padding-top: 1.25rem;
+  padding-top: var(--space-5);
   text-align: center;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--color-text-light);
 }
 
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-8);
   }
 }

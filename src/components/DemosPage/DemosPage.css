@@ -6,10 +6,10 @@
 .demos-hero {
   background:
     radial-gradient(circle at 78% 15%, rgba(255, 255, 255, 0.16), transparent 26%),
-    linear-gradient(135deg, #bb0000 0%, #760000 100%);
-  color: #fff;
+    linear-gradient(135deg, var(--color-primary) 0%, #760000 100%);
+  color: var(--color-white);
   margin-top: -80px;
-  padding: 8.5rem 2rem 4.5rem;
+  padding: 8.5rem var(--space-8) 4.5rem;
   text-align: center;
 }
 
@@ -22,13 +22,13 @@
 }
 
 .demos-hero h1 {
-  color: #fff;
+  color: var(--color-white);
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 7vw, 4.75rem);
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1;
-  margin: 0 0 1rem;
+  margin: 0 0 var(--space-4);
 }
 
 .demos-hero > p:last-child {
@@ -42,13 +42,13 @@
 .demos-content {
   margin: 0 auto;
   max-width: 1240px;
-  padding: 4rem 2rem 5rem;
+  padding: 4rem var(--space-8) 5rem;
 }
 
 .demos-intro {
   align-items: flex-end;
   display: flex;
-  gap: 2rem;
+  gap: var(--space-8);
   justify-content: space-between;
   margin-bottom: 2.25rem;
 }
@@ -69,13 +69,13 @@
 }
 
 .demos-count {
-  border: 1px solid rgba(187, 0, 0, 0.2);
-  border-radius: 999px;
-  color: #8b0000;
+  border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary-dark);
   flex-shrink: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: 700;
-  padding: 0.5rem 0.85rem;
+  padding: var(--space-2) 0.85rem;
 }
 
 .demos-grid {
@@ -85,7 +85,7 @@
 }
 
 .demo-card {
-  background: #fff;
+  background: var(--color-white);
   border: 1px solid rgba(20, 20, 20, 0.08);
   border-radius: 16px;
   box-shadow: 0 12px 34px rgba(25, 25, 25, 0.08);
@@ -113,11 +113,11 @@
 }
 
 .demo-card-content {
-  padding: 1.45rem 1.5rem 1.6rem;
+  padding: 1.45rem var(--space-6) 1.6rem;
 }
 
 .demo-number {
-  color: #8b0000;
+  color: var(--color-primary-dark);
   display: block;
   font-size: 0.72rem;
   font-weight: 800;
@@ -136,37 +136,37 @@
 }
 
 .demo-card a {
-  color: #8b0000;
+  color: var(--color-primary-dark);
   font-size: 0.92rem;
   font-weight: 700;
   text-decoration: none;
 }
 
 .demo-card a:hover {
-  color: #bb0000;
+  color: var(--color-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .demo-card a:focus-visible {
   border-radius: 3px;
-  outline: 3px solid rgba(187, 0, 0, 0.3);
+  outline: 3px solid rgba(var(--color-primary-rgb), 0.3);
   outline-offset: 4px;
 }
 
 @media (max-width: 767px) {
   .demos-hero {
-    padding: 7.5rem 1.25rem 3.5rem;
+    padding: 7.5rem var(--space-5) 3.5rem;
   }
 
   .demos-content {
-    padding: 3rem 1.15rem 4rem;
+    padding: var(--space-12) 1.15rem 4rem;
   }
 
   .demos-intro {
     align-items: flex-start;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-4);
   }
 
   .demos-grid {

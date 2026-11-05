@@ -1,7 +1,7 @@
 .home-previews {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 1rem;
+  padding: 4.5rem var(--space-6) var(--space-4);
 }
 
 .home-preview-section { margin-bottom: 5rem; }
@@ -10,8 +10,8 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
   border-bottom: 1px solid var(--color-border);
   padding-bottom: .75rem;
 }
@@ -19,7 +19,7 @@
 .home-preview-heading h2, .openings-preview h2 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(var(--text-2xl), 4vw, 2.75rem);
   font-weight: 700;
 }
 
@@ -33,7 +33,7 @@
 
 .research-preview-grid, .people-preview-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--space-5);
 }
 
 .research-preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -47,7 +47,7 @@
 .preview-kicker { margin: 0; color: var(--color-primary); font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 
 .publication-preview-list { border-top: 1px solid var(--color-border); }
-.publication-preview { display: flex; justify-content: space-between; gap: 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); }
+.publication-preview { display: flex; justify-content: space-between; gap: var(--space-8); padding: var(--space-5) 0; border-bottom: 1px solid var(--color-border); }
 .publication-preview h3 { margin-bottom: .45rem; }
 .publication-preview p { margin: 0; color: var(--color-text-light); }
 .publication-preview-venue { font-style: italic; }
@@ -55,11 +55,11 @@
 
 .people-preview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .person-preview-card { color: var(--color-text); text-decoration: none; text-align: center; }
-.person-preview-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; margin: 0 auto 1rem; max-width: 180px; box-shadow: var(--shadow-sm); }
+.person-preview-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; margin: 0 auto var(--space-4); max-width: 180px; box-shadow: var(--shadow-sm); }
 .person-preview-card h3 { margin-bottom: .2rem; }
 .person-preview-card p { color: var(--color-text-light); margin: 0; }
 
-.openings-preview { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(2rem, 5vw, 4rem); color: white; background: #2c2c2c; border-left: 6px solid var(--color-primary); }
+.openings-preview { display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); padding: clamp(var(--space-8), 5vw, 4rem); color: white; background: #2c2c2c; border-left: 6px solid var(--color-primary); }
 .openings-preview h2 { margin: .3rem 0 .75rem; }
 .openings-preview > div > p:not(.preview-kicker) { max-width: 650px; margin: 0; }
 .openings-link { flex: 0 0 auto; padding: .75rem 1.1rem; color: white; border: 1px solid white; }
@@ -72,7 +72,7 @@
 
 /* Compact layouts stack the publication and openings content. */
 @media (max-width: 800px) {
-  .publication-preview, .openings-preview { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .publication-preview, .openings-preview { align-items: flex-start; flex-direction: column; gap: var(--space-4); }
 }
 
 /* Mobile: single-column research cards avoid narrow text columns. */
@@ -81,7 +81,7 @@
 }
 
 @media (max-width: 480px) {
-  .home-previews { padding: 3rem 1.1rem 1px; }
+  .home-previews { padding: var(--space-12) 1.1rem 1px; }
   .home-preview-heading { align-items: flex-start; flex-direction: column; }
-  .people-preview-grid { gap: 1.5rem .75rem; }
+  .people-preview-grid { gap: var(--space-6) .75rem; }
 }

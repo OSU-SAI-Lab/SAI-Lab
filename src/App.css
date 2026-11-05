@@ -1,4 +1,13 @@
-/* Empty on purpose — all styling handled by Bootstrap + custom theme */
+/* App shell: footer stays at the bottom on short pages. */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
 
 /* Add top padding to non-homepage pages to prevent content from being hidden behind fixed navbar */
 .page-content {

@@ -13,7 +13,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #ffffff;
+    background-color: var(--color-white);
   }
 
   
@@ -25,7 +25,7 @@
   }
   
   .article-not-found h2 {
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     font-weight: 800;
     color: #222;
     margin-bottom: 12px;
@@ -33,7 +33,7 @@
   
   .article-not-found p {
     font-size: 1.05rem;
-    color: #666;
+    color: var(--color-text-light);
     margin-bottom: 30px;
   }
   
@@ -43,7 +43,7 @@
     margin-bottom: 36px;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #bb0000;
+    color: var(--color-primary);
     text-decoration: none;
     letter-spacing: 0.3px;
     transition: color 0.2s ease;
@@ -68,12 +68,12 @@
   .article-tag {
     display: inline-block;
     padding: 4px 12px;
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: #bb0000;
-    background: rgba(187, 0, 0, 0.07);
+    color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.07);
     border-radius: 4px;
   }
   
@@ -100,7 +100,7 @@
   /* ── Slideshow ── */
   .article-slideshow {
     margin-bottom: 40px;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     background: #f5f5f5;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
@@ -143,9 +143,9 @@
     padding: 6px 14px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--color-white);
     background: rgba(0, 0, 0, 0.55);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     backdrop-filter: blur(4px);
     transition: background 0.2s;
@@ -172,7 +172,7 @@
     justify-content: center;
     gap: 16px;
     padding: 14px 0;
-    background: #fff;
+    background: var(--color-white);
     border-top: 1px solid #eee;
   }
   
@@ -193,8 +193,8 @@
   }
   
   .slideshow-btn:hover {
-    background: #bb0000;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-white);
   }
   
   .slideshow-dots {
@@ -214,12 +214,12 @@
   }
   
   .slideshow-dot.active {
-    background: #bb0000;
+    background: var(--color-primary);
     transform: scale(1.25);
   }
   
   .slideshow-dot:hover:not(.active) {
-    background: #999;
+    background: var(--color-text-lighter);
   }
   
   /* ── Article body ── */
@@ -234,7 +234,7 @@
   }
   
   .article-body a {
-    color: #bb0000;
+    color: var(--color-primary);
     text-decoration: underline;
   }
   
@@ -260,7 +260,7 @@
   }
   
   .article-members-heading {
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: 700;
     color: #444;
     text-transform: uppercase;
@@ -279,18 +279,18 @@
     padding: 8px 18px;
     font-size: 0.88rem;
     font-weight: 600;
-    color: #bb0000;
-    background: rgba(187, 0, 0, 0.06);
-    border: 1px solid rgba(187, 0, 0, 0.15);
+    color: var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.06);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.15);
     border-radius: 30px;
     text-decoration: none;
     transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
   
   .article-member-chip:hover {
-    background: #bb0000;
-    color: #fff;
-    border-color: #bb0000;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
   }
   
   /* ── Responsive ── */
@@ -300,7 +300,7 @@
     }
   
     .article-title {
-      font-size: 2rem;
+      font-size: var(--text-2xl);
     }
   }
   
