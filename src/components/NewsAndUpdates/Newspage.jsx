@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import EmptyState from "../EmptyState";
+import PageHero from "../PageHero";
 import "./Newspage.css";
 import { newsItems } from "./newsData";
 import eventsJson from "../../assets/json/upcoming.json";
@@ -204,13 +205,9 @@ export default function NewsPage() {
 
   return (
     <div className="news-app">
-      <div className="news-hero">
-        <h1>News &amp; Events</h1>
-        <p>
-          Latest research milestones, awards, outreach, and upcoming events from
-          our lab at The Ohio State University.
-        </p>
-      </div>
+      <PageHero title="News & Events">
+        Latest research milestones, awards, outreach, and upcoming events from our lab at The Ohio State University.
+      </PageHero>
 
       <div className="news-content news-content-wide">
         <section className="upcoming-events" id="upcoming-events">

@@ -1,3 +1,4 @@
+import PageHero from "../PageHero";
 import "./DemosPage.css";
 
 const demos = [
@@ -31,14 +32,10 @@ const demos = [
 export default function DemosPage() {
   return (
     <div className="demos-page">
-      <section className="demos-hero">
-        <p className="demos-eyebrow">Systems in action</p>
-        <h1>Demos</h1>
-        <p>
-          Explore working demonstrations of our AI, edge computing, and digital
-          agriculture research.
-        </p>
-      </section>
+      <PageHero title="Demos">
+        Explore working demonstrations of our AI, edge computing, and digital
+        agriculture research.
+      </PageHero>
 
       <main className="demos-content">
         <div className="demos-intro">

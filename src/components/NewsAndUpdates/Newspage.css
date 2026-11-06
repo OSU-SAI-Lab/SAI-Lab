@@ -10,35 +10,6 @@
   font-family: 'DM Sans', sans-serif;
 }
 
-/* ===== Hero Header (matches .people-hero) ===== */
-.news-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: white;
-  padding: 4rem var(--space-8) var(--space-12) var(--space-8);
-  text-align: center;
-  margin-top: -80px;
-  padding-top: 80px;
-}
-
-.news-hero h1 {
-  font-family: 'Crimson Pro', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 var(--space-4) 0;
-  color: white;
-  letter-spacing: -0.02em;
-  animation: fadeInUp 0.6s ease;
-}
-
-.news-hero p {
-  font-size: var(--text-lg);
-  color: white;
-  opacity: 0.95;
-  font-weight: 400;
-  margin: 0;
-  animation: fadeInUp 0.6s ease 0.1s backwards;
-}
-
 /* ===== Content Area ===== */
 .news-content {
   max-width: 900px;
@@ -118,7 +89,7 @@
 
 .upcoming-event-location {
   margin-left: auto;
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--color-text-light);
   text-align: right;
@@ -157,7 +128,7 @@
   gap: 15px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .upcoming-events-grid {
     grid-template-columns: 1fr;
   }
@@ -412,20 +383,7 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .news-hero {
-    padding: var(--space-8) var(--space-4);
-    padding-top: 80px;
-    margin-top: -80px;
-  }
-
-  .news-hero h1 {
-    font-size: var(--text-2xl);
-  }
-
-  .news-hero p {
-    font-size: var(--text-base);
-  }
+@media (max-width: 767px) {
 
   .news-content {
     padding: var(--space-6) var(--space-4) var(--space-12);
@@ -442,17 +400,14 @@
 
 }
 
-@media (max-width: 480px) {
-  .news-hero h1 {
-    font-size: 1.75rem;
-  }
+@media (max-width: 479px) {
 
   .news-card-title {
     font-size: 1.125rem;
   }
 
   .filter-pill {
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
     padding: 0.4rem 0.875rem;
   }
 }

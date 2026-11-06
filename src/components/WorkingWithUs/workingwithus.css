@@ -10,53 +10,6 @@
   margin-top: -2rem; /* negate global page-content padding-top — adjust if needed */
 }
 
-/* 1. Hero Wrapper: Full width, flush against navbar (no gap) */
-.working-with-us-hero-container {
-  width: 100%;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  margin-top: 0;
-  padding-top: 0;
-  transform: none !important;
-  -webkit-transform: none !important;
-}
-
-.working-with-us-hero-container .hero-section {
-  padding: 4rem var(--space-8);
-  text-align: center;
-  color: white;
-  transform: none !important;
-  -webkit-transform: none !important;
-}
-
-.working-with-us-hero-container .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  transform: none !important;
-  -webkit-transform: none !important;
-}
-
-.working-with-us-hero-container h1 {
-  font-family: 'Crimson Pro', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: var(--space-4);
-  color: white;
-  transform: none !important;
-  -webkit-transform: none !important;
-  direction: ltr !important;
-  unicode-bidi: normal !important;
-}
-
-.working-with-us-hero-container .hero-subtitle {
-  font-size: var(--text-lg);
-  opacity: 0.95;
-  color: white;
-  transform: none !important;
-  -webkit-transform: none !important;
-  direction: ltr !important;
-  unicode-bidi: normal !important;
-}
-
 .working-with-us {
   min-height: 100vh;
   background: var(--color-bg);
@@ -386,7 +339,7 @@
   text-decoration: none;
   border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   transition: all 0.3s ease;
 }
 
@@ -451,7 +404,7 @@
 }
 
 .role-grid h4 {
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   text-transform: uppercase;
   color: var(--color-slate-500);
   margin-bottom: var(--space-2);
@@ -460,7 +413,7 @@
 .role-grid ul {
   list-style-type: disc;
   padding-left: 1.2rem;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.4;
 }
 
@@ -488,7 +441,7 @@
 }
 
 .section-toggle-icon {
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   transition: transform 0.2s ease;
   color: var(--color-slate-400);
 }
@@ -510,7 +463,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .working-with-us-layout {
     display: block;
   }
@@ -522,14 +475,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .working-with-us-hero-container h1 {
-    font-size: 2.25rem;
-  }
-
-  .working-with-us-hero-container .hero-subtitle {
-    font-size: 1.1rem;
-  }
+@media (max-width: 767px) {
 
   .content-container {
     padding: var(--space-8) var(--space-6);
@@ -569,14 +515,7 @@
   }
 }
 
-@media (max-width: 480px) {
-  .working-with-us-hero-container .hero-section {
-    padding: var(--space-12) var(--space-6);
-  }
-
-  .working-with-us-hero-container h1 {
-    font-size: var(--text-2xl);
-  }
+@media (max-width: 479px) {
 
   .opportunity-section {
     padding: var(--space-6);
@@ -669,7 +608,7 @@
 .pathway-group-heading p {
   margin: 0;
   color: #5b6470;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.6;
 }
 
@@ -717,7 +656,7 @@
 
 .pathway-card > span:not(.pathway-card-type):not(.pathway-link) {
   color: #5a6573;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.55;
 }
 
@@ -736,7 +675,7 @@
 .pathway-link {
   margin-top: 0.35rem;
   color: var(--color-primary);
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   font-weight: 600;
 }
 
@@ -775,7 +714,7 @@
 .decision-item p {
   margin: 0;
   color: #353b45;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.55;
 }
 
@@ -851,7 +790,7 @@ button.section-header {
 .family-note p {
   margin: 0;
   color: #744210;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   line-height: 1.6;
 }
 
@@ -863,13 +802,13 @@ button.section-header {
   margin-top: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   .pathway-groups {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .decision-summary {
     grid-template-columns: 1fr;
     padding: var(--space-4);
@@ -900,7 +839,7 @@ button.section-header {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .decision-summary {
     gap: var(--space-3);
   }

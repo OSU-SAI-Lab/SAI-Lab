@@ -3,6 +3,7 @@ import './ResearchPage.css';
 import { projects } from './data.js';
 import ProjectCard from './ProjectCard';
 import EmptyState from '../EmptyState';
+import PageHero from '../PageHero';
 import FilterDropdown, { FilterOption } from '../FilterDropdown';
 
 export default function ResearchPage() {
@@ -85,10 +86,9 @@ export default function ResearchPage() {
 
   return (
     <div className="research-page">
-      <section className="research-hero">
-        <h1>Research</h1>
-        <p>Advancing machine learning, distributed systems, and intelligent computation for real-world impact</p>
-      </section>
+      <PageHero title="Research">
+        Advancing machine learning, distributed systems, and intelligent computation for real-world impact
+      </PageHero>
 
       <div className="research-filters-section">
         <div className="research-filters-container">

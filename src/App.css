@@ -11,5 +11,5 @@
 
 /* Add top padding to non-homepage pages to prevent content from being hidden behind fixed navbar */
 .page-content {
-  padding-top: 80px;
+  padding-top: var(--navbar-height);
 }

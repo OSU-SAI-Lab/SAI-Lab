@@ -41,7 +41,7 @@
   .article-back-link {
     display: inline-block;
     margin-bottom: 36px;
-    font-size: 0.9rem;
+    font-size: var(--text-md);
     font-weight: 600;
     color: var(--color-primary);
     text-decoration: none;
@@ -141,7 +141,7 @@
     top: 12px;
     right: 12px;
     padding: 6px 14px;
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
     font-weight: 600;
     color: var(--color-white);
     background: rgba(0, 0, 0, 0.55);
@@ -294,7 +294,7 @@
   }
   
   /* ── Responsive ── */
-  @media (max-width: 960px) {
+  @media (max-width: 1023px) {
     .article-page {
       padding: 40px 40px 60px;
     }
@@ -304,7 +304,7 @@
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
     .article-page {
       padding: 28px 18px 50px;
     }

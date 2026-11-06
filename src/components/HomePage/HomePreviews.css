@@ -71,16 +71,16 @@
 }
 
 /* Compact layouts stack the publication and openings content. */
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .publication-preview, .openings-preview { align-items: flex-start; flex-direction: column; gap: var(--space-4); }
 }
 
 /* Mobile: single-column research cards avoid narrow text columns. */
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .research-preview-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .home-previews { padding: var(--space-12) 1.1rem 1px; }
   .home-preview-heading { align-items: flex-start; flex-direction: column; }
   .people-preview-grid { gap: var(--space-6) .75rem; }
