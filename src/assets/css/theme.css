@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 @import './cards.css';
 @import './empty-state.css';
+@import './page-hero.css';
+
+/* Breakpoints (media queries can't use custom properties, so use these literals):
+     tablet       @media (max-width: 1023px)
+     mobile       @media (max-width: 767px)
+     small phone  @media (max-width: 479px)
+   The navbar collapses at Bootstrap's lg breakpoint (991.98px) to match
+   expand="lg" in NavBar.jsx. */
 
 /* CSS Variables for consistent theming across the entire site */
 :root {
@@ -38,6 +46,7 @@
   /* Type scale */
   --text-xs: 0.75rem;
   --text-sm: 0.85rem;
+  --text-md: 0.9rem;
   --text-base: 1rem;
   --text-lg: 1.25rem;
   --text-xl: 1.5rem;
@@ -52,6 +61,9 @@
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-12: 3rem;
+
+  /* Fixed navbar height; inner pages are offset by this */
+  --navbar-height: 80px;
 
   /* Corner radius */
   --radius-sm: 6px;

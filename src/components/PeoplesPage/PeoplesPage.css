@@ -1,6 +1,5 @@
 /* PeoplesPage-specific styles - uses CSS variables from theme.css */
 
-
 .app {
   min-height: 100vh;
   display: flex;
@@ -45,32 +44,6 @@
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   animation: fadeInUp 0.6s ease 0.2s backwards;
-}
-
-/* People Hero Section */
-.people-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  color: white;
-  padding: 4rem var(--space-8) var(--space-12) var(--space-8);
-  text-align: center;
-  margin-top: -80px;
-  padding-top: 80px;
-}
-
-.people-hero h1 {
-  font-family: 'Crimson Pro', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: var(--space-4);
-  color: white;
-  letter-spacing: -0.02em;
-}
-
-.people-hero p {
-  font-size: var(--text-lg);
-  color: white;
-  opacity: 0.95;
-  font-weight: 400;
 }
 
 /* Filters Section */
@@ -133,7 +106,7 @@
 .filter-dropdown-button {
   padding: 0.875rem var(--space-6);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   font-weight: 500;
   border: 2px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -208,14 +181,14 @@
 }
 
 .filter-checkbox span {
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   color: var(--color-text);
 }
 
 .clear-filters-button {
   padding: 0.875rem var(--space-6);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   font-weight: 500;
   border: 2px solid var(--color-primary);
   border-radius: var(--radius-md);
@@ -239,7 +212,7 @@
 .filter-select {
   padding: 0.875rem 2.5rem 0.875rem var(--space-4);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   font-weight: 500;
   border: 2px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -302,7 +275,7 @@
 
 .active-filters-label {
   color: var(--color-text-light);
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   font-weight: 600;
 }
 
@@ -341,7 +314,6 @@
   font-size: 1.1rem;
 }
 
-
 /* Members Grid */
 .members-grid {
   display: grid;
@@ -376,7 +348,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   color: var(--color-text-light);
 }
 
@@ -388,7 +360,7 @@
 }
 
 .section-label {
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -412,7 +384,7 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   color: var(--color-text);
   font-weight: 500;
   transition: all var(--transition-fast);
@@ -478,7 +450,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   font-weight: 500;
   color: var(--color-primary);
   text-decoration: none;
@@ -531,22 +503,7 @@
 }
 
 /* Tablets and Medium Screens */
-@media (max-width: 768px) {
-
-  /* Hero Section */
-  .people-hero {
-    padding: var(--space-8) var(--space-6);
-    padding-top: calc(var(--space-8) + 80px);
-    margin-top: -80px;
-  }
-
-  .people-hero h1 {
-    font-size: 2.25rem;
-  }
-
-  .people-hero p {
-    font-size: 1.1rem;
-  }
+@media (max-width: 767px) {
 
   /* Filters Section - Compact Mobile Design */
   .filters-section {
@@ -568,7 +525,7 @@
 
   .search-input {
     padding: 0.625rem var(--space-3) 0.625rem 2.25rem;
-    font-size: 0.9rem;
+    font-size: var(--text-md);
     border-radius: var(--radius-sm);
   }
 
@@ -655,7 +612,7 @@
   }
 
   .filter-checkbox span {
-    font-size: 0.9rem;
+    font-size: var(--text-md);
   }
 
   /* Clear Filters - Compact Pill */
@@ -709,7 +666,7 @@
     border-radius: 50%;
     background: transparent;
     color: var(--color-primary);
-    font-size: 0.9rem;
+    font-size: var(--text-md);
     cursor: pointer;
     z-index: 1;
   }
@@ -789,7 +746,7 @@
   }
 
   .person-title {
-    font-size: 0.9rem;
+    font-size: var(--text-md);
   }
 
   /* Interest Tags - Smaller on mobile */
@@ -800,7 +757,7 @@
 
   /* Projects */
   .projects-list li {
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
   }
 
   /* Card Links */
@@ -825,21 +782,7 @@
 }
 
 /* Small Phones */
-@media (max-width: 480px) {
-
-  /* Hero */
-  .people-hero {
-    padding: var(--space-6) var(--space-4);
-    padding-top: calc(var(--space-6) + 80px);
-  }
-
-  .people-hero h1 {
-    font-size: 1.85rem;
-  }
-
-  .people-hero p {
-    font-size: var(--text-base);
-  }
+@media (max-width: 479px) {
 
   /* Filters - Even more compact */
   .filters-section {
@@ -859,12 +802,12 @@
 
   .filter-dropdown-button {
     padding: 0.4rem var(--space-3);
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
   }
 
   .clear-filters-button {
     padding: 0.4rem var(--space-3);
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
   }
 
   /* Main Content */
@@ -911,20 +854,12 @@
   }
 
   .card-link {
-    font-size: 0.8rem;
+    font-size: var(--text-sm);
   }
 }
 
 /* Landscape Phones */
-@media (max-width: 768px) and (orientation: landscape) {
-  .people-hero {
-    padding: var(--space-6);
-    padding-top: calc(var(--space-6) + 80px);
-  }
-
-  .people-hero h1 {
-    font-size: var(--text-2xl);
-  }
+@media (max-width: 767px) and (orientation: landscape) {
 
   .card-image-container {
     height: 200px;
@@ -935,7 +870,3 @@
   }
 }
 
-/* Keep tablet cards in two columns while retaining compact controls below 768px. */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .members-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}

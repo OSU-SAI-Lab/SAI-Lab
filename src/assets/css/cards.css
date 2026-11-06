@@ -96,7 +96,7 @@
 
 .card-subtitle,
 .card-meta {
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   color: var(--color-text-light);
   font-weight: 500;
   margin: 0;
@@ -104,7 +104,7 @@
 
 /* Card Description / Body Paragraph */
 .card-description {
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   color: var(--color-text-light);
   line-height: 1.6;
   margin: 0;
@@ -123,7 +123,7 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   color: var(--color-text);
   font-weight: 500;
   transition: all var(--transition-fast);
@@ -144,7 +144,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-size: 0.9rem;
+  font-size: var(--text-md);
   color: var(--color-text-light);
   flex-wrap: wrap;
 }
@@ -169,7 +169,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .card-body {
     padding: var(--space-5);
     gap: var(--space-3);

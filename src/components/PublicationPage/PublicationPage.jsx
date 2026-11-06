@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { ExternalLink, FileText, Github, Search, X } from "lucide-react";
 import { useOutletContext } from "react-router-dom";
 import EmptyState from "../EmptyState";
+import PageHero from "../PageHero";
 import "../../assets/css/publicationspage.css";
 
 const LAB_AUTHOR_PATTERNS = [
@@ -145,12 +146,8 @@ export default function PublicationsPage() {
 
   return (
     <>
+      <PageHero title="Publications">Peer-reviewed publications by the Systems and AI Lab</PageHero>
       <main className="publications-page">
-        <header className="publications-hero">
-          <p className="publications-eyebrow">Research output</p>
-          <h1>Publications</h1>
-          <p>Peer-reviewed publications by the Systems and AI Lab</p>
-        </header>
 
         <section className="publication-controls" aria-label="Publication filters">
           <label className="publication-search"><Search size={18} aria-hidden="true" /><span className="sr-only">Search publications</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search titles, authors, or venues" /></label>

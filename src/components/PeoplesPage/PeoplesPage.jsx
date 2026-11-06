@@ -5,6 +5,7 @@ import { labMembers } from './data.js';
 import { projects as researchProjects } from '../ResearchPage/data.js';
 import FilterDropdown, { FilterOption } from '../FilterDropdown';
 import EmptyState from '../EmptyState';
+import PageHero from '../PageHero';
 
 export default function People() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -88,10 +89,7 @@ export default function People() {
   };
   return (
     <div className="people-page">
-      <section className="people-hero">
-        <h1>People</h1>
-        <p>Members of the Systems and AI Lab</p>
-      </section>
+      <PageHero title="People">Members of the Systems and AI Lab</PageHero>
 
       {/* Filters */}
       <div className="filters-section">

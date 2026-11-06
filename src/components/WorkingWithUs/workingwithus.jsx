@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './workingwithus.css';
+import PageHero from '../PageHero';
 import { workingWithUsData } from './workingwithusdata';
 
 const defaultOpenSections = {
@@ -330,19 +331,10 @@ function WorkingWithUs() {
 
   return (
     <div className="working-with-us-page">
-      {/* HERO */}
-      <div className="working-with-us-hero-container">
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1>Working With Us</h1>
-
-            <p className="hero-subtitle">
-              Join our research team and contribute to cutting-edge work in
-              Systems and AI
-            </p>
-          </div>
-        </section>
-      </div>
+      <PageHero title="Working With Us">
+        Join our research team and contribute to cutting-edge work in Systems
+        and AI
+      </PageHero>
 
       <div className="working-with-us-layout">
         {/* MAIN CONTENT */}
