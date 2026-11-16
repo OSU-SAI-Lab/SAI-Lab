@@ -17,10 +17,12 @@ const recentPublications = publicationRows
   .filter((publication) => publication.id && publication.title)
   .sort((first, second) => Number(second.year) - Number(first.year))
   .slice(0, 5);
-const featuredPeople = [
-  ...labMembers.filter((member) => member.role === "faculty"),
-  ...labMembers.filter((member) => member.role === "phd"),
-].slice(0, 4);
+// Two rows of four, by people.json id. Row 1: faculty and PhD students.
+// Row 2: one postdoc, staff member, graduate student and undergraduate.
+const featuredPeopleIds = [1, 2, 4, 5, 3, 7, 8, 14];
+const featuredPeople = featuredPeopleIds
+  .map((id) => labMembers.find((member) => member.id === id))
+  .filter(Boolean);
 
 function SectionHeading({ id, title, link, label }) {
   return (
