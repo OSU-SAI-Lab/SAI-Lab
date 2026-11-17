@@ -72,6 +72,7 @@ export default function People() {
   // Group by role
   const groupedMembers = useMemo(() => ({
     faculty: filteredMembers.filter(m => m.role === 'faculty'),
+    postdoc: filteredMembers.filter(m => m.role === 'postdoc'),
     phd: filteredMembers.filter(m => m.role === 'phd'),
     staff: filteredMembers.filter(m => m.role === 'staff'),
     masters: filteredMembers.filter(m => m.role === 'masters'),
@@ -81,6 +82,7 @@ export default function People() {
 
   const roleLabels = {
     faculty: 'Faculty',
+    postdoc: 'Postdoctoral Researchers',
     phd: 'PhD Students',
     staff: 'Staff',
     masters: 'Graduate Students',

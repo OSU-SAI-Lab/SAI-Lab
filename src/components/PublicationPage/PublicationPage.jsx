@@ -15,6 +15,8 @@ const LAB_AUTHOR_PATTERNS = [
   /\bbrijesh nanda\b/i,
   /\bbrunda yogananda\b/i,
   /\bmundada\b/i,
+  /\bjason seh\b/i,
+  /\bjajodia\b/i,
 ];
 
 const TOPIC_RULES = [

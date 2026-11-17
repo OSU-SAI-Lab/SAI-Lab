@@ -1,6 +1,76 @@
 {
   "items": [
     {
+      "id": 25,
+      "title": "SAI Lab Showcases Research and Celebrates Team Recognition at SAIL 2026",
+      "description": "Hari Subramoni, Anirudh Potlapally, and Harikesh Byrandurga Gopinath represented the NSF ICICLE AI Institute at SAIL 2026 in San Diego with research posters on edge AI and ecology, and Harikesh was part of the winning Group Flash Talk team.",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>SAI Lab’s <a href=\"https://www.linkedin.com/in/harisubramoni/\" target=\"_blank\" rel=\"noopener noreferrer\">Hari Subramoni</a> and graduate students <a href=\"https://www.linkedin.com/in/anirudh-potlapally-30659a1ab/\" target=\"_blank\" rel=\"noopener noreferrer\">Anirudh Potlapally</a> and <a href=\"https://www.linkedin.com/in/harikesh-gopinath/\" target=\"_blank\" rel=\"noopener noreferrer\">Harikesh Byrandurga Gopinath</a> represented the <a href=\"https://icicle.osu.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">NSF ICICLE AI Institute</a> at the <a href=\"https://na.eventscloud.com/website/97211/home/\" target=\"_blank\" rel=\"noopener noreferrer\">2026 Summit for AI Institutes Leadership (SAIL)</a> in San Diego, California. Their participation included research poster presentations, cross-institute collaboration, and a winning Group Flash Talk on safe, human-directed agricultural autonomy.</p><p>Hosted by the NSF AI Institutes Virtual Organization (AIVO), the summit brought together researchers and leaders from across the NSF AI Institutes under the theme <strong>“Sailing Together Toward Innovation.”</strong></p><h2>Graduate Research in Edge AI and Ecology</h2><p>With support from AIVO, Anirudh and Harikesh presented their research at the Graduate Student &amp; Postdoc Workshop. Their posters highlighted complementary challenges in deploying and using AI: managing distributed edge infrastructure and supporting expert review of ecological imagery.</p><h3>Intelligent Edge Management Service</h3><p>The <strong>Intelligent Edge Management Service (IEMS)</strong> poster presented an edge control plane featuring unified model cards, target device grouping, Patra provenance tracking, and continuous fleet state monitoring. The work explores how these capabilities can support the management and tracking of AI models and devices across edge deployments.</p><h3>Human-in-the-Loop AI for Ecology</h3><p>The poster <strong><em>Resolve, Clear, or Defer: Training-Free Human-in-the-Loop Triage for Ecological Object Proposals</em></strong> presented an approach to reducing expert review workload without retraining models or forcing decisions on uncertain predictions. The work emphasizes selective human involvement in reviewing AI-generated ecological object proposals.</p><h2>Winning Group Flash Talk Explores Agricultural Autonomy</h2><p>Harikesh was part of the winning team in the Group Flash Talks at SAIL. Bringing together students from several AI institutes, the interdisciplinary team presented <strong>“Transition to ‘Agentic’ Autonomy in Agriculture.”</strong></p><p>The talk introduced a vision for a <strong>Tractor Operating System (TOS)</strong>: a system that would translate a farmer’s natural-language instructions into coordinated actions across autonomous tractors while enforcing safety limits and maintaining clear human control. The team framed the concept as a potential response to agricultural labor shortages.</p><p>Safety was central to the proposed approach. The team addressed two complementary dimensions:</p><ul><li><strong>External safety:</strong> Safeguards on both the instructions an agent receives and the actions it takes, intended to protect against misunderstandings, malicious intent, and technical failures.</li><li><strong>Internal safety:</strong> Training agents through imitation and reinforcement learning, then filtering their actions against known domain constraints, including geofencing, no-go zones, and stopping distances.</li></ul><p>Presented as a vision rather than a deployed system, TOS connected agricultural automation with questions about how autonomous agents can act within explicit safety boundaries and remain accountable to human operators.</p><h2>Building Connections Across the AI Institutes</h2><p>Alongside the graduate research presentations, ICICLE representatives demonstrated AI and cyberinfrastructure services through the Data Engineering for AI Applications Special Interest Group, AI Institute Tools Fair, and Institute Showcases. These activities provided opportunities to exchange ideas with researchers across participating NSF AI Institutes and explore future collaborations.</p><p>SAI Lab congratulates Anirudh and Harikesh on their research presentations and Harikesh and his teammates on their Group Flash Talk recognition. The lab thanks AIVO for organizing the summit and supporting graduate student participation.</p>",
+      "awardMedia": [
+        {
+          "type": "image",
+          "srcKey": "Sail2026FlashTalkWinners",
+          "alt": "Harikesh Byrandurga Gopinath (second from right) with the winning Group Flash Talk team, “Transitioning to ‘Agentic’ Autonomy,” at SAIL 2026.",
+          "caption": "Harikesh Byrandurga Gopinath (second from right) with the winning Group Flash Talk team, “Transitioning to ‘Agentic’ Autonomy,” at SAIL 2026."
+        }
+      ],
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "Sail2026PosterTeam",
+          "alt": "Harikesh Byrandurga Gopinath, Hari Subramoni, and Anirudh Potlapally at the ICICLE table with their SAIL 2026 posters.",
+          "caption": "Harikesh Byrandurga Gopinath, Hari Subramoni, and Anirudh Potlapally at the ICICLE table with their SAIL 2026 posters."
+        },
+        {
+          "type": "image",
+          "srcKey": "Sail2026BoothConversation",
+          "alt": "Harikesh Byrandurga Gopinath, Anirudh Potlapally, and Hari Subramoni talk with attendees at the ICICLE table.",
+          "caption": "Harikesh Byrandurga Gopinath, Anirudh Potlapally, and Hari Subramoni talk with attendees at the ICICLE table."
+        },
+        {
+          "type": "image",
+          "srcKey": "Sail2026ResearchDiscussion",
+          "alt": "Anirudh Potlapally and Hari Subramoni discuss the lab’s research with summit attendees.",
+          "caption": "Anirudh Potlapally and Hari Subramoni discuss the lab’s research with summit attendees."
+        },
+        {
+          "type": "image",
+          "srcKey": "Sail2026PosterVisitors",
+          "alt": "Attendees visit the ICICLE table and posters during SAIL 2026.",
+          "caption": "Attendees visit the ICICLE table and posters during SAIL 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "Sail2026IcicleTable",
+          "alt": "SAI Lab members with ICICLE colleagues at the ICICLE table at SAIL 2026.",
+          "caption": "SAI Lab members with ICICLE colleagues at the ICICLE table at SAIL 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "Sail2026PostersPortrait",
+          "alt": "Anirudh Potlapally and Harikesh Byrandurga Gopinath with a summit attendee in front of their posters.",
+          "caption": "Anirudh Potlapally and Harikesh Byrandurga Gopinath with a summit attendee in front of their posters."
+        }
+      ],
+      "members": [
+        {
+          "name": "Hari Subramoni",
+          "profileUrl": "https://www.linkedin.com/in/harisubramoni/"
+        },
+        {
+          "name": "Anirudh Potlapally",
+          "profileUrl": "https://www.linkedin.com/in/anirudh-potlapally-30659a1ab/"
+        },
+        {
+          "name": "Harikesh Byrandurga Gopinath",
+          "profileUrl": "https://www.linkedin.com/in/harikesh-gopinath/"
+        }
+      ],
+      "date": "2026-11-02",
+      "tag": "Outreach"
+    },
+    {
       "id": 24,
       "title": "SAI Lab and ICICLE Bring Hands-On Edge AI Learning to HackOHI/O 2026",
       "description": "SAI Lab and ICICLE engaged students at HackOHI/O 2026 in a hands-on computer vision workflow, from leaf-image annotation and model training to evaluation and edge deployment.",

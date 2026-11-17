@@ -44,8 +44,24 @@ import HackOhio2026Group from "../../assets/json/images/articles/hackohio-2026-g
 
 import HackOhio2026FirstPlace from "../../assets/json/images/articles/hackohio-2026-first-place.jpg";
 
+import Sail2026FlashTalkWinners from "../../assets/json/images/articles/sail-2026-flash-talk-winning-team.jpg";
+import Sail2026PosterTeam from "../../assets/json/images/articles/sail-2026-poster-team.jpg";
+import Sail2026BoothConversation from "../../assets/json/images/articles/sail-2026-booth-conversation.jpg";
+import Sail2026ResearchDiscussion from "../../assets/json/images/articles/sail-2026-research-discussion.jpg";
+import Sail2026PosterVisitors from "../../assets/json/images/articles/sail-2026-poster-visitors.jpg";
+import Sail2026IcicleTable from "../../assets/json/images/articles/sail-2026-icicle-table.jpg";
+import Sail2026PostersPortrait from "../../assets/json/images/articles/sail-2026-posters-portrait.jpg";
+
 /** Maps JSON media.srcKey → bundled asset URL */
 const mediaRegistry = {
+  Sail2026FlashTalkWinners,
+  Sail2026PosterTeam,
+  Sail2026BoothConversation,
+  Sail2026ResearchDiscussion,
+  Sail2026PosterVisitors,
+  Sail2026IcicleTable,
+  Sail2026PostersPortrait,
+
   HackOhio2026FirstPlace,
   HackOhio2026Award1,
   HackOhio2026Award2,
