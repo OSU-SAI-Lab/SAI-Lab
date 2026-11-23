@@ -1,6 +1,43 @@
 {
   "items": [
     {
+      "id": 26,
+      "title": "High School Students Build AI Models for Crop Disease Detection at High School I/O",
+      "description": "Around 30 high school students used ICICLE’s No-Code Workflow Studio and Ohio Supercomputer Center resources to build models that find and classify diseases on apple leaves in an eight-hour challenge at High School I/O.",
+      "link": null,
+      "author": "SAI Lab / NSF ICICLE AI Institute",
+      "body": "<p>High school students put artificial intelligence to work on an agricultural challenge at High School I/O on Sunday, November 15, 2026. As one of the event’s three problem tracks, the ICICLE AI challenge invited students to build and refine models that could identify diseases in images of apple leaves—all within eight hours.</p><p>Around 30 students took on the challenge, using ICICLE’s No-Code Workflow Studio and computing resources at the Ohio Supercomputer Center (OSC). SAI Lab students and mentors helped guide participants through model development, experimentation, and communicating their results.</p><h2>The Challenge: Find, Outline, and Identify Diseased Areas</h2><p>The task went beyond identifying whether a leaf was diseased. Students had to build a model that could locate individual diseased spots in a photograph, outline each affected area, and classify it as one of three diseases: <strong>cedar apple rust</strong>, <strong>black rot</strong>, or <strong>apple scab</strong>.</p><p>The challenge gave participants an opportunity to explore an AI workflow from start to finish. Using ICICLE’s No-Code Workflow Studio, teams connected data preprocessing, model training, inference, and visualization steps, then trained their models on OSC resources.</p><p>The goal was not simply to get a model running. Teams needed to examine its predictions, identify weaknesses, and decide what to change before the next training run.</p><h2>Learning Through Experimentation</h2><p>Throughout the day, students explored how preprocessing and training choices affected their results. They experimented with hyperparameters—including the number of training epochs, image size, model size, and learning rate—and compared successive runs to understand which changes helped.</p><p>Mentors supported teams as they inspected predictions, debugged workflows, and interpreted performance metrics. These iterations encouraged students to treat model development as an experimental process: make a change, evaluate the result, and use the evidence to guide the next decision.</p><h2>What the Teams Discovered</h2><p>The teams’ presentations highlighted different lessons from their experiments:</p><ul><li><strong>Team Patriot</strong> summarized its approach as “Smaller is best.” The team found that making small changes between runs helped guide experimentation, while using a smaller model made deployment on a compute node easier.</li><li><strong>Team Fries_rice_ramen</strong> reported that increasing the number of training epochs improved its model’s overall accuracy.</li><li>Another team observed an inverse relationship between recall and learning rate in its experiments, adding a discussion point about how training settings influenced the model’s ability to detect diseased regions.</li></ul><p>These observations reflected the teams’ results within the day’s experiments, rather than universal rules for training AI models. Together, they showed students engaging with the tradeoffs among predictive performance, computational requirements, and deployment.</p><h2>Celebrating the Winning Teams</h2><p>Congratulations to first-place <strong>Team Patriot</strong>: Thejan Nelahonne, Yash Rawale, Devarsh Chakkalakkal Binoop, and Harswith Buchireddy! The team achieved a reported accuracy of 0.81 and built a mobile app to deploy its model at the edge.</p><p>Congratulations also to second-place <strong>CAHS CoLabs</strong>: Hamza Yusuf and Liam Perez. The team developed the model with the highest reported accuracy of the day, 0.82.</p><p>Projects were evaluated across annotation quality, model performance, workflow completion, model efficiency, and presentation and communication—not accuracy alone.</p><h2>Building the Next Generation of AI Innovators</h2><p>The event brought together hands-on AI development, agricultural problem-solving, and access to research computing resources. In a single day, participants progressed from building workflows to training models, analyzing errors, and presenting evidence for their design choices.</p><p>Thank you to the High School I/O organizers, the ICICLE team, and the SAI Lab students and mentors who supported the challenge. Most importantly, congratulations to all the participants for their curiosity, persistence, and willingness to experiment.</p><h2>Explore the Student Projects</h2><p><strong>Presentation slides:</strong></p><ul><li><a href=\"https://drive.google.com/file/d/13Wh0wd4NjTlHKau1-Ys172e54j_pipDz/view?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Team presentation 1</a></li><li><a href=\"https://docs.google.com/presentation/d/13MCshBj-jZZz7vTV_3xUqUnXFsZBnSXnCWlwx2905y8/edit?slide=id.h56ca1f6c25e1c1b0_0_41#slide=id.h56ca1f6c25e1c1b0_0_41\" target=\"_blank\" rel=\"noopener noreferrer\">Team presentation 2</a></li><li><a href=\"https://docs.google.com/presentation/d/1xjjvqaNUrgLsYUhMugIZIdHtHdK3Qi4va59LV-wKMck/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Team presentation 3</a></li><li><a href=\"https://docs.google.com/presentation/d/1JAckQM6Vj21IAr5bOZ6Q-BnUFWrumjNhalIpftiI5-s/edit?slide=id.p4#slide=id.p4\" target=\"_blank\" rel=\"noopener noreferrer\">Team presentation 4</a></li></ul><p><strong>Student presentation videos:</strong> <a href=\"https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/kamath_62_osu_edu/IgCYz8cWIr2QTJaBZK1BKzG7AZritOV6uM1CuSC4nywRE-c?e=lO2bnT\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the recordings</a></p>",
+      "media": [
+        {
+          "type": "image",
+          "srcKey": "Hsio2026GroupPhoto",
+          "alt": "Participants and mentors of the ICICLE AI challenge at High School I/O 2026.",
+          "caption": "Participants and mentors of the ICICLE AI challenge at High School I/O 2026."
+        },
+        {
+          "type": "image",
+          "srcKey": "Hsio2026Mentoring",
+          "alt": "Students work with mentors during the ICICLE AI challenge.",
+          "caption": "Students work with mentors during the ICICLE AI challenge."
+        },
+        {
+          "type": "image",
+          "srcKey": "Hsio2026TeamResults",
+          "alt": "One team’s results slide: adjusting HSV color preprocessing improved precision and recall across the apple scab, black rot, and spot classes.",
+          "caption": "One team’s results slide: adjusting HSV color preprocessing improved precision and recall across the apple scab, black rot, and spot classes."
+        },
+        {
+          "type": "image",
+          "srcKey": "Hsio2026ChallengeTeam",
+          "alt": "Mentors and organizers of the ICICLE AI challenge at High School I/O 2026.",
+          "caption": "Mentors and organizers of the ICICLE AI challenge at High School I/O 2026."
+        }
+      ],
+      "members": [],
+      "date": "2026-11-15",
+      "tag": "Outreach"
+    },
+    {
       "id": 25,
       "title": "SAI Lab Showcases Research and Celebrates Team Recognition at SAIL 2026",
       "description": "Hari Subramoni, Anirudh Potlapally, and Harikesh Byrandurga Gopinath represented the NSF ICICLE AI Institute at SAIL 2026 in San Diego with research posters on edge AI and ecology, and Harikesh was part of the winning Group Flash Talk team.",
